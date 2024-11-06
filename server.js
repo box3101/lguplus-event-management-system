@@ -50,6 +50,6 @@ app.get("/event/870/m", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "event/870/mo", "common.html"));
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+app.listen(3002, () => {
+  console.log("Server is running on port 3002");
 });
