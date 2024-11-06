@@ -1,0 +1,2577 @@
+<style>
+  .esim-join .mobile-usim-detail-renewal.esim .mudr-top-area .kv-top-area {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .esim-join .mobile-usim-detail-renewal.esim .mudr-top-area .kv-top-area .title {
+    color: #fff;
+  }
+
+  .esim-join .mobile-usim-detail-renewal.esim .mudr-top-area .kv-top-area .txt {
+    color: #fff;
+  }
+
+  .esim-join .mobile-usim-detail-renewal.esim .mudr-top-area .kv-top-area .esim-kv-btn {
+    background-color: #2f0d76;
+  }
+
+  .esim-intro-wrap .banner-box {
+    padding: 20px 26px 0;
+  }
+
+  .esim-intro-wrap .banner-box img {
+    width: 100%;
+  }
+
+  .esim-intro-wrap .banner-box a {
+    display: block;
+  }
+
+  .esim-intro-wrap .banner-box a+a {
+    margin-top: 20px;
+  }
+
+  .esim-intro-wrap .esim-box {
+    padding: 50px 30px;
+  }
+
+  .esim-intro-wrap .esim-box.bg-gray {
+    background-color: #f5f6f8;
+  }
+
+  .esim-intro-wrap .esim-box .esim-box-empha {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    color: #e6007e;
+    margin-bottom: 8px;
+  }
+
+  .esim-intro-wrap .esim-box .esim-box-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #222;
+    line-height: 1.4;
+    letter-spacing: -2px;
+  }
+
+  .esim-intro-wrap .esim-box .esim-box-img {
+    margin: 28px 0;
+  }
+
+  .esim-intro-wrap .esim-box .esim-box-img img {
+    width: 100%;
+  }
+
+  .esim-intro-wrap .esim-box .esim-box-txt {
+    font-size: 16px;
+    line-height: 1.56;
+    letter-spacing: -1.28px;
+    color: #444;
+  }
+
+  .esim-intro-wrap .esim-box .c-link-arr-1 {
+    margin-top: 12px;
+  }
+
+  .esim-intro-wrap .esim-box.depth {
+    padding: 50px 0;
+  }
+
+  .esim-intro-wrap .esim-box.depth .esim-box-empha {
+    padding: 0 30px;
+  }
+
+  .esim-intro-wrap .esim-box.depth .esim-box-title {
+    padding: 0 22px 0 30px;
+  }
+
+  .esim-intro-wrap .esim-box.depth .esim-depth-box {
+    padding: 50px 30px 0 70px;
+  }
+
+  .esim-intro-wrap .esim-box.depth .esim-depth-box .esim-depth-empha {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.57;
+    letter-spacing: -1.12px;
+    text-align: left;
+    color: #e6007e;
+    margin-bottom: 8px;
+  }
+
+  .esim-intro-wrap .esim-box.depth .esim-depth-box .esim-depth-title {
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.42;
+    letter-spacing: -1.52px;
+    color: #222;
+    margin-bottom: 16px;
+  }
+
+  .esim-intro-wrap .esim-box.depth .esim-depth-box .esim-depth-txt {
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: -1.12px;
+    text-align: left;
+    color: #444;
+  }
+
+  .esim-intro-wrap .esim-box.depth .esim-depth-box .esim-depth-img {
+    margin-top: 30px;
+  }
+
+  .esim-intro-wrap .esim-box.depth .esim-depth-box .esim-depth-img img {
+    width: 100%;
+  }
+
+  .esim-intro-wrap .esim-box.depth .esim-depth-box.second-style {
+    padding: 50px 0 0 0;
+  }
+
+  .esim-intro-wrap .esim-box.depth .esim-depth-box.second-style .esim-depth-empha {
+    padding: 0 21px 0 70px;
+  }
+
+  .esim-intro-wrap .esim-box.depth .esim-depth-box.second-style .esim-depth-title {
+    padding: 0 21px 0 70px;
+  }
+
+  .esim-intro-wrap .esim-box.depth .esim-depth-box.second-style .esim-depth-txt {
+    padding: 0 21px 0 70px;
+  }
+
+  .acco-box .c-accordion-wrap.esim-intro-acco {
+    background: #fff;
+    border-radius: 15px;
+  }
+
+  .acco-box .c-accordion-wrap.esim-intro-acco .c-accordion-type1 {
+    border-top: 0;
+  }
+
+  .acco-box .c-accordion-wrap.esim-intro-acco .c-accordion-type1 .c-accordion-header {
+    border-bottom: 0;
+    background: inherit;
+    padding: 17px 20px 17px 20px;
+  }
+
+  .acco-box .c-accordion-wrap.esim-intro-acco .c-accordion-type1 .c-accordion-header.not-collapsed:before {
+    display: none;
+  }
+
+  .acco-box .c-accordion-wrap.esim-intro-acco .c-accordion-type1 .c-accordion-header.not-collapsed strong {
+    font-weight: bold;
+  }
+
+  .acco-box .c-accordion-wrap.esim-intro-acco .c-accordion-type1 .c-accordion-header strong {
+    font-size: 15px;
+  }
+
+  .acco-box .c-accordion-wrap.esim-intro-acco .content {
+    padding: 16px 20px 20px;
+  }
+
+  .acco-box .c-accordion-wrap.esim-intro-acco .content [class*="c-bullet-type-"]>li~li {
+    margin-top: 4px;
+  }
+
+  .acco-box .c-accordion-wrap.esim-intro-acco .content [class*="c-bullet-type-"]>li {
+    word-break: inherit;
+  }
+
+  .acco-box.qna-acco .c-accordion-wrap.esim-intro-acco,
+  .acco-box.slide-acco .c-accordion-wrap.esim-intro-acco {
+    background: #f4f6fd;
+  }
+
+  .acco-box.qna-acco .c-accordion-wrap.esim-intro-acco .content {
+    padding: 17px 20px 20px;
+  }
+
+  .acco-box.qna-acco .c-accordion-wrap.esim-intro-acco .content p {
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: -1.12px;
+    color: #000;
+  }
+
+  .acco-box.slide-acco .c-accordion-wrap.esim-intro-acco .c-accordion-type1 .c-accordion-header .ico {
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  .acco-box.slide-acco .c-accordion-wrap.esim-intro-acco .c-accordion-type1 .c-accordion-header .ico img {
+    width: 100%;
+  }
+
+  .acco-box.slide-acco .c-accordion-wrap.esim-intro-acco .content {
+    padding: 20px 12px 10px;
+  }
+
+  .acco-box.slide-acco .swiper-slide {
+    background: #fff;
+    width: calc(100% - 25px);
+    box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 7px;
+  }
+
+  .acco-box.slide-acco .slide-device {
+    font-size: 14px;
+    color: #000000;
+    padding-bottom: 16px;
+  }
+
+  .acco-box.slide-acco .swiper-slide .device-box {
+    padding: 20px;
+    border-radius: unset;
+    background-color: #fff;
+  }
+
+  .acco-box.slide-acco .swiper-slide .device-box .device-txt {
+    position: relative;
+  }
+
+  .acco-box.slide-acco .swiper-slide .device-box .device-txt .step-em {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #333;
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    margin: 3px 9px 0 0;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+
+  .acco-box.slide-acco .swiper-slide .device-box .device-txt .step-em.em-1 {
+    font-size: 11px;
+    line-height: 2.2;
+  }
+
+  .acco-box.slide-acco .swiper-slide .device-box .device-txt .device-title {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+    padding-left: 33px;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    letter-spacing: -1.02px;
+    line-height: 1.6;
+    height: 3.1em;
+  }
+
+  .acco-box.slide-acco .swiper-slide .device-box .device-txt .device-title span {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.38;
+  }
+
+  .acco-box.slide-acco .swiper-slide .device-box .device-img {
+    margin: 30px -20px 0;
+  }
+
+  .acco-box.slide-acco .swiper-slide .device-box .device-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .acco-box.slide-acco .m-swiper .swiper-pagination {
+    display: inline-block;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    font-size: 1px;
+    line-height: 0.8;
+  }
+
+  .acco-box.slide-acco .m-swiper.put-indicator-outside .swiper-pagination {
+    bottom: -26px;
+  }
+
+  .acco-box.slide-acco .m-swiper .swiper-pagination .swiper-pagination-bullet {
+    border: none;
+    background-color: #ddd;
+  }
+
+  .acco-box.slide-acco .m-swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border: none;
+    background-color: #999;
+  }
+
+  .acco-box.slide-acco .qr-box {
+    padding-bottom: 48px;
+  }
+
+  .acco-box.slide-acco .qr-box .qr-title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: -0.8px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 40px;
+  }
+
+  .acco-box.slide-acco .qr-img {
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  .acco-box.slide-acco .qr-img img {
+    width: 100%;
+  }
+
+  .acco-box.slide-acco .sm-dp-box .sm-dp-title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: -0.8px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 40px;
+  }
+
+  .acco-box.slide-acco .sm-dp-box .sm-dp-inp {
+    padding: 20px 20px 29px;
+    border-radius: 7px;
+    box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+    margin-bottom: 60px;
+  }
+
+  .acco-box.slide-acco .sm-dp-box .sm-dp-inp ul li {
+    position: relative;
+  }
+
+  .acco-box.slide-acco .sm-dp-box .sm-dp-inp ul li+li {
+    margin-top: 42px;
+  }
+
+  .acco-box.slide-acco .sm-dp-box .sm-dp-inp ul li span {
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: -0.56px;
+    text-align: left;
+    color: #666;
+  }
+
+  .acco-box.slide-acco .sm-dp-box .sm-dp-inp ul li p {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.57;
+    text-align: left;
+    color: #000;
+    margin-top: 10px;
+  }
+
+  .acco-box.slide-acco .sm-dp-box .sm-dp-inp button {
+    position: absolute;
+    right: 0;
+    top: 39px;
+    height: 26px;
+    padding: 0 12px;
+  }
+
+  .acco-box.slide-acco .sm-dp-box .sm-dp-inp ul li+li button {
+    top: 50px;
+  }
+
+  .acco-box.slide-acco .es-title {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.28;
+    letter-spacing: -0.72px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 40px;
+  }
+
+  .acco-box.slide-acco .slide-explan {
+    margin-bottom: 25px;
+  }
+
+  .acco-box.slide-acco .slide-explan .item {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .acco-box.slide-acco .slide-explan .item+.item {
+    margin-top: 12px;
+  }
+
+  .acco-box.slide-acco .slide-explan .item table {
+    margin-top: 6px;
+    letter-spacing: -0.48px;
+    font-size: inherit;
+    color: #666;
+  }
+
+  .acco-box.slide-acco .slide-explan .item table th {
+    font-weight: normal;
+    vertical-align: top;
+    padding-left: 7px;
+  }
+
+  .acco-box.slide-acco .slide-explan .item .list-title {
+    position: relative;
+    margin-bottom: 6px;
+    padding-left: 6px;
+    font-weight: 500;
+  }
+
+  .acco-box.slide-acco .slide-explan .item .list-title:before {
+    content: "-";
+    position: absolute;
+    text-indent: -6px;
+  }
+
+  .acco-box.slide-acco .slide-explan .item .list-title+div {
+    padding-left: 6px;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.42;
+  }
+
+  .phone-list-section {
+    background-color: #fff;
+  }
+
+  .phone-list-section>.h5 {
+    font-size: 15px !important;
+    font-weight: normal;
+    color: #000000;
+  }
+
+  .phone-list-section .list-box .list-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666666;
+    margin-bottom: 4px;
+  }
+
+  .phone-list-section .list-box ul::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .phone-list-section .list-box ul li {
+    position: relative;
+    float: left;
+    padding: 7px 8px;
+    border-radius: 4px;
+    background-color: #ebedf1;
+    font-size: 11px;
+    margin: 8px 8px 0 0;
+    color: #888888;
+  }
+
+  .phone-list-section .list-box+.list-box {
+    margin-top: 24px !important;
+  }
+
+  .esim-banner-section .esim-banner-wrap {
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20221202-093837-949-m28Owoq6.png") no-repeat center;
+    width: 100%;
+    height: 0;
+    padding-top: calc(230 / 308 * 100%);
+    position: relative;
+    background-size: contain;
+  }
+
+  .esim-banner-section .esim-banner-wrap>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .esim-banner-section {
+    padding: 50px 26px 0;
+  }
+
+  .esim-banner-section .esim-banner-wrap .esim-banner-cont {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 36%;
+  }
+
+  .esim-banner-section .esim-banner-wrap .esim-banner-cont .esim-banner-desc {
+    font-size: 18px;
+    color: #000;
+    font-weight: 700;
+    line-height: 1.39;
+  }
+
+  .esim-banner-section .esim-banner-wrap .esim-banner-cont .c-btn-solid-1-m {
+    padding: 0 15px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 320px) {
+    .mobile-usim-detail-renewal.esim {
+      overflow: hidden;
+    }
+  }
+</style>
+<div class="esim-intro-wrap" id="anchorPoint1">
+  <div class="esim-box">
+    <em class="esim-box-empha">쉬운 개통</em>
+    <h5 class="esim-box-title">쉽고 빠른<br />eSIM 비대면 온라인 개통</h5>
+    <div class="esim-box-img">
+      <img src="https://image.lguplus.com/static/contents/dfluid/images/backoffice-contents/M/mobile/esim_cont01.png"
+        alt="click 이미지" />
+    </div>
+    <p class="esim-box-txt">
+      오늘도 바쁜 하루,<br />개통하러 시간내기 너무 어렵죠.<br />쉬운 비대면
+      온라인 개통 빠르게 사용해요.
+    </p>
+  </div>
+  <div class="esim-box">
+    <em class="esim-box-empha">두개의 번호</em>
+    <h5 class="esim-box-title">
+      업무 시간이 끝나면<br />회사용 번호는 잠시 안녕
+    </h5>
+    <div class="esim-box-img">
+      <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220829-091330-949-m4Gt2ynX.png"
+        alt="채팅방, 동료 : 저기 대리님 주말에 연락해서 죄송한데요(상반기 매출실적보고.pdf 파일전달), 나 : 화면 표정 이미지" />
+    </div>
+    <p class="esim-box-txt">
+      업무 시간은 금요일까지 잖아요<br />주말에는 회사용 번호는 끄고,<br />온전한
+      나의 휴식을 켜세요
+    </p>
+    <a href="https://mstg.lguplus.com/ujam/60" data-route target="_blank" class="c-link-arr-1">내용 더 보기</a>
+    <!-- 운영: https://m.lguplus.com/ujam/61 -->
+  </div>
+  <div class="banner-box">
+    <!-- <a href="/mobile/self-esim/activate?regType=&selfYn=true&dvicType=E-5G02" title="자세히 보기"
+      style="display:inline-block;" data-route="" data-gtm-event-name='link_click' data-gtm-event-category='클릭'
+      data-gtm-event-action='이벤트상세 영역- 링크 클릭' data-gtm-event-label='컨텐츠 : 바로가기'
+      data-gtm-click-url='/mobile/self-esim/activate?regType=&selfYn=true&dvicType=E-5G02'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='바로가기'>
+      <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240809-103701-243-q0AMSGS1.png"
+        alt="셀프개통하면네이버페이 1만원을 더 받아요! 대상 요금제5G 다이렉트 34/37.5/42/44/46/47.5/51/59/65/69(유쓰 34/37.5/42/44/46/47.5/51 포함)LTE 다이렉트 34.5/45">
+    </a> -->
+    <a href="/mobile/dual-number-plus" title="자세히 보기" data-route="" style="display:inline-block;">
+      <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240529-112333-946-WOAuYctq.png"
+        alt="U+ 고객이라면 누구나 '2'개의 번호 단돈 8,800원으로 하나에 두개의 번호를 쓰세요">
+    </a>
+    <a href="https://mstg.lguplus.com/ujam/60" title="새 창 열림" data-route="" style="display:inline-block;">
+      <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240529-112343-754-uz9II9NU.png"
+        alt="2개의 번호 '2'것이 eSIM">
+    </a><!-- 운영: https://m.lguplus.com/ujam/61 -->
+    <a href="https://mstg.lguplus.com/ujam/61" title="새 창 열림" data-route="" style="display:inline-block;">
+      <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240529-112358-154-iAYJ0omV.png"
+        alt="eSIM 사용방법 '2'것만 기억해!">
+    </a><!-- 운영: https://m.lguplus.com/ujam/62 -->
+  </div>
+  <div class="esim-box">
+    <em class="esim-box-empha">eSIM은 무엇인가요?</em>
+    <h5 class="esim-box-title">다운로드 받는 유심 ‘eSIM’</h5>
+    <div class="esim-box-img">
+      <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220829-091516-764-8trouvbZ.png"
+        alt="eSIM QR코드 다운받기 화면 이미지" />
+    </div>
+    <p class="esim-box-txt">
+      eSIM은 embedded SIM으로,<br />휴대폰에 SIM이 내장되어 있어요.<br />통신사
+      가입을 완료하면 개통에 필요한<br />요금 정보를 QR 스캔이나, 휴대폰<br />설정
+      메뉴에서 다운 받을 수 있어요.
+    </p>
+  </div>
+  <div class="esim-box bg-gray">
+    <em class="esim-box-empha">eSIM 지원 휴대폰 확인</em>
+    <h5 class="esim-box-title">
+      eSIM이 지원되는 휴대폰은<br />앞으로 더 많아질 거예요!
+    </h5>
+    <div class="esim-box-img">
+      <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220829-091601-671-HuWBOeOD.png"
+        alt="메인, 보조 2개 회선으로 개통되어 있는 이미지" />
+    </div>
+    <p class="esim-box-txt">
+      내가 가진 휴대폰이 현재 국내에서 eSIM이<br />지원되는 휴대폰인지
+      확인해주세요
+    </p>
+    <div class="acco-box -mt-35">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_1_0">
+              <div class="c-acc-tit">
+                <strong>eSIM 지원 휴대폰 리스트</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_1_0" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <div class="phone-list-section">
+                    <div class="list-box">
+                      <p class="list-title">아이폰</p>
+                      <ul>
+                        <li>iPhone XR</li>
+                        <li>iPhone XS</li>
+                        <li>iPhone XS Max</li>
+                        <li>iPhone SE(2세대)</li>
+                        <li>iPhone 11</li>
+                        <li>iPhone 11 Pro</li>
+                        <li>iPhone 11 Pro Max</li>
+                        <li>iPhone SE(3세대)</li>
+                        <li>iPhone 12</li>
+                        <li>iPhone 12 Pro</li>
+                        <li>iPhone 12 Pro Max</li>
+                        <li>iPhone 12 mini</li>
+                        <li>iPhone 13</li>
+                        <li>iPhone 13 Pro</li>
+                        <li>iPhone 13 Pro Max</li>
+                        <li>iPhone 13 mini</li>
+                        <li>iPhone 14</li>
+                        <li>iPhone 14 Plus</li>
+                        <li>iPhone 14 Pro</li>
+                        <li>iPhone 14 Pro Max</li>
+                        <li>iPhone 15</li>
+                        <li>iPhone 15 Plus</li>
+                        <li>iPhone 15 Pro</li>
+                        <li>iPhone 15 Pro Max</li>
+                      </ul>
+                    </div>
+
+                    <div class="list-box">
+                      <p class="list-title">안드로이드</p>
+                      <ul>
+                        <li>Galaxy Z Fold 4</li>
+                        <li>Galaxy Z Flip 4</li>
+                        <li>Galaxy S23</li>
+                        <li>Galaxy S23+</li>
+                        <li>Galaxy S23 Ultra</li>
+                        <li>Galaxy Z Flip 5</li>
+                        <li>Galaxy Z Fold 5</li>
+                        <li>Galaxy S23 FE</li>
+                        <li>Galaxy S24</li>
+                        <li>Galaxy S24+</li>
+                        <li>Galaxy S24 Ultra</li>
+                        <li>Galaxy Z Flip 6</li>
+                        <li>Galaxy Z Fold 6</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
+      </div>
+    </div>
+    <div class="acco-box -mt-12">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_1_0">
+              <div class="c-acc-tit">
+                <strong>eSIM 지원 태블릿 리스트</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_1_0" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <div class="phone-list-section">
+                    <div class="list-box">
+                      <p class="list-title">아이패드</p>
+                      <ul>
+                        <li>iPad Pro 11</li>
+                        <li>iPad Pro 11 (2세대)</li>
+                        <li>iPad Pro 11 (3세대)</li>
+                        <li>iPad Pro 11 (4세대)</li>
+                        <li>iPad Pro 11 (5세대)</li>
+                        <li>iPad Pro 12.9</li>
+                        <li>iPad Pro 12.9 (4세대)</li>
+                        <li>iPad Pro 12.9 (5세대)</li>
+                        <li>iPad Pro 12.9 (6세대)</li>
+                        <li>iPad Pro 12.9 (7세대)</li>
+                        <li>iPad Air (3세대)</li>
+                        <li>iPad 10.2 (7세대)</li>
+                        <li>iPad (8세대)</li>
+                        <li>iPad (9세대)</li>
+                        <li>iPad 10.9 (10세대)</li>
+                        <li>iPad mini (5세대)</li>
+                        <li>iPad mini (5세대)</li>
+                        <li>iPad Pro 11 (M4)</li>
+                        <li>iPad Pro 13 (M4)</li>
+                        <li>iPad Air 11 (M2)</li>
+                        <li>iPad Air 13 (M2)</li>
+                      </ul>
+                    </div>
+
+                    <div class="list-box">
+                      <p class="list-title">갤럭시 탭</p>
+                      <ul>
+                        <li>갤럭시 탭 S9</li>
+                        <li>갤럭시 탭 S9+</li>
+                        <li>갤럭시 탭 S9 ultra</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
+      </div>
+    </div>
+  </div>
+  <div class="esim-box depth bg-gray -mt-20">
+    <em class="esim-box-empha">온라인요금제</em>
+    <h5 class="esim-box-title">
+      LG유플러스닷컴만의<br />온라인 전용 요금제로 저렴하게,<br />혜택은 덤으로
+    </h5>
+    <div class="esim-depth-box second-style">
+      <em class="esim-depth-empha">쇼핑쿠폰팩</em>
+      <h5 class="esim-depth-title">
+        꼭 필요한 할인 혜택으로,<br />매월마다 풍부한 온라인 쇼핑
+      </h5>
+      <p class="esim-depth-txt">
+        네이버페이, 카카오T, 요기요, GS25 등<br />내 생활에 맞춘 쇼핑 할인
+        쿠폰을 매월 받으세요.
+      </p>
+      <div class="esim-depth-img">
+        <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220829-091654-660-D1JmkC1M.png"
+          alt="eSIM가입 화면 이미지, Npay, GS25, 요기요, KakaoT 등 5000원 할인 쿠폰 제공 이미지" />
+      </div>
+    </div>
+    <div class="esim-depth-box">
+      <em class="esim-depth-empha">무약정</em>
+      <h5 class="esim-depth-title">무약정으로<br />모두의 휴대폰에 자유를</h5>
+      <p class="esim-depth-txt">
+        온라인 전용요금제는 무약정으로<br />가입할 수 있어요 언제든지 쉽게
+        해지하고,<br />가입할 수 있어요
+      </p>
+      <div class="esim-depth-img">
+        <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220829-091710-715-mIAikoUq.png"
+          alt="가입신청서 자유롭게 가입, 해지 가능 자물쇠 예시 이미지" />
+      </div>
+    </div>
+    <div class="esim-depth-box -pt-40">
+      <em class="esim-depth-empha">다이렉트요금제</em>
+      <h5 class="esim-depth-title">
+        온라인 전용 요금제는<br />‘다이렉트’가 붙어있어요.
+      </h5>
+      <p class="esim-depth-txt">
+        요금제가 너무 많아 고르기 어렵나요?<br />이름에 다이렉트가 붙어있는
+        요금제를 고르세요.
+      </p>
+      <div class="esim-depth-img">
+        <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220831-040308-037-dcBxaWia.png"
+          alt="요금제 선택, LTE 다이렉트22 22,000원/월 요금제 등" />
+      </div>
+    </div>
+  </div>
+  <div class="esim-box">
+    <em class="esim-box-empha">eSIM 스스로개통</em>
+    <h5 class="esim-box-title">
+      상담사 통화없이 내 폰에서<br />가입과 개통을 한번에
+    </h5>
+    <div class="esim-box-img">
+      <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220829-091623-128-aOZlpFvD.png"
+        alt="지금 바로 개통을 진행해주세요 eSIM 개통하는 방법 설정에서 개통, QR스캔 개통, 코드 입력 개통 안내 화면 이미지" />
+    </div>
+    <p class="esim-box-txt">
+      eSIM을 가입하면, 내 휴대폰 설정 메뉴 또는<br />QR코드를 스캔해서 바로
+      사용할 수 있어요
+    </p>
+
+    <div class="acco-box slide-acco -mt-35">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_1_1">
+              <div class="c-acc-tit">
+                <strong><i class="ico"><img src="/static/mb-static/indv/images/device/esim/m_ic_open_1.png"
+                      alt="내용 참조" /></i>내 휴대폰 설정에서 개통 방법</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_1_1" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <div class="slide-content">
+                    <h5 class="slide-device">아이폰</h5>
+                    <div class="m-swiper put-indicator-outside swiper-multiple">
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">1</em>
+                                <p class="device-title">
+                                  eSIM을 개통한 아이폰에 오는<br />Push 메시지를
+                                  눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/set_iphone_01.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">2</em>
+                                <p class="device-title">
+                                  eSIM 활성화를 해주세요<br />(eSIM 활성화 후
+                                  계속 버튼 탭)
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/set_iphone_02.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">3</em>
+                                <p class="device-title">
+                                  새로 개통할 eSIM 요금제<br />레이블을
+                                  선택해주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/set_iphone_03.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">4</em>
+                                <p class="device-title">
+                                  기본회선을 선택하고<br />계속을 눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/set_iphone_04.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">5</em>
+                                <p class="device-title">
+                                  애플 ID를 연동할 회선을 선택하고<br />계속을
+                                  눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/set_iphone_05.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">6</em>
+                                <p class="device-title">
+                                  셀룰러 데이터에 사용할 회선을<br />선택후
+                                  계속을 누르면 끝!
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/set_iphone_06.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-content -mt-35">
+                    <h5 class="slide-device">안드로이드</h5>
+                    <div class="m-swiper multiple-type full put-indicator-outside swiper-multiple">
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">1</em>
+                                <p class="device-title">
+                                  휴대폰 [설정] 메뉴의 [연결]을<br />눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/set_android_01.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">2</em>
+                                <p class="device-title">
+                                  [SIM 카드 관리자] 메뉴를<br />눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/set_android_02.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">3</em>
+                                <p class="device-title">
+                                  [모바일 요금제 추가] 메뉴를<br />눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/set_android_03.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">4</em>
+                                <p class="device-title">
+                                  요금제 추가 되는 동안<br />잠시만
+                                  기다려주세요!
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/set_android_04.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">5</em>
+                                <p class="device-title">
+                                  [확인] 버튼을 눌러주세요!
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/set_android_05.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="acco-box slide-acco -mt-12">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_1_2">
+              <div class="c-acc-tit">
+                <strong><i class="ico"><img src="/static/mb-static/indv/images/device/esim/m_ic_open_2.png"
+                      alt="내용 참조" /></i>QR 스캔해서 개통하는 방법</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_1_2" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <div class="qr-box">
+                    <h3 class="qr-title">
+                      eSIM 개통할 휴대폰으로<br />QR코드를 스캔해주세요
+                    </h3>
+                    <div class="qr-img">
+                      <img src="/static/mb-static/indv/images/device/esim/img_qr.jpg" alt="내용 참조" />
+                    </div>
+                  </div>
+                  <div class="slide-content">
+                    <h5 class="slide-device">
+                      아이폰 QR코드 스캔 어떻게 하나요?
+                    </h5>
+                    <div class="m-swiper put-indicator-outside swiper-multiple">
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">1</em>
+                                <p class="device-title">
+                                  카메라로 QR 코드를<br />스캔해주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/qr_iphone_01.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">2</em>
+                                <p class="device-title">
+                                  [계속] 버튼을 클릭해주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/qr_iphone_02.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">3</em>
+                                <p class="device-title">
+                                  [셀룰러 요금제 추가] 버튼을 클릭해주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/qr_iphone_03.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-content -mt-35">
+                    <h5 class="slide-device">
+                      안드로이드 QR코드 스캔 어떻게 하나요?
+                    </h5>
+                    <div class="m-swiper multiple-type full put-indicator-outside swiper-multiple">
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">1</em>
+                                <p class="device-title">
+                                  카메라로 QR 코드를 스캔하고<br />[옵션보기] 를
+                                  클릭해주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/qr_android_01.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">2</em>
+                                <p class="device-title">
+                                  [휴대전화에 요금제 추가] 를<br />눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/qr_android_02.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">3</em>
+                                <p class="device-title">
+                                  [확인] 버튼을 눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/qr_android_03.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="acco-box slide-acco -mt-12">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_1_3">
+              <div class="c-acc-tit">
+                <strong><i class="ico"><img src="/static/mb-static/indv/images/device/esim/m_ic_open_3.png"
+                      alt="내용 참조" /></i>직접 코드 입력해서 개통하는 방법</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_1_3" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <div class="sm-dp-box">
+                    <h3 class="sm-dp-title">
+                      고객님의 활성화 코드를<br />eSIM을 개통할 휴대폰에<br />입력해주세요
+                    </h3>
+                    <div class="sm-dp-inp">
+                      <ul>
+                        <li>
+                          <span>SM-DP+주소</span>
+                          <p>lgu.prod.ondemandconnectivity.com</p>
+                          <!-- <button class="c-btn-outline-1-s">복사하기</button> -->
+                        </li>
+                        <li>
+                          <span>활성화 코드</span>
+                          <p>LPA:1$lgu.prod.ondemandconnectivity.com$</p>
+                          <!-- <button class="c-btn-outline-1-s">복사하기</button> -->
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="slide-content">
+                    <h5 class="slide-device">아이폰 활성화 코드 입력방법</h5>
+                    <div class="m-swiper put-indicator-outside swiper-multiple">
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">1</em>
+                                <p class="device-title">
+                                  아이폰 [설정] 메뉴의<br />[셀룰러] 메뉴를
+                                  눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/code_iphone_01.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">2</em>
+                                <p class="device-title">
+                                  [셀룰러 요금제 추가] 메뉴 누른 후<br />[세부사항
+                                  직접 입력]을 눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/code_iphone_02.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">3</em>
+                                <p class="device-title">
+                                  SM-DP+주소를 입력해주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/code_iphone_03.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-content -mt-35">
+                    <h5 class="slide-device">
+                      안드로이드 활성화 코드 입력방법
+                    </h5>
+                    <div class="m-swiper multiple-type full put-indicator-outside swiper-multiple">
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">1</em>
+                                <p class="device-title">
+                                  휴대폰 [설정] 메뉴의 [연결]을<br />눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/code_android_01.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">2</em>
+                                <p class="device-title">
+                                  [SIM 카드 관리자] 메뉴를<br />눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/code_android_02.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">3</em>
+                                <p class="device-title">
+                                  [모바일 요금제 추가] 메뉴를<br />눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/code_android_03.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">4</em>
+                                <p class="device-title">
+                                  [통신사 QR 코드 스캔] 을<br />눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/code_android_04.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">5</em>
+                                <p class="device-title">
+                                  [개통코드 입력] 을 눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/code_android_05.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">6</em>
+                                <p class="device-title">
+                                  활성화 코드를 입력해주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img src="/static/mb-static/indv/images/device/code_android_06.png" alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="acco-box slide-acco -mt-12">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_1_4">
+              <div class="c-acc-tit">
+                <strong><i class="ico"><img
+                      src="//image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-034941-559-GG01oIWt.png"
+                      alt="내용 참조" /></i>eSIM 스스로 기기변경 방법</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_1_4" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <h3 class="es-title">
+                    eSIM 스스로 기기변경시 eSIM 발급 비용 2,750원이 발생해요
+                  </h3>
+
+                  <div class="slide-content">
+                    <h5 class="slide-device">아이폰(블루투스)</h5>
+                    <div class="slide-explan">
+                      <div class="item">
+                        - 기존 아이폰은 wi-fi 또는 셀룰러 연결, 새로운 아이폰은
+                        wi-fi로 반드시 연결 되도록 해주세요.
+                        <div>
+                          기존 아이폰을 새로운 아이폰과 가까이 두세요.<br />
+                          기존 아이폰에 잠금 설정이 되어야 해요.
+                        </div>
+                      </div>
+                      <div class="item">
+                        - 대상 휴대폰 (iOS 16.1 이상 소프트웨어 업데이트 필수)
+                        <div>
+                          iPhone XR / XS / XS Max, iPhone 11 / 11 Pro / 11Pro
+                          Max, iPhone 12 / 12 Pro / 12 Pro Max, iPhone 13 mini /
+                          13 / 13 Pro / 13 Pro Max, iPhone SE2 / iPhone SE3,
+                          iPhone 14 / 14 Pro / 14 Pro Max / 14 Plus / iPhone 15
+                          / 15 Plus / 15 Pro / 15 Pro Max
+                        </div>
+                      </div>
+                    </div>
+                    <div class="m-swiper multiple-type full put-indicator-outside swiper-multiple">
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">1</em>
+                                <p class="device-title">
+                                  새로운 아이폰에서 설정 > 셀룰러 > [셀룰러
+                                  설정] 버튼을 눌러주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035328-338-zZloqwru.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">2</em>
+                                <p class="device-title">
+                                  셀룰러 설정에서 [근처에 있는 아이폰에서 전송]
+                                  버튼을 눌러주세요<br />
+                                  <span>* 기존 아이폰에서도 전화번호 전송 화면이
+                                    나타나요.</span>
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035344-263-7wrFbV56.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">3</em>
+                                <p class="device-title">
+                                  확인 코드 6자리를 기존 아이폰 화면 코드 입력
+                                  란에 입력 해주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035351-310-7oYRQN9T.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">4</em>
+                                <p class="device-title">
+                                  새로운 아이폰 화면에 나오는 [다른 아이폰에서
+                                  전송] 버튼을 클릭 해주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035357-536-HOppA37P.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">5</em>
+                                <p class="device-title">
+                                  [전화번호 전송] 버튼을 눌러주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035404-554-4cwax3bF.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">6</em>
+                                <p class="device-title">
+                                  [다음] 버튼을 눌러주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035412-394-Q4EssHTQ.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">6-1</em>
+                                <p class="device-title">
+                                  <span>* 기존 아이폰 화면에서는 위와 같은 화면이
+                                    출력 돼요.</span>
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035423-794-7fIwyAT5.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">7</em>
+                                <p class="device-title">
+                                  가입자 본인 인증을 진행해주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035432-815-3iiga1Nf.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">8</em>
+                                <p class="device-title">
+                                  [다음] 버튼을 눌러주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035446-341-n7sA7Oo1.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">9</em>
+                                <p class="device-title">
+                                  eSIM 셀프 기기변경 완료 화면에서 [확인] 버튼을
+                                  눌러 주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-045032-981-w7UfoRcZ.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">10</em>
+                                <p class="device-title">
+                                  [다른 아이폰에서 전송] 버튼을 누르면 셀룰러
+                                  설정 완료와 기기변경 처리가 완료 돼요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035502-071-YN2Djy3W.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em em-1">10-1</em>
+                                <p class="device-title">
+                                  <span>* 기존 아이폰에서 새로운 아이폰으로 전송 된
+                                    내용 확인 가능 해요.</span>
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035635-400-nGbHByhf.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-content -mt-35">
+                    <h5 class="slide-device">삼성전자 단말</h5>
+                    <div class="slide-explan">
+                      <div class="item">
+                        - 대상 휴대폰
+                        <table>
+                          <colgroup>
+                            <col width="90" />
+                            <col />
+                          </colgroup>
+                          <tr>
+                            <th>변경 전 휴대폰 :</th>
+                            <td>One UI 5.1 이상 지원 휴대폰</td>
+                          </tr>
+                          <tr>
+                            <th>변경 후 휴대폰 :</th>
+                            <td>갤럭시 S23, 갤럭시 S23+, 갤럭시 S23 Ultra</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="m-swiper multiple-type full put-indicator-outside swiper-multiple">
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">1</em>
+                                <p class="device-title">
+                                  신규 휴대폰에서 설정 > 연결 SIM카드 관리 내
+                                  eSIM 추가 선택 후 [다른 기기에서 SIM이동]
+                                  버튼을 눌러주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035713-332-d5xV2D3L.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">2</em>
+                                <p class="device-title">
+                                  기존 휴대폰에 [이동] 버튼을 눌러주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035748-041-4vC9YAzr.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">3</em>
+                                <p class="device-title">
+                                  신규 휴대폰에 인증번호를 확인해 주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035758-185-5amwukYr.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">4</em>
+                                <p class="device-title">
+                                  기존 휴대폰에 인증번호를 입력해 주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-035808-556-XsBbxbKx.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">5</em>
+                                <p class="device-title">
+                                  신규 휴대폰에서 기기 변경할 회선을 선택해
+                                  주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-040153-329-3tWrwQS5.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">6</em>
+                                <p class="device-title">
+                                  기기를 변경할 회선 선택 후 [이동] 버튼을
+                                  눌러주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-040200-341-dLFvTeBt.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">7</em>
+                                <p class="device-title">
+                                  [다음] 버튼을 눌러주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-040206-532-g6BGR6WS.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">8</em>
+                                <p class="device-title">
+                                  가입자 본인인증을 진행해주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-040216-739-A1rOZVtr.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">9</em>
+                                <p class="device-title">
+                                  본인인증 완료 후 [확인] 버튼을 눌러주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-040224-264-wePjOGGm.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">10</em>
+                                <p class="device-title">
+                                  신규 휴대폰에 eSIM 다운로드를 확인 해주세요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-040236-106-FIEK4e7V.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">11</em>
+                                <p class="device-title">
+                                  기기변경 처리가 완료돼요.
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230314-040242-307-ribeMkYe.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <em class="esim-box-empha -pt-50">애플워치 eSIM 개통</em>
+    <h5 class="esim-box-title">
+      별도로 구매하신 애플워치도<br />손쉽게 가입/개통 하실 수 있어요
+    </h5>
+    <div class="esim-box-img">
+      <a target="_blank" title="새 창 열림" href="https://youtu.be/u8bQ00ZbvoE">
+        <img
+          alt="애플워치 eSIM 셀룰러 설정 안내 화면 이미지 : 셀룰러 설정 Apple watch가 iphone에 연결되어 있지 않은 경우에도 Apple Watch에서 셀룰러 데이터를 이용하여 전화를 걸거나 받고, 앱을 사용할 수 있습니다..."
+          src="https://lguplus.com/static/contents/medialog/mg/etc/htmlcont/esim/m_cell_settings.png" />
+      </a>
+    </div>
+    <p class="esim-box-txt">
+      오픈마켓 등에서 별도 구매하신 애플워치도<br />
+      블루투스 페어링을 통해서 손쉽게 가입/연동 하실 수 있습니다.<br />
+      <strong class="">※ 단, 보유하신 애플워치는 LG유플러스에 가입 되어 있으셔야
+        됩니다.</strong><br />
+      &nbsp; &nbsp; &nbsp; (듀얼넘버, 원넘버 가입자는 서비스 가입제한)
+    </p>
+
+    <div class="acco-box slide-acco -mt-35">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_2_1">
+              <div class="c-acc-tit">
+                <strong><i class="ico"><img
+                      src="https://lguplus.com/static/contents/medialog/mg/etc/htmlcont/esim/ic_iphone_applewatch.png"
+                      alt="내용 참조" /></i>내 아이폰 애플워치 eSIM 가입 방법</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_2_1" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <div class="slide-content">
+                    <div class="m-swiper multiple-type full put-indicator-outside swiper-multiple">
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">1</em>
+                                <p class="device-title">
+                                  아이폰의 워치앱에서<br />
+                                  페어링 후 셀룰러 설정
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://lguplus.com/static/contents/medialog/mg/etc/htmlcont/esim/m_img_applewatch_esim_01.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">2</em>
+                                <p class="device-title">서비스 약관동의</p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://lguplus.com/static/contents/medialog/mg/etc/htmlcont/esim/m_img_applewatch_esim_2.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">3</em>
+                                <p class="device-title">본인인증</p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://lguplus.com/static/contents/medialog/mg/etc/htmlcont/esim/m_img_applewatch_esim_03.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">4</em>
+                                <p class="device-title">아이폰 가입정보 확인</p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://lguplus.com/static/contents/medialog/mg/etc/htmlcont/esim/m_img_applewatch_esim_04.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">5</em>
+                                <p class="device-title">애플워치 요금제 선택</p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://lguplus.com/static/contents/medialog/mg/etc/htmlcont/esim/m_img_applewatch_esim_05.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">6</em>
+                                <p class="device-title">서비스가입 진행</p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://lguplus.com/static/contents/medialog/mg/etc/htmlcont/esim/m_img_applewatch_esim_06.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">7</em>
+                                <p class="device-title">서비스 가입완료</p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://lguplus.com/static/contents/medialog/mg/etc/htmlcont/esim/m_img_applewatch_esim__07.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-util-box">
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="acco-box slide-acco -mt-12">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_2_2">
+              <div class="c-acc-tit">
+                <strong><i class="ico"><img
+                      src="https://lguplus.com/static/contents/medialog/mg/etc/htmlcont/esim/ic_applewatch.png"
+                      alt="내용 참조" /></i>내 아이폰 애플워치 eSIM FAQ</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_2_2" style="display: none" class="collapse">
+              <div class="content">
+                <div class="slide-explan">
+                  <div class="item">
+                    <p class="list-title">
+                      신규 가입/개통 할 수 있는 애플워치는 어떤 종류가 있나요?
+                    </p>
+                    <div>
+                      애플워치 시리즈3, 4, 5, 6, 7, 8, 9<br />
+                      애플워치 SE, SE2<br />
+                      애플워치 Ultra, Ultra2<br />
+                    </div>
+                  </div>
+                  <div class="item">
+                    <p class="list-title">
+                      별도 구매한 애플워치를 eSIM 가입/개통은 어떻게 하나요?
+                    </p>
+                    <div>
+                      <strong>우선, 보유하신 아이폰이 LG유플러스에 가입되어 있으셔야
+                        합니다.</strong>
+                      (※단, 듀얼넘버, 원넘버 가입자는 서비스 가입제한
+                      됩니다.)<br /><br />
+
+                      [애플워치 eSIM 가입/개통하기] : <br />
+                      동영상을 참고 하세요.<br />
+                      <ul>
+                        <li>
+                          ①아이폰과 애플워치를 블루투스 페어링(블루투스로
+                          연결하기)을 먼저 해주세요.
+                        </li>
+                        <li>
+                          ② 애플워치의 네트워크 활성화를 진행해 주시면 됩니다.
+                        </li>
+                        <li>
+                          ③ 본인 확인이후, 가입정보 확인 및 요금제를 선택하시면
+                          가입/개통 됩니다.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <p class="list-title">
+                      애플워치 eSIM 다운로드 시 비용은 얼마인가요?
+                    </p>
+                    <div>
+                      eSIM 최초 개통시, 발급비용은 2,750원 입니다.<br />
+                      ※ 고객 과실로 eSIM 중복 발급 시 발급 비용이 발생 할 수도
+                      있으니, 가입 시 정확한 정보를 입력해 주세요!
+                    </div>
+                  </div>
+                  <div class="item">
+                    <p class="list-title">
+                      현재 애플워치를 사용 중입니다. 기기변경도 가능한가요?
+                    </p>
+                    <div>
+                      <strong>기기변경은 불가능 합니다. 애플워치 기기변경을 위해서는
+                        매장에 방문해 주시기 바랍니다.</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <em class="esim-box-empha -pt-50">태블릿 eSIM 개통</em>
+    <h5 class="esim-box-title">
+      별도로 구매하신 태블릿도<br />손쉽게 가입/개통 하실 수 있어요
+    </h5>
+    <div class="esim-box-img">
+      <img alt="eSIM 개통을 진행해주세요!"
+        src="https://image.lguplus.com/static/contents/dfluid/images/backoffice-contents/M/mobile/esim_cont03.png" />
+    </div>
+    <p class="esim-box-txt">
+      오픈마켓 등에서 별도 구매하신 태블릿도<br />손쉽게 가입/연동하실 수
+      있습니다.
+    </p>
+
+    <div class="acco-box slide-acco -mt-35">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_3_1">
+              <div class="c-acc-tit">
+                <strong><i class="ico"><img
+                      src="https://image.lguplus.com/static/contents/dfluid/images/backoffice-contents/M/mobile/ico_tablet.png"
+                      alt="내용 참조" /></i>내 태블릿 eSIM 가입 방법</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_3_1" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <div class="slide-content">
+                    <h5 class="slide-device">아이패드</h5>
+                    <div class="m-swiper multiple-type full put-indicator-outside swiper-multiple">
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">1</em>
+                                <p class="device-title">
+                                  eSIM을 개통한 아이패드에 오는 Push 메시지를
+                                  눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/contents/dfluid/images/backoffice-contents/M/mobile/esim_tab01.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">2</em>
+                                <p class="device-title">
+                                  eSIM 활성화를 해주세요<br />(eSIM 활성화 후
+                                  계속 버튼 탭)
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/contents/dfluid/images/backoffice-contents/M/mobile/esim_tab02.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">3</em>
+                                <p class="device-title">
+                                  eSIM 활성화 진행을 <br />기다려주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/contents/dfluid/images/backoffice-contents/M/mobile/esim_tab03.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">4</em>
+                                <p class="device-title">
+                                  셀룰러 설정 완료를 누르면 끝!
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/contents/dfluid/images/backoffice-contents/M/mobile/esim_tab04.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-util-box">
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-content -mt-35">
+                    <h5 class="slide-device">갤럭시탭</h5>
+                    <div class="m-swiper multiple-type full put-indicator-outside swiper-multiple">
+                      <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">1</em>
+                                <p class="device-title">
+                                  태블릿 [설정] 메뉴의 [연결]을 눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/contents/dfluid/images/backoffice-contents/M/mobile/esim_tab05.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">2</em>
+                                <p class="device-title">
+                                  [SIM 관리자]<br />메뉴를 눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/contents/dfluid/images/backoffice-contents/M/mobile/esim_tab06.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">3</em>
+                                <p class="device-title">
+                                  [eSIM 추가]<br />메뉴를 눌러주세요
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/contents/dfluid/images/backoffice-contents/M/mobile/esim_tab07.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">4</em>
+                                <p class="device-title">
+                                  요금제 추가 되는 동안 잠시만 기다려주세요!
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/contents/dfluid/images/backoffice-contents/M/mobile/esim_tab08.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="device-box">
+                              <div class="device-txt">
+                                <em class="step-em">5</em>
+                                <p class="device-title">
+                                  eSIM 추가 완료를 누르면 끝!
+                                </p>
+                              </div>
+                              <div class="device-img">
+                                <img
+                                  src="https://image.lguplus.com/static/contents/dfluid/images/backoffice-contents/M/mobile/esim_tab09.png"
+                                  alt="내용 참조" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="acco-box slide-acco -mt-12">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_3_2">
+              <div class="c-acc-tit">
+                <strong><i class="ico"><img
+                      src="https://image.lguplus.com/static/contents/dfluid/images/backoffice-contents/M/mobile/ico_tablet_faq.png"
+                      alt="내용 참조" /></i>내 태블릿 eSIM FAQ</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_3_2" style="display: none" class="collapse">
+              <div class="content">
+                <div class="slide-explan">
+                  <div class="item">
+                    <p class="list-title">
+                      신규 가입/개통 할 수 있는 태블릿은 어떤 종류가 있나요?
+                    </p>
+                    <div>
+                      애플 : iPad Pro 11, iPad Pro 11 2세대, iPad Pro 11 3세대,
+                      iPad Pro 11" 4세대, iPad Pro 11" 5세대, iPad Pro 12.9,
+                      iPad Pro 12.9 4세대, iPad Pro 12.9 5세대, iPad Pro 12.9"
+                      6세대, iPad Pro 12.9" 7세대, iPad Air 3세대, iPad 10.2
+                      7세대, iPad 8세대, iPad 9세대, iPad 10.9" 10세대, iPad
+                      mini 5세대<br /><br />
+                      삼성 : 갤럭시탭 S9, 갤럭시탭 S9+, 갤럭시탭 S9 ultra
+                    </div>
+                  </div>
+                  <div class="item">
+                    <p class="list-title">
+                      태블릿 eSIM 다운로드 시 비용은 얼마인가요?
+                    </p>
+                    <div>
+                      eSIM 최초 개통시, 발급비용은 2,750원 입니다.<br />
+                      (※ 고객 과실로 eSIM 중복 발급 시 발급 비용이 발생 할 수도
+                      있으니, 가입 시 정확한 정보를 입력해 주세요.)
+                    </div>
+                  </div>
+                  <div class="item">
+                    <p class="list-title">셀프 기기변경도 가능한가요?</p>
+                    <div>
+                      셀프 기기변경은 불가합니다.태블릿 기기변경을 위해서는
+                      매장에 방문해주시기 바랍니다.
+                    </div>
+                  </div>
+                  <div class="item">
+                    <p class="list-title">
+                      해외에서 구매해온 eSIM이 지원되는 태블릿인데 eSIM 개통이
+                      불가능하다고 나옵니다. 어떻게 해야 되나요?
+                    </p>
+                    <div>
+                      삼성,애플 외 제조사의 태블릿은 eSIM을 지원하더라도 개통이
+                      불가합니다. USIM으로 개통해주시기 바랍니다.
+                    </div>
+                  </div>
+                  <div class="item">
+                    <p class="list-title">
+                      eSIM이 지원되는 삼성, 애플 태블릿인데 eSIM 개통이
+                      불가능하다고 나옵니다. 어떻게 해야 되나요?
+                    </p>
+                    <div>
+                      자급제 일부 태블릿의 경우, eSIM을 지원하더라도 개통이
+                      불가할 수 있습니다. 전산 등록 후 개통이 가능하니, 고객센터
+                      연락 또는 매장으로 방문 부탁드립니다.
+                    </div>
+                  </div>
+                  <div class="item">
+                    <p class="list-title">
+                      번호변경을 하고 싶습니다. 가능한가요?
+                    </p>
+                    <div>
+                      온라인에서 번호 변경은 지원하지 않습니다. 매장에
+                      방문해주시기 바랍니다.
+                    </div>
+                  </div>
+                  <div class="item">
+                    <p class="list-title">
+                      USIM 사용 중, 쓰던 번호 그대로 eSIM으로 개통하고 싶습니다.
+                      가능한가요?
+                    </p>
+                    <div>
+                      USIM으로 쓰던 번호를 eSIM으로 변경은 온라인에서 지원하지
+                      않습니다.매장에 방문해 주시기 바랍니다.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- e -->
+  </div>
+  <div class="esim-box">
+    <em class="esim-box-empha">eSIM Q&A</em>
+    <h5 class="esim-box-title">아직은 처음이라<br />궁금한게 많을 거예요</h5>
+    <div class="acco-box qna-acco -mt-27">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header not-collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_1_5">
+              <div class="c-acc-tit">
+                <strong>듀얼넘버플러스가 뭐에요?</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_1_5" style="display: block" class="collapse" visible>
+              <div class="content">
+                <div>
+                  <p>
+                    기존 LG유플러스 번호가 있는 고객님들이 신청 가능한 eSIM
+                    요금제에요!<br />기존 번호가 있으시면 8,800원이라는 저렴한
+                    가격으로 새로운 번호를 사용하실 수 있습니다. eSIM 가입
+                    버튼을 클릭하시고 [듀얼넘버플러스] 로 가입 신청 하시면
+                    되세요!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acco-box qna-acco -mt-12">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_1_6">
+              <div class="c-acc-tit">
+                <strong>eSIM 다운로드 시 비용이 얼마인가요?</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_1_6" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <p>
+                    ※eSIM 오픈 이벤트로, LG유플러스에서 eSIM 최초 개통시 발급
+                    비용(2,750원)을 무료로 지원합니다.(22년 12월 31일 개통
+                    완료건까지)<br />신규가입 및 번호이동, 기기변경의 경우
+                    eSIM을 새로 발급 받으셔야 합니다. 고객 과실로 eSIM 중복 발급
+                    시 발급 비용이 발생 할 수 도 있으니, 가입 시 정확한 정보를
+                    입력해주세요!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acco-box qna-acco -mt-12">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_1_7">
+              <div class="c-acc-tit">
+                <strong>휴대폰 정보는 왜 수집하나요?</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_1_7" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <p>
+                    휴대폰 구매없이 eSIM만 단독으로 구매하기 위해선,
+                    개통하시려는 휴대폰의 IMEI(단말기 고유 식별 번호), EID(eSIM
+                    식별자) 등이 필요 합니다.<br />보유하고 계신 휴대폰이 eSIM
+                    가입이 되는 지와 25% 요금할인(선택약정할인)이 가능한지
+                    조회하기 위해서 필요해요!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acco-box qna-acco -mt-12">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_1_8">
+              <div class="c-acc-tit">
+                <strong>eSIM으로 기기변경을 하고 싶어요</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_1_8" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <p>
+                    현재 유플러스 고객님 이시라면 유플러스 닷컴에
+                    기기변경(유플러스 번호는 그대로 유지하면서 휴대폰만 새로
+                    구매하시면 eSIM으로 기기변경 하실 수 있어요!<br />다만
+                    자급제 휴대폰에서 eSIM으로 기기변경(유플러스에서 사용하고
+                    있는 eSIM/유심을 자급제 휴대폰 eSIM으로 옮김)하는 기능은
+                    유플러스닷컴에서는 아직 준비 중이에요! 그 전까진 가까운
+                    대리점에 방문해주시면 바로 변경 가능합니다!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acco-box qna-acco -mt-12">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_1_9">
+              <div class="c-acc-tit">
+                <strong>eSIM 스스로 개통중에 오류가 발생했어요!</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_1_9" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <p>
+                    eSIM 스스로 개통중에 오류가 발생하는 경우는 <br />
+                    ① 입력된 휴대폰 정보가 부정확하거나,<br />
+                    ② 가입 가능한 회선 초과 등의 이유가 있어요!<br />
+                    이 경우 상담사가 확인후 순차적으로 전화를 드리니, 당황하지
+                    마시고 잠시만 기다려 주세요! 또는 고객센터(1644-7009) 로
+                    전화 주시면 친절히 안내 해드릴게요!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acco-box qna-acco -mt-12">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_1_10">
+              <div class="c-acc-tit">
+                <strong>eSIM 사용 방법이 궁금해요!</strong>
+              </div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_1_10" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <p>
+                    eSIM으로 새로운 번호가 생겼는데 사용 방법이 궁금하시나요?
+                    '2'것만 기억하세요!<br />
+                    '전화 걸기/문자 보내기/연락처 관리 방법'을 쉽게 설명
+                    드립니다.
+                    <a href="https://mstg.lguplus.com/ujam/61" data-route target="_blank" title="새 창 열림"
+                      style="vertical-align: top; text-decoration: underline">[보러 가기]</a>
+                    <!-- 운영: https://m.lguplus.com/ujam/62 -->
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="esim-box bg-gray">
+    <em class="esim-box-empha">공지사항</em>
+    <h5 class="esim-box-title">eSIM 가입전에<br />이건 꼭 체크해주세요!</h5>
+    <div class="acco-box -mt-28">
+      <div class="c-accordion-wrap useAccordion esim-intro-acco">
+        <div class="accordion c-accordion-type1">
+          <div class="c-accordion-group">
+            <div class="c-accordion-header collapsed" role="button" tabindex="0" aria-expanded="false"
+              aria-controls="_uid_1_11">
+              <div class="c-acc-tit"><strong>꼭 확인해주세요</strong></div>
+              <div>
+                <i class="ico-toggle when-open"></i>
+                <i class="ico-toggle when-closed"></i>
+              </div>
+            </div>
+            <div id="_uid_1_11" style="display: none" class="collapse">
+              <div class="content">
+                <div>
+                  <ul class="c-bullet-type-circle">
+                    <li>eSIM 가입신청은 신규가입, 번호이동만 가능합니다.</li>
+                    <li>
+                      eSIM 가입 신청하시면 신청내역 확인 및 개통 안내를 위해
+                      유플러스닷컴 고객센터에서 전문 상담사가 고객님께 전화를
+                      드립니다. 셀프개통으로 가입 신청하실 경우, 별도 안내 전화
+                      없이 바로 eSIM의 개통 과정이 진행됩니다. eSIM심 가입
+                      관련된 궁금하신 사항은 전문 상담사에게 문의해 주시기
+                      바랍니다. (1644-7009)
+                    </li>
+                    <li>
+                      단말기는 eSIM의 활성화를 진행해야 사용할 수 있습니다. 신규
+                      가입시 개통 처리가 되면, eSIM의 활성화가 가능하며,
+                      번호이동은 가입 신청 후,고객센터(1644-7009)를 통해
+                      개통요청을 해주시기 바랍니다.
+                    </li>
+                    <li>
+                      미납, 연체, 정지, 일시 정지 중에는 개통할 수 없습니다.
+                    </li>
+                    <li>개인 고객만 가능합니다.</li>
+                    <li>
+                      5G 요금제의 경우 전국망 구축 전까지 미구축 지역에서는
+                      LTE로 이용됩니다.
+                    </li>
+                    <li>
+                      단말기 종류 및 상태에 따라 LG U<sup>+</sup>주요 서비스가
+                      이용되지 않을 수 있습니다.
+                    </li>
+                    <li>
+                      고객님의 소중한 개인정보를 보호하기 위해 해외에서의 접속을
+                      제한하고 있습니다. eSIM 개통은 국내망에서만 가능하고,
+                      개통된 이후에는 해외에서 자유롭게 데이터 사용이
+                      가능합니다.
+                    </li>
+                    <li>
+                      상품권 발송일 기준 정지/해지/명의변경 등 비정상 이용상태의
+                      경우 지급 제외됩니다.
+                    </li>
+                    <li>
+                      상품권 문의는 공식 대행사인 (주)존파이브에서 업무를
+                      대행합니다.
+                    </li>
+                    <li>발송 대행을 위해 개인정보가 대행사에 제공됩니다.</li>
+                    <li>상품권은 고객님께서 개통하신 번호로 발송됩니다.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1091 @@
+<style>
+  .usim-intro-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+  .usim-intro-wrap .usim-arrow {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 35px;
+    height: 12px;
+    background: url("https://stg.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230316-044426-209-wRS8JQbm.png")
+      no-repeat 0 0;
+    background-size: contain;
+    animation: arrowmove 2s ease-in-out infinite;
+  }
+  @keyframes arrowmove {
+    0% {
+      transform: translate(-50%, -9px);
+    }
+    50% {
+      transform: translate(-50%, 0);
+    }
+    100% {
+      transform: translate(-50%, -9px);
+    }
+  }
+  .usim-box {
+    padding: 70px 30px 50px 30px;
+    text-align: center;
+  }
+  .usim-box.banner {
+    padding-top: 7.083vw;
+    padding-bottom: 5.556vw;
+  }
+  .usim-box:nth-child(odd) {
+    background: #f5f6f8;
+  }
+  .usim-box:nth-child(even) {
+    background: #fff;
+  }
+  .usim-box:last-child {
+    background: #f5f6f8;
+  }
+  .usim-box.bg-gray {
+    background: #f5f6f8;
+  }
+  .usim-box.bg-white {
+    background: #fff;
+  }
+
+  .usim-box .usim-box__flag {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.04em;
+    color: #e6007e;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  .usim-box .usim-box__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 39px;
+    letter-spacing: -0.04em;
+    color: #222;
+  }
+  .usim-box .usim-box__title em {
+    color: #e6007e;
+    position: relative;
+  }
+  .usim-box .usim-box__title em.down::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: -34px;
+    width: 30px;
+    height: 30px;
+    background: url("https://stg.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230316-032527-865-Si1oinVc.png")
+      no-repeat center center;
+    background-size: contain;
+  }
+  .usim-box .usim-box__title em.up::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: -34px;
+    width: 30px;
+    height: 30px;
+    background: url("https://stg.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230316-032540-953-WpEIHVqG.png")
+      no-repeat center center;
+    background-size: contain;
+  }
+
+  .benefit-box {
+    margin-top: 40px;
+  }
+
+  .benefit-box .box {
+    border-radius: 30px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    padding-bottom: 35px;
+    margin-top: 40px;
+    position: relative;
+  }
+  .benefit-box .box:first-child {
+    margin-top: 55px;
+  }
+  .benefit-box .box img {
+    border: 0;
+    vertical-align: top;
+  }
+  .benefit-box .box img.animation_img {
+    width: 300px;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    animation: flagMoveGateway 2.4s ease-in-out infinite;
+  }
+
+  .benefit-box .title {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 30px;
+    letter-spacing: -0.04em;
+    color: #fff;
+  }
+
+  .benefit-box .box01 {
+    background: linear-gradient(180deg, #5762a3 0%, #424b84 100%);
+    height: 280px;
+    padding-bottom: 21px;
+  }
+  .benefit-box .box01 .desc {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    margin-top: 4px;
+    color: #b9c2ff;
+  }
+
+  .benefit-box .box02 {
+    background: linear-gradient(180deg, #f5f6f8 0%, #edeff2 100%);
+    overflow: hidden;
+  }
+  .benefit-box .box02 .title {
+    color: #222;
+  }
+  .benefit-box .box02 .slide-img-wrap {
+    width: 100%;
+    padding: 0 40px;
+    margin-bottom: 50px;
+    overflow-x: auto;
+  }
+  /* .benefit-box .box02 .slide-img-wrap::-webkit-scrollbar {
+    display: none;
+  } */
+  .benefit-box .box02 .slide-img-wrap ul {
+    overflow: hidden;
+    width: max-content;
+    /* animation: scrollMove 40s linear infinite; */
+  }
+  .benefit-box .box02 .slide-img-wrap ul li {
+    float: left;
+  }
+  .benefit-box .box02 .slide-img-wrap ul li + li {
+    margin-left: 20px;
+  }
+
+  .benefit-box .box02 .slide-img-wrap ul li img {
+    width: 100px;
+  }
+
+  .benefit-box .box03 {
+    background: linear-gradient(180deg, #fc7d8d 0%, #f96478 100%);
+  }
+  /* .benefit-box .box03 img.animation_img {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+  } */
+
+  @keyframes flagMoveGateway {
+    0% {
+      transform: translate(-50%, -18px);
+    }
+    50% {
+      transform: translate(-50%, 0);
+    }
+    100% {
+      transform: translate(-50%, -18px);
+    }
+  }
+  @keyframes scrollMove {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-39%);
+    }
+    50% {
+      transform: translateX(-78%);
+    }
+    75% {
+      transform: translateX(-39%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .slide-box {
+    width: 280px;
+    height: 378px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 40px;
+  }
+  .slide-box .m-swiper {
+    overflow: visible;
+  }
+  .slide-box .m-swiper .swiper-pagination .swiper-pagination-bullet {
+    overflow: hidden;
+    padding: 0;
+    /* margin: 0 2.5px;
+    width: 8px;
+    height: 8px; */
+    margin: 0 6px;
+    width: 12px;
+    height: 12px;
+    font-size: inherit;
+    line-height: inherit;
+    color: transparent;
+    white-space: nowrap;
+    border-radius: 50%;
+    /* border: none; */
+    /* background-color: #ccc; */
+    border: solid 2px #424242;
+    background-color: #ddd;
+    opacity: 1;
+  }
+  .slide-box .section_slick {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+  .slide-box
+    .m-swiper
+    .swiper-pagination
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    /* background-color: #e6007e; */
+    width: 36px;
+    border: solid 2px #333;
+    background-color: #aaa;
+    border-radius: 6px;
+    height: 12px;
+  }
+  .slide-box .m-swiper .swiper-slide {
+    overflow: hidden;
+    position: relative;
+    z-index: 1 !important;
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0 10px;
+    box-shadow: 0px 2px 20px rgba(49, 60, 96, 0.2);
+    border-radius: 25px;
+    background: #fff;
+  }
+  .slide-box .m-swiper .swiper-slide .contBox {
+    padding: 32px 0 30px;
+  }
+  .slide-box .m-swiper .swiper-slide .contBox .title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: 222;
+    margin-bottom: 20px;
+  }
+  .slide-box .m-swiper .swiper-slide .contBox img {
+    width: 150px;
+  }
+  .slide-box .m-swiper .swiper-slide .contBox .desc {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #222;
+  }
+
+  .slide-box .m-swiper .swiper-slide .contBox .desc em {
+    color: #e6007e;
+  }
+  .slide-box .m-swiper .swiper-slide .contBox .info {
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.08em;
+    color: #6d7582;
+  }
+  .banner .slide-box .m-swiper .swiper-slide .contBox {
+    margin-top: 0;
+    padding-top: 4.167vw;
+  }
+  .banner .slide-box .m-swiper .swiper-slide .contBox .desc {
+    font-weight: 700;
+  }
+  .banner .slide-box .m-swiper .swiper-slide .contBox .c-btn-rect-outline-1 {
+    margin-top: 22px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .m-swiper .swiper-pagination {
+    display: inline-block;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    font-size: 1px;
+    line-height: 0.8;
+  }
+  .swiper-slide-prev {
+    transform: translateX(calc(100% - 216px)) !important;
+  }
+  .swiper-slide-next {
+    transform: translateX(calc(-100% - -216px)) !important;
+  }
+
+  .qna-box {
+    text-align: left;
+    margin-top: 40px;
+  }
+  .qna-box .acco-box .c-accordion-wrap.esim-intro-acco {
+    background: #fff;
+    border-radius: 15px;
+  }
+  .bg-white .qna-box .acco-box .c-accordion-wrap.esim-intro-acco {
+    background: #f4f6fd;
+  }
+  .qna-box .acco-box .c-accordion-wrap.esim-intro-acco .c-accordion-type1 {
+    border-top: 0;
+  }
+  .qna-box
+    .acco-box
+    .c-accordion-wrap.esim-intro-acco
+    .c-accordion-type1
+    .c-accordion-header {
+    border-bottom: 0;
+    background: inherit;
+    padding: 17px 20px 17px 20px;
+  }
+  .qna-box
+    .acco-box
+    .c-accordion-wrap.esim-intro-acco
+    .c-accordion-type1
+    .c-accordion-header.not-collapsed:before {
+    display: none;
+  }
+  .qna-box
+    .acco-box
+    .c-accordion-wrap.esim-intro-acco
+    .c-accordion-type1
+    .c-accordion-header
+    strong {
+    text-overflow: initial;
+    white-space: initial;
+  }
+  .qna-box
+    .acco-box
+    .c-accordion-wrap.esim-intro-acco
+    .c-accordion-type1
+    .c-accordion-header.not-collapsed
+    strong {
+    font-weight: bold;
+  }
+  .qna-box
+    .acco-box
+    .c-accordion-wrap.esim-intro-acco
+    .c-accordion-type1
+    .c-accordion-header
+    strong {
+    font-size: 15px;
+  }
+
+  .qna-box .acco-box .c-accordion-wrap.esim-intro-acco .content {
+    padding: 16px 20px 20px;
+  }
+  .qna-box .acco-box .c-accordion-wrap.esim-intro-acco .content__video {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .qna-box
+    .acco-box
+    .c-accordion-wrap.esim-intro-acco
+    .content
+    [class*="c-bullet-type-"]
+    > li
+    ~ li {
+    margin-top: 4px;
+  }
+  .qna-box
+    .acco-box
+    .c-accordion-wrap.esim-intro-acco
+    .content
+    [class*="c-bullet-type-"]
+    > li {
+    word-break: inherit;
+  }
+  .qna-box .acco-box .c-accordion-wrap.esim-intro-acco .content p {
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: -1.12px;
+    color: #000;
+  }
+</style>
+<div>
+  <div class="usim-intro-wrap">
+    <div class="usim-arrow"><span class="blind">아래화살표</span></div>
+    <!-- Added -->
+    <div class="usim-box banner">
+      <div class="slide-box">
+        <div class="section_slick">
+          <div class="m-swiper swiper-coverflow">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" aria-hidden="true">
+                  <div class="contBox">
+                    <img
+                      alt="eSIM 셀프개통을 표현한 이미지 입니다."
+                      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240507-023555-189-JALJtfzq.png"
+                    />
+                    <p class="desc">
+                      잠깐! 유심이 없더라도<br />eSIM으로 셀프개통 할 수 있어요!
+                    </p>
+                    <p class="info">eSIM 가능 휴대폰 모델에 한함</p>
+                    <a
+                      data-route
+                      href="/mobile/esim"
+                      data-gtm-click-url="https://m.lguplus.com/mobile/esim"
+                      data-gtm-event-name="link_click"
+                      data-gtm-event-category="클릭"
+                      data-gtm-event-action="요금제 목록 영역 - 링크 클릭"
+                      data-gtm-event-label="컨텐츠 : eSIM가입하러 가기"
+                      data-gtm-click-location="요금제 목록 영역"
+                      data-gtm-click-text="eSIM가입하러 가기"
+                      class="c-btn-rect-outline-1"
+                    >
+                      eSIM가입하러 가기
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide" aria-hidden="true">
+                  <div class="contBox ty02">
+                    <img
+                      alt="LG U+ 액세서리 쿠폰 3만원 이미지"
+                      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240809-103705-496-QBbEloyD.png"
+                      style="width: 200px; margin-top: -10px"
+                    />
+                    <p class="desc" style="margin-top: 2px">
+                      셀프개통하면<br />네이버페이 1만원을 더 받아요!
+                    </p>
+                    <p class="info">
+                      대상 요금제: 5G 다이렉트 34 / 37.5 / 42 / 44 / 46 / 47.5 /
+                      51 / 59 / 65 / 69 (유쓰 34 / 37.5 / 42 / 44 / 46 / 47.5 /
+                      51 포함), LTE 다이렉트 34.5 / 45
+                    </p>
+                    <a
+                      class="c-btn-rect-outline-1"
+                      style="margin-top: 10px"
+                      href="/mobile/self-esim/activate?regType=&selfYn=true&dvicType=E-5G02"
+                      data-route
+                      data-gtm-click-url="https://m.lguplus.com/mobile/self-esim/activate?regType=&selfYn=true&dvicType=E-5G02"
+                      data-gtm-event-name="order_button_click"
+                      data-gtm-event-category="클릭"
+                      data-gtm-event-action="유심가입 영역 - 주문 버튼 클릭"
+                      data-gtm-event-label="컨텐츠 : 셀프 개통 하러가기"
+                      data-gtm-click-location="유심가입 영역"
+                      data-gtm-click-direction="유심"
+                      data-gtm-click-text="셀프 개통 하러가기"
+                    >
+                      셀프 개통 하러가기
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--//-->
+    <div class="usim-box">
+      <em class="usim-box__flag">다이렉트 요금제</em>
+      <p class="usim-box__title">
+        다이렉트 요금제로<br />
+        통신비는 <em class="down">낮추고</em><br />
+        혜택은 <em class="up">높이고</em>
+      </p>
+      <div class="slide-box">
+        <div class="section_slick">
+          <div class="m-swiper swiper-coverflow">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" aria-hidden="true">
+                  <div class="contBox">
+                    <p class="title">저렴하고 합리적이에요</p>
+                    <img
+                      alt="요금명세서와 동전, %할인을 표현한 이미지 입니다."
+                      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-023302-833-8Fvf9lsr.png"
+                    />
+                    <p class="desc">
+                      사용하던 데이터 그대로<br />
+                      요금은 최대 <em>31%</em> 아낄 수 있어요
+                    </p>
+                    <p class="info">일반 데이터 무제한 요금제 대비</p>
+                  </div>
+                </div>
+                <div class="swiper-slide" aria-hidden="true">
+                  <div class="contBox">
+                    <p class="title">사용 기간은 마음대로</p>
+                    <img
+                      alt="달력에 체크가 있는 이미지 입니다."
+                      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-023320-165-vBu3jkLn.png"
+                    />
+                    <p class="desc">
+                      <em>약정없이</em> 원하는 달만큼 쓰고<br />
+                      해지도 원할때 쉽게해요
+                    </p>
+                    <p class="info">무약정으로 요금제 사용</p>
+                  </div>
+                </div>
+                <div class="swiper-slide" aria-hidden="true">
+                  <div class="contBox">
+                    <p class="title">결합하면 더 할인돼요</p>
+                    <img
+                      alt="다이렉트요금제가 표기된 핸드폰 화면과 동전 이미지 입니다."
+                      src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-023338-105-5bZSEatZ.png"
+                    />
+                    <p class="desc">
+                      다이렉트끼리 <em>결합</em>하면<br />
+                      더 할인 받을수 있어요
+                    </p>
+                    <p class="info">
+                      다이렉트 59/69간 결합시 최대 14,000원 할인
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="usim-box" id="anchorPoint1">
+      <em class="usim-box__flag">이런 점이 좋아요</em>
+      <p class="usim-box__title">합리적인 소비를<br />고려하는 당신에게</p>
+      <div class="benefit-box">
+        <!-- <div class="box box01">
+          <img
+            src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-022633-340-h4fliErv.png"
+            alt="손바닥 위에 유심칩과 토큰이 올려져있는 이미지 입니다."
+            class="animation_img"
+          />
+          <p class="title">
+            유심칩<small>(7,700원)</small>을<br />무료료 받을 수 있어요
+          </p>
+          <p class="desc">유심 가입 고객 한정</p>
+        </div> -->
+        <div class="box box02">
+          <div class="slide-img-wrap">
+            <ul>
+              <li>
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-022933-153-WwPEZ2uX.png"
+                  alt="쇼핑쿠폰팩-카카오택시"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-022946-695-mGzPT1YN.png"
+                  alt="쇼핑쿠폰팩-토스"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-022959-503-DnAT3ND9.png"
+                  alt="쇼핑쿠폰팩-네이버페이"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-023010-454-ZNmM1t0Z.png"
+                  alt="쇼핑쿠폰팩-요기요"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-023021-788-D7byzDSb.png"
+                  alt="쇼핑쿠폰팩-GS Fresh Mall"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-023033-579-1I8UEFLI.png"
+                  alt="쇼핑쿠폰팩-유독"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-023057-154-1epNbchV.png"
+                  alt="쇼핑쿠폰팩-SSG PAY"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-023133-015-LmJSgURs.png"
+                  alt="쇼핑쿠폰팩-GS25"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-023145-367-8a31vreD.png"
+                  alt="쇼핑쿠폰팩-Auction, Gmarket"
+                />
+              </li>
+            </ul>
+          </div>
+          <p class="title">
+            내가 원하는 쇼핑 쿠폰을<br />매 월마다 받을 수 있어요
+          </p>
+        </div>
+        <div class="box box03">
+          <img
+            src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230407-022644-383-hi0M7NqY.png"
+            alt="선물박스 이미지 입니다."
+            class="animation_img"
+          />
+          <p class="title">트랜디한 사은품을<br />골라서 받을 수 있어요</p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="usim-box">
+      <em class="usim-box__flag">간편한 가입</em>
+      <p class="usim-box__title">
+        요금제 선택부터<br>
+        가입까지 <em>3분</em>이면 충분
+      </p>
+    </div> -->
+    <div class="usim-box -pt-50">
+      <em class="usim-box__flag">유심 Q&amp;A</em>
+      <p class="usim-box__title">자주하는 질문과<br />답변을 모았어요</p>
+      <div class="qna-box">
+        <div class="acco-box">
+          <div class="c-accordion-wrap useAccordion esim-intro-acco">
+            <div class="accordion c-accordion-type1">
+              <div class="c-accordion-group">
+                <div
+                  class="c-accordion-header not-collapsed"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="true"
+                  aria-controls="_uid_1_5"
+                >
+                  <div class="c-acc-tit">
+                    <strong
+                      >유심 가입이 뭔가요?<br />누가 가입할 수 있나요?</strong
+                    >
+                  </div>
+                  <div>
+                    <i class="ico-toggle when-open"></i>
+                    <i class="ico-toggle when-closed"></i>
+                  </div>
+                </div>
+                <div
+                  id="_uid_1_5"
+                  style="display: block"
+                  class="collapse"
+                  visible
+                >
+                  <div class="content">
+                    <div>
+                      <p>
+                        유플러스닷컴에서는 휴대폰을 변경하지 않아도 유심 가입 시
+                        LG U<sup>+</sup>의 모든 요금제를 이용할 수 있습니다.
+                        유심은 신규가입/번호이동 고객이 가입 가능합니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acco-box -mt-12">
+          <div class="c-accordion-wrap useAccordion esim-intro-acco">
+            <div class="accordion c-accordion-type1">
+              <div class="c-accordion-group">
+                <div
+                  class="c-accordion-header collapsed"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="_uid_1_6"
+                >
+                  <div class="c-acc-tit">
+                    <strong
+                      >유심을 신청했습니다. 주문이 정상적으로 완료됐는지
+                      궁금합니다.</strong
+                    >
+                  </div>
+                  <div>
+                    <i class="ico-toggle when-open"></i>
+                    <i class="ico-toggle when-closed"></i>
+                  </div>
+                </div>
+                <div id="_uid_1_6" style="display: none" class="collapse">
+                  <div class="content">
+                    <div>
+                      <p>
+                        신청서 접수가 완료되면 신청서에 기재하신 휴대폰 번호로
+                        신청 완료 MMS 문자가 발송됩니다.<br />신청서 확인 URL
+                        주소로 접속하신 후, 로그인 혹은 비회원 신청/주문조회를
+                        통해 주문 내역을 확인하실 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acco-box -mt-12">
+          <div class="c-accordion-wrap useAccordion esim-intro-acco">
+            <div class="accordion c-accordion-type1">
+              <div class="c-accordion-group">
+                <div
+                  class="c-accordion-header collapsed"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="_uid_1_7"
+                >
+                  <div class="c-acc-tit">
+                    <strong
+                      >유심을 가지고 있습니다. / 유심을 수령했습니다. 어떻게
+                      개통해야 하나요?</strong
+                    >
+                  </div>
+                  <div>
+                    <i class="ico-toggle when-open"></i>
+                    <i class="ico-toggle when-closed"></i>
+                  </div>
+                </div>
+                <div id="_uid_1_7" style="display: none" class="collapse">
+                  <div class="content">
+                    <div>
+                      <p>
+                        온라인에서 직접 셀프개통할 수 있습니다. 아래 과정대로
+                        진행해주세요.<br />유플러스닷컴에서 유심을 받으셨다면,
+                        동봉된 설명서를 참고해주세요.<br /><br />
+                        ① 유플러스닷컴에 접속해주세요.<br />
+                        ② 로그인을 하거나, 회원가입 버튼 아래의 비회원
+                        신청/주문조회를 통해 주문 내역을 확인해주세요.<br />
+                        ③ 개통하기 버튼을 눌러 개통을 진행해주세요.<br /><br />
+                        [번호이동]<br />
+                        번호이동 사전인증에 동의해주세요.<br />
+                        동의 후 개통이 완료돼요.<br /><br />
+                        [신규가입]<br />
+                        희망번호를 골라주세요.<br />
+                        번호 선택 후 개통이 완료돼요.<br /><br />
+                        ④ 개통을 완료하면 휴대폰에 유심을 장착하고, 휴대폰
+                        전원을 2~3회 ON/OFF 해주세요.<br /><br />
+                        ＊참고하세요!<br />
+                        - LG U<sup>+</sup> 유심으로만 가입/개통이 가능합니다.
+                        (타사 유심으로 가입/개통 불가)<br />
+                        - 태블릿/워치는 eSIM만 셀프개통이 가능합니다. 유심
+                        가입을 원할 경우 상담사 개통으로 진행해주세요.
+                      </p>
+                      <!-- <div class="content__video">
+                        <iframe
+                          width="100%"
+                          src="https://www.youtube.com/embed/O8AAZIkYmns"
+                          title="YouTube video player"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen
+                        ></iframe>
+                      </div> -->
+                      <!-- <p>
+                        ● 온라인 쇼핑몰 등 제휴처에서 유심을 구매하신 경우<br />
+                        가입 신청서 작성 &gt; 개통 요청서 작성 &gt; 개통 완료
+                        &gt; 유심 장착 후 사용 &gt; 개통 사은품 발송
+                      </p>
+                      <div class="content__video" style="margin-bottom: 0">
+                        <iframe
+                          width="100%"
+                          src="https://www.youtube.com/embed/aTShXyCB8ig"
+                          title="YouTube video player"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen
+                        ></iframe>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acco-box -mt-12">
+          <div class="c-accordion-wrap useAccordion esim-intro-acco">
+            <div class="accordion c-accordion-type1">
+              <div class="c-accordion-group">
+                <div
+                  class="c-accordion-header collapsed"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="_uid_1_8"
+                >
+                  <div class="c-acc-tit">
+                    <strong>셀프개통은 언제 할 수 있나요?</strong>
+                  </div>
+                  <div>
+                    <i class="ico-toggle when-open"></i>
+                    <i class="ico-toggle when-closed"></i>
+                  </div>
+                </div>
+                <div id="_uid_1_8" style="display: none" class="collapse">
+                  <div class="content">
+                    <div>
+                      <p>
+                        개통 가능 시간은 아래와 같습니다.<br /><br />
+                        [신규가입]<br />매일 오전 8시~오후 10시<br /><br />
+                        [번호이동]<br />평일/토요일 오전 10시~오후 8시
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acco-box -mt-12">
+          <div class="c-accordion-wrap useAccordion esim-intro-acco">
+            <div class="accordion c-accordion-type1">
+              <div class="c-accordion-group">
+                <div
+                  class="c-accordion-header collapsed"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="_uid_1_9"
+                >
+                  <div class="c-acc-tit">
+                    <strong
+                      >셀프개통이 불가하다고 합니다. 이럴 때 어떻게 개통해야
+                      하나요?</strong
+                    >
+                  </div>
+                  <div>
+                    <i class="ico-toggle when-open"></i>
+                    <i class="ico-toggle when-closed"></i>
+                  </div>
+                </div>
+                <div id="_uid_1_9" style="display: none" class="collapse">
+                  <div class="content">
+                    <div>
+                      <p>
+                        아래에 해당하는 고객님이신가요?<br />고객센터(1644-7009)로
+                        연락 주시면 전화 상담을 통해 개통을 도와드리겠습니다.<br /><br />
+                        ① 태블릿/워치 유심 가입 고객<br />
+                        ② 미성년자/외국인 고객<br />
+                        ③ SKT, KT 출고 단말 중 선택약정 가입을 원하는 고객<br />
+                        ④ 개인 고객이 아닌 법인 고객<br />
+                        ⑤ 신용 불량자 및 스패머로 등록된 고객<br />
+                        ⑥ 할부회선 수 3회선 이상 고객<br />
+                        ⑦ 최근 3개월 이내 해지 이력이 있는 고객<br />
+                        ⑧ 미납 금액이 있는 고객
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acco-box -mt-12">
+          <div class="c-accordion-wrap useAccordion esim-intro-acco">
+            <div class="accordion c-accordion-type1">
+              <div class="c-accordion-group">
+                <div
+                  class="c-accordion-header collapsed"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="_uid_1_10"
+                >
+                  <div class="c-acc-tit">
+                    <strong>유심은 어디서 구매할 수 있나요?</strong>
+                  </div>
+                  <div>
+                    <i class="ico-toggle when-open"></i>
+                    <i class="ico-toggle when-closed"></i>
+                  </div>
+                </div>
+                <div id="_uid_1_10" style="display: none" class="collapse">
+                  <div class="content">
+                    <div>
+                      <p>
+                        유심은 아래의 온/오프라인 채널에서 구매할 수
+                        있습니다.<br /><br />
+                        오프라인: 편의점(이마트24, GS25), U<sup>+</sup>
+                        직영점<br />
+                        온라인: 유플러스닷컴 악세사리몰, 네이버쇼핑, 쿠팡<br /><br />
+                        <a
+                          href="https://www.lguplus.com/mobile/accessory/category/product-view?seoName=usim&urcAcceProdNo=1001003644&random=0.6381774310082022"
+                          title="악세사리몰 유심 보러가기"
+                          >▶악세사리몰 유심 보러가기</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="acco-box -mt-12">
+          <div class="c-accordion-wrap useAccordion esim-intro-acco">
+            <div class="accordion c-accordion-type1">
+              <div class="c-accordion-group">
+                <div
+                  class="c-accordion-header collapsed"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="_uid_1_11"
+                >
+                  <div class="c-acc-tit">
+                    <strong
+                      >유심을 신청했는데 정상적으로 접수가 되었는지
+                      궁금합니다.</strong
+                    >
+                  </div>
+                  <div>
+                    <i class="ico-toggle when-open"></i>
+                    <i class="ico-toggle when-closed"></i>
+                  </div>
+                </div>
+                <div id="_uid_1_11" style="display: none" class="collapse">
+                  <div class="content">
+                    <div>
+                      <p>
+                        신청서 작성이 완료되면 신청서 작성시 기재하신 휴대폰
+                        번호로 안내 MMS 문자가 발송됩니다. 해당 문자의 URL
+                        주소로 접속하신 후 신청서 확인을 통해 정상적으로
+                        접수되었는지 조회가 가능합니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acco-box -mt-12">
+            <div class="c-accordion-wrap useAccordion esim-intro-acco">
+              <div class="accordion c-accordion-type1">
+                <div class="c-accordion-group">
+                  <div
+                    class="c-accordion-header collapsed"
+                    role="button"
+                    tabindex="0"
+                    aria-expanded="false"
+                    aria-controls="_uid_1_12"
+                  >
+                    <div class="c-acc-tit">
+                      <strong
+                        >번호이동으로 가입하면 이전 통신사는<br />제가 해지해야
+                        하나요?</strong
+                      >
+                    </div>
+                    <div>
+                      <i class="ico-toggle when-open"></i>
+                      <i class="ico-toggle when-closed"></i>
+                    </div>
+                  </div>
+                  <div id="_uid_1_12" style="display: none" class="collapse">
+                    <div class="content">
+                      <div>
+                        <p>
+                          개통과 동시에 이전 통신사는 자동으로 해지처리 되며,
+                          사용하신 요금은 U+에서 합산 청구됩니다.<br />(단,
+                          휴대폰 할부금이 남아있는 경우에는 할부금만
+                          이전통신사를 통해 청구됩니다.)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="usim-box -pt-50">
+      <em class="usim-box__flag">공지사항</em>
+      <p class="usim-box__title">유심가입 전에<br />이건 꼭 체크해 주세요!</p>
+      <div class="qna-box">
+        <div class="acco-box">
+          <div class="c-accordion-wrap useAccordion esim-intro-acco">
+            <div class="accordion c-accordion-type1">
+              <div class="c-accordion-group">
+                <div
+                  class="c-accordion-header collapsed"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="_uid_1_13"
+                >
+                  <div class="c-acc-tit"><strong>꼭 확인해주세요</strong></div>
+                  <div>
+                    <i class="ico-toggle when-open"></i>
+                    <i class="ico-toggle when-closed"></i>
+                  </div>
+                </div>
+                <div id="_uid_1_13" style="display: none" class="collapse">
+                  <div class="content">
+                    <div>
+                      <ul class="c-bullet-type-circle">
+                        <li>
+                          유심가입 신청은 신규가입, 번호이동만 가능합니다.
+                        </li>
+                        <li>
+                          유심가입 신청하시면 신청내역 확인 및 개통 안내를 위해
+                          유플러스닷컴 고객센터에서 전문 상담사가 고객님께
+                          전화를 드립니다.<br />셀프개통으로 가입 신청하실 경우,
+                          별도 안내 전화없이 바로 유심 배송이 진행됩니다.<br />유심가입
+                          관련된 궁금하신 사항은 전문 상담사에게 문의해 주시기
+                          바랍니다. (1644-7009)
+                        </li>
+                        <li>
+                          상담사 안내를 통한 유심 가입 시 <br />
+                          1)신규가입은 개통이 완료된 유심을 1~2일 내에 받을 수
+                          있으며<br />
+                          2)번호이동은 유심을 배송받은 후 고객센터 (1644-7009)을
+                          통해 별도 개통 요청을 주시면 됩니다.
+                        </li>
+                        <li>
+                          미납, 연체, 정지, 일시 정지 중에는 개통할 수 없습니다.
+                        </li>
+                        <li>
+                          5G 요금제의 경우 전국망 구축 전까지 미구축 지역에서는
+                          LTE로 이용됩니다.
+                        </li>
+                        <li>
+                          단말기 종류 및 상태에 따라 LG U<sup>+</sup>주요
+                          서비스가 이용되지 않을 수 있습니다.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo 리스트</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.1.0/redux.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      #todoForm {
+        display: flex;
+        margin-bottom: 20px;
+      }
+      #todoInput {
+        flex-grow: 1;
+        padding: 5px;
+        font-size: 16px;
+      }
+      button {
+        padding: 5px 10px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #f1f1f1;
+        margin-bottom: 10px;
+      }
+      .deleteBtn {
+        background-color: #f44336;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Redux Todo 리스트</h1>
+    <form id="todoForm">
+      <input
+        type="text"
+        id="todoInput"
+        placeholder="할 일을 입력하세요"
+        required
+      />
+      <button type="submit">추가</button>
+    </form>
+    <ul id="todoList"></ul>
+
+    <script>
+      // Action Types
+      const ADD_TODO = "ADD_TODO";
+      const DELETE_TODO = "DELETE_TODO";
+
+      // Action Creators (액션 생성자)
+      const addTodo = (text) => ({
+        type: ADD_TODO,
+        payload: { id: Date.now(), text },
+      });
+
+      const deleteTodo = (id) => ({
+        type: DELETE_TODO,
+        payload: id,
+      });
+
+      // 초기 상태를 정의
+      const initialState = {
+        todos: [],
+      };
+
+      // 불변성을 유지하는 리듀서 함수
+      function todoReducer(state = initialState, action) {
+        switch (action.type) {
+          case ADD_TODO:
+            return {
+              ...state,
+              todos: [...state.todos, action.payload],
+            };
+          case DELETE_TODO:
+            return {
+              ...state,
+              todos: state.todos.filter((todo) => todo.id !== action.payload),
+            };
+          default:
+            return state;
+        }
+      }
+
+      // Store
+      const composeEnhancers =
+        window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || Redux.compose;
+      const store = Redux.createStore(todoReducer, composeEnhancers());
+
+      // UI Update
+      function renderTodos() {
+        const todoList = document.getElementById("todoList");
+        const state = store.getState();
+
+        todoList.innerHTML = "";
+        state.todos.forEach((todo) => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+                    ${todo.text}
+                    <button onclick="dispatchDeleteTodo(${todo.id})">삭제</button>
+                `;
+          todoList.appendChild(li);
+        });
+      }
+      // Subscribe to store changes
+      store.subscribe(renderTodos);
+
+      // Event Handlers
+      function dispatchAddTodo(e) {
+        e.preventDefault();
+        const todoInput = document.getElementById("todoInput");
+        const text = todoInput.value.trim();
+        if (text) {
+          store.dispatch(addTodo(text));
+          todoInput.value = "";
+        }
+      }
+
+      function dispatchDeleteTodo(id) {
+        store.dispatch(deleteTodo(id));
+      }
+
+      // Event Listeners
+      document
+        .getElementById("todoForm")
+        .addEventListener("submit", dispatchAddTodo);
+
+      // Initial render
+      renderTodos();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    /*
+      Promise
+
+      [ 뜻 : '약속 ' ]
+      -> "이 작업이 끝나면 '약속'된 결과를 줄게"
+      -> "지금은 결과가 없지만, 나중에 반드시 결과를 알려주겠다는 약속"
+
+      [ 쓰는이유 ]
+      
+      1. 비동기 작업을 깔끔하게 처리
+      2. 코드 가독성 향상
+      3. 복잡한 비동기 로직을 단순화
+
+      [ 프로그래밍에서의 의미 ]
+
+      const 치킨주문 = new Promise((성공,실패)=>{
+        1. 지금은 치킨이 없음
+        2. 20분 후에 치킨을 줄것을 약속
+        
+        setTimeout(()=>{
+          const 치킨완성 = true;
+          
+          if(치킨완성){
+            성공("맛있는 치킨") -> 약속 이행
+          }
+          else{
+            실패("치킨 실패") -> 약속 실패
+          }
+        },2000)
+      });
+
+      [ Promise의 3가지 상태 ]
+      
+      1. 대기(pending) : '약속을 하고 기다리는 중'
+      const promise = new Promise(() => {});
+
+      2. 이행(fulfilled) : '약속을 지킨 상태'
+      Promise.resolve("성공!");
+
+      3. 거부(Rejected) : '약속을 못 지킨 상태'
+      Promise.reject("실패")
+
+
+
+    */
+
+    const myPromise = new Promise((resolve, reject) => {
+      // 비동기 작업 작업 수행
+      if (/* 성공조건 */) {
+        resolve("성공");
+      } else {
+        reject("실패");
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

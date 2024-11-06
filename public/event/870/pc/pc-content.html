@@ -1,0 +1,1412 @@
+<!-- pc -->
+<link rel="stylesheet" as="style" crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<style type="text/css">
+  .new_evt_wrap {
+    position: relative;
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  .new_evt_wrap .section {
+    position: relative;
+    width: 1080px;
+  }
+
+  .new_evt_wrap .section.effect_section {
+    overflow: hidden;
+  }
+
+  .section .event_detail_a {
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .section a,
+  .section button {
+    z-index: 2;
+  }
+
+  /* slick */
+  .section_slick {
+    /* background: url(https://image.lguplus.com/common/images/hsvc/hsvc_event/ev17319/slide_bg.jpg) repeat-y 0 0 !important; */
+    background-color: #d6e3ff;
+  }
+
+  .homRecmd {
+    background: none !important;
+    padding-bottom: 53px !important;
+    margin-top: 44px;
+  }
+
+  .homRecmd .homRecmd_wrap {
+    height: 750px !important;
+    width: 1080px !important;
+    padding: 0 36px !important;
+  }
+
+  .homRecmd .slick-arrow {
+    background: none !important;
+    width: 52px !important;
+    height: 52px !important;
+    z-index: 1 !important;
+    opacity: 100% !important;
+    top: 40% !important;
+  }
+
+  .homRecmd .slick-arrow.slick-prev {
+    background-image: url(https://image.lguplus.com/common/images/hsvc/hsvc_event/ev17319/main_slick_prev_btn.png) !important;
+    margin-left: -506px !important;
+  }
+
+  .homRecmd .slick-arrow.slick-next {
+    background-image: url(https://image.lguplus.com/common/images/hsvc/hsvc_event/ev17319/main_slick_next_btn.png) !important;
+    margin-right: -506px !important;
+  }
+
+  .slick-slide img {
+    display: inline-block !important;
+    height: 100%;
+  }
+
+  .contBox {
+    transition: all 0.1s ease !important;
+    height: 715px;
+    opacity: 0.6 !important;
+    margin: 0 -43px !important;
+    transform: scale(0.7) !important;
+    filter: blur(1.04px) !important;
+    -webkit-filter: blur(1.29px) !important;
+  }
+
+  .center .slick-center .contBox,
+  .swiper-slide-active .contBox {
+    margin: 0 -40px !important;
+    transform: scale(1) !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+    height: 785px !important;
+  }
+
+  .homRecmd_info {
+    font-size: 12px;
+    color: #666666;
+    position: absolute;
+    bottom: 25px;
+    right: 135px;
+  }
+
+  .homRecmd_info li {
+    position: relative;
+    padding-left: 12px;
+    color: #666666;
+  }
+
+  .homRecmd_info li:before {
+    content: "※";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .slick-slide.fade .contBox {
+    padding: 26px 70px !important;
+  }
+
+  .slick-slide.next_slide .contBox {
+    padding: 26px 70px !important;
+  }
+
+  .slick-slide.prev_slide .contBox {
+    padding: 26px 70px !important;
+  }
+
+  .m-swiper.swiper-coverflow {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .m-swiper.swiper-coverflow .swiper-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .m-swiper.swiper-coverflow .swiper-button-prev {
+    width: 52px !important;
+    height: 52px !important;
+    z-index: 1 !important;
+    opacity: 100% !important;
+    top: 400px !important;
+    left: 0 !important;
+    background-image: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230502-104407-801-4lMa839T.png) !important;
+  }
+
+  .m-swiper.swiper-coverflow .swiper-button-prev:after {
+    display: none;
+  }
+
+  .m-swiper.swiper-coverflow .swiper-button-next {
+    width: 52px !important;
+    height: 52px !important;
+    z-index: 1 !important;
+    opacity: 100% !important;
+    top: 400px !important;
+    right: 0 !important;
+    background-image: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230502-104413-729-BBELAFIB.png) !important;
+  }
+
+  .m-swiper.swiper-coverflow .swiper-button-next:after {
+    display: none;
+  }
+
+  /* 툴팁 */
+  .m-swiper.swiper-coverflow .tool_tip {
+    position: absolute;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip .btn_gifts {
+    width: 32px;
+    height: 32px;
+    background: url("/common/images/cmm/ico_common.png") no-repeat -224px 0;
+    vertical-align: top;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip .ico_qustion {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    margin-top: 1px;
+    vertical-align: top;
+    background: none;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_body {
+    position: absolute;
+    top: 36px !important;
+    left: 50%;
+    z-index: 9;
+    width: 240px;
+    height: auto;
+    margin-left: -120px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #666;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+    -webkit-transition: 0.15s ease;
+    -ms-transition: 0.15s ease;
+    transition: 0.15s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_body:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    z-index: 8;
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    background: url("/common/images/cmm/ico_common.png") no-repeat -256px 0;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_body p {
+    color: #666;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_body .txt_noti {
+    display: block;
+    height: 100%;
+    overflow: inherit;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_body .wifi_logo {
+    width: 192px;
+    margin: 0 auto;
+    padding-top: 16px;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_body .wifi_logo:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_body .wifi_logo li {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-left: 6px;
+    border-radius: 4px;
+    background-color: #eee;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_body .wifi_logo li:first-child {
+    margin-left: 0;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip .btn_gifts:hover+.tool_tip_body,
+  .m-swiper.swiper-coverflow .tool_tip .btn_gifts:focus+.tool_tip_body {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip .ico_qustion:hover+.tool_tip_body {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    top: 30px;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip .ico_qmark:hover+.tool_tip_body {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    top: 36px;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_in_txt {
+    position: relative;
+    width: 330px;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_in_txt .tool_tip_body {
+    position: static;
+    z-index: 9;
+    width: 330px;
+    margin: 0;
+    padding: 11px 30px 10px 14px;
+    border: 1px solid #ed008c;
+    border-radius: 0;
+    background-color: #fff;
+    text-align: left;
+    -webkit-transition: 0.15s ease;
+    -ms-transition: 0.15s ease;
+    transition: 0.15s ease;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_in_txt .tool_tip_body:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: -9px;
+    right: 52px;
+    left: auto;
+    z-index: 8;
+    width: 14px;
+    height: 10px;
+    background: url("/common/images/cmm/ico_common.png") no-repeat -576px -170px;
+  }
+
+  .m-swiper.swiper-coverflow .mac .tool_tip_in_txt .tool_tip_body:before {
+    top: -9px;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_in_txt .tool_tip_body .item {
+    margin-top: 0;
+    color: #ed008c;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_in_txt .tool_tip_body .btn_close_wrap {
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    width: 12px;
+    height: 12px;
+    /*margin-top:-6px;*/
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_in_txt .tool_tip_body .btn_close_wrap button {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    vertical-align: top;
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_in_txt .tool_tip_body .btn_close_wrap button:before {
+    content: "";
+    display: inline-block;
+    height: 12px;
+    border-left: 1px solid #ed008c;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .m-swiper.swiper-coverflow .tool_tip_in_txt .tool_tip_body .btn_close_wrap button:after {
+    content: "";
+    display: inline-block;
+    height: 12px;
+    margin-left: -1px;
+    border-left: 1px solid #ed008c;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .btn_evt-wrap {
+    margin-top: 30px;
+  }
+
+  .btn_evt-wrap .btn_evt_sec {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .footerWrap {
+    background: #303030;
+    padding: 50px;
+  }
+
+  .footerWrap h3 {
+    padding-bottom: 30px;
+    position: relative;
+  }
+
+  .footerWrap h3::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+  }
+
+  .footerWrap .depth_anchor {
+    font-size: 14px;
+    color: #ffffff;
+    background: #767676;
+    display: inline-block;
+    padding: 4px 19px 4px 10px;
+    border-radius: 20px;
+    line-height: 1;
+    margin-left: 10px;
+    position: relative;
+  }
+
+  .footerWrap .depth_anchor::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    z-index: 10;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #fafafa;
+    border-bottom: none;
+    border-left: none;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .footerWrap h4 {
+    color: #fff;
+    margin: 38px 0 21px 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .acType .ui-accordion {
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .acType .titType {
+    position: relative;
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    color: #fafafa;
+    opacity: 0.6;
+    font-weight: bold;
+    padding: 16px 0 14px 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #8e8583;
+    background: transparent;
+    text-align: left;
+  }
+
+  .acType .titType:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    background: url(https://image.lguplus.com/common/images/hsvc/hsvc_event/blic_plus.png) no-repeat 50% 50%;
+    width: 23px;
+    height: 23px;
+  }
+
+  .acType .titType span {
+    text-indent: -10px;
+    padding-left: 10px;
+  }
+
+  .acType .titType.ui-state-active:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    background: url(https://image.lguplus.com/common/images/hsvc/hsvc_event/blic_minus.png) no-repeat 50% 50%;
+    width: 23px;
+    height: 23px;
+  }
+
+  .acType .subDepth {
+    display: none;
+    background: #303030;
+    padding: 0px 10px 30px 27px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    border-bottom: 1px solid #8e8583;
+    box-sizing: border-box;
+  }
+
+  .acType .subDepth ul {
+    font-size: 16px;
+  }
+
+  .acType .subDepth ul>li:before {
+    content: "- ";
+    margin-left: -9px;
+  }
+
+  .acType .subDepth ul>li.tit:before {
+    display: none;
+  }
+
+  .acType .subDepth ul>li+li {
+    margin-top: 10px;
+  }
+
+  .acType button.ui-state-active {
+    border-bottom: none;
+    opacity: 1;
+  }
+
+  /* 하단 고정 바 */
+  .container {
+    padding-bottom: 118px;
+  }
+
+  .float_area {
+    position: fixed;
+    transform: translateX(-50%);
+    bottom: 0;
+    left: 50%;
+    width: 1440px;
+    /* 1080px */
+    min-width: 1080px;
+    height: 100px;
+    z-index: 100;
+    display: flex;
+    padding: 22px 0;
+    text-align: center;
+    border-radius: 30px 30px 0px 0px;
+    background: linear-gradient(180deg, #db1976 0%, #f53894 100%);
+  }
+
+  .float_box {
+    position: fixed;
+    height: 140px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 40px 0;
+    background-color: #FFF;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .float_area .inner_wrap {
+    position: relative;
+    width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Pretendard;
+  }
+
+  .float_area .inner_wrap::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 134px;
+    height: 134px;
+    left: 0;
+    bottom: -26px;
+    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/ico_customers.png") 0 0 no-repeat;
+    background-size: contain;
+  }
+
+  .float_area .inner_wrap .txt_wrap {
+    text-align: left;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.6em;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    padding-left: 147px;
+    vertical-align: top;
+  }
+
+  .float_area .inner_wrap .txt_wrap em {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.84px;
+  }
+
+  .inner_wrap .btn_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    vertical-align: middle;
+  }
+
+  .inner_wrap .btn_wrap>button,
+  .inner_wrap .btn_wrap>a {
+    display: inline-block;
+    width: 240px;
+    height: 56px;
+    line-height: 56px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.72px;
+  }
+
+  .inner_wrap .btn_wrap .icon {
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    margin-top: -2px;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  .inner_wrap .btn_wrap .btn_f_fill {
+    background: #fff;
+    border: 0px none;
+    color: #000;
+    margin-left: 12px
+  }
+
+  /* 플로팅배너 말풍선 */
+  .inner_wrap .flt_balloon {
+    position: absolute;
+    display: inline-block;
+    top: -54px;
+    /* right: 27px; */
+    right: 15px;
+    width: 188px;
+    /* width: 205px;  */
+    height: 54px;
+    /* background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240827-033818-434-4k5iLOpw.png") no-repeat center / 100% auto; */
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241030-043035-641-H78UdCtg.png") no-repeat center / 100% auto;
+  }
+
+  /* 띠배너 */
+  .section.B_banner {
+    padding: 0 80px 40px;
+    background: #f5f5f5;
+  }
+
+  /* 하단 배너 */
+  .section .outliner {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  .section .outliner>li {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #e7e7e7;
+  }
+
+  .section .outliner:not(.disb)>li {
+    -webkit-box-shadow: 0px 6px 10px 0px #0000000f;
+    box-shadow: 0px 6px 10px 0px #0000000f;
+  }
+
+  .section .outliner:not(.disb)>li:hover {
+    outline: 2px solid #e6007e;
+    z-index: 2;
+  }
+
+  .variety {
+    padding: 40px 80px 80px;
+  }
+
+  .variety ul {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    row-gap: 20px;
+  }
+
+  .variety ul li {
+    overflow: hidden;
+    width: 293px;
+    height: 244px;
+    -webkit-box-shadow: 0px 4px 20px 0px #0000000f;
+    box-shadow: 0px 4px 20px 0px #0000000f;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+  }
+
+  .variety ul.outliner.col_2 li {
+    width: 451px;
+    text-align: center;
+  }
+
+  .variety ul li a {
+    display: block;
+  }
+
+  #starbucksEvt {
+    -webkit-transition: height 1s linear;
+    transition: height 1s linear;
+  }
+
+  #starbucksEvt .event_detail_btn {
+    display: none;
+  }
+
+  #starbucksEvt.active {}
+
+  #starbucksEvt.active .event_detail_btn {
+    display: block;
+    transform: translateX(-50%);
+  }
+
+  #starbucksEvt #btn_detail {
+    position: absolute;
+    display: block;
+    width: 642px;
+    height: 139px;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 100px;
+  }
+
+  .starbucks_inner {
+    background: #f3f3f3;
+    padding: 44px 80px;
+  }
+
+  .starbucks_inner .subDepth {
+    position: relative;
+    display: none;
+  }
+
+  /* 내용접기 버튼 */
+  #starbucksEvt .acco_btnwrap .on {
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240716-063319-310-4LeA2ZML.png) no-repeat 50% 0;
+    width: 100%;
+    height: 60px;
+    bottom: 80px;
+  }
+
+  #starbucksEvt .acco_btnwrap button {
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240716-063319-310-4LeA2ZML.png) no-repeat 50% 0;
+    width: 100%;
+    height: 60px;
+    margin-top: 40px;
+  }
+
+  #starbucksEvt .acco_btnwrap .on img {
+    display: none;
+  }
+
+  .starbucks_inner .event_detail_a {
+    position: absolute;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #starbucksEvt .subDepth .event_detail_a {
+    width: 571px;
+    height: 94px;
+    bottom: 183px;
+  }
+</style>
+<div>
+  <form action="" id="frmTelCnslRqst" method="post" name="frmTelCnslRqst">
+    <input id="appfKdDivsCd" name="appfKdDivsCd" type="hidden" value="2" />
+    <input id="onlnCnslJobDivsCd" name="onlnCnslJobDivsCd" type="hidden" value="3" />
+    <input id="appfLednChnlDivsCd" name="appfLednChnlDivsCd" type="hidden" value="01" />
+    <input id="appfLednDivsCd" name="appfLednDivsCd" type="hidden" value="01" />
+    <input id="appfProdSvcDivsCd" name="appfProdSvcDivsCd" type="hidden" value="02" />
+    <input id="custDivsCd" name="custDivsCd" type="hidden" value="I" />
+    <input id="aplcNm" name="aplcNm" type="hidden" value="" />
+    <input id="operationId" name="operationId" type="hidden" value="" />
+    <input id="tecoRsvRqstOcemCmpyNm" name="tecoRsvRqstOcemCmpyNm" type="hidden" value="" />
+    <input id="tecoRsvRqstOcemEmno" name="tecoRsvRqstOcemEmno" type="hidden" value="" />
+    <input id="tecoRsvRqstOcemNm" name="tecoRsvRqstOcemNm" type="hidden" value="" />
+    <input id="tecoRsvRqstCslrYardId" name="tecoRsvRqstCslrYardId" type="hidden" value="" />
+    <input id="entrProdDivsCd" name="entrProdDivsCd" type="hidden" value="" />
+    <input id="entrRqstPpCd" name="entrRqstPpCd" type="hidden" value="인터넷+IPTV 추천 결합상품" />
+    <input id="ppNm" name="ppNm" type="hidden" value="" />
+    <input id="calEvetNm" name="calEvetNm" type="hidden" value="실속 할인" />
+    <input id="prodEntrAdLnkSiteNm" name="prodEntrAdLnkSiteNm" type="hidden" value="" />
+  </form>
+  <div class="new_evt_wrap">
+    <!-- KV -->
+    <div class="section">
+      <img alt="하단내용 참조"
+        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240708-100316-017-sU4b8LNy.jpg" />
+      <div class="blind">
+        <p>유플러스닷컴 | U<sup>+</sup>공식온라인스토어</p>
+        <h2>인터넷+IPTV 신규가입 유플닷컴에서만 월 1만원대!</h2>
+        <p>실속파를 위한 요금 할인</p>
+        <p>할인 후 총 납부 금액 월 11,630원이 찍힌 인터넷+IPTV 요금 이미지 (Only 유플닷컴)</p>
+      </div>
+      <button class="event_detail_a" onclick="$_openPopup('EventContent', ''); return false;"
+        style="bottom: 55px; left: 350px; width: 380px; height: 100px" data-gtm-event-name="button_click"
+        data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역 - 버튼 클릭" data-gtm-event-label="컨텐츠 : 가입 상담 신청 버튼"
+        data-gtm-click-location="이벤트상세 영역" data-gtm-click-text="가입 상담 신청">
+        <span>가입 상담 신청</span>
+      </button>
+    </div>
+    <!-- //KV -->
+
+    <!-- 40%가 선택한 이유 -->
+    <div class="section">
+      <img alt="하단내용 참조"
+        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240708-100433-465-KQJEOPz6.jpg" />
+      <div class="blind">
+        <h3>24년도 전체 가입자의 40%가 선택한 이유</h3>
+        <dl>
+          <dt>월 요금 최대 30% 할인</dt>
+          <dd>인터넷+IPTV 가입 시 사은품 대신 월 요금할인</dd>
+          <dt>매월 1만원대 요금</dt>
+          <dd>매월 1만원대의 요금으로 실속 있는 인터넷 생활</dd>
+          <dt>사은품보다는 요금할인</dt>
+          <dd>상품권, 가전 사은품이 필요 없는 경우</dd>
+          <dt>유플닷컴 특별 혜택</dt>
+          <dd>U<sup>+</sup>공식온라인스토어인 '유플닷컴'만의 특별 혜택</dd>
+        </dl>
+      </div>
+    </div>
+    <!-- //40%가 선택한 이유 -->
+
+    <!-- 요금제 컨텐츠 -->
+    <div class="section tabs_conts_wrap">
+      <h3><img alt="실속파 요금 추천"
+          src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240514-103535-563-opFlaYOM.jpg" />
+      </h3>
+      <button class="event_detail_a" style="width: 190px; height: 68px; top: 316px; left: 246px;" data-idx="1"
+        aria-controls="tab001" onclick="tabsClick(this)" data-route data-gtm-event-name="button_click"
+        data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역 - 버튼 클릭" data-gtm-event-label="컨텐츠 : 아이콘"
+        data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="내부" data-gtm-click-text="100M">
+        <span class="blind">100M</span>
+      </button>
+      <button class="event_detail_a" style="width: 190px; height: 68px; top: 316px; left: 446px;" data-idx="2"
+        aria-controls="tab002" onclick="tabsClick(this)" data-route data-gtm-event-name="button_click"
+        data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역 - 버튼 클릭" data-gtm-event-label="컨텐츠 : 아이콘"
+        data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="내부" data-gtm-click-text="500M">
+        <span class="blind">500M</span>
+      </button>
+      <button class="event_detail_a" style="width: 190px; height: 68px; top: 316px; left: 646px;" data-idx="3"
+        aria-controls="tab003" onclick="tabsClick(this)" data-route data-gtm-event-name="button_click"
+        data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역 - 버튼 클릭" data-gtm-event-label="컨텐츠 : 아이콘"
+        data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="내부" data-gtm-click-text="1기가">
+        <span class="blind">1기가</span>
+      </button>
+      <div id="tabs001" class="tabs_conts" aria-labelledby="tabs001" role="tabpanel">
+        <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240802-012717-268-GYNMhNva.jpg"
+          alt="하단내용 참조">
+        <div class="blind">
+          <h4>월 요금 부담이 가장 적은</h4>
+          <p>100M 프리미엄 안심 + 211채널 베이직</p>
+          <dl>
+            <dt>월 이용 요금</dt>
+            <dd>39,600원</dd>
+            <dt>인터넷+IPTV 결합 할인</dt>
+            <dd>-2,200원</dd>
+            <dt>온라인 단독 할인</dt>
+            <dd>-2,170원</dd>
+            <dt>휴대폰 결합 할인</dt>
+            <dd>-5,500원</dd>
+            <dt>실속 할인</dt>
+            <dd>-5,500원</dd>
+            <dt>제휴카드 할인</dt>
+            <dd>-17,000원</dd>
+            <dt>UHD 셋톱박스 이용료</dt>
+            <dd>4,400원</dd>
+            <dt>할인 후 총 납부 금액</dt>
+            <dd>월 11,630원</dd>
+          </dl>
+        </div>
+      </div>
+      <div id="tabs002" class="tabs_conts" aria-labelledby="tabs002" role="tabpanel" style="display:none;">
+        <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240925-051546-569-HzV36F40.jpg"
+          alt="하단내용 참조">
+        <div class="blind">
+          <h4>신규가입자들이 가장 많이 선택한</h4>
+          <p>500M 프리미엄 안심 + 252채널 프리미엄</p>
+          <dl>
+            <dt>월 이용 요금</dt>
+            <dd>56,100원</dd>
+            <dt>인터넷+IPTV 결합 할인</dt>
+            <dd>-7,700원</dd>
+            <dt>온라인 단독 할인</dt>
+            <dd>-2,750원</dd>
+            <dt>휴대폰 결합 할인</dt>
+            <dd>-9,900원</dd>
+            <dt>실속 할인</dt>
+            <dd>-8,800원</dd>
+            <dt>제휴카드 할인</dt>
+            <dd>-17,000원</dd>
+            <dt>UHD 셋톱박스 이용료</dt>
+            <dd>4,400원</dd>
+            <dt>할인 후 총 납부 금액</dt>
+            <dd>월 14,350원</dd>
+          </dl>
+        </div>
+      </div>
+      <div id="tabs003" class="tabs_conts" aria-labelledby="tabs003" role="tabpanel" style="display:none;">
+        <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240802-012739-421-j1yCeoAF.jpg"
+          alt="하단내용 참조">
+        <div class="blind">
+          <h4>월 요금 할인이 가장 많은</h4>
+          <p>1기가 프리미엄 안심 + 257채널 프리미엄 VOD</p>
+          <dl>
+            <dt>월 이용 요금</dt>
+            <dd>67,100원</dd>
+            <dt>인터넷+IPTV 결합 할인</dt>
+            <dd>-11,000원</dd>
+            <dt>온라인 단독 할인</dt>
+            <dd>-3,300원</dd>
+            <dt>휴대폰 결합 할인</dt>
+            <dd>-13,200원</dd>
+            <dt>실속 할인</dt>
+            <dd>-11,000원</dd>
+            <dt>제휴카드 할인</dt>
+            <dd>-17,000원</dd>
+            <dt>UHD 셋톱박스 이용료</dt>
+            <dd>4,400원</dd>
+            <dt>할인 후 총 납부 금액</dt>
+            <dd>월 16,000원</dd>
+          </dl>
+        </div>
+      </div>
+      <img alt="하단내용 참조"
+        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240802-012800-816-6y7sUyMi.jpg" />
+      <div class="blind">
+        <ul>
+          <li>※ 월 납부요금은 부가세 포함, 3년 약정 기준 입니다.</li>
+          <li>※ 휴대폰 결합할인은 '참 쉬운 가족 결합'으로 U<sup>+</sup>휴대폰 1개 결합 시 적용되는 요금할인 금액 기준입니다.</li>
+          <li>※ 제휴카드 할인은 'U<sup>+</sup>Family 하나카드' 로 통신요금 자동이체 신청 후 전월 이용실적이 30만원 이상인 경우 통신요금에 따라 최대 월 17,000원 할인
+            적용됩니다.
+            (카드발급 기간에 따라 할인율 변동 가능)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- //요금제 컨텐츠 -->
+
+
+    <!-- 스타벅스 -->
+    <div class="event_detail" id="starbucksEvt">
+      <div class="starbucks_inner accordions_conts_wrap">
+        <button class="titType" aria-controls="bn_001" aria-expanded="false" data-destination="#bn_001"
+          onclick="accordianClick(this);clickTargetHandler(this);">
+          <!-- <img
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240827-024854-135-YHgX4S80.png"
+            alt="온라인 가입하면 스타벅스 3만원 쿠폰 추첨 요금제 추천과 설치 예약을 1분만에!' 자세히 보기"
+          /> -->
+          <img class="passive"
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241104-011657-696-1s3Rl3fg.png"
+            alt="온라인 가입하면 10만원 상당의 경품 추첨
+            요금제 추천과 설치 예약을 1분만에!
+            자세히 보기" />
+        </button>
+        <div id="bn_001" class="subDepth">
+          <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241104-012005-076-HW1MaFwJ.jpg"
+            alt="하단 내용 참조" / style="    width: calc(100%);
+            /* margin-left: -30px; */
+            margin-top: 30px;
+            border-radius: 15px;">
+          <div class="blind">
+            <h2>잠깐! 10만원 상당의 경품이 쏟아지는 온라인 가입 이벤트</h2>
+            <p>
+              온라인 가입을 통해 인터넷/IPTV 가입하면
+              3만원 상당 스타벅스 음료 세트와 7만원 상당 유플닷컴 굿즈 증정!
+            </p>
+
+            <p>스타벅스 음료 세트 (3만원 상당)</p>
+            <p>땡스 어 라떼 세트(2잔)x3개 (아이스 카페라떼 T 총 6잔)</p>
+
+            <p>유플닷컴 단독 굿즈 '자취박스' (7만원 상당)</p>
+
+            <ul>
+              <li>
+                이벤트 대상: 12월 1일까지 '온라인 가입'을 통해
+                인터넷/IPTV 신규 가입 및 설치 완료한 고객 추첨 200명
+              </li>
+              <li>이벤트 기간: 2024. 11. 1(금) ~ 2024. 12. 1(일)</li>
+              <li>
+                이벤트 경품:
+                - 혜택 1) 3만원 상당의 스타벅스 모바일 쿠폰
+                ▶ 가입 시 등록한 휴대폰 번호로 모바일 쿠폰 발송
+                - 혜택 2) 7만원 상당의 유플닷컴 단독 굿즈 '자취박스'
+                ▶ 가입 시 인터넷 설치 주소지로
+              </li>
+              <li>
+                당첨자 발표: 2024. 12. 13(금)
+                (※ 당첨자 개별 연락 및 순차 발송 예정)
+              </li>
+            </ul>
+          </div>
+          <!-- 프리미엄안심500M+프리미엄 가입신청서 url : https://www.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=17-->
+          <a data-route="" class="event_detail_a" href="/internet-iptv/internet-iptv-package/plan"
+            data-gtm-event-name="link_click" data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+            data-gtm-event-label="컨텐츠 : 가입 상담 신청"
+            data-gtm-click-url="https://www.lguplus.com/internet-iptv/internet-iptv-package/plan"
+            data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="내부" data-gtm-click-text="가입 상담 신청">
+            <span>가입 상담 신청</span>
+          </a>
+          <div class="acco_btnwrap">
+            <button type="button" aria-expanded="true" aria-controls="bn_001" onclick="togglesClickClose(this)">
+              <span class="blind">내용 접기</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //스타벅스 -->
+
+    <!-- 하단 Banner -->
+    <div class="section variety">
+      <ul class="outliner">
+        <li>
+          <a data-route href="https://www.lguplus.com/benefit-event/ongoing/80782"
+            data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80782" data-gtm-event-name="link_click"
+            data-gtm-event-category="클릭" data-gtm-event-action="중단배너 영역- 링크 클릭"
+            data-gtm-event-label="컨텐츠: 우리집에 딱 맞는 인터넷+IPTV 꿀조합 자세히 보기" data-gtm-click-location="중단배너 영역"
+            data-gtm-click-direction="내부" data-gtm-click-text="우리집에 딱 맞는 인터넷+IPTV 꿀조합 자세히 보기">
+            <img src="https://lguplus.com/static/contents/medialog/mg/event/69791/card_10_iptv_v2.png"
+              alt="우리집에 딱 맞는 인터넷+IPTV 꿀조합 클릭, 일러스트 이미지. 거실 쇼파에 엄마, 아빠, 할아버지가 손자를 앉고 각자 노트북, 태블릿을 보고 있으며, 맘카, 펫토이와 반려견. VR을 쓰고 있는 아이의 이미지" />
+            <span class="blind">우리집에 딱 맞는 <em>인터넷+IPTV 꿀조합 자세히 보기</em></span>
+          </a>
+        </li>
+        <li>
+          <a data-route href="https://www.lguplus.com/benefit-event/ongoing/387"
+            data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/387" data-gtm-event-name="link_click"
+            data-gtm-event-category="클릭" data-gtm-event-action="중단배너 영역 - 링크 클릭"
+            data-gtm-event-label="컨텐츠: U+공식스토어가 정답인 이유! 인터넷/IPTV 신규가입 최대 235만원 혜택! 자세히 보기"
+            data-gtm-click-location="중단배너 영역" data-gtm-click-direction="내부"
+            data-gtm-click-text="U+공식스토어가 정답인 이유! 인터넷/IPTV 신규가입 최대 235만원 혜택! 자세히 보기">
+            <img
+              src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240206-023716-302-1NQM0qFG.png"
+              alt="U+공식스토어가 정답인 이유! 인터넷/IPTV 신규가입 최대 235만원 혜택 클릭, TV디스플레이 앞에 온라인단독할인 이미지, 백화점 상품권, 웰컴쿠폰, 휴대폰 결합 할인 이미지" />
+            <span class="blind">U+공식스토어가 정답인 이유! 인터넷/IPTV 신규가입 최대 235만원
+              혜택 자세히 보기</span>
+          </a>
+        </li>
+        <li>
+          <a data-route href="https://www.lguplus.com/benefit-event/ongoing/121"
+            data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/121" data-gtm-event-name="link_click"
+            data-gtm-event-category="클릭" data-gtm-event-action="중단배너 영역- 링크 클릭" data-gtm-event-label="컨텐츠: 다이렉트 요금제"
+            data-gtm-click-location="중단배너 영역" data-gtm-click-direction="내부" data-gtm-click-text="다이렉트 요금제">
+            <img src="https://lguplus.com/static/contents/medialog/mg/event/69791/card_2_v2.png"
+              alt="20ㆍ30전용 인터넷 요금제 다이렉트 요금제 클릭, 다이렉트 요금제 배경이미지 " />
+            <span class="blind">20·30전용 인터넷 요금제 다이렉트 요금제</span>
+          </a>
+        </li>
+        <li>
+          <a data-route href="https://www.lguplus.com/benefit-event/ongoing/80593"
+            data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80593" data-gtm-event-name="link_click"
+            data-gtm-event-category="클릭" data-gtm-event-action="중단배너 영역- 링크 클릭" data-gtm-event-label="컨텐츠: 온라인 가입 리뉴얼"
+            data-gtm-click-location="중단배너 영역" data-gtm-click-direction="내부" data-gtm-click-text="온라인 가입 리뉴얼">
+            <img src="https://lguplus.com/static/contents/medialog/mg/event/69791/card_3.png"
+              alt="더 쉽고, 더 빠르고, 간편해진 온라인 가입 리뉴얼 클릭, 인터넷/IPTV 선물상자 속 휴대폰 이미지 " />
+            <span class="blind">더 쉽고, 더 빠르고, 간편해진 온라인 가입 리뉴얼</span>
+          </a>
+        </li>
+        <li>
+          <a data-route href="https://www.lguplus.com/benefit-event/ongoing/80614"
+            data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80614" data-gtm-event-name="link_click"
+            data-gtm-event-category="클릭" data-gtm-event-action="중단배너 영역- 링크 클릭"
+            data-gtm-event-label="컨텐츠: OTT와 실시간 방송 U+tv next 자세히 보기" data-gtm-click-location="중단배너 영역"
+            data-gtm-click-direction="내부" data-gtm-click-text="OTT와 실시간 방송 U+tv next 자세히 보기">
+            <img
+              src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240405-024957-556-yh2w7B6p.png"
+              alt="OTT와 실시간 방송 U+tv next 클릭, 넷플릭스, 디즈니 플러스, 티빙 배경이미지" />
+            <span class="blind">OTT와 실시간 방송 U+tv next 자세히 보기</span>
+          </a>
+        </li>
+        <li>
+          <a data-route href="https://www.lguplus.com/benefit-event/ongoing/14"
+            data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/14" data-gtm-event-name="link_click"
+            data-gtm-event-category="클릭" data-gtm-event-action="중단배너 영역- 링크 클릭"
+            data-gtm-event-label="컨텐츠: 홈 인테리어 사은품 증정 인기 프리미엄 가전 자세히 보기" data-gtm-click-location="중단배너 영역"
+            data-gtm-click-direction="내부" data-gtm-click-text="홈 인테리어 사은품 증정 인기 프리미엄 가전 자세히 보기">
+            <img src="https://lguplus.com/static/contents/medialog/mg/event/69791/card_05.png"
+              alt="홈 인테리어 사은품 증정 인기 프리미엄 가전 클릭, 가전제품 배경이미지:퓨리케어,노트북,패드,청소기 이미지" />
+            <span class="blind">홈 인테리어 사은품 증정 인기 프리미엄 가전 자세히 보기</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- footerWrap -->
+    <div class="section footerWrap">
+      <h3>
+        <img alt="꼭 알아두세요!" src="https://image.lguplus.com/common/images/hsvc/hsvc_event/event_footer.png" />
+      </h3>
+      <div class="acType">
+        <div class="accordions_conts_wrap" id="accordion">
+          <button aria-controls="_accordion_001" aria-expanded="false" class="titType" onclick="accordianClick(this)">
+            이벤트 유의사항
+          </button>
+          <div class="subDepth" id="_accordion_001">
+            <ul>
+              <li>인터넷/IPTV 신규가입 고객 대상 이벤트 입니다.</li>
+              <li>
+                실속 할인을 선택하신 경우 상품권 등 별도 사은품이 제공되지 않습니다.
+              </li>
+              <li>실속 할인은 3년 약정 시에만 선택 가능합니다.</li>
+              <li>
+                실속 할인은 유플러스닷컴에서만 선택 가능합니다.
+              </li>
+              <li>
+                실속 할인은 인터넷 단독, 인터넷+IPTV, 인터넷+IPTV+스마트홈,
+                인터넷+IPTV+인터넷 전화, 인터넷+IPTV+스마트홈+인터넷 전화
+                신규가입 시 제공 가능합니다.
+              </li>
+              <li>
+                실속 할인은 약정 만료 시까지 제공되며 약정 갱신 시 할인 적용되지
+                않습니다.
+              </li>
+              <li>
+                기본 사은품 미제공 되는 요금제의 경우 실속 할인 선택이 불가
+                합니다.
+              </li>
+            </ul>
+          </div>
+          <button aria-controls="_accordion_002" aria-expanded="false" class="titType" onclick="accordianClick(this)">
+            실속 할인 적용되는 인터넷 요금제
+          </button>
+          <div class="subDepth" id="_accordion_002">
+            <ul>
+              <li>
+                100M : 프리미엄 안심 100M, 스마트 광랜안심,
+                와이파이기본_광랜안심
+              </li>
+              <li>
+                500M : 프리미엄 안심 500M, 스마트기가 최대 500M, 스마트
+                기가슬림안심, 와이파이기본_기가슬림안심
+              </li>
+              <li>
+                1G : 프리미엄 안심 1기가, 스마트기가 최대 1G, 스마트 기가안심,
+                와이파이기본_기가안심
+              </li>
+              <li>
+                2.5G : 스마트기가 최대 2.5G, 와이파이기본_2.5기가안심,
+                와이파이기본_2.5기가
+              </li>
+              <li>5G : 와이파이기본_5기가</li>
+              <li>10G : 와이파이기본_10기가</li>
+            </ul>
+          </div>
+          <button aria-controls="_accordion_003" aria-expanded="false" class="titType" onclick="accordianClick(this)">
+            인터넷/IPTV 온라인 가입 고객 대상 스타벅스 3만원 쿠폰 증정 이벤트 공통 유의사항
+          </button>
+          <div class="subDepth" id="_accordion_003">
+            <ul>
+              <li>
+                2024년 12월 1일까지 유플러스닷컴 사이트 내 ‘온라인 가입/온라인 1분 가입’을 통해 인터넷/IPTV 신규 가입 및 설치 완료한 고객 전원에게
+                경품을 지급합니다.
+              </li>
+              <li>IPTV 단독, 소호 홈 상품 신규 가입자는 대상자에 포함되지 않습니다.</li>
+              <li>이벤트 당첨자 발표는 별도로 진행하지 않으며, 당첨자에 한해 개별적으로 연락 드립니다.</li>
+              <li>경품은 대상자에게 인터넷 신규 가입 시 등록한 휴대폰번호로 모바일 쿠폰이 발송될 예정입니다.</li>
+              <li>당첨자와 경품 수령자는 동일해야 하며, 경품 양도는 불가합니다.</li>
+              <li>잘못 등록된 개인정보로 인해 경품 발송대상자에서 제외되었을 경우 주최측이 책임지지 않습니다.</li>
+              <li>타인의 명의를 도용하여 부정인증을 시도한 경우 법령에 따라 처벌(3년 이하의 징역 또는 1천만원 이하의 벌금형)을 받을 수 있습니다.</li>
+              <li>타인의 개인정보 도용,컴퓨터 프로그램 등을 이용한 응모 등 부정한 방법으로 이벤트에 참여한 경우 당첨이 취소됩니다.</li>
+              <li>경품은 상품명이 변경될 수 있으며, 부득이한 경우 해당 경품과 동일한 금액의 상품권으로 변경 될 수 있습니다.</li>
+              <li>
+                유효기간이 있는 모바일 상품권 등의 경품은 유효기간 만료로 사용 불가에 대해 책임지지 않으며 재발송 및 환불 대상이 아닙니다. 스타벅스 모바일
+                쿠폰 관련 문의사항은 1544-1151로 문의하여 확인하실 수 있습니다.
+              </li>
+              <li>본 이벤트는 주최측 사정에 의해 사전 예고 없이 종료될 수 있으며, 이벤트 기간이 지난 뒤 응모한 경우 당첨 대상에서 제외됩니다.</li>
+              <!-- <li>2024년 7월 22일 ~ 8월 31일 운영되었던 인터넷/IPTV 온라인 가입 고객 대상 스타벅스 1만원 쿠폰 추첨 이벤트의 경우 2024년 8월 29일로 조기 종료되었으며, 당첨자 발표는 2024년 9월 13일 동일하게 당첨자에게 개별 연락 예정입니다.</li> -->
+            </ul>
+          </div>
+          <button aria-controls="_accordion_004" aria-expanded="false" class="titType" onclick="accordianClick(this)">
+            인터넷/IPTV 온라인 가입 고객 대상 자취박스 증정 이벤트 유의사항
+          </button>
+          <div class="subDepth" id="_accordion_004">
+            <ul>
+              <li>이벤트 기간 내 인터넷/IPTV 설치까지 완료한 고객 대상으로 사은품이 지급됩니다. <br> (온라인 가입만 진행하고, 인터넷/IPTV 설치를 12월 1일 내 하지 않은 경우
+                대상자에서 제외됩니다.)</li>
+              <li>온라인 가입 외의 방법으로 접수 후 인터넷 설치를 한 고객은 대상자에서 제외됩니다. (*온라인 가입 외 접수 : 가입 상담 신청 및 전화 접수)</li>
+              <li>경품 당첨자 발표는 별도로 진행하지 않으며, 당첨되신 분께 개별 연락 후 인터넷/IPTV 설치 주소로 자동 배송됩니다.</li>
+              <li>주소지 이전 등의 개인 사유로 인해 경품 미수령 발생 시, 경품 재발송은 불가합니다.</li>
+              <li>당첨자와 경품 수령자는 동일해야 하며 경품 양도는 불가합니다.</li>
+              <li>잘못 등록된 개인정보로 인해 경품 발송 대상자에서 제외되었을 경우 주최 측이 책임지지 않습니다.</li>
+              <li>경품 배송 시 배송 일자 변경이 불가하며 제품을 수령하신 후 교환 또한 불가합니다.</li>
+              <li>타인의 명의를 도용하여 부정 인증을 시도한 경우 법령에 따라 처벌(3년 이하의 징역 또는 1천만원 이하의 벌금형)을 받을 수 있습니다.</li>
+              <li>타인의 개인정보 도용, 컴퓨터 프로그램 등을 이용한 응모 등 부정한 방법으로 이벤트에 참여한 경우 당첨이 취소됩니다.</li>
+              <li>경품 발송을 위해 고객님의 정보를 발송 대행사에 제공하며, 배송 후 모든 정보는 폐기됩니다.</li>
+              <li>본 이벤트는 주최 측 사정에 의해 사전 예고 없이 변경 및 종료될 수 있으며, 당사 사정에 의해 사은품이 변경될 수 있습니다.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //footerWrap -->
+  </div>
+
+  <!-- 플로팅 버튼 -->
+  <div id="floatArea" class="float_area">
+    <div class="inner_wrap">
+      <div class="txt_wrap">
+        <p class="tit">전문 상담사가 가입을 빠르게 도와드립니다.</p>
+        <p class="call_wrap"><em>1644-7070</em> <span>ARS > 1번</span></p>
+      </div>
+      <div class="btn_wrap">
+        <button data-route class="flt_btn_chat" onclick="$_openPopup('EventContent', ''); return false;"
+          data-gtm-event-name='button_click' data-gtm-event-category='클릭' data-gtm-event-action='플로팅 영역- 버튼 클릭'
+          data-gtm-event-label='컨텐츠 : 상담 예약하기' data-gtm-click-location='플로팅 영역' data-gtm-click-text='상담 예약하기'>
+          <span class="icon"><img src="https://lguplus.com/static/contents/medialog/mg/event/69791/ico_call.png"
+              alt=""></span>상담 예약하기
+        </button>
+        <a data-route class="btn_f_fill" href="/internet-iptv/internet-iptv-package/plan?p=1"
+          data-gtm-event-name='link_click' data-gtm-event-category='클릭' data-gtm-event-action='플로팅 영역- 링크 클릭'
+          data-gtm-event-label='컨텐츠 : 온라인 1분 가입' data-gtm-click-url='' data-gtm-click-location='플로팅 영역'
+          data-gtm-click-direction='' data-gtm-click-text='온라인 1분 가입'>
+          <span class="icon"><img src="https://lguplus.com/static/contents/medialog/mg/event/69791/ico_clipboard.png"
+              alt=""></span>온라인
+          1분 가입</span>
+        </a>
+      </div>
+      <span class="flt_balloon"><em class="blind">3만원 100% 증정</em></span>
+    </div>
+  </div>
+  <!-- //플로팅 버튼 -->
+</div>
+
+<script>
+  // 2024 Next.js 전환
+  const props = {
+    externalInfo: {
+      appfKdDivsCd: "2",
+      onlnCnslJobDivsCd: "3",
+      appfLednChnlDivsCd: "01",
+      appfLednDivsCd: "01",
+      appfProdSvcDivsCd: "02",
+      custDivsCd: "I",
+      aplcNm: "",
+      operationId: "",
+      ushopUrl: "",
+      tecoRsvRqstOcemCmpyNm: "",
+      tecoRsvRqstOcemEmno: "",
+      tecoRsvRqstOcemNm: "",
+      tecoRsvRqstCslrYardId: "",
+      entrProdDivsCd: "",
+      entrRqstPpCd: "",
+      ppNm: "",
+      calEvetNm: "실속 할인",
+      serviceType: ""
+    }
+  }
+
+  // 2024 Next.js 전환 onCnslPop 추가 
+  window.addEventListener(
+    "externalServicesReady",
+    () => {
+      if (externalServices.route.query.get('onCnslPop') === "Y") {
+        externalServices.dispatchMessageEvent('EventTelInternetCnslPopup', props);
+      }
+    },
+    { once: true }
+  );
+
+  setTimeout(function () {
+    console.log(window.evtDetailSwiperIns);
+    if (window.evtDetailSwiperIns) {
+      window.evtDetailSwiperIns.destroy();
+      window.evtDetailSwiperIns = null;
+    }
+    window.evtDetailSwiperIns = new Swiper(
+      ".swiper-coverflow .swiper-container",
+      {
+        // Optional parameters
+        loop: true,
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-coverflow .swiper-container .swiper-button-next",
+          prevEl: ".swiper-coverflow .swiper-container .swiper-button-prev",
+        },
+        effect: "coverflow",
+        centeredSlides: true,
+        slidesPerView: 3,
+        loopAdditionalSlides: 1,
+        coverflowEffect: {
+          rotate: 0,
+          depth: 30,
+          slideShadows: false,
+        },
+      }
+    );
+  }, 2000);
+
+  function accordianClick(target) {
+    var parent = target.closest(".accordions_conts_wrap");
+    var titTypes = parent.querySelectorAll(".titType");
+    var subDepths = parent.querySelectorAll(".subDepth");
+    var content = target.nextElementSibling;
+    var on = "ui-state-active";
+    var re = new RegExp(" " + on);
+    var checkActive = re.test(target.className);
+    if (checkActive) {
+      target.classList.remove(on);
+      target.setAttribute("aria-expanded", false);
+      content.style.display = "none";
+    } else {
+      titTypes.forEach(function (titType) {
+        titType.classList.remove(on);
+        titType.setAttribute("aria-expanded", false);
+      });
+      subDepths.forEach(function (subDepth) {
+        subDepth.style.display = "none";
+      });
+      target.classList.add(on);
+      target.setAttribute("aria-expanded", true);
+      content.style.display = "block";
+    }
+  }
+
+  function togglesClickClose(target) {
+    var parent = target.parentNode.parentNode;
+    var toggleBt = parent.previousElementSibling;
+    toggleBt.click();
+  }
+
+  // 탭 이동
+  function tabsClick(target) {
+    var parent = target.closest(".tabs_conts_wrap");
+    var tabsBtns = parent.querySelectorAll(".event_detail_a");
+    var tabsConts = parent.querySelectorAll(".tabs_conts");
+    var targetIdx = target.getAttribute("data-idx") - 1;
+
+    tabsBtns.forEach(function (tabsBtn, idx) {
+      if (targetIdx === idx) {
+        target.setAttribute("aria-selected", true);
+      } else {
+        tabsBtn.setAttribute("aria-selected", false);
+      }
+    });
+    tabsConts.forEach(function (tabsCont, idx) {
+      if (targetIdx === idx) {
+        tabsCont.style.display = "block";
+      } else {
+        tabsCont.style.display = "none";
+      }
+    });
+  }
+
+  function unfoldDetail(target) {
+    target.remove();
+    var parent = document.getElementById("starbucksEvt");
+    parent.classList.add("active");
+  }
+
+  // Target Handler
+  function clickTargetHandler(e) {
+    if (!e) {
+      return;
+    } else {
+      var target = e.getAttribute("data-destination");
+      var reductionHeight = 100;
+      var targetOffsetTop = window.pageYOffset + document.querySelector(target).getBoundingClientRect().top - reductionHeight;
+      scrollTo(targetOffsetTop, 500);
+      var anchor_tabs = document.querySelectorAll(".anchor_wrap > li");
+      anchor_tabs.forEach((anchor_tab) => {
+        anchor_tab.addEventListener("click", () => {
+          anchor_tabs.forEach((anchor_tab) => {
+            anchor_tab.classList.remove("on");
+          });
+          anchor_tab.classList.add("on");
+        });
+      });
+    }
+  }
+
+  function closeLayerEvent(target) {
+    var elemLayer = target.closest(".event_modal");
+    var reverse = "." + target.getAttribute("data-reverse");
+    var reverseBt = document.querySelector(reverse);
+    var on = "on";
+    elemLayer.classList.remove(on);
+    elemLayer.removeAttribute("tabindex");
+    reverseBt.focus();
+  }
+
+
+  function scrollTo(to, duration) {
+    var element = document.scrollingElement || document.documentElement;
+    var start = element.scrollTop;
+    var change = to - start;
+    var startDate = +new Date();
+    var easeInOutQuad = function (t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return (c / 2) * t * t + b;
+      t--;
+      return (-c / 2) * (t * (t - 2) - 1) + b;
+    };
+    var animateScroll = function () {
+      var currentDate = +new Date();
+      var currentTime = currentDate - startDate;
+      element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+      if (currentTime < duration) {
+        requestAnimationFrame(animateScroll);
+      } else {
+        element.scrollTop = to;
+      }
+    };
+    animateScroll();
+  }
+</script>
+<!-- //pc -->
