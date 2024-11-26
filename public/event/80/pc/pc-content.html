@@ -625,6 +625,18 @@
     /* background: #F3F3F3; */
     margin: 0 auto;
     padding: 48px 80px 100px;
+    padding-top: 80px;
+  }
+
+  .section.benefits::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1080px;
+    height: 50px;
+    background: linear-gradient(180deg, #f3e6ee 0%, #f3f3f3 100%);
+    z-index: 0;
   }
 
   .benefits ul {
