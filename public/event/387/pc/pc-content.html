@@ -620,37 +620,6 @@
     z-index: 1;
   }
 
-  /* 별 반짝이는 애니메이션 */
-  .star {
-    position: absolute;
-    width: 0;
-    height: 0;
-    background-color: transparent;
-    clip-path: polygon(
-      50% 0%,
-      60% 40%,
-      100% 50%,
-      60% 60%,
-      50% 100%,
-      40% 60%,
-      0% 50%,
-      40% 40%
-    );
-    background: white;
-    opacity: 0;
-    animation: twinkle 2s infinite ease-in-out;
-  }
-
-  @keyframes twinkle {
-    0%,
-    100% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-  }
-
   .benefits {
     background: #f3f3f3;
     margin: 0 auto;
@@ -1554,6 +1523,34 @@
   .accordions_conts_wrap.type_img button.ui-state-active img.passive {
     display: none;
   }
+
+  /* 241116 눈송이 스타일추가  */
+  .section.kv {
+    position: relative;
+    overflow: hidden;
+    height: 900px;
+  }
+  .snowflake {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0px;
+    color: white;
+    font-size: 12px;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear infinite;
+    overflow-x: hidden;
+  }
+  @keyframes fall {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(900px);
+    }
+  }
+  /* 241116 눈송이 스타일추가 EEE  */
 </style>
 <div>
   <div class="new_evt_wrap">
@@ -1572,8 +1569,8 @@
           data-gtm-click-text="10월 한정 추가 10만원 상품권 더!"
         >
           <img
-            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241031-100040-794-yDRbS6lY.png"
-            alt="11월 한정 추가 10만원 상품권 더!"
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241126-123933-088-AWvumhEW.png"
+            alt="12월 한정 추가 10만원 상품권 더!"
           />
           <!--기존:https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241004-102011-362-S79mPazU.png -->
         </button>
@@ -1655,12 +1652,12 @@
       <!-- //anchor_wrap -->
       <div id="promo_section" class="section" data-destination="#promo_section">
         <img
-          src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241121-051513-988-zPdnAOwl.png"
+          src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241126-123950-162-Gmsj2Mn7.png"
           alt="하단 내용 참조"
         />
         <!-- 기존: https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241004-101339-160-v16iWNr7.png -->
         <div class="blind">
-          <h3>11월 한정 신규가입 혜택. 추가 상품권 10만원 더!</h3>
+          <h3>12월 한정 신규가입 혜택. 추가 상품권 10만원 더!</h3>
           <p>신세계 상품구너 100,000원 (1,000명 추첨)</p>
           <dl>
             <dt>대상</dt>
@@ -1669,35 +1666,37 @@
               완료한 고객 추첨 1,000명
             </dd>
             <dt>기간</dt>
-            <dd>2024.11.1(금)~ 11.30일 (토)</dd>
+            <dd>2024.12.1(일)~ 12.31일 (화)</dd>
             <dt>당첨 발표</dt>
-            <dd>2024.12.13(금)</dd>
+            <dd>2025.1.17(금)</dd>
             <dt>혜택 발송</dt>
             <dd>가입하신 고객 연락처로 2주 이내 발송 예정</dd>
           </dl>
         </div>
         <!-- 남은시간 countdown -->
-        <div class="timerWrap">
-          <div class="day">
-            <span id="d1">0</span>
-            <span id="d0">0</span>
-            <span class="kr">일</span>
+        <!-- <div class="section count">
+          <div class="timerWrap">
+            <div class="day">
+              <span id="d1">0</span>
+              <span id="d0">0</span>
+              <span class="kr">일</span>
+            </div>
+            <div class="hour">
+              <span id="h1">0</span>
+              <span id="h0">0</span>
+              <span class="kr">시간</span>
+            </div>
+            <div class="min">
+              <span id="m1">0</span>
+              <span id="m0">0</span>
+              <span class="kr">분</span>
+            </div>
+            <div class="sec">
+              <span id="s1">0</span>
+              <span id="s0">0</span>
+            </div>
           </div>
-          <div class="hour">
-            <span id="h1">0</span>
-            <span id="h0">0</span>
-            <span class="kr">시간</span>
-          </div>
-          <div class="min">
-            <span id="m1">0</span>
-            <span id="m0">0</span>
-            <span class="kr">분</span>
-          </div>
-          <div class="sec">
-            <span id="s1">0</span>
-            <span id="s0">0</span>
-          </div>
-        </div>
+        </div> -->
         <!-- //남은시간 countdown -->
         <button
           class="event_detail_a"
@@ -1708,7 +1707,7 @@
           data-gtm-event-label="컨텐츠 : 추가 10만원 혜택 받기"
           data-gtm-click-location="이벤트상세 영역"
           data-gtm-click-text="추가 10만원 혜택 받기"
-          style="width: 43%; height: 6.5%; bottom: 5.8%; left: 50%"
+          style="width: 43%; height: 7.6%; bottom: 6.6%; left: 50%"
         >
           <span class="blind">추가 10만원 혜택 받기</span>
         </button>
@@ -3060,12 +3059,12 @@
                 aria-expanded="false"
                 onclick="accordianClick(this)"
               >
-                11월 한정 추가 사은품 이벤트 유의사항
+                12월 한정 추가 사은품 이벤트 유의사항
               </button>
               <div id="_accordion_004" class="subDepth">
                 <ul>
                   <li>
-                    이벤트 기간(2024.11.1 ~ 11.30)동안 3년 약정으로
+                    이벤트 기간(2024.12.1 ~ 12.31)동안 3년 약정으로
                     인터넷(프리미엄 안심 500M 이상)+U<sup>+</sup>tv(프리미엄
                     이상) 동시 신규 가입한 고객님 중 추첨 1,000명께 추가 사은품
                     10만원을 제공합니다.
@@ -4819,6 +4818,8 @@
   }
 
   function counter() {
+    const secCount = document.querySelector(".section.count");
+    if (!secCount) return;
     var dday = new Date("nov 30, 2024, 23:59:59").getTime();
     var timer = setInterval(function () {
       var now = new Date();
@@ -4976,33 +4977,43 @@
     externalServices.dispatchMessageEvent("EventTelInternetCnslPopup", props);
   }
 
-  // kv 별 효과
-  const starCreationInterval = 350; // 별 생성 주기 (ms, 0.5초마다 생성)
+  // 241126 KV 눈 효과
+  const MAX_SNOWFLAKES = 150; // 최대 눈송이 개수 상수 정의
+  let currentSnowflakes = 0; // 현재 눈송이 개수 변수 정의
+  function createSnowflake() {
+    // 최대 개수 제한 확인
+    if (currentSnowflakes >= MAX_SNOWFLAKES) {
+      return;
+    }
 
-  function createStar() {
-    const section = document.querySelector(".section.kv");
-    const star = document.createElement("div");
-    star.classList.add("star");
-    star.style.left = Math.random() * section.clientWidth + "px";
-    star.style.top = Math.random() * section.clientHeight + "px";
-    star.style.width = `${Math.random() * 6 + 7}px`; // 8~18px
-    star.style.height = star.style.width; // 정사각형 유지
-    star.style.animationDuration = Math.random() * 1 + 1 + "s"; // 1~3초
-    section.appendChild(star);
+    const snowflake = document.createElement("div");
+    snowflake.classList.add("snowflake");
+    snowflake.innerText = "❄";
+    snowflake.style.left = Math.random() * window.innerWidth + "px";
+    snowflake.style.animationDuration = Math.random() * 3 + 12 + "s"; // 12-15초 랜덤
+    snowflake.style.fontSize = Math.random() * 5 + 5 + "px";
 
-    // 일정 시간 후 별 제거
-    setTimeout(() => {
-      star.remove();
-    }, 5000); // 3초 후 제거
+    const kvSection = document.querySelector(".section.kv");
+    if (kvSection) {
+      kvSection.appendChild(snowflake);
+      currentSnowflakes++;
+    }
+
+    // 애니메이션이 끝나면 요소 제거
+    snowflake.addEventListener("animationend", () => {
+      snowflake.remove();
+      currentSnowflakes--;
+    });
   }
 
-  // 별 생성 주기 설정
-  setInterval(createStar, starCreationInterval); // starCreationInterval에 따라 별 생성
+  // 주기적으로 눈송이 생성 (간격 늘림)
+  setInterval(createSnowflake, 400); // 0.4초마다 눈송이 생성
+
+  /* 241126 KV 눈 효과 EEE */
 
   // 전역 스코프 (window)에 필요한 함수들을 바인딩합니다.
   window.telCnslPop = telCnslPop;
   window.holidayCnslPop = holidayCnslPop;
-  window.createStar = createStar;
 
   function _slicedToArray(arr, i) {
     return (

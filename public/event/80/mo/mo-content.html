@@ -104,37 +104,6 @@
     }
   }
 
-  /* 별 반짝이는 애니메이션 */
-  .star {
-    position: absolute;
-    width: 0;
-    height: 0;
-    background-color: transparent;
-    clip-path: polygon(
-      50% 0%,
-      60% 40%,
-      100% 50%,
-      60% 60%,
-      50% 100%,
-      40% 60%,
-      0% 50%,
-      40% 40%
-    );
-    background: white;
-    opacity: 0;
-    animation: twinkle 2s infinite ease-in-out;
-  }
-
-  @keyframes twinkle {
-    0%,
-    100% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-  }
-
   .benefits {
     margin: 0 auto;
     /* background: #f3f3f3
@@ -644,10 +613,6 @@
   }
 
   /* .mgt15 { margin-top: 15px; } */
-  .star {
-    font-size: 17px !important;
-    line-height: 21px !important;
-  }
 
   .sign {
     position: absolute;
@@ -1870,6 +1835,35 @@
       transform: translate(0, -2vw);
     }
   }
+
+  /* 241116 눈송이 스타일추가  */
+  .section.kv {
+    position: relative;
+    overflow: hidden;
+    height: 122.222vw; /* 880/720px = 122.222vw */
+  }
+  .snowflake {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0px;
+    color: white;
+    font-size: 5px !important;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear infinite;
+    overflow-x: hidden;
+    z-index: 1;
+  }
+  @keyframes fall {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(122.222vw);
+    }
+  }
+  /* 241116 눈송이 스타일추가 EEE  */
 </style>
 <div>
   <div class="new_evt_wrap" id="promo_section">
@@ -1877,7 +1871,7 @@
       <!-- KV -->
       <div class="section kv" style="z-index: 2">
         <img
-          src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241120-022241-102-EUsIdD5I.jpg"
+          src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241126-015721-569-YhfRqawu.png"
           alt="하단내용 참조"
         />
         <div class="kv_title_wrap">
@@ -1922,7 +1916,7 @@
       </div>
       <!-- //KV -->
       <!-- Timer 추가 -->
-      <div class="section" style="z-index: 1">
+      <!-- <div class="section count" style="z-index: 1">
         <img
           src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241122-092256-059-1jUdVond.png"
           alt="하단 참조"
@@ -1955,7 +1949,7 @@
             2주 이내
           </p>
         </div>
-      </div>
+      </div> -->
       <!-- anchor_wrap -->
       <div class="section" style="position: sticky; top: 56px; z-index: 3">
         <ul class="anchor_wrap">
@@ -1988,56 +1982,6 @@
           </li>
         </ul>
       </div>
-      <!-- 추석프로모션 -->
-      <!-- <div class="section">
-        <div id="_holiday" style="position:absolute;top:0;"></div>
-        <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240905-035720-329-NGQPcZZs.jpg" alt="하단 내용 참조">
-        <div class="blind">
-          <h3>행복한 추석, 경품 이벤트</h3>
-          <p>애플 정품 액세서리 에어맥스, 애플워치, 월렛 스탠드 이미지와 추첨 1명 뱃지 이미지</p>
-          <dl>
-            <dt>대상</dt>
-            <dd>이벤트 기간 동안 ‘가입 상담 신청‘ 또는 ‘온라인 1분 가입＇후 ~9월 30일까지 설치 완료한 인터넷+IPTV 신규 가입 고객</dd>
-            <dt>기간</dt>
-            <dd>2024.9.10 ~ 2024.9.30</dd>
-            <dt>발표</dt>
-            <dd>2024.10.18 ※ 당첨자 개별 연락, 경품 순차 발송 예정</dd>
-          </dl>
-          <h4>경품 안내</h4>
-          <p>이벤트 기간 내 인터넷+IPTV 신규 가입하면 자동 응모!</p>
-          <ul>
-            <li>추첨 1명 – 애플 에어팟 맥스, 애플 워치 시리즈 9, 월렛 스탠드</li>
-            <li>추첨 300명 – CGV 관람권 (2매)</li>
-          </ul>
-        </div>
-        <button 
-          class="rnd" 
-          onclick="holidayCnslPop();closeLayerEvent(this);return false;"
-          data-gtm-event-name="button_click"
-          data-gtm-event-category="클릭" 
-          data-gtm-event-action="이벤트상세 영역- 버튼 클릭" 
-          data-gtm-event-label="컨텐츠 : 상담 예약하기"
-          data-gtm-click-location="이벤트상세 영역" 
-          data-gtm-click-text="상담 예약하기"
-          style="position:absolute;bottom:10%;transform:unset;left:22%;width:56%;height:6%">
-          <span class="blind">상담 예약하기</span>
-        </button>
-        <a 
-          class="rnd" 
-          href="/signup/smart-plan/intro"
-          data-route="" 
-          data-gtm-click-url="https://www.lguplus.com/signup/signup/smart-plan/intro"
-          data-gtm-event-name="link_click" 
-          data-gtm-event-category="클릭" 
-          data-gtm-event-action="이벤트상세 영역- 링크 클릭"
-          data-gtm-event-label="컨텐츠 : 온라인 1분 가입" 
-          data-gtm-click-location="이벤트상세 영역" 
-          data-gtm-click-direction=""
-          data-gtm-click-text="온라인 1분 가입"
-          style="position:absolute;width:56%;height:6%;bottom:2.7%;transform:unset;left:22%">
-          <span class="blind">온라인 1분 가입</span>
-        </a>
-      </div> -->
       <!-- anchor_wrap -->
       <!-- 혜택 -->
       <div class="section benefits">
@@ -2053,13 +1997,13 @@
             >
               <img
                 class="passive"
-                src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241118-092703-163-lrq0g73j.png"
-                alt="11만원 유플닷컴 11월 한정 혜택 자세히 보기 (일러스트레이션 상품권, 선물봉투, 11월한정 이미지)"
+                src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241126-124221-055-lay9JrCK.png"
+                alt="11만원 유플닷컴 12월 한정 혜택 자세히 보기 (일러스트레이션 상품권, 선물봉투, 11월한정 이미지)"
               />
               <img
                 class="active"
-                src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241118-092707-679-BlQ1iklL.png"
-                alt="10만원 유플닷컴 10월 한정 혜택 자세히 보기 닫기 (일러스트레이션 상품권, 선물봉투, 10월한정 이미지)"
+                src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241126-124239-093-0ez6ZABt.png"
+                alt="10만원 유플닷컴 12월 한정 혜택 자세히 보기 닫기 (일러스트레이션 상품권, 선물봉투, 10월한정 이미지)"
               />
             </button>
             <div id="bn_000" class="subDepth" style="position: relative">
@@ -2075,7 +2019,7 @@
                   border-top: none;
                   border-radius: 0 0 10px 10px;
                 "
-                src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241118-092711-789-cE2UgI94.png"
+                src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241126-124255-798-BasOVVYP.png"
                 alt="하단 내용 참조"
               />
               <div class="blind">
@@ -2087,9 +2031,9 @@
                     가입 완료한 고객 <em>추첨 1,000명</em>
                   </dd>
                   <dt>기간</dt>
-                  <dd>2024.11.1(금)~ 11.30일 (토)</dd>
+                  <dd>2024.12.1(일)~ 12.31일 (화)</dd>
                   <dt>당첨 발표</dt>
-                  <dd>2024.12.13(금)</dd>
+                  <dd>2025.1.17(금)</dd>
                   <dt>혜택 발송</dt>
                   <dd>가입 시 작성한 주소로 2주 이내 발송 예정</dd>
                 </dl>
@@ -2109,7 +2053,7 @@
                 data-gtm-event-label="컨텐츠 : 추가 10만원 혜택 받기"
                 data-gtm-click-location="이벤트상세 영역"
                 data-gtm-click-text="추가 10만원 혜택 받기"
-                style="width: 78%; height: 8.4%; bottom: 6.8%; left: 11%"
+                style="width: 78%; height: 8.4%; bottom: 5.8%; left: 11%"
               >
                 <span class="blind">추가 10만원 혜택 받기</span>
               </button>
@@ -4330,14 +4274,14 @@
               aria-expanded="false"
               onclick="accordianClick(this)"
             >
-              11월 한정 추가 사은품 이벤트 유의사항
+              12월 한정 추가 사은품 이벤트 유의사항
             </button>
             <div id="_accordion_004" class="subDepth">
               <ul>
                 <li>
-                  이벤트 기간(2024.11.1 ~ 11.30)동안 3년 약정으로
-                  인터넷(프리미엄 안심 500M 이상)+U<sup>+</sup>tv(프리미엄 이상)
-                  동시 신규 가입한 고객님 중 추첨 1,000명께 추가 사은품 10만원을
+                  이벤트 기간(2024.12.1~12.31)동안 3년 약정으로 인터넷(프리미엄
+                  안심 500M 이상)+U<sup>+</sup>tv(프리미엄 이상) 동시 신규
+                  가입한 고객님 중 추첨 1,000명께 추가 사은품 10만원을
                   제공합니다.
                 </li>
                 <li>
@@ -4742,6 +4686,8 @@
   }
 
   function counter() {
+    const countSection = document.querySelector(".section.count");
+    if (!countSection) return;
     var dday = new Date("nov 30, 2024, 23:59:59").getTime();
     var timer = setInterval(function () {
       var now = new Date();
@@ -4928,33 +4874,44 @@
     externalServices.dispatchMessageEvent("EventTelInternetCnslPopup", props);
   }
 
-  // kv 별 효과
-  const starCreationInterval = 500; // 별 생성 주기 (ms, 0.5초마다 생성)
+  /* 241126 KV 눈 효과 */
+  // 화면에 표시될 최대 눈송이 개수 제한
+  const MAX_SNOWFLAKES = 50;
+  let currentSnowflakes = 0;
 
-  function createStar() {
-    const section = document.querySelector(".section.kv");
-    const star = document.createElement("div");
-    star.classList.add("star");
-    star.style.left = Math.random() * section.clientWidth + "px";
-    star.style.top = Math.random() * section.clientHeight + "px";
-    star.style.width = `${Math.random() * 6 + 7}px`; // 8~18px
-    star.style.height = star.style.width; // 정사각형 유지
-    star.style.animationDuration = Math.random() * 1 + 1 + "s"; // 1~3초
-    section.appendChild(star);
+  // Snowflake 생성 함수
+  function createSnowflake() {
+    // 최대 개수 제한 확인
+    if (currentSnowflakes >= MAX_SNOWFLAKES) {
+      return;
+    }
 
-    // 일정 시간 후 별 제거
-    setTimeout(() => {
-      star.remove();
-    }, 5000); // 3초 후 제거
+    const snowflake = document.createElement("div");
+    snowflake.classList.add("snowflake");
+    snowflake.innerText = "❄";
+    snowflake.style.left = Math.random() * window.innerWidth + "px";
+    snowflake.style.animationDuration = Math.random() * 3 + 12 + "s"; // 12-15초 랜덤
+    snowflake.style.fontSize = Math.random() * 5 + 5 + "px";
+
+    const kvSection = document.querySelector(".section.kv");
+    if (kvSection) {
+      kvSection.appendChild(snowflake);
+      currentSnowflakes++;
+    }
+
+    // 애니메이션이 끝나면 요소 제거
+    snowflake.addEventListener("animationend", () => {
+      snowflake.remove();
+      currentSnowflakes--;
+    });
   }
 
-  // 별 생성 주기 설정
-  setInterval(createStar, starCreationInterval); // starCreationInterval에 따라 별 생성
+  // 주기적으로 눈송이 생성 (간격 늘림)
+  setInterval(createSnowflake, 400); // 0.8초마다 눈송이 생성
 
   // 전역 스코프 (window)에 필요한 함수들을 바인딩합니다.
   window.telCnslPop = telCnslPop;
   window.holidayCnslPop = holidayCnslPop;
-  window.createStar = createStar;
 
   ("use strict");
   function _slicedToArray(arr, i) {
