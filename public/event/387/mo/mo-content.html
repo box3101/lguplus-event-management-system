@@ -3,8 +3,12 @@
         MV 시작
     ==========================================
     -->
-<link rel="stylesheet" as="style" crossorigin
-  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link
+  rel="stylesheet"
+  as="style"
+  crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+/>
 <style type="text/css">
   .ft-pretendard {
     font-family: "Pretendard";
@@ -49,21 +53,77 @@
     position: relative;
   }
 
-  .new_evt_wrap .section.kv {
-    height: 111.111vw;
-    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240719-115444-895-K647rjth.png") 0 0 no-repeat;
-    background-size: cover;
-    overflow: hidden;
+  /* .new_evt_wrap .section.kv {
+      height: 116.667vw;
+      background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241114-092548-600-QCuaPMM6.png") 0 0 no-repeat;
+      background-size: cover;
+      overflow: hidden;
+    } */
+
+  .kv .kv_title_wrap {
+    width: 100%;
+    height: 34.636vw;
+    position: absolute;
+    top: 41.5%;
+    z-index: 1;
   }
 
-  .kv>.ani {
+  .kv .kv_title_wrap .ani {
     display: block;
     position: absolute;
     animation: floatingB2 3.4s ease-in-out infinite;
   }
 
-  .kv>.ani.title {
+  .kv .kv_title_wrap .ani.title {
     animation-name: floatingB1;
+  }
+
+  .kv .kv_title_wrap .number_ob {
+    position: absolute;
+    animation: numberUpDown 2s infinite ease-in-out;
+  }
+  .kv .kv_title_wrap .number3 {
+    animation-delay: 0.5s;
+    z-index: 3;
+  }
+  .kv .kv_title_wrap .number5 {
+    animation-delay: 1s;
+    z-index: 2;
+  }
+  .kv .kv_title_wrap .number2 {
+    animation-delay: 1.5s;
+    z-index: 1;
+  }
+
+  /* 별 반짝이는 애니메이션 */
+  .star {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    clip-path: polygon(
+      50% 0%,
+      60% 40%,
+      100% 50%,
+      60% 60%,
+      50% 100%,
+      40% 60%,
+      0% 50%,
+      40% 40%
+    );
+    background: white;
+    opacity: 0;
+    animation: twinkle 2s infinite ease-in-out;
+  }
+
+  @keyframes twinkle {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
   }
 
   .benefits {
@@ -96,12 +156,14 @@
   .ev-slide .ev-slide-controls__play {
     width: 32px;
     height: 32px;
-    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230308-021310-325-RlPeayZF.png) top 12px center no-repeat;
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230308-021310-325-RlPeayZF.png)
+      top 12px center no-repeat;
     background-size: 10px;
   }
 
   .ev-slide .ev-slide-controls__play.is-pause {
-    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230308-021305-382-Y8bcHdS3.png) top 12px center no-repeat;
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230308-021305-382-Y8bcHdS3.png)
+      top 12px center no-repeat;
     background-size: 10px;
   }
 
@@ -159,12 +221,14 @@
   }
 
   .ev-slide-01 .ev-slide-controls__arrow--prev {
-    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-101520-397-xOX96H6y.png") no-repeat center center / 100%;
+    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-101520-397-xOX96H6y.png")
+      no-repeat center center / 100%;
     left: 2%;
   }
 
   .ev-slide-01 .ev-slide-controls__arrow--next {
-    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-101528-451-UiQ2N4V0.png") no-repeat center center / 100%;
+    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-101528-451-UiQ2N4V0.png")
+      no-repeat center center / 100%;
     right: 2%;
     transform: translateY(-50%);
   }
@@ -203,7 +267,8 @@
   }
 
   /* TAB */
-  #anchor03 {}
+  #anchor03 {
+  }
 
   #anchor03 .tabs_conts_wrap {
     display: flex;
@@ -241,7 +306,8 @@
     transform: translateX(-50%);
     left: 50%;
     bottom: -1.806vw;
-    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/ico_selector.png") 0 0 no-repeat;
+    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/ico_selector.png")
+      0 0 no-repeat;
     background-size: cover;
   }
 
@@ -279,13 +345,13 @@
     z-index: 2;
   }
 
-  #anchor02 .tabs_conts .imglist>li {
+  #anchor02 .tabs_conts .imglist > li {
     width: 78.889vw;
     height: 56.944vw;
     margin-bottom: 4.444vw;
   }
 
-  .share_pop_cont .imglist>li {
+  .share_pop_cont .imglist > li {
     width: 100%;
     margin-bottom: 4.444vw;
   }
@@ -350,7 +416,8 @@
     right: 2.222vw;
     width: 8.889vw;
     height: 8.889vw;
-    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/m/pop_close.png") no-repeat;
+    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/m/pop_close.png")
+      no-repeat;
     background-size: cover;
     font-size: 0;
   }
@@ -404,7 +471,7 @@
     text-align: center;
   }
 
-  .type2 .share_layer .share_layer_inner .share_layer_tit>img {
+  .type2 .share_layer .share_layer_inner .share_layer_tit > img {
     width: auto;
     height: 11.111vw;
   }
@@ -429,7 +496,8 @@
     right: 10px;
     width: 8.889vw;
     height: 8.889vw;
-    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/ico_pop_close.png") no-repeat 0 0;
+    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/ico_pop_close.png")
+      no-repeat 0 0;
     background-size: 100%;
     font-size: 0;
   }
@@ -628,21 +696,21 @@
     font-size: 15px;
   }
 
-  .package-cont>li {
+  .package-cont > li {
     border-bottom: 1px solid #eee;
     padding: 6% 4%;
   }
 
-  .package-cont>li:first-child {
+  .package-cont > li:first-child {
     padding: 6% 0 !important;
   }
 
-  .package-cont>li:last-child {
+  .package-cont > li:last-child {
     border-bottom: 0;
     padding-bottom: 0;
   }
 
-  .price-total>ul {
+  .price-total > ul {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -696,9 +764,11 @@
     margin-right: 5px;
     display: inline-block;
     background: rgb(239, 108, 89);
-    background: linear-gradient(90deg,
-        rgba(239, 108, 89, 1) 0%,
-        rgba(230, 6, 129, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(239, 108, 89, 1) 0%,
+      rgba(230, 6, 129, 1) 100%
+    );
   }
 
   .blue-txt {
@@ -828,7 +898,8 @@
     position: absolute;
     top: 18px;
     right: 10px;
-    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220526-031420-695-csuo3I7a.png) no-repeat 50% 50%;
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220526-031420-695-csuo3I7a.png)
+      no-repeat 50% 50%;
     width: 15px;
     height: 15px;
   }
@@ -844,7 +915,8 @@
     position: absolute;
     top: 18px;
     right: 10px;
-    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220526-031403-132-d9oOmJNi.png) no-repeat 50% 50%;
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220526-031403-132-d9oOmJNi.png)
+      no-repeat 50% 50%;
     background-size: 100%;
     width: 15px;
     height: 15px;
@@ -878,17 +950,17 @@
     font-size: 13px;
   }
 
-  .acType .subDepth ul>li {
+  .acType .subDepth ul > li {
     position: relative;
     margin-left: -10px;
     word-break: break-all;
   }
 
-  .acType .subDepth ul>li+li {
+  .acType .subDepth ul > li + li {
     margin-top: 6px;
   }
 
-  .acType .subDepth ul>li:before {
+  .acType .subDepth ul > li:before {
     content: "";
     position: absolute;
     width: 4px;
@@ -935,8 +1007,8 @@
     position: relative;
   }
 
-  .float_area button+a:before,
-  .float_area a+button:before {
+  .float_area button + a:before,
+  .float_area a + button:before {
     display: inline-block;
     content: "";
     width: 1px;
@@ -974,18 +1046,24 @@
   }
 
   .float_area a strong.flt_btn_mainCall:before {
-    background: #fff url("https://lguplus.com/static/contents/medialog/mg/event/69791/m/ico_m_callMain.png") 50% 50% no-repeat;
+    background: #fff
+      url("https://lguplus.com/static/contents/medialog/mg/event/69791/m/ico_m_callMain.png")
+      50% 50% no-repeat;
     background-size: 36px 36px;
   }
 
   .float_area a strong.flt_btn_chat:before,
   .float_area button strong.flt_btn_chat:before {
-    background: #fff url("https://lguplus.com/static/contents/medialog/mg/event/69791/m/ico_m_call.png") 50% 50% no-repeat;
+    background: #fff
+      url("https://lguplus.com/static/contents/medialog/mg/event/69791/m/ico_m_call.png")
+      50% 50% no-repeat;
     background-size: 36px 36px;
   }
 
   .float_area a strong.flt_btn_cnl:before {
-    background: #fff url("https://lguplus.com/static/contents/medialog/mg/event/69791/m/ico_m_reag.png") 50% 50% no-repeat;
+    background: #fff
+      url("https://lguplus.com/static/contents/medialog/mg/event/69791/m/ico_m_reag.png")
+      50% 50% no-repeat;
     background-size: 36px 36px;
   }
 
@@ -1006,7 +1084,8 @@
     left: 50%;
     transform: translateX(-50%);
     top: 38%;
-    background: url(https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230410-053551-593-oOuNQfVL.gif) no-repeat 50% 50% / cover;
+    background: url(https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20230410-053551-593-oOuNQfVL.gif)
+      no-repeat 50% 50% / cover;
     width: 79%;
     height: 2.5%;
   }
@@ -1059,7 +1138,8 @@
   }
 
   .acco_btnwrap .acco_qustion_btn {
-    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230221-012041-544-YaKDfKAf.png) no-repeat 50% 0;
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230221-012041-544-YaKDfKAf.png)
+      no-repeat 50% 0;
     width: 240px;
     height: 48px;
     font-size: 0;
@@ -1068,7 +1148,8 @@
   }
 
   .acco_btnwrap .on {
-    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230221-012235-520-TJSYxwb9.png) no-repeat 50% 0;
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230221-012235-520-TJSYxwb9.png)
+      no-repeat 50% 0;
     width: 240px;
     height: 48px;
     background-size: 60%;
@@ -1087,19 +1168,19 @@
     background-color: #f3f3f3;
   }
 
-  .instant_consult>div {
+  .instant_consult > div {
     padding: 0 8.333vw 16.667vw;
     /*0 8.333vw 5.556vw;*/
     -webkit-transition: height 0.6s linear;
     transition: height 0.6s linear;
   }
 
-  .instant_consult>div h4 {
+  .instant_consult > div h4 {
     margin: 2.362vw auto 4.167vw;
     text-align: center;
   }
 
-  .instant_consult>div p.ad {
+  .instant_consult > div p.ad {
     text-align: center;
   }
 
@@ -1107,7 +1188,7 @@
     border-bottom: 0px none !important;
   }
 
-  .c-inpfield~.c-inpfield {
+  .c-inpfield ~ .c-inpfield {
     margin-top: 3.333vw;
   }
 
@@ -1124,11 +1205,11 @@
     letter-spacing: -0.72px;
   }
 
-  .c-inpfield .c-inpform~.c-inpform {
+  .c-inpfield .c-inpform ~ .c-inpform {
     margin-top: 1.389vw;
   }
 
-  .instant_consult>div .signup_btn {
+  .instant_consult > div .signup_btn {
     display: block;
     width: 62.5vw;
     height: 12.222vw;
@@ -1151,7 +1232,7 @@
   }
 
   .checkbox .text-chkbox,
-  .checkbox .text-chkbox>.txt {
+  .checkbox .text-chkbox > .txt {
     display: inline-block;
     vertical-align: baseline;
     line-height: 6.389vw;
@@ -1175,25 +1256,27 @@
     height: 30px;
   }
 
-  .terms_of_use .checkbox input[type="checkbox"]+label {
+  .terms_of_use .checkbox input[type="checkbox"] + label {
     position: relative;
     display: inline-block;
     padding: 0 7vw;
     font-size: 14px;
     font-weight: 600;
     color: #000;
-    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/ico_dcheck.png") left top 4px no-repeat;
+    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/ico_dcheck.png")
+      left top 4px no-repeat;
     background-size: 4.444vw 4.444vw;
     cursor: pointer;
     color: #333;
   }
 
-  .terms_of_use .checkbox input[type="checkbox"]:checked+label {
-    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/ico_checked.png") left top 4px no-repeat;
+  .terms_of_use .checkbox input[type="checkbox"]:checked + label {
+    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/ico_checked.png")
+      left top 4px no-repeat;
     background-size: 4.444vw 4.444vw;
   }
 
-  .terms_of_use .checkbox+.acc-toggle {
+  .terms_of_use .checkbox + .acc-toggle {
     position: absolute;
     top: 4px;
     right: 0;
@@ -1208,7 +1291,7 @@
     letter-spacing: -0.72px;
   }
 
-  .terms_of_use .checkbox+.acc-toggle::after,
+  .terms_of_use .checkbox + .acc-toggle::after,
   #_terms_of_use .acc-toggle::after {
     position: absolute;
     content: "";
@@ -1217,7 +1300,8 @@
     right: 0;
     width: 4.444vw;
     height: 4.444vw;
-    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/m/arrow.png") 50% 50% no-repeat;
+    background: url("https://lguplus.com/static/contents/medialog/mg/event/69791/m/arrow.png")
+      50% 50% no-repeat;
     background-size: contain;
     transform: rotate(180deg);
     -webkit-transition: transform 0.15s;
@@ -1228,13 +1312,13 @@
     top: 4px;
   }
 
-  .terms_of_use .checkbox+.acc-toggle.on::after,
+  .terms_of_use .checkbox + .acc-toggle.on::after,
   #_terms_of_use .acc-toggle.on::after {
     transform: rotate(0deg);
     background-size: contain;
   }
 
-  .terms_of_use .acc-toggle:not(.on)+#_terms_of_use {
+  .terms_of_use .acc-toggle:not(.on) + #_terms_of_use {
     visibility: hidden;
     overflow: hidden;
     max-height: 0;
@@ -1242,7 +1326,7 @@
     transition: max-height 0.6s linear;
   }
 
-  .terms_of_use .acc-toggle.on+#_terms_of_use {
+  .terms_of_use .acc-toggle.on + #_terms_of_use {
     visibility: visible;
     margin-top: 3.611vw;
     max-height: max-content;
@@ -1254,7 +1338,7 @@
     margin-top: 2.361vw;
   }
 
-  #_terms_of_use .checkbox input[type="checkbox"]+label {
+  #_terms_of_use .checkbox input[type="checkbox"] + label {
     color: #797979;
     font-size: 3.611vw;
   }
@@ -1266,7 +1350,7 @@
     border-radius: 10px;
   }
 
-  #_terms_of_use .checkbox:has(.acc-toggle.on)+.agreeBox {
+  #_terms_of_use .checkbox:has(.acc-toggle.on) + .agreeBox {
     visibility: visible;
     margin-top: 2.361vw;
     margin-bottom: 4.444vw;
@@ -1286,23 +1370,23 @@
     font-size: 12px;
   }
 
-  #_terms_of_use .agreeBox .agreeTxt+.agreeTxt {
+  #_terms_of_use .agreeBox .agreeTxt + .agreeTxt {
     padding-top: 0;
   }
 
-  #_terms_of_use .agreeBox .agreeTxt dl>dt {
+  #_terms_of_use .agreeBox .agreeTxt dl > dt {
     margin-top: 4.167vw;
     margin-bottom: 0.2vw;
     font-weight: 600;
   }
 
-  #_terms_of_use .agreeBox .agreeTxt dl>dd {
+  #_terms_of_use .agreeBox .agreeTxt dl > dd {
     margin-top: 10px;
     line-height: 16px;
     letter-spacing: -0.72px;
   }
 
-  #_terms_of_use .agreeBox .agreeTxt dl>dd em {
+  #_terms_of_use .agreeBox .agreeTxt dl > dd em {
     color: #e6007e;
     font-style: normal;
     font-weight: 600;
@@ -1319,12 +1403,12 @@
     margin-top: 1.111vw;
   }
 
-  #_terms_of_use [class*="c-bullet-type-"]>li {
+  #_terms_of_use [class*="c-bullet-type-"] > li {
     padding-left: 4.167vw;
     font-size: 10px !important;
   }
 
-  #_terms_of_use [class*="c-bullet-type-"]>li:before {
+  #_terms_of_use [class*="c-bullet-type-"] > li:before {
     width: 2px;
     height: 2px;
     left: 1.667vw;
@@ -1334,7 +1418,8 @@
   .evt_visual {
     min-height: 158.194vw;
     /* padding: 150.139vw 0 0; */
-    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240628-090357-366-MmqI78L7.jpg") top center no-repeat;
+    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240628-090357-366-MmqI78L7.jpg")
+      top center no-repeat;
     background-size: 100% auto;
   }
 
@@ -1357,21 +1442,21 @@
     transition: max-height 0.6s linear;
   }
 
-  .evt_detail.on+.hidden_evt {
+  .evt_detail.on + .hidden_evt {
     visibility: visible;
     max-height: max-content;
     -webkit-transition: max-height 1s linear;
     transition: max-height 1s linear;
   }
 
-  .evt_detail.on+.hidden_evt .duo {
+  .evt_detail.on + .hidden_evt .duo {
     position: absolute;
     top: 144.811vw;
     padding: 113.811vw 0 16.667vw;
     align-items: center;
   }
 
-  .evt_detail.on+.hidden_evt .duo>* {
+  .evt_detail.on + .hidden_evt .duo > * {
     background: none !important;
     border: none !important;
   }
@@ -1427,14 +1512,14 @@
     flex-direction: unset;
   }
 
-  .c-btn-group.duo.fix>button,
-  .c-btn-group.duo.fix>a {
+  .c-btn-group.duo.fix > button,
+  .c-btn-group.duo.fix > a {
     background-color: transparent;
     border: 0px none !important;
   }
 
-  .c-btn-group.duo>button,
-  .c-btn-group.duo>a {
+  .c-btn-group.duo > button,
+  .c-btn-group.duo > a {
     width: 62.5vw;
     background: #000;
     color: #fff;
@@ -1447,7 +1532,7 @@
     border: 2px solid #000;
   }
 
-  .c-btn-group.duo+h4 {
+  .c-btn-group.duo + h4 {
     padding-top: 60px;
   }
 
@@ -1468,7 +1553,7 @@
 
   @keyframes floatingB2 {
     0% {
-      transform: translate(0, -1vw);
+      transform: translate(0, -2vw);
     }
 
     50% {
@@ -1476,7 +1561,17 @@
     }
 
     100% {
-      transform: translate(0, -1vw);
+      transform: translate(0, -2vw);
+    }
+  }
+
+  @keyframes numberUpDown {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5vw);
     }
   }
 
@@ -1509,19 +1604,19 @@
     justify-content: space-between;
   }
 
-  .section .outliner>li {
+  .section .outliner > li {
     background-color: #fff;
     border-radius: 2.778vw;
     border: 1px solid #ddd;
   }
 
-  .section .outliner:not(.disb)>li {
+  .section .outliner:not(.disb) > li {
     -webkit-box-shadow: 0px 6px 10px 0px #0000000f;
     box-shadow: 0px 6px 10px 0px #0000000f;
   }
 
-  .section .outliner:not(.disb)>li:hover,
-  .section .outliner:not(.disb)>li:focus {
+  .section .outliner:not(.disb) > li:hover,
+  .section .outliner:not(.disb) > li:focus {
     outline: 2px solid #e6007e !important;
     z-index: 2;
   }
@@ -1530,7 +1625,7 @@
     outline: 0px none transparent !important;
   }
 
-  .benefits .outliner>li {
+  .benefits .outliner > li {
     background-color: #fff;
     border-radius: 2.778vw;
     border: 1px solid #ebd2ff;
@@ -1571,13 +1666,13 @@
     position: absolute;
     width: 60.5%;
     height: 5.2%;
-    bottom: 41.6%;
+    bottom: 25.35%;
     left: 50%;
     transform: translate(-50%);
     text-align: center;
   }
 
-  .timerWrap>div {
+  .timerWrap > div {
     display: flex;
     position: absolute;
     width: 21.25vw;
@@ -1586,20 +1681,20 @@
     align-items: center;
   }
 
-  .timerWrap>div span {
+  .timerWrap > div span {
     display: inline-block;
     font-size: 4.639vw;
     color: #fff;
     font-weight: 700;
   }
 
-  .timerWrap>div span.kr {
+  .timerWrap > div span.kr {
     margin-left: 2px;
     font-size: 4.639vw;
   }
 
   .timerWrap .day {
-    left: -3vw;
+    left: -3.2vw;
   }
 
   .timerWrap .hour {
@@ -1658,13 +1753,13 @@
     grid-template-rows: 1fr 1fr;
   }
 
-  #price_info .subDepth ul>li {
+  #price_info .subDepth ul > li {
     width: 43.056vw;
     height: 41.667vw;
     background: none transparent;
   }
 
-  #price_info .subDepth ul>li button {
+  #price_info .subDepth ul > li button {
     width: 100%;
     height: inherit;
   }
@@ -1744,12 +1839,22 @@
   <div class="new_evt_wrap">
     <!-- 상단 띠배너 영역 -->
     <div class="section">
-      <button class="anchor" data-route data-destination="#promo_section"
-        onclick="clickTargetHandler(this); return false" data-gtm-event-name="button_click" data-gtm-event-category="클릭"
-        data-gtm-event-action="이벤트상세 영역- 버튼 클릭" data-gtm-event-label=" 컨텐츠 : 10월 한정 추가 10만원 상품권 더!"
-        data-gtm-click-location=" 이벤트상세 영역" data-gtm-click-text="10월 한정 추가 10만원 상품권 더!">
-        <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241031-100115-803-G0vFVDTQ.png"
-          alt="11월 한정 추가 10만원 상품권 더!" />
+      <button
+        class="anchor"
+        data-route
+        data-destination="#promo_section"
+        onclick="clickTargetHandler(this); return false"
+        data-gtm-event-name="button_click"
+        data-gtm-event-category="클릭"
+        data-gtm-event-action="이벤트상세 영역- 버튼 클릭"
+        data-gtm-event-label=" 컨텐츠 : 10월 한정 추가 10만원 상품권 더!"
+        data-gtm-click-location=" 이벤트상세 영역"
+        data-gtm-click-text="10월 한정 추가 10만원 상품권 더!"
+      >
+        <img
+          src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241031-100115-803-G0vFVDTQ.png"
+          alt="11월 한정 추가 10만원 상품권 더!"
+        />
         <!-- 기존: https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241004-102029-939-clXg6yIN.png -->
       </button>
     </div>
@@ -1757,20 +1862,49 @@
     <div class="effect_section">
       <!-- KV -->
       <div class="section kv">
-        <img class="ani title"
-          src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240718-045046-914-nfRGyyto.png"
-          alt="휴대폰" style="top: 84.722vw; left: -10.556vw; width: 42.778vw" />
-        <img class="ani bl_l"
-          src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240718-045112-082-VMj7AmU2.png"
-          alt="풍선" style="top: 11.111vw; left: 2.5vw; width: 26.806vw" />
-        <img class="ani bl_r"
-          src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240718-045059-249-iFmJ15K0.png"
-          alt="풍선" style="top: 63.194vw; left: 75vw; width: 31.944vw" />
+        <img
+          src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241115-045225-904-fbBoneJq.jpg"
+          alt=""
+        />
+        <div class="kv_title_wrap">
+          <img
+            class="ani bl_l"
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241113-023015-629-gtqL9eW5.png"
+            alt="최대 글씨가 써져있는 풍선모양"
+            style="width: 32.5vw; top: -18vw; left: 1.5vw"
+          />
+          <img
+            class="ani bl_r"
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241113-023021-056-NRCy4HWR.png"
+            alt="만원 글씨가 써져있는 하트모양"
+            style="width: 27.833vw; top: -2vw; right: 0.3vw"
+          />
+          <img
+            class="number_ob number3"
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241113-025201-149-UZ2pL9uD.png"
+            alt="3"
+            style="width: 22vw; left: 17.5vw"
+          />
+          <img
+            class="number_ob number5"
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241113-025205-670-a3Kgb50j.png"
+            alt="5"
+            style="width: 21.722vw; left: 37.2vw"
+          />
+          <img
+            class="number_ob number2"
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241113-025209-664-xdcdyMNr.png"
+            alt="2"
+            style="width: 27.139vw; top: -9vw; right: 16vw"
+          />
+          <!-- <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241113-124806-652-ptVcMUlM.gif"
+              alt="하단 내용 참조" /> -->
+        </div>
         <div class="blind">
           <p>유플러스닷컴</p>
           <p>U<sup>+</sup> 공식온라인스토어</p>
           <p>인터넷 / IPTV 신규가입</p>
-          <p>역대급 혜택 최대 352만원</p>
+          <p>초강력 혜택 최대 352만원</p>
           <p>최대 46만원 상품권과 112만원 휴대폰 결합할인까지!</p>
         </div>
       </div>
@@ -1779,17 +1913,29 @@
       <div class="section" style="position: sticky; top: 56px; z-index: 3">
         <ul class="anchor_wrap">
           <li id="anchorBtn01">
-            <button data-destination="#anchor01" class="anchor" onclick="clickTargetHandler(this); return false;">
+            <button
+              data-destination="#anchor01"
+              class="anchor"
+              onclick="clickTargetHandler(this); return false;"
+            >
               가입 혜택
             </button>
           </li>
           <li id="anchorBtn02">
-            <button data-destination="#anchor02" class="anchor" onclick="clickTargetHandler(this); return false;">
+            <button
+              data-destination="#anchor02"
+              class="anchor"
+              onclick="clickTargetHandler(this); return false;"
+            >
               추천 요금제
             </button>
           </li>
           <li id="anchorBtn03">
-            <button data-destination="#promo_section" class="anchor" onclick="clickTargetHandler(this); return false;">
+            <button
+              data-destination="#promo_section"
+              class="anchor"
+              onclick="clickTargetHandler(this); return false;"
+            >
               이벤트
             </button>
           </li>
@@ -1820,14 +1966,14 @@
         </div> -->
       <!-- 라방 배너 EEE -->
       <div id="promo_section" class="section" tabindex="0">
-        <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241031-100127-541-W9GXn3a4.jpg"
-          alt="하단 내용 참조" />
+        <img
+          src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241121-051523-421-Lojo0Tb6.png"
+          alt="하단 내용 참조"
+        />
         <!-- 기존: https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241004-101401-759-Q6oZHfRs.png -->
         <div class="blind">
           <h3>11월 한정 신규가입 혜택. 추가 상품권 10만원 더!</h3>
           <p>신세계 상품구너 100,000원 (1,000명 추첨)</p>
-          <p>추가 10만원 상품권 혜택 종료까지</p>
-          <p>카운트다운을 보여주는 효과</p>
           <dl>
             <dt>대상</dt>
             <dd>
@@ -1835,43 +1981,47 @@
               완료한 고객 추첨 1,000명
             </dd>
             <dt>기간</dt>
-            <dd>2024.11.1(금)~ 11.30일 (토) </dd>
+            <dd>2024.11.1(금)~ 11.30일 (토)</dd>
             <dt>당첨 발표</dt>
             <dd>2024.12.13(금)</dd>
             <dt>혜택 발송</dt>
-            <dd>가입 시 작성한 주소로 2주 이내 발송 예정</dd>
+            <dd>가입하신 고객 연락처로 2주 이내 발송 예정</dd>
           </dl>
         </div>
         <!-- 남은시간 countdown -->
-        <!-- <div class="timerWrap">
-            <div class="day">
-              <span id="d1">0</span>
-              <span id="d0">0</span>
-              <span class="kr">일</span>
-            </div>
-            <div class="hour">
-              <span id="h1">0</span>
-              <span id="h0">0</span>
-              <span class="kr">시간</span>
-            </div>
-            <div class="min">
-              <span id="m1">0</span>
-              <span id="m0">0</span>
-              <span class="kr">분</span>
-            </div> 
-            <div class="sec">
-              <span id="s1">0</span>
-              <span id="s0">0</span>
-            </div> 
-          </div>  -->
+        <div class="timerWrap">
+          <div class="day">
+            <span id="d1">0</span>
+            <span id="d0">0</span>
+            <span class="kr">일</span>
+          </div>
+          <div class="hour">
+            <span id="h1">0</span>
+            <span id="h0">0</span>
+            <span class="kr">시간</span>
+          </div>
+          <div class="min">
+            <span id="m1">0</span>
+            <span id="m0">0</span>
+            <span class="kr">분</span>
+          </div>
+          <div class="sec">
+            <span id="s1">0</span>
+            <span id="s0">0</span>
+          </div>
+        </div>
         <!-- //남은시간 countdown -->
-        <button class="event_detail_a" onclick="telCnslPop();closeLayerEvent(this);return false;"
-          data-gtm-event-name="button_click" data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역- 버튼 클릭"
-          data-gtm-event-label="컨텐츠 : 추가 10만원 혜택 받기" data-gtm-click-location="이벤트상세 영역"
-          data-gtm-click-text="추가 10만원 혜택 받기" style="width: 62%;
-            height: 9.3%;
-            bottom: 8.4%;
-            left: 19%;">
+        <button
+          class="event_detail_a"
+          onclick="telCnslPop();closeLayerEvent(this);return false;"
+          data-gtm-event-name="button_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="이벤트상세 영역- 버튼 클릭"
+          data-gtm-event-label="컨텐츠 : 추가 10만원 혜택 받기"
+          data-gtm-click-location="이벤트상세 영역"
+          data-gtm-click-text="추가 10만원 혜택 받기"
+          style="width: 62%; height: 6.5%; bottom: 7%; left: 19%"
+        >
           <span class="blind">추가 10만원 혜택 받기</span>
         </button>
       </div>
@@ -1928,11 +2078,16 @@
       <!-- 혜택 -->
       <div id="anchor01" class="section benefits" tabindex="0">
         <h4>
-          <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240719-050654-053-x5Fgn0Id.png"
-            alt="하단 내용 참조" style="width: 53.333vw" />
+          <img
+            src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240719-050654-053-x5Fgn0Id.png"
+            alt="하단 내용 참조"
+            style="width: 53.333vw"
+          />
         </h4>
-        <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240911-040820-961-rKPMfFrf.png"
-          alt="하단내용 참조" />
+        <img
+          src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241113-023753-436-TTd8aIUS.png"
+          alt="하단내용 참조"
+        />
         <div class="blind">
           <h5>46만원 사은품 OR 요금할인</h5>
           <dl>
@@ -1955,23 +2110,45 @@
             </li>
           </ul>
         </div>
-        <button type="button" class="event_detail_a event_modal_open7" onclick="openLayerEvent(this)"
-          style="left: 9%; top: 35%; width: 34%; height: 4%; padding: 0" data-layer="event_modal_layer7"
-          data-gtm-event-name="button_click" data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역- 버튼 클릭"
-          data-gtm-event-label="컨텐츠 : 사은품 보기" data-gtm-click-location="이벤트상세 영역" data-gtm-click-text="사은품 보기">
+        <button
+          type="button"
+          class="event_detail_a event_modal_open7"
+          onclick="openLayerEvent(this)"
+          style="left: 9%; top: 35%; width: 34%; height: 4%; padding: 0"
+          data-layer="event_modal_layer7"
+          data-gtm-event-name="button_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="이벤트상세 영역- 버튼 클릭"
+          data-gtm-event-label="컨텐츠 : 사은품 보기"
+          data-gtm-click-location="이벤트상세 영역"
+          data-gtm-click-text="사은품 보기"
+        >
           <span class="blind">사은품 보기</span>
         </button>
-        <button type="button" class="event_detail_a event_modal_open8" data-layer="event_modal_layer8"
-          onclick="openLayerEvent(this)" style="right: 9%; top: 35%; width: 34%; height: 4%; padding: 0"
-          data-gtm-event-name="button_click" data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
-          data-gtm-event-label="컨텐츠 : 할인 혜택 보기 버튼" data-gtm-click-location="이벤트상세 영역" data-gtm-click-text="할인 혜택 보기">
+        <button
+          type="button"
+          class="event_detail_a event_modal_open8"
+          data-layer="event_modal_layer8"
+          onclick="openLayerEvent(this)"
+          style="right: 9%; top: 35%; width: 34%; height: 4%; padding: 0"
+          data-gtm-event-name="button_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
+          data-gtm-event-label="컨텐츠 : 할인 혜택 보기 버튼"
+          data-gtm-click-location="이벤트상세 영역"
+          data-gtm-click-text="할인 혜택 보기"
+        >
           <span class="blind">할인 혜택 보기</span>
         </button>
         <div class="benefits_swiper">
-          <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240911-042831-943-AXNH2ueP.png"
-            alt="믿을 수 있는 신규 가입 혜택을 확인해 보세요!" />
+          <img
+            src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240911-042831-943-AXNH2ueP.png"
+            alt="믿을 수 있는 신규 가입 혜택을 확인해 보세요!"
+          />
           <div class="ev-slide ev-slide-01" data-event-carousel>
-            <div class="swiper-container ev-slide__container" data-swiper-option='{
+            <div
+              class="swiper-container ev-slide__container"
+              data-swiper-option='{
                   "autoplay": {
                       "delay": 3000
                   },
@@ -1983,14 +2160,16 @@
                   "slidesOffsetAfter": 0,
                   "loop": true,
                   "loopAdditionalSlides": 1
-                }'>
+                }'
+            >
               <div class="swiper-wrapper ev-slide__list">
                 <!-- 1 -->
                 <div class="swiper-slide ev-slide__slide">
                   <div class="ev-slide__stage">
                     <img
                       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-100710-265-IqvBX5ft.png"
-                      alt="하단내용 참조" />
+                      alt="하단내용 참조"
+                    />
                     <div class="blind">
                       <h5>
                         휴대폰 결합 시 최대 112만원 요금 할인(월 31,000원 할인 X
@@ -2010,7 +2189,8 @@
                   <div class="ev-slide__stage">
                     <img
                       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-100719-799-Wz1x9qH0.png"
-                      alt="하단내용 참조" />
+                      alt="하단내용 참조"
+                    />
                     <div class="blind">
                       <span>추가 혜택</span>
                       <h5>유플러스닷컴 단독 최대 11만원 추가 요금 할인</h5>
@@ -2029,7 +2209,8 @@
                   <div class="ev-slide__stage">
                     <img
                       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-100729-348-RIU505rr.png"
-                      alt="하단내용 참조" />
+                      alt="하단내용 참조"
+                    />
                     <div class="blind">
                       <h5>
                         인터넷+IPTV 결합 시 최대 39만원 요금 할인(월 11,000원
@@ -2047,7 +2228,8 @@
                   <div class="ev-slide__stage">
                     <img
                       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-100738-870-BkmjBUiS.png"
-                      alt="하단내용 참조" />
+                      alt="하단내용 참조"
+                    />
                     <div class="blind">
                       <h5>무료 제공기기</h5>
                       <p>
@@ -2067,7 +2249,8 @@
                   <div class="ev-slide__stage">
                     <img
                       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-100747-506-kV5pnj3N.png"
-                      alt="하단내용 참조" />
+                      alt="하단내용 참조"
+                    />
                     <div class="blind">
                       <h5>U+ tv 콘텐츠 할인(월 2,200원 X 36개월)</h5>
                       <p>유료 VOD 콘텐츠 20% 할인</p>
@@ -2085,7 +2268,8 @@
                   <div class="ev-slide__stage">
                     <img
                       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-100756-624-el0UUFOd.png"
-                      alt="하단내용 참조" />
+                      alt="하단내용 참조"
+                    />
                     <div class="blind">
                       <span>추가 혜택</span>
                       <h5>웰컴 쿠폰 증정</h5>
@@ -2106,7 +2290,8 @@
                   <div class="ev-slide__stage">
                     <img
                       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-100807-837-tg12YSud.png"
-                      alt="하단내용 참조" />
+                      alt="하단내용 참조"
+                    />
                     <div class="blind">
                       <h5>
                         LG U+ 제휴카드 할인 (최대 월 25,000원 요금 할인 X
@@ -2125,7 +2310,8 @@
                   <div class="ev-slide__stage">
                     <img
                       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-100819-278-01QiQeii.png"
-                      alt="하단내용 참조" />
+                      alt="하단내용 참조"
+                    />
                     <div class="blind">
                       <h5>
                         U+모바일 tv 기본 월정액 무료 제공(월 5,500원 할인 X
@@ -2142,13 +2328,25 @@
                 </div>
               </div>
               <div class="ev-slide-controls">
-                <button type="button" class="ev-slide-controls__arrow ev-slide-controls__arrow--prev" data-swiper="PREV"
-                  aria-label="이전 슬라이드 보기"></button>
-                <button type="button" class="ev-slide-controls__arrow ev-slide-controls__arrow--next" data-swiper="NEXT"
-                  aria-label="다음 슬라이드 보기"></button>
+                <button
+                  type="button"
+                  class="ev-slide-controls__arrow ev-slide-controls__arrow--prev"
+                  data-swiper="PREV"
+                  aria-label="이전 슬라이드 보기"
+                ></button>
+                <button
+                  type="button"
+                  class="ev-slide-controls__arrow ev-slide-controls__arrow--next"
+                  data-swiper="NEXT"
+                  aria-label="다음 슬라이드 보기"
+                ></button>
                 <div class="ev-slide-controls__paging">
                   <div class="swiper-pagination"></div>
-                  <button type="button" class="ev-slide-controls__play" data-swiper="PLAY"></button>
+                  <button
+                    type="button"
+                    class="ev-slide-controls__play"
+                    data-swiper="PLAY"
+                  ></button>
                 </div>
               </div>
             </div>
@@ -2162,53 +2360,96 @@
           <p class="ad">
             <img
               src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240719-050541-276-VDFh0XrS.png"
-              alt="전화상담으로 평균 3분 이상 빠르게 가입할 수 있어요!" style="width: 78.889vw; height: auto" />
+              alt="전화상담으로 평균 3분 이상 빠르게 가입할 수 있어요!"
+              style="width: 78.889vw; height: auto"
+            />
           </p>
           <h4>
             <img
               src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240719-050905-950-DI8OHD3Z.png"
-              alt="간편하게 신청하고, 많은 혜택 받아보세요!" style="width: 80.278vw; height: auto" />
+              alt="간편하게 신청하고, 많은 혜택 받아보세요!"
+              style="width: 80.278vw; height: auto"
+            />
           </h4>
           <div class="regs_form" ga-event-block="true">
             <div class="c-inpfield">
               <label for="userName-3-1" class="c-label blind">이름</label>
               <div class="c-inpform">
                 <div class="c-inpitem">
-                  <input id="userName-3-1" name="_name" placeholder="이름을 입력하세요" title="이름을 입력하세요" type="text"
-                    class="c-inp" />
+                  <input
+                    id="userName-3-1"
+                    name="_name"
+                    placeholder="이름을 입력하세요"
+                    title="이름을 입력하세요"
+                    type="text"
+                    class="c-inp"
+                  />
                 </div>
               </div>
               <label for="phone-1-1" class="c-label blind">휴대폰 번호</label>
               <div class="c-inpform">
                 <div class="c-inpitem">
-                  <input id="phone-1-1" name="_name" placeholder="휴대폰 번호를 입력하세요" maxlength="11" title="휴대폰 번호를 입력하세요."
-                    type="tel" class="c-inp" />
+                  <input
+                    id="phone-1-1"
+                    name="_name"
+                    placeholder="휴대폰 번호를 입력하세요"
+                    maxlength="11"
+                    title="휴대폰 번호를 입력하세요."
+                    type="tel"
+                    class="c-inp"
+                  />
                 </div>
               </div>
             </div>
             <!-- 이용약관 -->
             <div class="terms_of_use">
               <p class="checkbox" style="padding-left: 0px">
-                <input id="_uid_1_check_0" name="_uid_1_check" type="checkbox" data-gtm-event-name="button_click"
-                  data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역- 버튼 클릭"
-                  data-gtm-event-label="컨텐츠 : 전체 이용양관 동의(필수)" data-gtm-click-location="이벤트상세 영역"
-                  data-gtm-click-text="전체 이용양관 동의(필수)" />
-                <label for="_uid_1_check_0" class="text-chkbox"><span class="txt">전체 이용약관 동의
-                    <em>(필수)</em></span></label>
+                <input
+                  id="_uid_1_check_0"
+                  name="_uid_1_check"
+                  type="checkbox"
+                  data-gtm-event-name="button_click"
+                  data-gtm-event-category="클릭"
+                  data-gtm-event-action="이벤트상세 영역- 버튼 클릭"
+                  data-gtm-event-label="컨텐츠 : 전체 이용양관 동의(필수)"
+                  data-gtm-click-location="이벤트상세 영역"
+                  data-gtm-click-text="전체 이용양관 동의(필수)"
+                />
+                <label for="_uid_1_check_0" class="text-chkbox"
+                  ><span class="txt"
+                    >전체 이용약관 동의 <em>(필수)</em></span
+                  ></label
+                >
               </p>
-              <button aria-label="전체 이용약관 동의 약관내용보기" type="button" class="btn acc-toggle" aria-expanded="false"
-                aria-controls="_terms_of_use" onclick="(this).classList.toggle('on')">
+              <button
+                aria-label="전체 이용약관 동의 약관내용보기"
+                type="button"
+                class="btn acc-toggle"
+                aria-expanded="false"
+                aria-controls="_terms_of_use"
+                onclick="(this).classList.toggle('on')"
+              >
                 전체보기
               </button>
               <div id="_terms_of_use">
                 <p class="checkbox">
-                  <input id="_uid_1_check_1" name="_uid_1_check" type="checkbox" />
+                  <input
+                    id="_uid_1_check_1"
+                    name="_uid_1_check"
+                    type="checkbox"
+                  />
                   <label for="_uid_1_check_1" class="text-chkbox">
-                    <span class="txt">개인정보 수집 &middot; 이용 동의 및 상담업무 처리위탁
-                      안내 <em>(필수)</em></span>
+                    <span class="txt"
+                      >개인정보 수집 &middot; 이용 동의 및 상담업무 처리위탁
+                      안내 <em>(필수)</em></span
+                    >
                   </label>
-                  <button aria-label="개인정보 수집 이용 동의 및 상담업무 처리위탁 안내 약관내용보기" type="button" class="btn acc-toggle"
-                    onclick="(this).classList.toggle('on')"></button>
+                  <button
+                    aria-label="개인정보 수집 이용 동의 및 상담업무 처리위탁 안내 약관내용보기"
+                    type="button"
+                    class="btn acc-toggle"
+                    onclick="(this).classList.toggle('on')"
+                  ></button>
                 </p>
                 <div class="agreeBox">
                   <div class="agreeTxt">
@@ -2248,7 +2489,11 @@
                   </div>
                 </div>
                 <p class="checkbox">
-                  <input id="_uid_1_check_2" name="_uid_1_check" type="checkbox" />
+                  <input
+                    id="_uid_1_check_2"
+                    name="_uid_1_check"
+                    type="checkbox"
+                  />
                   <label for="_uid_1_check_2" class="text-chkbox">
                     <span class="txt">만 14세 이상입니다. <em>(필수)</em></span>
                   </label>
@@ -2256,11 +2501,21 @@
               </div>
             </div>
             <div class="c-btn-group">
-              <button data-route class="signup_btn" data-gtm-event-name="button_click" data-gtm-event-category="클릭"
-                data-gtm-event-action="이벤트상세 영역- 버튼 클릭" data-gtm-event-label="컨텐츠 : 상담예약하고 혜택받기"
-                data-gtm-click-location="이벤트상세 영역" data-gtm-click-text="상담예약하고 혜택받기">
-                <img src="https://lguplus.com/static/contents/medialog/mg/event/69791/btn_regis.png"
-                  style="width: 47.639vw !important; height: auto !important" alt="상담예약하고 혜택받기" />
+              <button
+                data-route
+                class="signup_btn"
+                data-gtm-event-name="button_click"
+                data-gtm-event-category="클릭"
+                data-gtm-event-action="이벤트상세 영역- 버튼 클릭"
+                data-gtm-event-label="컨텐츠 : 상담예약하고 혜택받기"
+                data-gtm-click-location="이벤트상세 영역"
+                data-gtm-click-text="상담예약하고 혜택받기"
+              >
+                <img
+                  src="https://lguplus.com/static/contents/medialog/mg/event/69791/btn_regis.png"
+                  style="width: 47.639vw !important; height: auto !important"
+                  alt="상담예약하고 혜택받기"
+                />
               </button>
             </div>
           </div>
@@ -2269,66 +2524,109 @@
       <!--// 상담 -->
       <!-- 가장 많이 선택한 인터넷+TV 추천요금제 -->
       <div class="section detail_view" id="anchor02" tabindex="0">
-        <div id="tabs001" class="tabs_conts" aria-labelledby="tabs001" role="tabpanel">
+        <div
+          id="tabs001"
+          class="tabs_conts"
+          aria-labelledby="tabs001"
+          role="tabpanel"
+        >
           <div class="ui_carousel_track">
             <img
               src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240528-040756-557-nqdTMPZB.png"
-              alt="하단 내용 참조" />
+              alt="하단 내용 참조"
+            />
             <div class="blind">
               <p class="ref">
                 ※ 3년 약정, 부가세 포함, 휴대폰 결합, 프리미엄 안심 인터넷
                 요금제 기준
               </p>
             </div>
-            <a data-route="" class="event_detail_a bn1"
+            <a
+              data-route=""
+              class="event_detail_a bn1"
               href="https://m.lguplus.com/signup/package?isPhoneDiscount=Y&amp;urcHmProdGrpKwrdProdNo=19"
-              data-gtm-event-name="link_click" data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+              data-gtm-event-name="link_click"
+              data-gtm-event-category="클릭"
+              data-gtm-event-action="이벤트상세 영역- 링크 클릭"
               data-gtm-event-label="컨텐츠 : 결합상품1 인터넷100M+베이직"
               data-gtm-click-url="https://www.lguplus.com/signup/package?urcHmProdNoList%5B0%5D=990001790&amp;urcHmProdNoList%5B1%5D=990001710"
-              data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="" data-gtm-click-text="결합상품1 인터넷100M+베이직"
-              style="top: 14.3%">
-              <span class="blind">웹서핑을 편리하게, 인기 채널 모두 담은, 인터넷 100M + 베이직,
-                월 39,600원에서 할인된 월 34,130원 , 상품권 30만원 증정</span>
+              data-gtm-click-location="이벤트상세 영역"
+              data-gtm-click-direction=""
+              data-gtm-click-text="결합상품1 인터넷100M+베이직"
+              style="top: 14.3%"
+            >
+              <span class="blind"
+                >웹서핑을 편리하게, 인기 채널 모두 담은, 인터넷 100M + 베이직,
+                월 39,600원에서 할인된 월 34,130원 , 상품권 30만원 증정</span
+              >
             </a>
-            <a data-route="" class="event_detail_a bn2"
+            <a
+              data-route=""
+              class="event_detail_a bn2"
               href="https://m.lguplus.com/signup/package?isPhoneDiscount=Y&amp;urcHmProdGrpKwrdProdNo=17"
-              data-gtm-event-name="link_click" data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+              data-gtm-event-name="link_click"
+              data-gtm-event-category="클릭"
+              data-gtm-event-action="이벤트상세 영역- 링크 클릭"
               data-gtm-event-label=" 컨텐츠 : 결합상품2 인터넷500M+프리미엄"
               data-gtm-click-url="https://www.lguplus.com/signup/package?urcHmProdNoList%5B0%5D=990001790&amp;urcHmProdNoList%5B1%5D=990001710"
-              data-gtm-click-location=" 이벤트상세 영역" data-gtm-click-direction="" data-gtm-click-text="결합상품2 인터넷500M+프리미엄"
-              style="top: 41.3%">
-              <span class="blind">영상은 끊김없이, VIP 전용관 혜택을 위한, 인터넷 500M +
+              data-gtm-click-location=" 이벤트상세 영역"
+              data-gtm-click-direction=""
+              data-gtm-click-text="결합상품2 인터넷500M+프리미엄"
+              style="top: 41.3%"
+            >
+              <span class="blind"
+                >영상은 끊김없이, VIP 전용관 혜택을 위한, 인터넷 500M +
                 프리미엄, 월 56,100원에서 할인된 월 40,150원 , 상품권 40만원
-                증정</span>
+                증정</span
+              >
             </a>
-            <a data-route="" class="event_detail_a bn3"
+            <a
+              data-route=""
+              class="event_detail_a bn3"
               href="https://m.lguplus.com/signup/package?isPhoneDiscount=Y&amp;urcHmProdGrpKwrdProdNo=79"
-              ddata-gtm-event-name="link_click" ata-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+              ddata-gtm-event-name="link_click"
+              ata-gtm-event-category="클릭"
+              data-gtm-event-action="이벤트상세 영역- 링크 클릭"
               data-gtm-event-label="컨텐츠: 결합상품3 인터넷1G+프라임라이트"
               data-gtm-click-url="https://www.lguplus.com/signup/package?urcHmProdNoList%5B0%5D=990001790&amp;urcHmProdNoList%5B1%5D=990001710"
-              data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="" data-gtm-click-text="결합상품3 인터넷1G+프라임라이트"
-              style="top: 68.3%">
-              <span class="blind">고사양 게임을 가장 빠르게, 인터넷 1기가 + 프리미엄 VOD, 월
-                67,100원에서 할인된 월 44,000원 , 상품권 43만원 증정</span>
+              data-gtm-click-location="이벤트상세 영역"
+              data-gtm-click-direction=""
+              data-gtm-click-text="결합상품3 인터넷1G+프라임라이트"
+              style="top: 68.3%"
+            >
+              <span class="blind"
+                >고사양 게임을 가장 빠르게, 인터넷 1기가 + 프리미엄 VOD, 월
+                67,100원에서 할인된 월 44,000원 , 상품권 43만원 증정</span
+              >
             </a>
           </div>
         </div>
         <div id="price_info" class="tabs_conts">
           <div class="w_920 acBnr">
             <div class="accordions_conts_wrap type_img">
-              <button class="titType" aria-controls="bn_001" aria-expanded="false" data-destination="#bn_001"
-                onclick="accordianClick(this);">
-                <img class="passive"
+              <button
+                class="titType"
+                aria-controls="bn_001"
+                aria-expanded="false"
+                data-destination="#bn_001"
+                onclick="accordianClick(this);"
+              >
+                <img
+                  class="passive"
                   src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240719-024151-860-8ZzYtEPj.png"
-                  alt="인터넷+IPTV 꿀조합 '우리집에 딱 맞는 맞춤형 패키지 추천' 자세히 보기 (일러스트레인션 집, 와이파이 배경 이미지)" />
-                <img class="active"
+                  alt="인터넷+IPTV 꿀조합 '우리집에 딱 맞는 맞춤형 패키지 추천' 자세히 보기 (일러스트레인션 집, 와이파이 배경 이미지)"
+                />
+                <img
+                  class="active"
                   src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-011643-101-lpMPOWil.png"
-                  alt="인터넷+IPTV 꿀조합 '우리집에 딱 맞는 맞춤형 패키지 추천' 자세히 보기 닫기 (일러스트레인션 집, 와이파이 배경 이미지)" />
+                  alt="인터넷+IPTV 꿀조합 '우리집에 딱 맞는 맞춤형 패키지 추천' 자세히 보기 닫기 (일러스트레인션 집, 와이파이 배경 이미지)"
+                />
               </button>
               <div id="bn_001" class="subDepth">
                 <img
                   src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-011651-110-QlxqnB0t.png"
-                  alt="인터넷+IPTV 꿀조합 '우리집에 딱 맞는 맞춤형 패키지 추천' 하단 내용 참조" />
+                  alt="인터넷+IPTV 꿀조합 '우리집에 딱 맞는 맞춤형 패키지 추천' 하단 내용 참조"
+                />
                 <div class="blind">
                   <h5>
                     가구 유형 별로 가장 인기 있는 추천 요금제를 확인해보세요!
@@ -2336,69 +2634,110 @@
                 </div>
                 <ul>
                   <li>
-                    <button type="button" data-layer="event_modal_layer10" onclick="openLayerEvent(this)"
-                      data-gtm-event-name="button_click" data-gtm-event-category="클릭"
-                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭" data-gtm-event-label="컨텐츠 : 1인 가구 추천 요금제"
-                      data-gtm-click-location="이벤트상세 영역" data-gtm-click-text="1인 가구 추천 요금제">
+                    <button
+                      type="button"
+                      data-layer="event_modal_layer10"
+                      onclick="openLayerEvent(this)"
+                      data-gtm-event-name="button_click"
+                      data-gtm-event-category="클릭"
+                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
+                      data-gtm-event-label="컨텐츠 : 1인 가구 추천 요금제"
+                      data-gtm-click-location="이벤트상세 영역"
+                      data-gtm-click-text="1인 가구 추천 요금제"
+                    >
                       <span class="blind">1인 가구 추천 요금제</span>
                     </button>
                   </li>
                   <li>
-                    <button type="button" data-layer="event_modal_layer11" onclick="openLayerEvent(this)"
-                      data-gtm-event-name="button_click" data-gtm-event-category="클릭"
-                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭" data-gtm-event-label="컨텐츠 : 2인 가구 추천 요금제"
-                      data-gtm-click-location="이벤트상세 영역" data-gtm-click-text="2인 가구 추천 요금제">
+                    <button
+                      type="button"
+                      data-layer="event_modal_layer11"
+                      onclick="openLayerEvent(this)"
+                      data-gtm-event-name="button_click"
+                      data-gtm-event-category="클릭"
+                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
+                      data-gtm-event-label="컨텐츠 : 2인 가구 추천 요금제"
+                      data-gtm-click-location="이벤트상세 영역"
+                      data-gtm-click-text="2인 가구 추천 요금제"
+                    >
                       <span class="blind">2인 가구 추천 요금제</span>
                     </button>
                   </li>
                   <li>
-                    <button type="button" data-layer="event_modal_layer12" onclick="openLayerEvent(this)"
-                      data-gtm-event-name="button_click" data-gtm-event-category="클릭"
-                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭" data-gtm-event-label="컨텐츠 : 육아 가구 추천 요금제"
-                      data-gtm-click-location="이벤트상세 영역" data-gtm-click-text="육아 가구 추천 요금제">
+                    <button
+                      type="button"
+                      data-layer="event_modal_layer12"
+                      onclick="openLayerEvent(this)"
+                      data-gtm-event-name="button_click"
+                      data-gtm-event-category="클릭"
+                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
+                      data-gtm-event-label="컨텐츠 : 육아 가구 추천 요금제"
+                      data-gtm-click-location="이벤트상세 영역"
+                      data-gtm-click-text="육아 가구 추천 요금제"
+                    >
                       <span class="blind">육아 가구 추천 요금제</span>
                     </button>
                   </li>
                   <li>
-                    <button type="button" data-layer="event_modal_layer13" onclick="openLayerEvent(this)"
-                      data-gtm-event-name="button_click" data-gtm-event-category="클릭"
-                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭" data-gtm-event-label="컨텐츠 : 중년+자녀 가구 추천 요금제"
-                      data-gtm-click-location="이벤트상세 영역" data-gtm-click-text="중년+자녀 가구 추천 요금제">
+                    <button
+                      type="button"
+                      data-layer="event_modal_layer13"
+                      onclick="openLayerEvent(this)"
+                      data-gtm-event-name="button_click"
+                      data-gtm-event-category="클릭"
+                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
+                      data-gtm-event-label="컨텐츠 : 중년+자녀 가구 추천 요금제"
+                      data-gtm-click-location="이벤트상세 영역"
+                      data-gtm-click-text="중년+자녀 가구 추천 요금제"
+                    >
                       <span class="blind">중년+자녀 가구 추천 요금제</span>
                     </button>
                   </li>
                 </ul>
               </div>
-              <button class="titType" aria-controls="bn_002" aria-expanded="false" data-destination="#bn_002"
-                onclick="accordianClick(this);">
+              <button
+                id="_box"
+                class="titType"
+                aria-controls="bn_002"
+                aria-expanded="false"
+                data-destination="#bn_002"
+                onclick="accordianClick(this);"
+              >
                 <!-- <img
                     class="passive"
                     src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240827-024920-244-juMZgPqi.png"
                     alt="온라인 가입하면 스타벅스 3만원 쿠폰 추정. 요금제 추천과 설치 예약을 1분만에! 자세히 보기"> -->
-                <img class="passive"
+                <img
+                  class="passive"
                   src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241104-012049-042-3Cyf3TE7.png"
                   alt="온라인 가입하면 10만원 상당의 경품 추첨
 요금제 추천과 설치 예약을 1분만에!
-자세히 보기" />
+자세히 보기"
+                />
                 <!-- <img
                     class="active"
                     src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240913-020042-219-O02tN8gw.png"
                     alt="온라인 가입하면 스타벅스 3만원 쿠폰 추첨. 요금제 추천과 설치 예약을 1분만에! 자세히 보기 닫기"> -->
-                <img class="active"
+                <img
+                  class="active"
                   src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241104-012106-798-xctD0oZd.png"
                   alt="온라인 가입하면 10만원 상당의 경품 추첨
 요금제 추천과 설치 예약을 1분만에!
-자세히 보기 닫기" />
+자세히 보기 닫기"
+                />
               </button>
               <div id="bn_002" class="subDepth">
                 <img
                   src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241104-040412-185-4dc2feMX.png"
-                  alt="하단 내용 참조" />
+                  alt="하단 내용 참조"
+                />
                 <div class="blind">
-                  <h2>잠깐! 10만원 상당의 경품이 쏟아지는 온라인 가입 이벤트</h2>
+                  <h2>
+                    잠깐! 10만원 상당의 경품이 쏟아지는 온라인 가입 이벤트
+                  </h2>
                   <p>
-                    온라인 가입을 통해 인터넷/IPTV 가입하면
-                    3만원 상당 스타벅스 음료 세트와 7만원 상당 유플닷컴 굿즈 증정!
+                    온라인 가입을 통해 인터넷/IPTV 가입하면 3만원 상당 스타벅스
+                    음료 세트와 7만원 상당 유플닷컴 굿즈 증정!
                   </p>
 
                   <p>스타벅스 음료 세트 (3만원 상당)</p>
@@ -2408,46 +2747,62 @@
 
                   <ul>
                     <li>
-                      이벤트 대상: 12월 1일까지 '온라인 가입'을 통해
-                      인터넷/IPTV 신규 가입 및 설치 완료한 고객 추첨 200명
+                      이벤트 대상: 12월 1일까지 '온라인 가입'을 통해 인터넷/IPTV
+                      신규 가입 및 설치 완료한 고객 추첨 200명
                     </li>
                     <li>이벤트 기간: 2024. 11. 1(금) ~ 2024. 12. 1(일)</li>
                     <li>
-                      이벤트 경품:
-                      - 혜택 1) 3만원 상당의 스타벅스 모바일 쿠폰
-                      ▶ 가입 시 등록한 휴대폰 번호로 모바일 쿠폰 발송
-                      - 혜택 2) 7만원 상당의 유플닷컴 단독 굿즈 '자취박스'
-                      ▶ 가입 시 인터넷 설치 주소지로
+                      이벤트 경품: - 혜택 1) 3만원 상당의 스타벅스 모바일 쿠폰 ▶
+                      가입 시 등록한 휴대폰 번호로 모바일 쿠폰 발송 - 혜택 2)
+                      7만원 상당의 유플닷컴 단독 굿즈 '자취박스' ▶ 가입 시
+                      인터넷 설치 주소지로
                     </li>
                     <li>
-                      당첨자 발표: 2024. 12. 13(금)
-                      (※ 당첨자 개별 연락 및 순차 발송 예정)
+                      당첨자 발표: 2024. 12. 13(금) (※ 당첨자 개별 연락 및 순차
+                      발송 예정)
                     </li>
                   </ul>
                 </div>
-                <a data-route="" class="event_detail_a"
+                <a
+                  data-route=""
+                  class="event_detail_a"
                   href="https://m.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=17"
-                  data-gtm-event-name="link_click" data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+                  data-gtm-event-name="link_click"
+                  data-gtm-event-category="클릭"
+                  data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
                   data-gtm-event-label="컨텐츠 : 이벤트 참여하러 가기"
                   data-gtm-click-url="https://m.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=17"
-                  data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="내부" data-gtm-click-text="이벤트 참여하러 가기"
-                  style="bottom: 4.2%; width: 64%; height: 5.6%; left: 18%">
+                  data-gtm-click-location="이벤트상세 영역"
+                  data-gtm-click-direction="내부"
+                  data-gtm-click-text="이벤트 참여하러 가기"
+                  style="bottom: 4.2%; width: 64%; height: 5.6%; left: 18%"
+                >
                   <span>이벤트 참여하러 가기</span>
                 </a>
               </div>
-              <button class="titType" aria-controls="bn_003" aria-expanded="false" data-destination="#bn_003"
-                onclick="accordianClick(this);">
-                <img class="passive"
+              <button
+                class="titType"
+                aria-controls="bn_003"
+                aria-expanded="false"
+                data-destination="#bn_003"
+                onclick="accordianClick(this);"
+              >
+                <img
+                  class="passive"
                   src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-033849-012-rdFPzXgQ.png"
-                  alt="신규 출시 기념! 추가 12만원 혜택 '우리집 육아 필수템 초고화질 CCTV' 자세히 보기" />
-                <img class="active"
+                  alt="신규 출시 기념! 추가 12만원 혜택 '우리집 육아 필수템 초고화질 CCTV' 자세히 보기"
+                />
+                <img
+                  class="active"
                   src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-011731-553-dq59wcWH.png"
-                  alt="신규 출시 기념! 추가 12만원 혜택 '우리집 육아 필수템 초고화질 CCTV' 자세히 보기 닫기" />
+                  alt="신규 출시 기념! 추가 12만원 혜택 '우리집 육아 필수템 초고화질 CCTV' 자세히 보기 닫기"
+                />
               </button>
               <div id="bn_003" class="subDepth" style="padding-bottom: 0">
                 <img
                   src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-011741-186-bg5vcH0b.png"
-                  alt="하단 내용 참조" />
+                  alt="하단 내용 참조"
+                />
                 <div class="blind">
                   <h5>유플닷컴에만 가능한 신규 출시 기념 최대 12만원 혜택</h5>
                   <ul>
@@ -2476,34 +2831,53 @@
                   </p>
                   <p>※3년 약정, 휴대폰 결합 할인 적용 기준</p>
                 </div>
-                <a data-route class="event_detail_a rnd"
+                <a
+                  data-route
+                  class="event_detail_a rnd"
                   href="https://m.lguplus.com/signup/package?urcHmProdNoList%5B0%5D=990001792&urcHmProdNoList%5B1%5D=990001705&urcHmProdNoList%5B2%5D=990001798"
                   data-gtm-click-url="https://www.lguplus.com/signup/package?urcHmProdNoList%5B0%5D=990001792&urcHmProdNoList%5B1%5D=990001705&urcHmProdNoList%5B2%5D=990001798"
-                  data-gtm-event-name="link_click" data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역- 링크 클릭"
-                  data-gtm-event-label="컨텐츠 : 온라인 1분 가입" data-gtm-click-url="" data-gtm-click-location="이벤트상세 영역"
-                  data-gtm-click-direction="" data-gtm-click-text="온라인 1분 가입" style="
-                      bottom: 3.7%;
-                      transform: unset;
-                      left: 18%;
-                      width: 63%;
-                      height: 5%;
-                    ">
+                  data-gtm-event-name="link_click"
+                  data-gtm-event-category="클릭"
+                  data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+                  data-gtm-event-label="컨텐츠 : 온라인 1분 가입"
+                  data-gtm-click-url=""
+                  data-gtm-click-location="이벤트상세 영역"
+                  data-gtm-click-direction=""
+                  data-gtm-click-text="온라인 1분 가입"
+                  style="
+                    bottom: 3.7%;
+                    transform: unset;
+                    left: 18%;
+                    width: 63%;
+                    height: 5%;
+                  "
+                >
                   <span class="blind">온라인 1분 가입</span>
                 </a>
               </div>
-              <button class="titType" aria-controls="bn_004" aria-expanded="false" data-destination="#bn_004"
-                onclick="accordianClick(this);">
-                <img class="passive"
+              <button
+                class="titType"
+                aria-controls="bn_004"
+                aria-expanded="false"
+                data-destination="#bn_004"
+                onclick="accordianClick(this);"
+              >
+                <img
+                  class="passive"
                   src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240913-015533-658-as05cdb8.png"
-                  alt="신규 출시 기념! 추가 12만원 혜택 '우리집 육아 필수템 초고화질 CCTV' 자세히 보기" />
-                <img class="active"
+                  alt="신규 출시 기념! 추가 12만원 혜택 '우리집 육아 필수템 초고화질 CCTV' 자세히 보기"
+                />
+                <img
+                  class="active"
                   src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240913-015545-505-ew2UdmA4.png"
-                  alt="신규 출시 기념! 추가 12만원 혜택 '우리집 육아 필수템 초고화질 CCTV' 자세히 보기 닫기" />
+                  alt="신규 출시 기념! 추가 12만원 혜택 '우리집 육아 필수템 초고화질 CCTV' 자세히 보기 닫기"
+                />
               </button>
               <div id="bn_004" class="subDepth" style="padding-bottom: 0">
                 <img
                   src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-011809-603-IO7jpW7H.png"
-                  alt="하단 내용 참조" />
+                  alt="하단 내용 참조"
+                />
                 <div class="blind">
                   <h4>
                     인터넷/유료방송 가입과 해지를 한번에!
@@ -2555,19 +2929,28 @@
                     </li>
                   </ol>
                 </div>
-                <a data-route="" title="새창열림" class="event_detail_a" href="javascript:void(0);"
-                  onclick="oneStopCnslPop();closeLayerEvent(this);return false;" data-gtm-event-name="link_click"
-                  data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+                <a
+                  data-route=""
+                  title="새창열림"
+                  class="event_detail_a"
+                  href="javascript:void(0);"
+                  onclick="oneStopCnslPop();closeLayerEvent(this);return false;"
+                  data-gtm-event-name="link_click"
+                  data-gtm-event-category="클릭"
+                  data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
                   data-gtm-event-label="컨텐츠 : 온라인 1분 가입"
                   data-gtm-click-url="https://www.lguplus.com/internet-iptv/telCnsl?onlnCnslJobDivsCd=3&appfLednChnlDivsCd=01&appfLednDivsCd=01&appfProdSvcDivsCd=02&operationId=telreg&calEvetNm=%EC%9B%90%EC%8A%A4%ED%86%B1+%EC%A0%84%ED%99%98+%EC%84%9C%EB%B9%84%EC%8A%A4"
-                  data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="내부" data-gtm-click-text="온라인 1분 가입"
+                  data-gtm-click-location="이벤트상세 영역"
+                  data-gtm-click-direction="내부"
+                  data-gtm-click-text="온라인 1분 가입"
                   style="
-                      bottom: 1.7%;
-                      transform: unset;
-                      left: 18%;
-                      width: 63%;
-                      height: 4%;
-                    ">
+                    bottom: 1.7%;
+                    transform: unset;
+                    left: 18%;
+                    width: 63%;
+                    height: 4%;
+                  "
+                >
                   <span>온라인 1분 가입</span>
                 </a>
               </div>
@@ -2577,32 +2960,54 @@
       </div>
       <div class="section">
         <div class="c-btn-group duo" style="margin-top: 0">
-          <a class="rnd" href="tel:1644-7070"
+          <a
+            class="rnd"
+            href="tel:1644-7070"
             onclick="fbq('track', 'CompeleteRegistration', {content_ids: '이벤트상세_콜클릭',});dablena('track', 'event1');callTaboola('M_Call1_floating');"
-            data-route data-gtm-event-name="call_click" data-gtm-event-category="클릭"
-            data-gtm-event-action="이벤트상세 영역 - 콜버튼 클릭" data-gtm-event-label="컨텐츠 : 상담전화 걸기"
-            data-gtm-click-url="1644-7070" data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="내부"
-            data-gtm-click-text="상담전화 걸기">
+            data-route
+            data-gtm-event-name="call_click"
+            data-gtm-event-category="클릭"
+            data-gtm-event-action="이벤트상세 영역 - 콜버튼 클릭"
+            data-gtm-event-label="컨텐츠 : 상담전화 걸기"
+            data-gtm-click-url="1644-7070"
+            data-gtm-click-location="이벤트상세 영역"
+            data-gtm-click-direction="내부"
+            data-gtm-click-text="상담전화 걸기"
+          >
             <img
               src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240828-013008-770-fMHGC3MB.png"
-              alt="1644-7070" style="width: 79px !important" />
+              alt="1644-7070"
+              style="width: 79px !important"
+            />
           </a>
-          <a data-route class="rnd link" href="https://m.lguplus.com/signup/smart-plan/intro"
-            data-gtm-click-url="https://m.lguplus.com/signup/smart-plan/intro" data-gtm-event-name="link_click"
-            data-gtm-event-category="클릭" data-gtm-event-action="이벤트상세 영역- 링크 클릭" data-gtm-event-label="컨텐츠 : 온라인 1분 가입"
-            data-gtm-click-url="" data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction=""
-            data-gtm-click-text="온라인 1분 가입">
+          <a
+            data-route
+            class="rnd link"
+            href="https://m.lguplus.com/signup/smart-plan/intro"
+            data-gtm-click-url="https://m.lguplus.com/signup/smart-plan/intro"
+            data-gtm-event-name="link_click"
+            data-gtm-event-category="클릭"
+            data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+            data-gtm-event-label="컨텐츠 : 온라인 1분 가입"
+            data-gtm-click-url=""
+            data-gtm-click-location="이벤트상세 영역"
+            data-gtm-click-direction=""
+            data-gtm-click-text="온라인 1분 가입"
+          >
             <img
               src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240828-025116-096-YaPfqtSm.png"
-              style="width: 94.5px; height: auto !important; margin-top: -5px" />
+              style="width: 94.5px; height: auto !important; margin-top: -5px"
+            />
           </a>
         </div>
       </div>
       <!-- 4가지 이유 -->
       <div class="answer">
         <div id="_whyUplus">
-          <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-025958-894-LEYC41Qx.png"
-            alt="U+공식온라인스토어가 정답인 4가지 이유" />
+          <img
+            src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-025958-894-LEYC41Qx.png"
+            alt="U+공식온라인스토어가 정답인 4가지 이유"
+          />
           <div class="blind">
             <h4>U+공식온라인스토어가 정답인 4가지 이유</h4>
             <ul class="outliner disb">
@@ -2631,74 +3036,132 @@
       <div class="section variety">
         <ul class="outliner">
           <li tabindex="0">
-            <a data-route href="https://m.lguplus.com/benefit-event/ongoing/80820"
-              data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80820" data-gtm-event-name="link_click"
-              data-gtm-event-category="클릭" data-gtm-event-action="중단배너 영역- 링크 클릭"
-              data-gtm-event-label="컨텐츠: 기본 할인에 요금할인 추가 실속파를 위한 할인 자세히 보기" data-gtm-click-location="중단배너 영역"
-              data-gtm-click-direction="내부" data-gtm-click-text="기본 할인에 요금할인 추가 실속파를 위한 할인 자세히 보기">
+            <a
+              data-route
+              href="https://m.lguplus.com/benefit-event/ongoing/80820"
+              data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80820"
+              data-gtm-event-name="link_click"
+              data-gtm-event-category="클릭"
+              data-gtm-event-action="중단배너 영역- 링크 클릭"
+              data-gtm-event-label="컨텐츠: 기본 할인에 요금할인 추가 실속파를 위한 할인 자세히 보기"
+              data-gtm-click-location="중단배너 영역"
+              data-gtm-click-direction="내부"
+              data-gtm-click-text="기본 할인에 요금할인 추가 실속파를 위한 할인 자세히 보기"
+            >
               <img
                 src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-030010-630-kvIhZpkP.png"
-                alt="기본 할인에 요금할인 추가 실속파를 위한 할인, 실속할인 최대 30% Only 유플닷컴 배경 이미지" />
-              <span class="blind">기본 할인에 요금할인 추가 실속파를 위한 할인, 실속할인 최대 30%
-                Only 유플닷컴</span>
+                alt="기본 할인에 요금할인 추가 실속파를 위한 할인, 실속할인 최대 30% Only 유플닷컴 배경 이미지"
+              />
+              <span class="blind"
+                >기본 할인에 요금할인 추가 실속파를 위한 할인, 실속할인 최대 30%
+                Only 유플닷컴</span
+              >
             </a>
           </li>
           <li tabindex="0">
-            <a data-route href="https://m.lguplus.com/benefit-event/ongoing/121"
-              data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/121" data-gtm-event-name="link_click"
-              data-gtm-event-category="클릭" data-gtm-event-action="중단배너 영역- 링크 클릭" data-gtm-event-label="컨텐츠: 다이렉트 요금제"
-              data-gtm-click-location="중단배너 영역" data-gtm-click-direction="내부" data-gtm-click-text="다이렉트 요금제">
+            <a
+              data-route
+              href="https://m.lguplus.com/benefit-event/ongoing/121"
+              data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/121"
+              data-gtm-event-name="link_click"
+              data-gtm-event-category="클릭"
+              data-gtm-event-action="중단배너 영역- 링크 클릭"
+              data-gtm-event-label="컨텐츠: 다이렉트 요금제"
+              data-gtm-click-location="중단배너 영역"
+              data-gtm-click-direction="내부"
+              data-gtm-click-text="다이렉트 요금제"
+            >
               <img
                 src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-030020-460-p5a1isp8.png"
-                alt="20ㆍ30전용 인터넷 요금제 다이렉트 요금제 클릭, 다이렉트 요금제 배경이미지 " />
+                alt="20ㆍ30전용 인터넷 요금제 다이렉트 요금제 클릭, 다이렉트 요금제 배경이미지 "
+              />
               <span class="blind">20·30전용 인터넷 요금제 다이렉트 요금제</span>
             </a>
           </li>
           <li tabindex="0">
-            <a data-route href="https://m.lguplus.com/benefit-event/ongoing/80593"
-              data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80593" data-gtm-event-name="link_click"
-              data-gtm-event-category="클릭" data-gtm-event-action="중단배너 영역- 링크 클릭" data-gtm-event-label="컨텐츠: 온라인 가입 리뉴얼"
-              data-gtm-click-location="중단배너 영역" data-gtm-click-direction="내부" data-gtm-click-text="온라인 가입 리뉴얼">
+            <a
+              data-route
+              href="https://m.lguplus.com/benefit-event/ongoing/80593"
+              data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80593"
+              data-gtm-event-name="link_click"
+              data-gtm-event-category="클릭"
+              data-gtm-event-action="중단배너 영역- 링크 클릭"
+              data-gtm-event-label="컨텐츠: 온라인 가입 리뉴얼"
+              data-gtm-click-location="중단배너 영역"
+              data-gtm-click-direction="내부"
+              data-gtm-click-text="온라인 가입 리뉴얼"
+            >
               <img
                 src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-030028-976-914RGLMa.png"
-                alt="더 쉽고, 더 빠르고, 간편해진 온라인 가입 리뉴얼 클릭, 인터넷/IPTV 선물상자 속 휴대폰 이미지 " />
-              <span class="blind">더 쉽고, 더 빠르고, 간편해진 온라인 가입 리뉴얼</span>
+                alt="더 쉽고, 더 빠르고, 간편해진 온라인 가입 리뉴얼 클릭, 인터넷/IPTV 선물상자 속 휴대폰 이미지 "
+              />
+              <span class="blind"
+                >더 쉽고, 더 빠르고, 간편해진 온라인 가입 리뉴얼</span
+              >
             </a>
           </li>
           <li tabindex="0">
-            <a data-route href="https://m.lguplus.com/benefit-event/ongoing/80995" data-gtm-event-name="link_click"
-              data-gtm-event-category="클릭" data-gtm-event-action="중단배너 영역- 링크 클릭"
+            <a
+              data-route
+              href="https://m.lguplus.com/benefit-event/ongoing/80995"
+              data-gtm-event-name="link_click"
+              data-gtm-event-category="클릭"
+              data-gtm-event-action="중단배너 영역- 링크 클릭"
               data-gtm-event-label="컨텐츠 : 7개 방송사 콘텐츠를 자유롭게 즐기는 프리미엄 환승구독 자세히보기"
-              data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80995" data-gtm-click-location="중단배너 영역"
-              data-gtm-click-direction="내부" data-gtm-click-text="7개 방송사 콘텐츠를 자유롭게 즐기는 프리미엄 환승구독 자세히보기">
+              data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80995"
+              data-gtm-click-location="중단배너 영역"
+              data-gtm-click-direction="내부"
+              data-gtm-click-text="7개 방송사 콘텐츠를 자유롭게 즐기는 프리미엄 환승구독 자세히보기"
+            >
               <img
                 src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-030040-874-5vZoHWaW.png"
-                alt="7개 방송사 콘텐츠를 자유롭게 즐기는 프리미엄 환승구독 클릭, 환승구독 배경이미지" />
-              <span class="blind">7개 방송사 콘텐츠를 자유롭게 즐기는 프리미엄 환승구독
-                자세히보기</span>
+                alt="7개 방송사 콘텐츠를 자유롭게 즐기는 프리미엄 환승구독 클릭, 환승구독 배경이미지"
+              />
+              <span class="blind"
+                >7개 방송사 콘텐츠를 자유롭게 즐기는 프리미엄 환승구독
+                자세히보기</span
+              >
             </a>
           </li>
           <li tabindex="0">
-            <a data-route href="https://m.lguplus.com/benefit-event/ongoing/14"
-              data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/14" data-gtm-event-name="link_click"
-              data-gtm-event-category="클릭" data-gtm-event-action="중단배너 영역- 링크 클릭"
-              data-gtm-event-label="컨텐츠: 홈 인테리어 사은품 증정 인기 프리미엄 가전 자세히 보기" data-gtm-click-location="중단배너 영역"
-              data-gtm-click-direction="내부" data-gtm-click-text="홈 인테리어 사은품 증정 인기 프리미엄 가전 자세히 보기">
+            <a
+              data-route
+              href="https://m.lguplus.com/benefit-event/ongoing/14"
+              data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/14"
+              data-gtm-event-name="link_click"
+              data-gtm-event-category="클릭"
+              data-gtm-event-action="중단배너 영역- 링크 클릭"
+              data-gtm-event-label="컨텐츠: 홈 인테리어 사은품 증정 인기 프리미엄 가전 자세히 보기"
+              data-gtm-click-location="중단배너 영역"
+              data-gtm-click-direction="내부"
+              data-gtm-click-text="홈 인테리어 사은품 증정 인기 프리미엄 가전 자세히 보기"
+            >
               <img
                 src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-030052-758-VRF0aDOS.png"
-                alt="홈 인테리어 사은품 증정 인기 프리미엄 가전 클릭, 가전제품 배경이미지:퓨리케어,노트북,패드,청소기 이미지" />
-              <span class="blind">홈 인테리어 사은품 증정 인기 프리미엄 가전 자세히 보기</span>
+                alt="홈 인테리어 사은품 증정 인기 프리미엄 가전 클릭, 가전제품 배경이미지:퓨리케어,노트북,패드,청소기 이미지"
+              />
+              <span class="blind"
+                >홈 인테리어 사은품 증정 인기 프리미엄 가전 자세히 보기</span
+              >
             </a>
           </li>
           <li tabindex="0">
-            <a data-route href="https://m.lguplus.com/benefit-event/ongoing/80614"
-              data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80614" data-gtm-event-name="link_click"
-              data-gtm-event-category="클릭" data-gtm-event-action="중단배너 영역- 링크 클릭"
-              data-gtm-event-label="컨텐츠: OTT와 실시간 방송 U+tv next 자세히 보기" data-gtm-click-location="중단배너 영역"
-              data-gtm-click-direction="내부" data-gtm-click-text="OTT와 실시간 방송 U+tv next 자세히 보기">
+            <a
+              data-route
+              href="https://m.lguplus.com/benefit-event/ongoing/80614"
+              data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80614"
+              data-gtm-event-name="link_click"
+              data-gtm-event-category="클릭"
+              data-gtm-event-action="중단배너 영역- 링크 클릭"
+              data-gtm-event-label="컨텐츠: OTT와 실시간 방송 U+tv next 자세히 보기"
+              data-gtm-click-location="중단배너 영역"
+              data-gtm-click-direction="내부"
+              data-gtm-click-text="OTT와 실시간 방송 U+tv next 자세히 보기"
+            >
               <img
                 src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-030102-590-tlyaWhcz.png"
-                alt="OTT와 실시간 방송 U+tv next 클릭, 넷플릭스, 디즈니 플러스, 티빙 배경이미지" />
+                alt="OTT와 실시간 방송 U+tv next 클릭, 넷플릭스, 디즈니 플러스, 티빙 배경이미지"
+              />
               <span class="blind">OTT와 실시간 방송 U+tv next 자세히 보기</span>
             </a>
           </li>
@@ -2709,13 +3172,20 @@
       <!-- Layer Popup -->
       <div class="type2">
         <div class="ui_modal_wrap event_modal event_modal_layer7" tabindex="0">
-          <div class="ui_modal_dim ui_modal_close" data-reverse="event_modal_open7" onclick="closeLayerEvent(this)">
-          </div>
+          <div
+            class="ui_modal_dim ui_modal_close"
+            data-reverse="event_modal_open7"
+            onclick="closeLayerEvent(this)"
+          ></div>
           <div class="share_layer ui_modal_container">
             <div class="share_layer_inner">
               <div class="share_layer_tit">
-                <img src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/tabB_h5a.png" alt="최대 혜택으로 받을 수 있는 인기 사은품(택1) ※ 사은품 : 3년 약정, 인터넷(프리미엄 안심 1기가)+IPTV+스마트홈
-                      결합 기준" style="width: 63.333vw; height: 29.167vw" />
+                <img
+                  src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/tabB_h5a.png"
+                  alt="최대 혜택으로 받을 수 있는 인기 사은품(택1) ※ 사은품 : 3년 약정, 인터넷(프리미엄 안심 1기가)+IPTV+스마트홈
+                      결합 기준"
+                  style="width: 63.333vw; height: 29.167vw"
+                />
                 <h4 class="blind">
                   최대 혜택으로 받을 수 있는 인기 사은품(택1)
                 </h4>
@@ -2724,8 +3194,12 @@
                   결합 기준
                 </p>
                 <div class="layer_close">
-                  <button type="button" class="ui_modal_close" data-reverse="event_modal_open7"
-                    onclick="closeLayerEvent(this)">
+                  <button
+                    type="button"
+                    class="ui_modal_close"
+                    data-reverse="event_modal_open7"
+                    onclick="closeLayerEvent(this)"
+                  >
                     <span class="blind">닫기</span>
                   </button>
                 </div>
@@ -2734,74 +3208,110 @@
                 <div style="padding-bottom: 80px">
                   <ul class="imglist">
                     <li>
-                      <img src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_item_01.jpg"
-                        alt="모바일 신세계(이마트) 상품권, 모바일 롯데 상품권 46만원 상당" />
+                      <img
+                        src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_item_01.jpg"
+                        alt="모바일 신세계(이마트) 상품권, 모바일 롯데 상품권 46만원 상당"
+                      />
                       <p class="blind">
-                        모바일 신세계(이마트) 상품권, 모바일 롯데 상품권<em>46만원 상당</em>
+                        모바일 신세계(이마트) 상품권, 모바일 롯데 상품권<em
+                          >46만원 상당</em
+                        >
                       </p>
                     </li>
                     <li>
-                      <img src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_item_2.jpg"
-                        alt="삼성 50인치 UHD (정가 699,000원) 혜택가 0원" />
+                      <img
+                        src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_item_2.jpg"
+                        alt="삼성 50인치 UHD (정가 699,000원) 혜택가 0원"
+                      />
                       <p class="blind">
                         삼성 50인치 UHD (정가 699,000원)
                         <em>혜택가 0원</em>
                       </p>
                     </li>
                     <li>
-                      <img src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_item_03.jpg"
-                        alt="LG 50인치 UHD TV (정가 956,000원) 혜택가 0원" />
+                      <img
+                        src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_item_03.jpg"
+                        alt="LG 50인치 UHD TV (정가 956,000원) 혜택가 0원"
+                      />
                       <p class="blind">
                         LG 50인치 UHD TV (정가 956,000원)
                         <em>혜택가 0원</em>
                       </p>
                     </li>
                     <li>
-                      <img src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_item_04.jpg"
-                        alt="LG 오브제컬렉션 A9 무선청소기 (정가 570,000원) 혜택가 0원" />
+                      <img
+                        src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_item_04.jpg"
+                        alt="LG 오브제컬렉션 A9 무선청소기 (정가 570,000원) 혜택가 0원"
+                      />
                       <p class="blind">
-                        LG 오브제컬렉션 A9 무선청소기 (정가 570,000원)<em>혜택가 0원</em>
+                        LG 오브제컬렉션 A9 무선청소기 (정가 570,000원)<em
+                          >혜택가 0원</em
+                        >
                       </p>
                     </li>
                     <li>
-                      <img src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_item_05.jpg"
-                        alt="삼성 건조기 9kg (정가 570,000원) 혜택가 0원" />
+                      <img
+                        src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_item_05.jpg"
+                        alt="삼성 건조기 9kg (정가 570,000원) 혜택가 0원"
+                      />
                       <p class="blind">
                         삼성 건조기 9kg (정가 570,000원)<em>혜택가 0원</em>
                       </p>
                     </li>
                     <li>
-                      <img src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_item_06.jpg"
-                        alt="LG 퓨리케어 공기청정기 10평 (정가 400,000원) 혜택가 0원" />
+                      <img
+                        src="https://lguplus.com/static/contents/medialog/mg/event/69791/m/m_item_06.jpg"
+                        alt="LG 퓨리케어 공기청정기 10평 (정가 400,000원) 혜택가 0원"
+                      />
                       <p class="blind">
-                        LG 퓨리케어 공기청정기 10평 (정가 400,000원)<em>혜택가 0원</em>
+                        LG 퓨리케어 공기청정기 10평 (정가 400,000원)<em
+                          >혜택가 0원</em
+                        >
                       </p>
                     </li>
                   </ul>
                 </div>
-                <div class="float_box" style="
-                      display: flex;
-                      justify-content: center;
-                      padding: 20px;
-                      gap: 0 15px;
-                    ">
-                  <button onclick="telCnslPop();closeLayerEvent(this);return false;" style="flex: 1; width: auto"
-                    data-gtm-event-name="button_click" data-gtm-event-category="클릭"
-                    data-gtm-event-action="이벤트상세 영역- 버튼 클릭" data-gtm-event-label="컨텐츠 : 팝업_실속할인_가입상담 신청"
-                    data-gtm-click-location="이벤트상세 영역" data-gtm-click-text="팝업_실속할인_가입상담 신청">
+                <div
+                  class="float_box"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    padding: 20px;
+                    gap: 0 15px;
+                  "
+                >
+                  <button
+                    onclick="telCnslPop();closeLayerEvent(this);return false;"
+                    style="flex: 1; width: auto"
+                    data-gtm-event-name="button_click"
+                    data-gtm-event-category="클릭"
+                    data-gtm-event-action="이벤트상세 영역- 버튼 클릭"
+                    data-gtm-event-label="컨텐츠 : 팝업_실속할인_가입상담 신청"
+                    data-gtm-click-location="이벤트상세 영역"
+                    data-gtm-click-text="팝업_실속할인_가입상담 신청"
+                  >
                     <img
                       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240828-014037-064-q9Pk7pBC.png"
-                      alt="가입상담 신청" />
+                      alt="가입상담 신청"
+                    />
                   </button>
-                  <a data-route href="tel:1644-7070"
+                  <a
+                    data-route
+                    href="tel:1644-7070"
                     onclick="fbq('track', 'CompeleteRegistration', {content_ids: '플로팅_콜클릭',});dablena('track', 'event1');callTaboola('M_Call1_floating');"
-                    data-gtm-event-name="call_click" data-gtm-event-category="클릭"
-                    data-gtm-event-action="이벤트 상세 영역 - 콜버튼 클릭" data-gtm-event-label="컨텐츠 : 상담전화 걸기"
-                    data-gtm-click-url="1644-7070" data-gtm-click-location="이벤트 상세 영역" data-gtm-click-direction="내부"
-                    data-gtm-click-text="상담전화 걸기">
+                    data-gtm-event-name="call_click"
+                    data-gtm-event-category="클릭"
+                    data-gtm-event-action="이벤트 상세 영역 - 콜버튼 클릭"
+                    data-gtm-event-label="컨텐츠 : 상담전화 걸기"
+                    data-gtm-click-url="1644-7070"
+                    data-gtm-click-location="이벤트 상세 영역"
+                    data-gtm-click-direction="내부"
+                    data-gtm-click-text="상담전화 걸기"
+                  >
                     <img
                       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240828-014048-814-QP7Q6jHu.png"
-                      alt="1644-7070" />
+                      alt="1644-7070"
+                    />
                   </a>
                 </div>
               </div>
@@ -2816,11 +3326,17 @@
                 <h4 style="height: 13.889vw; margin-bottom: 5.556vw">
                   <img
                     src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240719-071726-113-yIcdGOGF.png"
-                    alt="" style="width: 40.278vw" />
+                    alt=""
+                    style="width: 40.278vw"
+                  />
                 </h4>
                 <div class="layer_close">
-                  <button type="button" class="ui_modal_close" data-reverse="event_modal_open8"
-                    onclick="closeLayerEvent(this)">
+                  <button
+                    type="button"
+                    class="ui_modal_close"
+                    data-reverse="event_modal_open8"
+                    onclick="closeLayerEvent(this)"
+                  >
                     <span class="blind">닫기</span>
                   </button>
                 </div>
@@ -2829,7 +3345,9 @@
                 <div class="-pb-160">
                   <img
                     src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240719-071744-203-JmNmUqLj.png"
-                    alt="하단 내용 참조" style="width: 69.444vw" />
+                    alt="하단 내용 참조"
+                    style="width: 69.444vw"
+                  />
                   <div class="blind">
                     <h5>실속 할인 요금제란?</h5>
                     <p>
@@ -2839,7 +3357,8 @@
                   </div>
                   <img
                     src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240718-110437-515-g9s1ORaz.png"
-                    alt="하단 내용 참조" />
+                    alt="하단 내용 참조"
+                  />
                   <div class="blind">
                     <h2>유플닷컴에서만 월 1만원대!</h2>
                     <p>실속파를 위한 요금 할인</p>
@@ -2863,53 +3382,93 @@
                   </div>
                   <div class="tabs_conts_wrap">
                     <h3>
-                      <img alt="실속파 요금 추천"
-                        src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240719-071210-141-jDepohHy.jpg" />
+                      <img
+                        alt="실속파 요금 추천"
+                        src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240719-071210-141-jDepohHy.jpg"
+                      />
                     </h3>
-                    <button class="event_detail_a" style="
-                          width: 20vw;
-                          height: 7.5vw;
-                          top: 17.2%;
-                          left: 10%;
-                          z-index: 1;
-                        " data-idx="1" aria-controls="tab001" onclick="tabsClick(this)"
-                      data-gtm-event-name="button_click" data-gtm-event-category="클릭"
-                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭" data-gtm-event-label="컨텐츠 : 아이콘"
-                      data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="내부" data-gtm-click-text="100M"
-                      aria-selected="true">
+                    <button
+                      class="event_detail_a"
+                      style="
+                        width: 20vw;
+                        height: 7.5vw;
+                        top: 17.2%;
+                        left: 10%;
+                        z-index: 1;
+                      "
+                      data-idx="1"
+                      aria-controls="tab001"
+                      onclick="tabsClick(this)"
+                      data-gtm-event-name="button_click"
+                      data-gtm-event-category="클릭"
+                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
+                      data-gtm-event-label="컨텐츠 : 아이콘"
+                      data-gtm-click-location="이벤트상세 영역"
+                      data-gtm-click-direction="내부"
+                      data-gtm-click-text="100M"
+                      aria-selected="true"
+                    >
                       <span class="blind">100M</span>
                     </button>
-                    <button class="event_detail_a" style="
-                          width: 20vw;
-                          height: 7.5vw;
-                          top: 17.2%;
-                          left: 38.5%;
-                          z-index: 1;
-                        " data-idx="2" aria-controls="tab002" onclick="tabsClick(this)" data-route=""
-                      data-gtm-event-name="button_click" data-gtm-event-category="클릭"
-                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭" data-gtm-event-label="컨텐츠 : 아이콘"
-                      data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="내부" data-gtm-click-text="500M"
-                      aria-selected="false">
+                    <button
+                      class="event_detail_a"
+                      style="
+                        width: 20vw;
+                        height: 7.5vw;
+                        top: 17.2%;
+                        left: 38.5%;
+                        z-index: 1;
+                      "
+                      data-idx="2"
+                      aria-controls="tab002"
+                      onclick="tabsClick(this)"
+                      data-route=""
+                      data-gtm-event-name="button_click"
+                      data-gtm-event-category="클릭"
+                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
+                      data-gtm-event-label="컨텐츠 : 아이콘"
+                      data-gtm-click-location="이벤트상세 영역"
+                      data-gtm-click-direction="내부"
+                      data-gtm-click-text="500M"
+                      aria-selected="false"
+                    >
                       <span class="blind">500M</span>
                     </button>
-                    <button class="event_detail_a" style="
-                          width: 20vw;
-                          height: 7.5vw;
-                          top: 17.2%;
-                          right: 10%;
-                          z-index: 1;
-                        " data-idx="3" aria-controls="tab003" onclick="tabsClick(this)" data-route=""
-                      data-gtm-event-name="button_click" data-gtm-event-category="클릭"
-                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭" data-gtm-event-label="컨텐츠 : 아이콘"
-                      data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="내부" data-gtm-click-text="1기가"
-                      aria-selected="false">
+                    <button
+                      class="event_detail_a"
+                      style="
+                        width: 20vw;
+                        height: 7.5vw;
+                        top: 17.2%;
+                        right: 10%;
+                        z-index: 1;
+                      "
+                      data-idx="3"
+                      aria-controls="tab003"
+                      onclick="tabsClick(this)"
+                      data-route=""
+                      data-gtm-event-name="button_click"
+                      data-gtm-event-category="클릭"
+                      data-gtm-event-action="이벤트상세 영역 - 버튼 클릭"
+                      data-gtm-event-label="컨텐츠 : 아이콘"
+                      data-gtm-click-location="이벤트상세 영역"
+                      data-gtm-click-direction="내부"
+                      data-gtm-click-text="1기가"
+                      aria-selected="false"
+                    >
                       <span class="blind">1기가</span>
                     </button>
-                    <div id="tabs001" class="tabs_conts" aria-labelledby="tabs001" role="tabpanel"
-                      style="display: block">
+                    <div
+                      id="tabs001"
+                      class="tabs_conts"
+                      aria-labelledby="tabs001"
+                      role="tabpanel"
+                      style="display: block"
+                    >
                       <img
                         src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240805-101403-715-opR6oJpG.png"
-                        alt="하단내용 참조" />
+                        alt="하단내용 참조"
+                      />
                       <div class="blind">
                         <h4>월 요금 부담이 가장 적은</h4>
                         <p>100M 프리미엄 안심 + 211채널 베이직</p>
@@ -2933,11 +3492,17 @@
                         </dl>
                       </div>
                     </div>
-                    <div id="tabs002" class="tabs_conts" aria-labelledby="tabs002" role="tabpanel"
-                      style="display: none">
+                    <div
+                      id="tabs002"
+                      class="tabs_conts"
+                      aria-labelledby="tabs002"
+                      role="tabpanel"
+                      style="display: none"
+                    >
                       <img
                         src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240925-045530-966-lYAXuqtt.png"
-                        alt="하단내용 참조" />
+                        alt="하단내용 참조"
+                      />
                       <div class="blind">
                         <h4>신규가입자들이 가장 많이 선택한</h4>
                         <p>500M 프리미엄 안심 + 252채널 프리미엄</p>
@@ -2961,11 +3526,17 @@
                         </dl>
                       </div>
                     </div>
-                    <div id="tabs003" class="tabs_conts" aria-labelledby="tabs003" role="tabpanel"
-                      style="display: none">
+                    <div
+                      id="tabs003"
+                      class="tabs_conts"
+                      aria-labelledby="tabs003"
+                      role="tabpanel"
+                      style="display: none"
+                    >
                       <img
                         src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240805-014846-512-0IZFPBah.png"
-                        alt="하단내용 참조" />
+                        alt="하단내용 참조"
+                      />
                       <div class="blind">
                         <h4>월 요금 할인이 가장 많은</h4>
                         <p>1기가 프리미엄 안심 + 257채널 프리미엄 VOD</p>
@@ -2991,7 +3562,8 @@
                     </div>
                     <img
                       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240805-101400-143-Lg4DRj3y.png"
-                      alt="하단참조" />
+                      alt="하단참조"
+                    />
                     <div class="blind">
                       <ul>
                         <li>
@@ -3010,60 +3582,99 @@
                       </ul>
                     </div>
                     <!-- [100M] ▶ 프리미엄 안심100M+베이직 가입신청서 -->
-                    <a class="btn_sign on" data-route="" data-idx="1"
+                    <a
+                      class="btn_sign on"
+                      data-route=""
+                      data-idx="1"
                       href="https://m.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=19"
                       data-gtm-click-url="https://www.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=19"
-                      data-gtm-event-name="link_click" data-gtm-event-category="클릭"
-                      data-gtm-event-action="이벤트상세 영역- 링크 클릭" data-gtm-event-label="컨텐츠 : 팝업_이대로 신청서 작성하기"
-                      data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction=""
-                      data-gtm-click-text="팝업_이대로 신청서 작성하기">
+                      data-gtm-event-name="link_click"
+                      data-gtm-event-category="클릭"
+                      data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+                      data-gtm-event-label="컨텐츠 : 팝업_이대로 신청서 작성하기"
+                      data-gtm-click-location="이벤트상세 영역"
+                      data-gtm-click-direction=""
+                      data-gtm-click-text="팝업_이대로 신청서 작성하기"
+                    >
                       <span class="blind">이대로 신청서 작성하기</span>
                     </a>
                     <!-- [500]▶ 프리미엄 안심500M+프리미엄 가입신청서 -->
-                    <a class="btn_sign" data-route="" data-idx="2"
+                    <a
+                      class="btn_sign"
+                      data-route=""
+                      data-idx="2"
                       href="https://m.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=17"
                       data-gtm-click-url="https://www.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=17"
-                      data-gtm-event-name="link_click" data-gtm-event-category="클릭"
-                      data-gtm-event-action="이벤트상세 영역- 링크 클릭" data-gtm-event-label="컨텐츠 : 팝업_이대로 신청서 작성하기"
-                      data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction=""
-                      data-gtm-click-text="팝업_이대로 신청서 작성하기">
+                      data-gtm-event-name="link_click"
+                      data-gtm-event-category="클릭"
+                      data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+                      data-gtm-event-label="컨텐츠 : 팝업_이대로 신청서 작성하기"
+                      data-gtm-click-location="이벤트상세 영역"
+                      data-gtm-click-direction=""
+                      data-gtm-click-text="팝업_이대로 신청서 작성하기"
+                    >
                       <span class="blind">이대로 신청서 작성하기</span>
                     </a>
                     <!--[1기가] ▶ 프리미엄 안심1기가+프리미엄VOD 가입신청서 -->
-                    <a class="btn_sign" data-route="" data-idx="3"
+                    <a
+                      class="btn_sign"
+                      data-route=""
+                      data-idx="3"
                       href="https://m.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=10"
                       data-gtm-click-url="https://www.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=10"
-                      data-gtm-event-name="link_click" data-gtm-event-category="클릭"
-                      data-gtm-event-action="이벤트상세 영역- 링크 클릭" data-gtm-event-label="컨텐츠 : 팝업_이대로 신청서 작성하기"
-                      data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction=""
-                      data-gtm-click-text="팝업_이대로 신청서 작성하기">
+                      data-gtm-event-name="link_click"
+                      data-gtm-event-category="클릭"
+                      data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+                      data-gtm-event-label="컨텐츠 : 팝업_이대로 신청서 작성하기"
+                      data-gtm-click-location="이벤트상세 영역"
+                      data-gtm-click-direction=""
+                      data-gtm-click-text="팝업_이대로 신청서 작성하기"
+                    >
                       <span class="blind">이대로 신청서 작성하기</span>
                     </a>
                   </div>
                 </div>
-                <div class="float_box" style="
-                      display: flex;
-                      justify-content: center;
-                      padding: 20px;
-                      gap: 0 15px;
-                    ">
-                  <button onclick="telCnslPop();closeLayerEvent(this);return false;" style="width: auto; height: auto"
-                    data-gtm-event-name="button_click" data-gtm-event-category="클릭"
-                    data-gtm-event-action="이벤트상세 영역- 버튼 클릭" data-gtm-event-label="컨텐츠 : 팝업_실속할인_가입상담 신청"
-                    data-gtm-click-location="이벤트상세 영역" data-gtm-click-text="팝업_실속할인_가입상담 신청">
+                <div
+                  class="float_box"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    padding: 20px;
+                    gap: 0 15px;
+                  "
+                >
+                  <button
+                    onclick="telCnslPop();closeLayerEvent(this);return false;"
+                    style="width: auto; height: auto"
+                    data-gtm-event-name="button_click"
+                    data-gtm-event-category="클릭"
+                    data-gtm-event-action="이벤트상세 영역- 버튼 클릭"
+                    data-gtm-event-label="컨텐츠 : 팝업_실속할인_가입상담 신청"
+                    data-gtm-click-location="이벤트상세 영역"
+                    data-gtm-click-text="팝업_실속할인_가입상담 신청"
+                  >
                     <img
                       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240828-014037-064-q9Pk7pBC.png"
-                      alt="가입상담 신청" />
+                      alt="가입상담 신청"
+                    />
                   </button>
-                  <a data-route href="tel:1644-7070"
+                  <a
+                    data-route
+                    href="tel:1644-7070"
                     onclick="fbq('track', 'CompeleteRegistration', {content_ids: '플로팅_콜클릭',});dablena('track', 'event1');callTaboola('M_Call1_floating');"
-                    data-gtm-event-name="call_click" data-gtm-event-category="클릭"
-                    data-gtm-event-action="이벤트 상세 영역 - 콜버튼 클릭" data-gtm-event-label="컨텐츠 : 상담전화 걸기"
-                    data-gtm-click-url="1644-7070" data-gtm-click-location="이벤트 상세 영역" data-gtm-click-direction="내부"
-                    data-gtm-click-text="상담전화 걸기">
+                    data-gtm-event-name="call_click"
+                    data-gtm-event-category="클릭"
+                    data-gtm-event-action="이벤트 상세 영역 - 콜버튼 클릭"
+                    data-gtm-event-label="컨텐츠 : 상담전화 걸기"
+                    data-gtm-click-url="1644-7070"
+                    data-gtm-click-location="이벤트 상세 영역"
+                    data-gtm-click-direction="내부"
+                    data-gtm-click-text="상담전화 걸기"
+                  >
                     <img
                       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240828-014048-814-QP7Q6jHu.png"
-                      alt="1644-7070" />
+                      alt="1644-7070"
+                    />
                   </a>
                 </div>
               </div>
@@ -3077,13 +3688,19 @@
             <div class="share_layer_inner">
               <div class="share_layer_tit">
                 <h4>
-                  <img style="width: 187px"
+                  <img
+                    style="width: 187px"
                     src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240717-063346-609-WfOcLaCH.png"
-                    alt="1인 가구 맞춤 추천" />
+                    alt="1인 가구 맞춤 추천"
+                  />
                 </h4>
                 <div class="layer_close">
-                  <button type="button" class="ui_modal_close" data-reverse="event_modal_open10"
-                    onclick="closeLayerEvent(this)">
+                  <button
+                    type="button"
+                    class="ui_modal_close"
+                    data-reverse="event_modal_open10"
+                    onclick="closeLayerEvent(this)"
+                  >
                     <span class="blind">닫기</span>
                   </button>
                 </div>
@@ -3092,7 +3709,8 @@
                 <div class="family" style="padding: 0 20px; position: relative">
                   <img
                     src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-013406-959-A7Ojr1yy.png"
-                    alt="1인 가구 맞춤 추천 하단 내용 참조" />
+                    alt="1인 가구 맞춤 추천 하단 내용 참조"
+                  />
                   <div class="blind">
                     <p>2030 가구 35%가 선택했어요!</p>
                     <dl>
@@ -3102,18 +3720,25 @@
                     <p>할인 적용 전 '1년 약정' 금액, 월 19,800원</p>
                     <p>휴대폰 결합하면 월 18,420원</p>
                   </div>
-                  <a data-route="" href="https://m.lguplus.com/signup/step1/internet?urcHmProdNoList=990001786"
-                    data-gtm-event-name="link_click" data-gtm-event-category="클릭"
-                    data-gtm-event-action="이벤트상세 영역- 링크 클릭" data-gtm-event-label="컨텐츠 : 팝업_실속할인_온라인 1분 가입"
+                  <a
+                    data-route=""
+                    href="https://m.lguplus.com/signup/step1/internet?urcHmProdNoList=990001786"
+                    data-gtm-event-name="link_click"
+                    data-gtm-event-category="클릭"
+                    data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+                    data-gtm-event-label="컨텐츠 : 팝업_실속할인_온라인 1분 가입"
                     data-gtm-click-url="https://m.lguplus.com/signup/step1/internet?urcHmProdNoList=990001786"
-                    data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction=""
-                    data-gtm-click-text="팝업_실속할인_온라인 1분 가입" style="
-                        position: absolute;
-                        top: 39%;
-                        height: 6%;
-                        width: 44%;
-                        left: 28%;
-                      ">
+                    data-gtm-click-location="이벤트상세 영역"
+                    data-gtm-click-direction=""
+                    data-gtm-click-text="팝업_실속할인_온라인 1분 가입"
+                    style="
+                      position: absolute;
+                      top: 39%;
+                      height: 6%;
+                      width: 44%;
+                      left: 28%;
+                    "
+                  >
                     <span class="blind">온라인 1분 가입</span>
                   </a>
                   <div class="blind">
@@ -3130,19 +3755,25 @@
                       증정'
                     </p>
                   </div>
-                  <a data-route=""
+                  <a
+                    data-route=""
                     href="https://m.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=12"
-                    data-gtm-event-name="link_click" data-gtm-event-category="클릭"
-                    data-gtm-event-action="이벤트상세 영역- 링크 클릭" data-gtm-event-label="컨텐츠 : 팝업_실속할인_온라인 1분 가입"
+                    data-gtm-event-name="link_click"
+                    data-gtm-event-category="클릭"
+                    data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+                    data-gtm-event-label="컨텐츠 : 팝업_실속할인_온라인 1분 가입"
                     data-gtm-click-url="https://www.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=12"
-                    data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction=""
-                    data-gtm-click-text="팝업_실속할인_온라인 1분 가입" style="
-                        position: absolute;
-                        top: 94%;
-                        height: 6%;
-                        width: 44%;
-                        left: 28%;
-                      ">
+                    data-gtm-click-location="이벤트상세 영역"
+                    data-gtm-click-direction=""
+                    data-gtm-click-text="팝업_실속할인_온라인 1분 가입"
+                    style="
+                      position: absolute;
+                      top: 94%;
+                      height: 6%;
+                      width: 44%;
+                      left: 28%;
+                    "
+                  >
                     <span class="blind">온라인 1분 가입</span>
                   </a>
                 </div>
@@ -3156,13 +3787,19 @@
             <div class="share_layer_inner">
               <div class="share_layer_tit">
                 <h4>
-                  <img style="width: 190px"
+                  <img
+                    style="width: 190px"
                     src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240717-063428-153-JryfdOwa.png"
-                    alt="2인 가구 맞춤 추천" />
+                    alt="2인 가구 맞춤 추천"
+                  />
                 </h4>
                 <div class="layer_close">
-                  <button type="button" class="ui_modal_close" data-reverse="event_modal_open11"
-                    onclick="closeLayerEvent(this)">
+                  <button
+                    type="button"
+                    class="ui_modal_close"
+                    data-reverse="event_modal_open11"
+                    onclick="closeLayerEvent(this)"
+                  >
                     <span class="blind">닫기</span>
                   </button>
                 </div>
@@ -3171,7 +3808,8 @@
                 <div class="family" style="padding: 0 20px; position: relative">
                   <img
                     src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-013423-948-lTSpHlr3.png"
-                    alt="2인 가구 맞춤 추천 하단 내용 참조" />
+                    alt="2인 가구 맞춤 추천 하단 내용 참조"
+                  />
                   <div class="blind">
                     <h5>2인 가구 맞춤 추천</h5>
                     <p>2인 가구  54%가 선택했어요!</p>
@@ -3191,19 +3829,25 @@
                       프리미엄클럽, 아이들나라, 기가와이파이6, 스마트홈스피커
                     </p>
                   </div>
-                  <a data-route=""
+                  <a
+                    data-route=""
                     href="https://m.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=17"
-                    data-gtm-event-name="link_click" data-gtm-event-category="클릭"
-                    data-gtm-event-action="이벤트상세 영역- 링크 클릭" data-gtm-event-label="컨텐츠 : 팝업_실속할인_온라인 1분 가입"
+                    data-gtm-event-name="link_click"
+                    data-gtm-event-category="클릭"
+                    data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+                    data-gtm-event-label="컨텐츠 : 팝업_실속할인_온라인 1분 가입"
                     data-gtm-click-url="https://www.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=17"
-                    data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction=""
-                    data-gtm-click-text="팝업_실속할인_온라인 1분 가입" style="
-                        top: 90%;
-                        position: absolute;
-                        height: 10%;
-                        width: 44%;
-                        left: 28%;
-                      ">
+                    data-gtm-click-location="이벤트상세 영역"
+                    data-gtm-click-direction=""
+                    data-gtm-click-text="팝업_실속할인_온라인 1분 가입"
+                    style="
+                      top: 90%;
+                      position: absolute;
+                      height: 10%;
+                      width: 44%;
+                      left: 28%;
+                    "
+                  >
                     <span class="blind">온라인 1분 가입</span>
                   </a>
                 </div>
@@ -3217,13 +3861,19 @@
             <div class="share_layer_inner">
               <div class="share_layer_tit">
                 <h4>
-                  <img style="width: 190px"
+                  <img
+                    style="width: 190px"
                     src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240717-063446-060-BhIMiUis.png"
-                    alt="육아 가구 추천 요금제" />
+                    alt="육아 가구 추천 요금제"
+                  />
                 </h4>
                 <div class="layer_close">
-                  <button type="button" class="ui_modal_close" data-reverse="event_modal_open12"
-                    onclick="closeLayerEvent(this)">
+                  <button
+                    type="button"
+                    class="ui_modal_close"
+                    data-reverse="event_modal_open12"
+                    onclick="closeLayerEvent(this)"
+                  >
                     <span class="blind">닫기</span>
                   </button>
                 </div>
@@ -3232,7 +3882,8 @@
                 <div class="family" style="position: relative; padding: 0 20px">
                   <img
                     src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-013433-284-Hp52skz3.png"
-                    alt="육아 가구 맞춤 추천 하단 내용 참조" />
+                    alt="육아 가구 맞춤 추천 하단 내용 참조"
+                  />
                   <div class="blind">
                     <h5>육아 가구 맞춤 추천</h5>
                     <p>육아 가구  54%가 선택했어요!</p>
@@ -3254,19 +3905,25 @@
                       기가와이파이6, 스마트홈스피커
                     </p>
                   </div>
-                  <a data-route=""
+                  <a
+                    data-route=""
                     href="https://m.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=151"
-                    data-gtm-event-name="link_click" data-gtm-event-category="클릭"
-                    data-gtm-event-action="이벤트상세 영역- 링크 클릭" data-gtm-event-label="컨텐츠 : 팝업_실속할인_온라인 1분 가입"
+                    data-gtm-event-name="link_click"
+                    data-gtm-event-category="클릭"
+                    data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+                    data-gtm-event-label="컨텐츠 : 팝업_실속할인_온라인 1분 가입"
                     data-gtm-click-url="https://www.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=151"
-                    data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction=""
-                    data-gtm-click-text="팝업_실속할인_온라인 1분 가입" style="
-                        top: 92%;
-                        position: absolute;
-                        height: 8%;
-                        width: 44%;
-                        left: 28%;
-                      ">
+                    data-gtm-click-location="이벤트상세 영역"
+                    data-gtm-click-direction=""
+                    data-gtm-click-text="팝업_실속할인_온라인 1분 가입"
+                    style="
+                      top: 92%;
+                      position: absolute;
+                      height: 8%;
+                      width: 44%;
+                      left: 28%;
+                    "
+                  >
                     <span class="blind">온라인 1분 가입</span>
                   </a>
                 </div>
@@ -3280,13 +3937,19 @@
             <div class="share_layer_inner">
               <div class="share_layer_tit">
                 <h4>
-                  <img style="width: 240px"
+                  <img
+                    style="width: 240px"
                     src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240717-063504-693-kwTwc5UH.png"
-                    alt="중년+자녀 가구 추천 요금제" />
+                    alt="중년+자녀 가구 추천 요금제"
+                  />
                 </h4>
                 <div class="layer_close">
-                  <button type="button" class="ui_modal_close" data-reverse="event_modal_open13"
-                    onclick="closeLayerEvent(this)">
+                  <button
+                    type="button"
+                    class="ui_modal_close"
+                    data-reverse="event_modal_open13"
+                    onclick="closeLayerEvent(this)"
+                  >
                     <span class="blind">닫기</span>
                   </button>
                 </div>
@@ -3295,7 +3958,8 @@
                 <div class="family" style="position: relative; padding: 0 20px">
                   <img
                     src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240912-013444-764-zbEgi0cJ.png"
-                    alt="중년+자녀 가구 추천 하단 내용 참조" />
+                    alt="중년+자녀 가구 추천 하단 내용 참조"
+                  />
                   <div class="blind">
                     <h5>중년+자녀 가구 맞춤 추천</h5>
                     <p>중년+자녀 가구  32%가 선택했어요!</p>
@@ -3317,19 +3981,25 @@
                       스마트홈스피커
                     </p>
                   </div>
-                  <a data-route=""
+                  <a
+                    data-route=""
                     href="https://m.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=30"
-                    data-gtm-event-name="link_click" data-gtm-event-category="클릭"
-                    data-gtm-event-action="이벤트상세 영역- 링크 클릭" data-gtm-event-label="컨텐츠 : 팝업_실속할인_온라인 1분 가입"
+                    data-gtm-event-name="link_click"
+                    data-gtm-event-category="클릭"
+                    data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+                    data-gtm-event-label="컨텐츠 : 팝업_실속할인_온라인 1분 가입"
                     data-gtm-click-url="https://www.lguplus.com/signup/package?isPhoneDiscount=Y&urcHmProdGrpKwrdProdNo=30"
-                    data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction=""
-                    data-gtm-click-text="팝업_실속할인_온라인 1분 가입" style="
-                        top: 92%;
-                        position: absolute;
-                        height: 9%;
-                        width: 41%;
-                        left: 29%;
-                      ">
+                    data-gtm-click-location="이벤트상세 영역"
+                    data-gtm-click-direction=""
+                    data-gtm-click-text="팝업_실속할인_온라인 1분 가입"
+                    style="
+                      top: 92%;
+                      position: absolute;
+                      height: 9%;
+                      width: 41%;
+                      left: 29%;
+                    "
+                  >
                     <span class="blind">온라인 1분 가입</span>
                   </a>
                 </div>
@@ -3344,42 +4014,67 @@
         <h3>꼭 확인하세요!</h3>
         <div class="acType">
           <div id="accordion" class="accordions_conts_wrap">
-            <button class="titType" aria-controls="_accordion_001" aria-expanded="false" onclick="accordianClick(this)">
+            <button
+              class="titType"
+              aria-controls="_accordion_001"
+              aria-expanded="false"
+              onclick="accordianClick(this)"
+            >
               인터넷/IPTV 가입 시 유의사항
             </button>
             <div id="_accordion_001" class="subDepth">
               <ul>
                 <li>
                   할인기준 : 3년 약정으로 인터넷(프리미엄 안심 1기가) +
-                  U<sup>+</sup>tv(프리미엄 VOD) 동시 신규 가입하는 경우 위
-                  모든 할인을 제공합니다.
+                  U<sup>+</sup>tv(프리미엄 VOD) 동시 신규 가입하는 경우 위 모든
+                  할인을 제공합니다.
                 </li>
                 <li>셋톱박스 임대료는 UHD 셋톱박스 기준 금액입니다.</li>
                 <li>
                   제휴카드 할인은 ‘LG U<sup>+</sup>현대카드M
                   Edition3(통신할인형2.0)’ 로 통신료 자동이체 신청 후 전월
                   이용실적이 100만원 이상인 경우 월 25,000원 할인 적용됩니다.
-                  <a data-route class="depth_anchor" href="https://www.lguplus.com/benefit-affiliate/card-discount"
-                    data-gtm-event-name="link_click" data-gtm-event-category="클릭"
-                    data-gtm-event-action="이벤트상세 영역 - 링크 클릭" data-gtm-event-label="컨텐츠 : 자세히 보기"
+                  <a
+                    data-route
+                    class="depth_anchor"
+                    href="https://www.lguplus.com/benefit-affiliate/card-discount"
+                    data-gtm-event-name="link_click"
+                    data-gtm-event-category="클릭"
+                    data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+                    data-gtm-event-label="컨텐츠 : 자세히 보기"
                     data-gtm-click-url="https://www.lguplus.com/benefit-affiliate/card-discount"
-                    data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="내부" data-gtm-click-text="자세히 보기">자세히
-                    보기</a>
+                    data-gtm-click-location="이벤트상세 영역"
+                    data-gtm-click-direction="내부"
+                    data-gtm-click-text="자세히 보기"
+                    >자세히 보기</a
+                  >
                 </li>
                 <li>
-                  휴대폰 결합 할인은 ‘U<sup>+</sup>투게더 결합’으로 인터넷
-                  500M 이상 + 휴대폰 4회선 이상 결합 시 월 31,000원 할인
-                  적용됩니다.
-                  <a data-route class="depth_anchor" href="https://www.lguplus.com/mobile/combined/together"
-                    data-gtm-event-name="link_click" data-gtm-event-category="클릭"
-                    data-gtm-event-action="이벤트상세 영역 - 링크 클릭" data-gtm-event-label="컨텐츠 : 자세히 보기"
+                  휴대폰 결합 할인은 ‘U<sup>+</sup>투게더 결합’으로 인터넷 500M
+                  이상 + 휴대폰 4회선 이상 결합 시 월 31,000원 할인 적용됩니다.
+                  <a
+                    data-route
+                    class="depth_anchor"
+                    href="https://www.lguplus.com/mobile/combined/together"
+                    data-gtm-event-name="link_click"
+                    data-gtm-event-category="클릭"
+                    data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+                    data-gtm-event-label="컨텐츠 : 자세히 보기"
                     data-gtm-click-url="https://www.lguplus.com/mobile/combined/together "
-                    data-gtm-click-location="이벤트상세 영역" data-gtm-click-direction="내부" data-gtm-click-text="자세히 보기">자세히
-                    보기</a>
+                    data-gtm-click-location="이벤트상세 영역"
+                    data-gtm-click-direction="내부"
+                    data-gtm-click-text="자세히 보기"
+                    >자세히 보기</a
+                  >
                 </li>
               </ul>
             </div>
-            <button class="titType" aria-controls="_accordion_002" aria-expanded="false" onclick="accordianClick(this)">
+            <button
+              class="titType"
+              aria-controls="_accordion_002"
+              aria-expanded="false"
+              onclick="accordianClick(this)"
+            >
               사은품 관련 유의사항
             </button>
             <div id="_accordion_002" class="subDepth">
@@ -3397,8 +4092,8 @@
                 <li>
                   개통 완료 후 실사용 기간 1년 이내 해지 혹은 요금제 변경 시
                   받은 사은품에 대한 해지반환금이 발생합니다.<br />
-                  (요금제 변경 시 발생되는 반환금은 더 저렴한 요금제로의
-                  변경에 한하며, 기존/변경 요금제에 따라 발생되는 반환 금액은
+                  (요금제 변경 시 발생되는 반환금은 더 저렴한 요금제로의 변경에
+                  한하며, 기존/변경 요금제에 따라 발생되는 반환 금액은
                   상이합니다.)
                 </li>
                 <li>
@@ -3409,27 +4104,32 @@
                   배송 후 모든 정보는 폐기됩니다.
                 </li>
                 <li>
-                  모바일 상품권의 금액은 가입한 서비스의 종류와 약정기간에
-                  따라 다릅니다.
+                  모바일 상품권의 금액은 가입한 서비스의 종류와 약정기간에 따라
+                  다릅니다.
                 </li>
                 <li>모든 금액은 부가세 포함 금액입니다.</li>
                 <li>
                   자세한 내용은 유플러스닷컴 고객센터(1644-7070)로 문의
-                  바랍니다.(평일 9시~19시, 토요일 9시~12시 / 상담예약은
-                  24시까지 가능)
+                  바랍니다.(평일 9시~19시, 토요일 9시~12시 / 상담예약은 24시까지
+                  가능)
                 </li>
               </ul>
             </div>
-            <button class="titType" aria-controls="_accordion_007" aria-expanded="false" onclick="accordianClick(this)">
-              인터넷/IPTV 온라인 가입 고객 대상 <br> 스타벅스 3만원 쿠폰 증정
-              이벤트 공통 유의사항
+            <button
+              class="titType"
+              aria-controls="_accordion_007"
+              aria-expanded="false"
+              onclick="accordianClick(this)"
+            >
+              인터넷/IPTV 온라인 가입 고객 대상 <br />
+              스타벅스 3만원 쿠폰 증정 이벤트 공통 유의사항
             </button>
             <div id="_accordion_007" class="subDepth">
               <ul>
                 <li>
-                  2024년 12월 1일까지 유플러스닷컴 사이트 내 ‘온라인
-                  가입/온라인 1분 가입’을 통해 인터넷/IPTV 신규 가입 및 설치
-                  완료한 고객 전원에게 경품을 지급합니다.
+                  2024년 12월 1일까지 유플러스닷컴 사이트 내 ‘온라인 가입/온라인
+                  1분 가입’을 통해 인터넷/IPTV 신규 가입 및 설치 완료한 고객
+                  전원에게 경품을 지급합니다.
                 </li>
                 <li>
                   IPTV 단독, 소호 홈 상품 신규 가입자는 대상자에 포함되지
@@ -3444,8 +4144,7 @@
                   모바일 쿠폰이 발송될 예정입니다.
                 </li>
                 <li>
-                  당첨자와 경품 수령자는 동일해야 하며, 경품 양도는
-                  불가합니다.
+                  당첨자와 경품 수령자는 동일해야 하며, 경품 양도는 불가합니다.
                 </li>
                 <li>
                   잘못 등록된 개인정보로 인해 경품 발송대상자에서 제외되었을
@@ -3465,10 +4164,10 @@
                   동일한 금액의 상품권으로 변경 될 수 있습니다.
                 </li>
                 <li>
-                  유효기간이 있는 모바일 상품권 등의 경품은 유효기간 만료로
-                  사용 불가에 대해 책임지지 않으며 재발송 및 환불 대상이
-                  아닙니다. 스타벅스 모바일 쿠폰 관련 문의사항은 1544-1151로
-                  문의하여 확인하실 수 있습니다.
+                  유효기간이 있는 모바일 상품권 등의 경품은 유효기간 만료로 사용
+                  불가에 대해 책임지지 않으며 재발송 및 환불 대상이 아닙니다.
+                  스타벅스 모바일 쿠폰 관련 문의사항은 1544-1151로 문의하여
+                  확인하실 수 있습니다.
                 </li>
                 <li>
                   본 이벤트는 주최측 사정에 의해 사전 예고 없이 종료될 수
@@ -3479,28 +4178,74 @@
               </ul>
             </div>
             <!-- 인터넷/IPTV 온라인 가입 고객 대상 자취박스 증정 이벤트 유의사항 추가 -->
-            <button class="titType" aria-controls="_accordion_008" aria-expanded="false" onclick="accordianClick(this)">
-              인터넷/IPTV 온라인 가입 고객 대상 <br> 자취박스 증정 이벤트 유의사항
+            <button
+              class="titType"
+              aria-controls="_accordion_008"
+              aria-expanded="false"
+              onclick="accordianClick(this)"
+            >
+              인터넷/IPTV 온라인 가입 고객 대상 <br />
+              자취박스 증정 이벤트 유의사항
             </button>
             <div class="subDepth" id="_accordion_008">
               <ul>
-                <li>이벤트 기간 내 인터넷/IPTV 설치까지 완료한 고객 대상으로 사은품이 지급됩니다. <br> (온라인 가입만 진행하고, 인터넷/IPTV 설치를 12월 1일 내 하지 않은 경우
-                  대상자에서 제외됩니다.)</li>
-                <li>온라인 가입 외의 방법으로 접수 후 인터넷 설치를 한 고객은 대상자에서 제외됩니다. (*온라인 가입 외 접수 : 가입 상담 신청 및 전화 접수)</li>
-                <li>경품 당첨자 발표는 별도로 진행하지 않으며, 당첨되신 분께 개별 연락 후 인터넷/IPTV 설치 주소로 자동 배송됩니다.</li>
-                <li>주소지 이전 등의 개인 사유로 인해 경품 미수령 발생 시, 경품 재발송은 불가합니다.</li>
-                <li>당첨자와 경품 수령자는 동일해야 하며 경품 양도는 불가합니다.</li>
-                <li>잘못 등록된 개인정보로 인해 경품 발송 대상자에서 제외되었을 경우 주최 측이 책임지지 않습니다.</li>
-                <li>경품 배송 시 배송 일자 변경이 불가하며 제품을 수령하신 후 교환 또한 불가합니다.</li>
-                <li>타인의 명의를 도용하여 부정 인증을 시도한 경우 법령에 따라 처벌(3년 이하의 징역 또는 1천만원 이하의 벌금형)을 받을 수 있습니다.</li>
-                <li>타인의 개인정보 도용, 컴퓨터 프로그램 등을 이용한 응모 등 부정한 방법으로 이벤트에 참여한 경우 당첨이 취소됩니다.</li>
-                <li>경품 발송을 위해 고객님의 정보를 발송 대행사에 제공하며, 배송 후 모든 정보는 폐기됩니다.</li>
-                <li>본 이벤트는 주최 측 사정에 의해 사전 예고 없이 변경 및 종료될 수 있으며, 당사 사정에 의해 사은품이 변경될 수 있습니다.</li>
+                <li>
+                  이벤트 기간 내 인터넷/IPTV 설치까지 완료한 고객 대상으로
+                  사은품이 지급됩니다. <br />
+                  (온라인 가입만 진행하고, 인터넷/IPTV 설치를 12월 1일 내 하지
+                  않은 경우 대상자에서 제외됩니다.)
+                </li>
+                <li>
+                  온라인 가입 외의 방법으로 접수 후 인터넷 설치를 한 고객은
+                  대상자에서 제외됩니다. (*온라인 가입 외 접수 : 가입 상담 신청
+                  및 전화 접수)
+                </li>
+                <li>
+                  경품 당첨자 발표는 별도로 진행하지 않으며, 당첨되신 분께 개별
+                  연락 후 인터넷/IPTV 설치 주소로 자동 배송됩니다.
+                </li>
+                <li>
+                  주소지 이전 등의 개인 사유로 인해 경품 미수령 발생 시, 경품
+                  재발송은 불가합니다.
+                </li>
+                <li>
+                  당첨자와 경품 수령자는 동일해야 하며 경품 양도는 불가합니다.
+                </li>
+                <li>
+                  잘못 등록된 개인정보로 인해 경품 발송 대상자에서 제외되었을
+                  경우 주최 측이 책임지지 않습니다.
+                </li>
+                <li>
+                  경품 배송 시 배송 일자 변경이 불가하며 제품을 수령하신 후 교환
+                  또한 불가합니다.
+                </li>
+                <li>
+                  타인의 명의를 도용하여 부정 인증을 시도한 경우 법령에 따라
+                  처벌(3년 이하의 징역 또는 1천만원 이하의 벌금형)을 받을 수
+                  있습니다.
+                </li>
+                <li>
+                  타인의 개인정보 도용, 컴퓨터 프로그램 등을 이용한 응모 등
+                  부정한 방법으로 이벤트에 참여한 경우 당첨이 취소됩니다.
+                </li>
+                <li>
+                  경품 발송을 위해 고객님의 정보를 발송 대행사에 제공하며, 배송
+                  후 모든 정보는 폐기됩니다.
+                </li>
+                <li>
+                  본 이벤트는 주최 측 사정에 의해 사전 예고 없이 변경 및 종료될
+                  수 있으며, 당사 사정에 의해 사은품이 변경될 수 있습니다.
+                </li>
               </ul>
             </div>
             <!-- 인터넷/IPTV 온라인 가입 고객 대상 자취박스 증정 이벤트 유의사항 추가 EEE -->
             <!-- 스마트홈 요금제 as-of 2024.07.17 -->
-            <button class="titType" aria-controls="_accordion_003" aria-expanded="false" onclick="accordianClick(this)">
+            <button
+              class="titType"
+              aria-controls="_accordion_003"
+              aria-expanded="false"
+              onclick="accordianClick(this)"
+            >
               스마트홈 요금제 신규 출시 추가 사은품 유의사항
             </button>
             <div id="_accordion_003" class="subDepth">
@@ -3517,37 +4262,41 @@
                 </li>
               </ul>
             </div>
-            <button class="titType" aria-controls="_accordion_004" aria-expanded="false" onclick="accordianClick(this)">
+            <button
+              class="titType"
+              aria-controls="_accordion_004"
+              aria-expanded="false"
+              onclick="accordianClick(this)"
+            >
               11월 한정 추가 사은품 이벤트 유의사항
             </button>
             <div id="_accordion_004" class="subDepth">
               <ul>
                 <li>
                   이벤트 기간(2024.11.1 ~ 11.30)동안 3년 약정으로
-                  인터넷(프리미엄 안심 500M 이상)+U<sup>+</sup>tv(프리미엄
-                  이상) 동시 신규 가입한 고객님 중 추첨 1,000명께 추가 사은품
-                  10만원을 제공합니다.
+                  인터넷(프리미엄 안심 500M 이상)+U<sup>+</sup>tv(프리미엄 이상)
+                  동시 신규 가입한 고객님 중 추첨 1,000명께 추가 사은품 10만원을
+                  제공합니다.
                 </li>
                 <li>
-                  위, 이벤트에 당첨되신 경우 개통 시 입력한 인터넷 설치 주소로
-                  2주 이내 경품이 발송 될 예정입니다.
+                  위, 이벤트에 당첨되신 경우 가입하신 고객 연락처로 2주 이내
+                  경품이 발송 될 예정입니다.
                 </li>
                 <li>
                   사은품 수량이 부족한 경우 다른 상품으로 변경 될 수 있으며,
                   사은품을 받으신 후에는 교환 할 수 없습니다.
                 </li>
                 <li>
-                  당첨자의 경품 수령자는 동일해야 하며, 경품 양도는
-                  불가합니다.
+                  당첨자의 경품 수령자는 동일해야 하며, 경품 양도는 불가합니다.
                 </li>
                 <li>
-                  타인의 명의를 도용하여 부정인증을 시도한 경우 관련 볍령에
-                  따라 처벌(3년 이하의 징역 또는 1천만원 이하의 벌금형)을 받을
-                  수 있습니다.
+                  타인의 명의를 도용하여 부정인증을 시도한 경우 관련 볍령에 따라
+                  처벌(3년 이하의 징역 또는 1천만원 이하의 벌금형)을 받을 수
+                  있습니다.
                 </li>
                 <li>
-                  타인의 개인정보 도용, 컴퓨터 프로그램을 이용한 응모 등
-                  부정한 방법으로 이벤트에 참여하는 경우 당첨이 취소됩니다.
+                  타인의 개인정보 도용, 컴퓨터 프로그램을 이용한 응모 등 부정한
+                  방법으로 이벤트에 참여하는 경우 당첨이 취소됩니다.
                 </li>
                 <li>
                   위 이벤트의 경우 당사 사정에 의해 사전 예고 없이 종료될 수
@@ -3585,40 +4334,77 @@
 </div>
 <!-- 플로팅 버튼 -->
 <div class="float_area" id="floatArea">
-  <a data-route href="tel:1644-7070"
+  <a
+    data-route
+    href="tel:1644-7070"
     onclick="fbq('track', 'CompeleteRegistration', {content_ids: '플로팅_콜클릭',});dablena('track', 'event1');callTaboola('M_Call1_floating');"
-    data-gtm-event-name="call_click" data-gtm-event-category="클릭" data-gtm-event-action="플로팅 영역 - 콜버튼 클릭"
-    data-gtm-event-label="컨텐츠 : 상담전화 걸기" data-gtm-click-url="1644-7070" data-gtm-click-location="플로팅 영역"
-    data-gtm-click-direction="내부" data-gtm-click-text="상담전화 걸기">
+    data-gtm-event-name="call_click"
+    data-gtm-event-category="클릭"
+    data-gtm-event-action="플로팅 영역 - 콜버튼 클릭"
+    data-gtm-event-label="컨텐츠 : 상담전화 걸기"
+    data-gtm-click-url="1644-7070"
+    data-gtm-click-location="플로팅 영역"
+    data-gtm-click-direction="내부"
+    data-gtm-click-text="상담전화 걸기"
+  >
     <strong class="flt_btn_mainCall">상담<br />전화걸기</strong>
   </a>
-  <button data-route aria-label="플로팅 상담예약하기" onclick="telCnslPop();closeLayerEvent(this);return false;"
-    data-gtm-event-name="button_click" data-gtm-event-category="클릭" data-gtm-event-action="플로팅 영역- 버튼 클릭"
-    data-gtm-event-label="컨텐츠 : 상담 예약하기" data-gtm-click-location="플로팅 영역" data-gtm-click-text="상담 예약하기">
+  <button
+    data-route
+    aria-label="플로팅 상담예약하기"
+    onclick="telCnslPop();closeLayerEvent(this);return false;"
+    data-gtm-event-name="button_click"
+    data-gtm-event-category="클릭"
+    data-gtm-event-action="플로팅 영역- 버튼 클릭"
+    data-gtm-event-label="컨텐츠 : 상담 예약하기"
+    data-gtm-click-location="플로팅 영역"
+    data-gtm-click-text="상담 예약하기"
+  >
     <strong class="flt_btn_chat">상담<br />예약하기</strong>
   </button>
-  <a data-route href="https://m.lguplus.com/signup/smart-plan/intro" aria-label="플로팅 온라인 1분 가입"
-    data-gtm-click-url="https://m.lguplus.com/signup/smart-plan/intro" data-gtm-event-name="link_click"
-    data-gtm-event-category="클릭" data-gtm-event-action="플로팅 영역- 링크 클릭" data-gtm-event-label="컨텐츠 : 온라인 1분 가입"
-    data-gtm-click-url="" data-gtm-click-location="플로팅 영역" data-gtm-click-direction="" data-gtm-click-text="온라인 1분 가입"
-    class="join-banner">
+  <a
+    data-route
+    href="https://m.lguplus.com/signup/smart-plan/intro"
+    aria-label="플로팅 온라인 1분 가입"
+    data-gtm-click-url="https://m.lguplus.com/signup/smart-plan/intro"
+    data-gtm-event-name="link_click"
+    data-gtm-event-category="클릭"
+    data-gtm-event-action="플로팅 영역- 링크 클릭"
+    data-gtm-event-label="컨텐츠 : 온라인 1분 가입"
+    data-gtm-click-url=""
+    data-gtm-click-location="플로팅 영역"
+    data-gtm-click-direction=""
+    data-gtm-click-text="온라인 1분 가입"
+    class="join-banner"
+  >
     <strong class="flt_btn_cnl">온라인<br />1분 가입</strong>
   </a>
-  <span class="flt_balloon"><img
+  <span class="flt_balloon"
+    ><img
       src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240827-033827-260-shJBFw7l.png"
-      alt="3만원 추첨" /></span>
+      alt="3만원 추첨"
+  /></span>
   <!-- <span class="flt_balloon"><img src="모바일 10만원 추첨 이미지" alt="10만원 추첨" /></span> -->
 </div>
 <!-- //플로팅 버튼 -->
 <!-- 사이드 앵커배너 -->
 <!-- 트래픽 교환배너 -->
 <div class="traffic_bnr">
-  <a href="https://www.lguplus.com/internet-iptv/soho/event/81105" data-gtm-event-name="link_click"
-    data-gtm-event-category="클릭" data-gtm-event-action="플로팅 영역- 링크 클릭" data-gtm-event-label="컨텐츠 : 가게전용 혜택"
-    data-gtm-click-url="https://www.lguplus.com/internet-iptv/soho/event/81105" data-gtm-click-location="플로팅 영역"
-    data-gtm-click-direction="내부" data-gtm-click-text="가게전용 혜택">
-    <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240910-012243-184-zXbakEom.png"
-      title="가게 전용" />
+  <a
+    href="https://www.lguplus.com/internet-iptv/soho/event/81105"
+    data-gtm-event-name="link_click"
+    data-gtm-event-category="클릭"
+    data-gtm-event-action="플로팅 영역- 링크 클릭"
+    data-gtm-event-label="컨텐츠 : 가게전용 혜택"
+    data-gtm-click-url="https://www.lguplus.com/internet-iptv/soho/event/81105"
+    data-gtm-click-location="플로팅 영역"
+    data-gtm-click-direction="내부"
+    data-gtm-click-text="가게전용 혜택"
+  >
+    <img
+      src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240910-012243-184-zXbakEom.png"
+      title="가게 전용"
+    />
   </a>
 </div>
 <!-- 트래픽 교환배너 전용 css -->
@@ -3646,11 +4432,11 @@
     transition: all 0.3s ease-in-out;
   }
 
-  .traffic_bnr>a {
+  .traffic_bnr > a {
     display: inline-block;
   }
 
-  .traffic_bnr>a img {
+  .traffic_bnr > a img {
     width: 100%;
   }
 
@@ -3863,13 +4649,15 @@
     var target = document.getElementById(index);
     var targetOffsetTop = target
       ? window.pageYOffset +
-      target.getBoundingClientRect().top -
-      reductionHeight
+        target.getBoundingClientRect().top -
+        reductionHeight
       : 0;
     var $tab_A = "_price";
     var $tab_B = "_benefits";
     var $why = "_whyUplus";
     var $holiday = "_holiday";
+    var $promo = "_promo";
+    var $box = "_box";
 
     // redirecting url
     var myURL = "/benefit-event/ongoing/387";
@@ -3897,11 +4685,31 @@
           document.getElementById("_holiday").click();
         }, 400);
       }
+      if (index === $promo) {
+        setTimeout(function () {
+          var trigBtn = document
+            .getElementById("anchorBtn03")
+            .querySelector("button");
+          trigBtn.click();
+        }, 400);
+      }
+      if (index === $box) {
+        document.getElementById("_box").click();
+        setTimeout(function () {
+          var target = document.getElementById("_box");
+          var reductionHeight = 100;
+          var targetOffsetTop =
+            window.pageYOffset +
+            target.getBoundingClientRect().top -
+            reductionHeight;
+          scrollTo(targetOffsetTop, 500);
+        }, 1000);
+      }
     }
 
     window.history.pushState({}, document.title, myURL);
 
-    scrollTo(targetOffsetTop, 300);
+    // scrollTo(targetOffsetTop, 300); 24.11.11
   }
 
   setTimeout(function () {
@@ -3915,7 +4723,7 @@
   }
 
   function counter() {
-    var dday = new Date("oct 31, 2024, 23:59:59").getTime();
+    var dday = new Date("nov 30, 2024, 23:59:59").getTime();
     var timer = setInterval(function () {
       var now = new Date();
       var distance = dday - now;
@@ -4101,9 +4909,33 @@
     externalServices.dispatchMessageEvent("EventTelInternetCnslPopup", props);
   }
 
+  // kv 별 효과
+  const starCreationInterval = 500; // 별 생성 주기 (ms, 0.5초마다 생성)
+
+  function createStar() {
+    const section = document.querySelector(".section.kv");
+    const star = document.createElement("div");
+    star.classList.add("star");
+    star.style.left = Math.random() * section.clientWidth + "px";
+    star.style.top = Math.random() * section.clientHeight + "px";
+    star.style.width = `${Math.random() * 6 + 7}px`; // 8~18px
+    star.style.height = star.style.width; // 정사각형 유지
+    star.style.animationDuration = Math.random() * 1 + 1 + "s"; // 1~3초
+    section.appendChild(star);
+
+    // 일정 시간 후 별 제거
+    setTimeout(() => {
+      star.remove();
+    }, 5000); // 3초 후 제거
+  }
+
+  // 별 생성 주기 설정
+  setInterval(createStar, starCreationInterval); // starCreationInterval에 따라 별 생성
+
   // 전역 스코프 (window)에 필요한 함수들을 바인딩합니다.
   window.telCnslPop = telCnslPop;
   window.holidayCnslPop = holidayCnslPop;
+  window.createStar = createStar;
 
   ("use strict");
   function _slicedToArray(arr, i) {
@@ -4124,7 +4956,7 @@
       null == arr
         ? null
         : ("undefined" != typeof Symbol && arr[Symbol.iterator]) ||
-        arr["@@iterator"];
+          arr["@@iterator"];
     if (null != _i) {
       var _s,
         _e,
@@ -4289,8 +5121,8 @@
           ".instant_consult div div.c-btn-group .signup_btn"
         );
         var _document$querySelect = document.querySelectorAll(
-          ".instant_consult .c-inpfield .c-inpform input"
-        ),
+            ".instant_consult .c-inpfield .c-inpform input"
+          ),
           _document$querySelect2 = _slicedToArray(_document$querySelect, 2),
           nameEl = _document$querySelect2[0],
           phoneEl = _document$querySelect2[1];
