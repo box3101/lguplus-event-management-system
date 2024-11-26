@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pc-1586</title>
+    <link rel="stylesheet" href="../pc.css" />
+  </head>
+
+  <body>
+    <div id="content"></div>
+    <div class="c-btn-group -mt-8n-10"></div>
+    <div class="list-bottom">
+      <div class="btn-box-default">
+        <a
+          id="_uid_180"
+          href="#none"
+          data-gtm-event-name="link_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="이벤트목록 영역 - 링크 클릭"
+          data-gtm-event-label="컨텐츠 : 원스톱 전환 서비스"
+          data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/1004"
+          data-gtm-click-location="이벤트목록 영역"
+          data-gtm-click-direction="내부"
+          data-gtm-click-text="원스톱 전환 서비스"
+          data-gtm-abms-section=""
+          data-gtm-abms-elem=""
+          class="cont-prev"
+          ><span>이전글</span> <span class="tit">원스톱 전환 서비스</span>
+          <span class="date">2023-08-04</span></a
+        >
+        <a
+          id="_uid_181"
+          href="#none"
+          data-gtm-event-name="link_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="이벤트목록 영역 - 링크 클릭"
+          data-gtm-event-label="컨텐츠 : 유플러스닷컴 아이폰 기획전"
+          data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/1041"
+          data-gtm-click-location="이벤트목록 영역"
+          data-gtm-click-direction="내부"
+          data-gtm-click-text="유플러스닷컴 아이폰 기획전"
+          data-gtm-abms-section=""
+          data-gtm-abms-elem=""
+          class="cont-next"
+          ><span>다음글</span>
+          <span class="tit">유플러스닷컴 아이폰 기획전</span>
+          <span class="date"> 2023-08-28 </span></a
+        >
+      </div>
+      <!---->
+      <div class="c-btn-group -mt-8n-10">
+        <button id="_uid_182" class="c-btn-outline-2-m">목록</button>
+      </div>
+    </div>
+    <h2 class="h3 -mt-8n-10">플러스 추천</h2>
+    <script>
+      // history.pushState 오버라이드
+      const originalPushState = window.history.pushState;
+      window.history.pushState = function () {
+        // pushState 무시
+        return;
+      };
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "/event/1586/pc/pc-content.html", true);
+      xhr.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+          document.getElementById("content").innerHTML = this.responseText;
+
+          // 스크립트 실행 전에 postParam 함수 오버라이드
+          window.postParam = function () {
+            // URL 변경 로직 무시
+            return;
+          };
+
+          // 스크립트를 찾아서 실행
+          var scripts = document
+            .getElementById("content")
+            .getElementsByTagName("script");
+          Array.from(scripts).forEach((script) => {
+            var newScript = document.createElement("script");
+            Array.from(script.attributes).forEach((attr) => {
+              newScript.setAttribute(attr.name, attr.value);
+            });
+            newScript.appendChild(document.createTextNode(script.innerHTML));
+            script.parentNode.replaceChild(newScript, script);
+          });
+        }
+      };
+      xhr.send();
+
+      // popstate 이벤트도 막기
+      window.addEventListener("popstate", function (e) {
+        e.preventDefault();
+        return false;
+      });
+    </script>
+  </body>
+</html>
