@@ -73,6 +73,15 @@ app.get("/event/1586/m", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "event/1586/mo", "common.html"));
 });
 
+// 1634
+app.get("/event/1634", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "event/1634/pc", "common.html"));
+});
+
+app.get("/event/1634/m", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "event/1634/mo", "common.html"));
+});
+
 // 팝업 HTML 파일 제공을 위한 라우트 설정
 app.get("/popup/common", (req, res) => {
   res.sendFile(
