@@ -68,7 +68,7 @@
     height: 34.636vw;
     position: absolute;
     top: 45.8%;
-    z-index: 10;
+    z-index: 4;
   }
 
   .kv .kv_title_wrap .ani {
@@ -1841,19 +1841,21 @@
     position: relative;
     overflow: hidden;
     height: 122.222vw; /* 880/720px = 122.222vw */
+    overflow-x: hidden;
   }
   .snowflake {
     position: absolute;
     left: 0;
-    right: 0;
     top: 0px;
     color: white;
-    font-size: 5px !important;
     user-select: none;
     pointer-events: none;
     animation: fall linear infinite;
     overflow-x: hidden;
     z-index: 1;
+    display: block;
+    width: 6px !important;
+    height: 6px !important;
   }
   @keyframes fall {
     0% {
@@ -4876,7 +4878,7 @@
 
   /* 241126 KV 눈 효과 */
   // 화면에 표시될 최대 눈송이 개수 제한
-  const MAX_SNOWFLAKES = 50;
+  const MAX_SNOWFLAKES = 30;
   let currentSnowflakes = 0;
 
   // Snowflake 생성 함수
@@ -4888,10 +4890,22 @@
 
     const snowflake = document.createElement("div");
     snowflake.classList.add("snowflake");
-    snowflake.innerText = "❄";
+
+    // SVG 눈송이 추가
+    snowflake.style.backgroundImage = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 47.5 47.5' id='snowflake'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath d='M0 38h38V0H0v38Z'%3E%3C/path%3E%3C/clipPath%3E%3C/defs%3E%3Cg fill='%23ffffff' clip-path='url(%23a)' transform='matrix(1.25 0 0 -1.25 0 47.5)'%3E%3Cpath d='M20 9.414v19.171l4.828 4.829s.707.707 0 1.415c-.707.707-1.414 0-1.414 0L20 31.414V36s0 1-1 1-1-1-1-1v-4.586l-3.414 3.415s-.707.707-1.414 0c-.707-.708 0-1.415 0-1.415L18 28.585V9.414l-4.828-4.828s-.707-.707 0-1.414 1.414 0 1.414 0L18 6.586V2s0-1 1-1 1 1 1 1v4.586l3.414-3.414s.707-.707 1.414 0 0 1.414 0 1.414L20 9.414Z'%3E%3C/path%3E%3Cpath d='M35.622 16.134c-.259.966-1.225.707-1.225.707l-6.594-1.767-16.604 9.586-1.767 6.595s-.259.966-1.225.707c-.967-.259-.707-1.224-.707-1.224l1.249-4.664-3.971 2.293s-.866.5-1.366-.366c-.5-.866.366-1.366.366-1.366l3.971-2.293-4.663-1.249s-.967-.259-.707-1.225c.259-.966 1.224-.707 1.224-.707l6.596 1.767 16.604-9.586 1.766-6.596s.259-.966 1.225-.707c.966.26.707 1.225.707 1.225l-1.25 4.664 3.972-2.293s.867-.5 1.367.365c.5.867-.367 1.367-.367 1.367l-3.971 2.293 4.663 1.249s.966.259.707 1.225'%3E%3C/path%3E%3Cpath d='m34.915 23.093-4.664 1.25 3.972 2.292s.867.501.367 1.367c-.501.867-1.367.366-1.367.366l-3.971-2.293 1.249 4.664s.259.965-.707 1.224-1.225-.707-1.225-.707l-1.767-6.595-16.604-9.587-6.595 1.768s-.965.259-1.224-.707c-.26-.967.707-1.225.707-1.225l4.662-1.249-3.971-2.293s-.865-.501-.365-1.367c.5-.865 1.365-.365 1.365-.365l3.972 2.293-1.25-4.663s-.259-.967.707-1.225c.967-.26 1.226.706 1.226.706l1.767 6.597 16.604 9.585 6.594-1.768s.966-.258 1.225.707c.258.967-.707 1.225-.707 1.225'%3E%3C/path%3E%3C/g%3E%3C/svg%3E")`;
+
     snowflake.style.left = Math.random() * window.innerWidth + "px";
     snowflake.style.animationDuration = Math.random() * 3 + 12 + "s"; // 12-15초 랜덤
-    snowflake.style.fontSize = Math.random() * 5 + 5 + "px";
+
+    // fontSize 대신 width와 height 설정
+    const size = Math.random() * 5 + 5;
+    snowflake.style.width = size + "px";
+    snowflake.style.height = size + "px";
+
+    // 배경 이미지 설정
+    snowflake.style.backgroundSize = "contain";
+    snowflake.style.backgroundRepeat = "no-repeat";
+    snowflake.style.backgroundPosition = "center";
 
     const kvSection = document.querySelector(".section.kv");
     if (kvSection) {
@@ -4905,7 +4919,6 @@
       currentSnowflakes--;
     });
   }
-
   // 주기적으로 눈송이 생성 (간격 늘림)
   setInterval(createSnowflake, 400); // 0.8초마다 눈송이 생성
 
