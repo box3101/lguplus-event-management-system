@@ -104,6 +104,19 @@ app.get("/popup/common/m", (req, res) => {
   );
 });
 
+// 단말관리
+app.get("/deviceManagement", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "deviceManagement/common/pc", "common.html")
+  );
+});
+
+app.get("/deviceManagement/m", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "public", "deviceManagement/common/mo", "common.html")
+  );
+});
+
 app.listen(3002, () => {
   console.log("Server is running on port 3002");
 });
