@@ -4977,7 +4977,8 @@
     externalServices.dispatchMessageEvent("EventTelInternetCnslPopup", props);
   }
 
-  // 241126 KV 눈 효과
+  // Snowflake 생성 함수
+
   const MAX_SNOWFLAKES = 150; // 최대 눈송이 개수 상수 정의
   let currentSnowflakes = 0; // 현재 눈송이 개수 변수 정의
   function createSnowflake() {
@@ -5007,7 +5008,7 @@
   }
 
   // 주기적으로 눈송이 생성 (간격 늘림)
-  setInterval(createSnowflake, 400); // 0.4초마다 눈송이 생성
+  setInterval(createSnowflake, 400); // 0.8초마다 눈송이 생성
 
   /* 241126 KV 눈 효과 EEE */
 

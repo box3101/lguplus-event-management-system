@@ -1,8 +1,3 @@
-<!-- 
-  ==========================================
-      PC 시작
-  ==========================================
-  -->
 <link
   as="style"
   crossorigin=""
@@ -450,9 +445,9 @@
     width: 188px;
     /* width: 205px;  */
     height: 54px;
-    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240827-033818-434-4k5iLOpw.png")
+    /* background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240827-033818-434-4k5iLOpw.png") no-repeat center / 100% auto; */
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241030-043035-641-H78UdCtg.png")
       no-repeat center / 100% auto;
-    /* background: url(10만원 추첨) no-repeat center / 100% auto; */
   }
 
   /* swiper 추가 */
@@ -462,13 +457,11 @@
     height: 86px !important;
     z-index: 1 !important;
   }
-
   .m-swiper .swiper-button-prev {
     background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240827-035708-532-K2Efq0iw.png)
       no-repeat 60% center / 100% auto;
     background-size: auto;
   }
-
   .m-swiper .swiper-button-next {
     background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240827-035724-083-0aWzb8cV.png)
       no-repeat 46% center / 100% auto;
@@ -570,7 +563,7 @@
   }
 
   .variety ul li {
-    overflow: visible;
+    overflow: hidden;
     width: 293px;
     height: 244px;
     -webkit-box-shadow: 0px 4px 20px 0px #0000000f;
@@ -587,12 +580,6 @@
 
   .variety ul li a {
     display: block;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-
-  .variety ul li a:hover {
-    outline: 1px dotted #333;
   }
 
   #unfold_visual {
@@ -632,7 +619,6 @@
     cursor: pointer;
     width: 50%;
   }
-
   #gs25beerEvt {
     min-height: 1264px;
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240628-090423-381-nF5u2jfA.jpg")
@@ -641,23 +627,19 @@
     -webkit-transition: height 1s linear;
     transition: height 1s linear;
   }
-
   #gs25beerEvt .event_detail_btn {
     display: none;
   }
-
   #gs25beerEvt.active {
     height: 1637px;
     background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240628-090441-411-2HVmP06S.jpg")
       no-repeat top center;
     background-size: contain;
   }
-
   #gs25beerEvt.active .event_detail_btn {
     display: block;
     transform: translateX(-50%);
   }
-
   #gs25beerEvt #btn_detail {
     position: absolute;
     display: block;
@@ -672,19 +654,15 @@
     -webkit-transition: height 1s linear;
     transition: height 1s linear;
   }
-
   #starbucksEvt .event_detail_btn {
     display: none;
   }
-
   #starbucksEvt.active {
   }
-
   #starbucksEvt.active .event_detail_btn {
     display: block;
     transform: translateX(-50%);
   }
-
   #starbucksEvt #btn_detail {
     position: absolute;
     display: block;
@@ -694,17 +672,14 @@
     left: 50%;
     bottom: 100px;
   }
-
-  .starbucks_inner {
+  /* .starbucks_inner {
     background: #f3f3f3;
-    /* padding: 44px 80px; */
-  }
-
+    padding: 44px 80px;
+  } */
   .starbucks_inner .subDepth {
     position: relative;
     /* display: none; */
   }
-
   /* 내용접기 버튼 */
   #starbucksEvt .acco_btnwrap .on {
     background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240716-063319-310-4LeA2ZML.png)
@@ -725,7 +700,6 @@
   #starbucksEvt .acco_btnwrap .on img {
     display: none;
   }
-
   .starbucks_inner .event_detail_a {
     position: absolute;
     display: block;
@@ -745,27 +719,24 @@
   <div class="new_evt_wrap">
     <!-- 상단 띠배너 영역 -->
     <!-- <div class="event_detail">
-      <a
-        href="https://www.lguplus.com/signup/internet?urcHmProdNoList=990001786"
+      <a 
+        href="https://www.lguplus.com/signup/internet?urcHmProdNoList=990001786" 
         data-route=""
         data-gtm-event-name="link_click"
-        data-gtm-event-category="클릭"
-        data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+        data-gtm-event-category="클릭" 
+        data-gtm-event-action="이벤트상세 영역 - 링크 클릭" 
         data-gtm-event-label="컨텐츠 : 경품 응모하기"
         data-gtm-click-location="이벤트상세 영역"
-        data-gtm-click-url="https://www.lguplus.com/signup/internet?urcHmProdNoList=990001786"
-        data-gtm-click-direction="내부"
-        data-gtm-click-text="경품 응모하기"
-      >
-        <img
-          alt="하단내용 참조"
-          src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240905-035705-026-fqJ6ukvd.jpg"
-        />
+        data-gtm-click-url="https://www.lguplus.com/signup/internet?urcHmProdNoList=990001786" 
+        data-gtm-click-direction="내부" 
+        data-gtm-click-text="경품 응모하기">
+        <img alt="하단내용 참조" src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240905-035705-026-fqJ6ukvd.jpg" />
       </a>
       <div class="blind">
-        다이렉트 온라인 가입 고객 추석 경품 이벤트 애플 인기 정품 액세서리 3종
-        증정 기간 : 24.9.10~24.9.30 애플 정품 액세서리 에어맥스, 애플워치, 월렛
-        스탠드 이미지와 추첨 1명 뱃지 이미지
+        다이렉트 온라인 가입 고객 추석 경품 이벤트
+        애플 인기 정품 액세서리 3종 증정
+        기간 : 24.9.10~24.9.30
+        애플 정품 액세서리 에어맥스, 애플워치, 월렛 스탠드 이미지와 추첨 1명 뱃지 이미지
       </div>
     </div> -->
     <!-- //상단 띠배너 영역 -->
@@ -839,7 +810,6 @@
         >온라인 1분 가입하기</a
       >
     </div>
-
     <div class="event_detail" id="starbucksEvt">
       <div class="starbucks_inner accordions_conts_wrap">
         <!-- <button
@@ -856,34 +826,25 @@
         </button> -->
         <div id="bn_001" class="subDepth">
           <img
-            src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241104-012005-076-HW1MaFwJ.jpg"
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241030-051000-401-76FCmn6o.jpg"
             alt="하단 내용 참조"
           />
           <div class="blind">
-            <h2>잠깐! 10만원 상당의 경품이 쏟아지는 온라인 가입 이벤트</h2>
+            <h2>잠깐! 온라인 1분가입 이벤트</h2>
             <p>
-              온라인 가입을 통해 인터넷/IPTV 가입하면 3만원 상당 스타벅스 음료
-              세트와 7만원 상당 유플닷컴 굿즈 증정!
+              온라인가입으로 인터넷/IPTV 가입하면 스타벅스 음료세트 추첨 200명
             </p>
-
-            <p>스타벅스 음료 세트 (3만원 상당)</p>
+            <p>3만원 COUPON</p>
             <p>땡스 어 라떼 세트(2잔)x3개 (아이스 카페라떼 T 총 6잔)</p>
-
-            <p>유플닷컴 단독 굿즈 '자취박스' (7만원 상당)</p>
-
             <ul>
               <li>
-                이벤트 대상: 12월 1일까지 '온라인 가입'을 통해 인터넷/IPTV 신규
+                이벤트 대상: 12월 1일까지 온라인 가입을 통해 인터넷/IPTV 신규
                 가입 및 설치 완료한 고객 추첨 200명
               </li>
-              <li>이벤트 기간: 2024. 11. 1(금) ~ 2024. 12. 1(일)</li>
+              <li>이벤트 기간: 2024. 11. 01(금) ~ 2024. 12. 1(일)</li>
+              <li>경품 지급: 가입 시 등록한 휴대폰 번호로 모바일 쿠폰 발송</li>
               <li>
-                이벤트 경품: - 혜택 1) 3만원 상당의 스타벅스 모바일 쿠폰 ▶ 가입
-                시 등록한 휴대폰 번호로 모바일 쿠폰 발송 - 혜택 2) 7만원 상당의
-                유플닷컴 단독 굿즈 '자취박스' ▶ 가입 시 인터넷 설치 주소지로
-              </li>
-              <li>
-                당첨자 발표: 2024. 12. 13(금) (※ 당첨자 개별 연락 및 순차 발송
+                당첨 발표: 2024. 12. 13(금) (* 당첨자 개별 연락 및 순차 발송
                 예정)
               </li>
             </ul>
@@ -901,7 +862,7 @@
             data-gtm-click-location="이벤트상세 영역"
             data-gtm-click-direction="내부"
             data-gtm-click-text="이벤트 참여하러가기"
-            style="bottom: 92px; height: 110px; width: 577px"
+            style="bottom: 108px; height: 95px; width: 577px"
           >
             <span>이벤트 참여하러가기</span>
           </a>
@@ -975,7 +936,6 @@
     </div>
     <!-- Swiper -->
     <div class="event_detail sl_bg">
-      <div class="blind">2. 나에게 딱 맞춘 월 1만 원대 요금제</div>
       <div class="tabcont">
         <div class="menu-box">
           <ul>
@@ -1717,126 +1677,28 @@
               <!-- <li>2024년 7월 22일 ~ 8월 31일 운영되었던 인터넷/IPTV 온라인 가입 고객 대상 스타벅스 1만원 쿠폰 추첨 이벤트의 경우 2024년 8월 29일로 조기 종료되었으며, 당첨자 발표는 2024년 9월 13일 동일하게 당첨자에게 개별 연락 예정입니다.</li> -->
             </ul>
           </div>
-          <!-- 인터넷/IPTV 온라인 가입 고객 대상 자취박스 증정 이벤트 유의사항 추가 -->
-          <button
-            class="titType"
-            aria-controls="_accordion_003"
-            aria-expanded="false"
-            onclick="accordianClick(this)"
-          >
-            인터넷/IPTV 온라인 가입 고객 대상 자취박스 증정 이벤트 유의사항
-          </button>
-          <div class="subDepth" id="_accordion_003">
-            <ul>
-              <li>
-                이벤트 기간 내 인터넷/IPTV 설치까지 완료한 고객 대상으로
-                사은품이 지급됩니다. <br />
-                (온라인 가입만 진행하고, 인터넷/IPTV 설치를 12월 1일 내 하지
-                않은 경우 대상자에서 제외됩니다.)
-              </li>
-              <li>
-                온라인 가입 외의 방법으로 접수 후 인터넷 설치를 한 고객은
-                대상자에서 제외됩니다. (*온라인 가입 외 접수 : 가입 상담 신청 및
-                전화 접수)
-              </li>
-              <li>
-                경품 당첨자 발표는 별도로 진행하지 않으며, 당첨되신 분께 개별
-                연락 후 인터넷/IPTV 설치 주소로 자동 배송됩니다.
-              </li>
-              <li>
-                주소지 이전 등의 개인 사유로 인해 경품 미수령 발생 시, 경품
-                재발송은 불가합니다.
-              </li>
-              <li>
-                당첨자와 경품 수령자는 동일해야 하며 경품 양도는 불가합니다.
-              </li>
-              <li>
-                잘못 등록된 개인정보로 인해 경품 발송 대상자에서 제외되었을 경우
-                주최 측이 책임지지 않습니다.
-              </li>
-              <li>
-                경품 배송 시 배송 일자 변경이 불가하며 제품을 수령하신 후 교환
-                또한 불가합니다.
-              </li>
-              <li>
-                타인의 명의를 도용하여 부정 인증을 시도한 경우 법령에 따라
-                처벌(3년 이하의 징역 또는 1천만원 이하의 벌금형)을 받을 수
-                있습니다.
-              </li>
-              <li>
-                타인의 개인정보 도용, 컴퓨터 프로그램 등을 이용한 응모 등 부정한
-                방법으로 이벤트에 참여한 경우 당첨이 취소됩니다.
-              </li>
-              <li>
-                경품 발송을 위해 고객님의 정보를 발송 대행사에 제공하며, 배송 후
-                모든 정보는 폐기됩니다.
-              </li>
-              <li>
-                본 이벤트는 주최 측 사정에 의해 사전 예고 없이 변경 및 종료될 수
-                있으며, 당사 사정에 의해 사은품이 변경될 수 있습니다.
-              </li>
-            </ul>
-          </div>
-          <!-- 인터넷/IPTV 온라인 가입 고객 대상 자취박스 증정 이벤트 유의사항 추가 EEE -->
-          <!-- <button
-            class="titType"
-            aria-controls="_accordion_003"
-            aria-expanded="false"
-            onclick="accordianClick(this)"
-          >
+          <!-- <button class="titType" aria-controls="_accordion_003" aria-expanded="false" onclick="accordianClick(this)">
             추석 경품 이벤트 유의사항
           </button>
           <div id="_accordion_003" class="subDepth">
             <ul>
-              <li>
-                이벤트 기간 동안 ‘온라인 1분 가입’을 통해 다이렉트 인터넷 신규
-                가입 및 ~9/30까지 설치/개통 완료한 고객 추첨 1분에게 애플 정품
-                액세서리 3종(에어팟 맥스, 애플워치 시리즈9, 애플 카드지갑)을
-                지급합니다.
-              </li>
-              <li>
-                IPTV단독, 소호 홈 상품 신규 가입자는 대상자에 포함되지 않습니다.
-              </li>
-              <li>
-                이벤트 당첨자 발표는 별도로 진행하지 않으며, 당첨자에 한해
-                개별적으로 연락 드립니다.
-              </li>
-              <li>
-                애플 정품 액세서리 3종 경품은 대상자에게 인터넷 신규 가입 시
-                등록한 설치 주소로 배송될 예정입니다.
-              </li>
-              <li>
-                5만원 초과 경품은 제세공과금 (22%, LG유플러스부담) 신고와 배송
-                정보를 확인하기 위해 응모 시 작성하신 휴대 전화번호로 연락하여
-                관련 서류에 대해 요청할 수 있으며, 관련 필요 서류를 제출하지
-                않으실 경우 당첨이 취소됩니다.
-              </li>
-              <li>
-                경품은 모델과 색상이 변경될 수 있으며, 부득이 한 경우 해당
-                제품과 동일한 금액의 상품권으로 변경될 수 있습니다.
-              </li>
-              <li>
-                경품 배송 시 배송 업체 및 지정된 배송 일자의 변경이 불가하며
-                제품을 수령하신 후 교환 또한 불가합니다.
-              </li>
-              <li>
-                당첨자의 경품 수령자는 동일해야 하며, 경품 양도는 불가합니다.
-              </li>
-              <li>
-                타인의 명의를 도용하여 부정 인증을 시도한 경우 관련 법령에 따라
-                처벌(3년 이하의 징역 또는 1천만원 이하의 벌금형)을 받을 수
-                있습니다.
-              </li>
-              <li>
-                타인의 개인정보 도용, 컴퓨터 프로그램을 이용한 응모 등 부정한
-                방법으로 이벤트에 참여하는 경우 당첨이 취소됩니다.
-              </li>
+              <li>이벤트 기간 동안 ‘온라인 1분 가입’을 통해 다이렉트 인터넷 신규 가입 및 ~9/30까지 설치/개통 완료한 고객 추첨 1분에게 애플 정품 액세서리 3종(에어팟 맥스, 애플워치 시리즈9, 애플 카드지갑)을 지급합니다.</li>
+              <li>IPTV단독, 소호 홈 상품 신규 가입자는 대상자에 포함되지 않습니다.</li>
+              <li>이벤트 당첨자 발표는 별도로 진행하지 않으며, 당첨자에 한해 개별적으로 연락 드립니다.</li>
+              <li>애플 정품 액세서리 3종 경품은 대상자에게 인터넷 신규 가입 시 등록한 설치 주소로 배송될 예정입니다.</li>
+              <li>5만원 초과 경품은 제세공과금 (22%, LG유플러스부담) 신고와 배송 정보를 확인하기 위해 응모 시 작성하신 휴대 전화번호로 연락하여 관련 서류에 대해 요청할 수 있으며, 관련 필요 서류를 제출하지 않으실 경우 당첨이 취소됩니다.</li>
+              <li>경품은 모델과 색상이 변경될 수 있으며, 부득이 한 경우 해당 제품과 동일한 금액의 상품권으로 변경될 수 있습니다.</li>
+              <li>경품 배송 시 배송 업체 및 지정된 배송 일자의 변경이 불가하며 제품을 수령하신 후 교환 또한 불가합니다.</li>
+              <li>당첨자의 경품 수령자는 동일해야 하며, 경품 양도는 불가합니다.</li>
+              <li>타인의 명의를 도용하여 부정 인증을 시도한 경우 관련 법령에 따라 처벌(3년 이하의 징역 또는 1천만원 이하의 벌금형)을 받을 수 있습니다.</li>
+              <li>타인의 개인정보 도용, 컴퓨터 프로그램을 이용한 응모 등 부정한 방법으로 이벤트에 참여하는 경우 당첨이 취소됩니다.</li>
             </ul>
           </div> -->
         </div>
       </div>
     </div>
     <!-- //유의사항 영역 -->
+
     <!-- 플로팅 배너 -->
     <div class="float_area" id="floatArea">
       <div class="inner_wrap">
@@ -1871,7 +1733,7 @@
               </i>자취박스  -->
           </a>
         </div>
-        <span class="flt_balloon"></span>
+        <span class="flt_balloon"><em class="blind">3만원 100% 증정</em></span>
       </div>
     </div>
   </div>
@@ -2058,7 +1920,7 @@
       var index = loc.searchParams.get("postParam");
       var target = document.getElementById(index);
       var $gs25 = "_gs25music";
-      var myURL = "https://lguplus.com/benefit-event/ongoing/121";
+      var myURL = "https://lguplus.com/benefit-event/ongoing/80447";
 
       var targetOffsetTop = target
         ? window.pageYOffset +
@@ -2125,8 +1987,4 @@
     window.scrollTo(0, 0);
   });
 </script>
-<!-- 
-  ==========================================
-      PC 끝
-  ==========================================
-  -->
+<!-- //pc -->

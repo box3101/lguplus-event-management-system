@@ -37,6 +37,15 @@ app.get("/event/121/m", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "event/121/mo", "common.html"));
 });
 
+// 506
+app.get("/event/506", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "event/506/pc", "common.html"));
+});
+
+app.get("/event/506/m", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "event/506/mo", "common.html"));
+});
+
 // 632
 app.get("/event/632", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "event/632/pc", "common.html"));
