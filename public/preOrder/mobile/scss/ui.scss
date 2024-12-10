@@ -1,0 +1,272 @@
+// px을 rem으로 변환하는 함수
+@function rem($px) {
+  @return calc($px / 16) + rem;
+}
+
+:root {
+  font-size: 14px; // 기본 폰트 사이즈 고정
+
+  @media screen and (min-width: 360px) {
+    font-size: 16px; // 작은 화면에서만 조정
+  }
+}
+/* ==================== */
+/*      컨텐츠         */
+/* ==================== */
+.preorder-section {
+  min-height: rem(7000);
+  .common-inner {
+    padding: 0 rem(20);
+  }
+
+  /* ==================== */
+  /*      visual         */
+  /* ============= ======= */
+  .main-visual {
+    text-align: center;
+    width: 100%;
+    height: 56.25vw;
+    background-color: #ccc;
+    background-position: center;
+
+    .price-swiper {
+      height: rem(50);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  /* ==================== */
+  /*   model-select-wrp   */
+  /* ============= ======= */
+  .model-select-wrp {
+    .swiper-scrollbar {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 60px;
+    }
+    .swiper-scrollbar-drag {
+      width: 33.3%;
+    }
+  }
+
+  /* ==================== */
+  /*      toast-message       */
+  /* ==================== */
+  .toast-message {
+    position: fixed;
+    top: rem(20);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: rem(4);
+    background: #fff;
+    border-radius: rem(50);
+    padding: rem(10) rem(15);
+    font-size: rem(14);
+    box-shadow: rgba(99, 99, 99, 0.2) 0 rem(2) rem(8) 0;
+    z-index: 1000;
+
+    &-text {
+      color: #333;
+    }
+
+    .countdown {
+      font-weight: 600;
+      color: #000;
+    }
+
+    &-close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      padding: 0 rem(4);
+      margin-left: rem(4);
+      cursor: pointer;
+      font-size: rem(18);
+      color: #666;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #333;
+      }
+    }
+
+    animation: slideDown 0.3s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translate(-50%, rem(-20));
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+  }
+
+  /* ==================== */
+  /*      공통 탭         */
+  /* ==================== */
+  .common-tab-menu-wrp {
+    .common-tab-menu {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      &-item {
+        padding: rem(10) rem(20);
+        background-color: #f1f1f1;
+        cursor: pointer;
+
+        &.active {
+          background-color: #ccc;
+        }
+      }
+    }
+
+    .common-tab-content {
+      display: none;
+      padding: rem(20);
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .custom {
+    }
+  }
+
+  /* ==================== */
+  /*      공통 NOTICE        */
+  /* ==================== */
+  .common-notice-wrp {
+    .common-notice-menu {
+      &-item {
+        padding: rem(10) rem(20);
+        background-color: #f1f1f1;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: #e0e0e0;
+        }
+
+        &.active {
+          background-color: #d0d0d0;
+
+          > .common-notice-content {
+            max-height: rem(500);
+            opacity: 1;
+            transition: max-height 0.3s ease-out, opacity 0.2s ease;
+          }
+        }
+      }
+    }
+
+    .common-notice-content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      padding: 0 rem(20);
+      transition: max-height 0.3s ease-in, opacity 0.2s ease, padding 0.2s ease;
+
+      &.active {
+        padding: rem(20);
+      }
+    }
+  }
+}
+
+/* ==================== */
+/*   공통 둥둥 뜨는 효과 */
+/* ==================== */
+@keyframes dongdong {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(rem(-6));
+  }
+}
+
+.dongdong-effect {
+  animation: float 2s ease-in-out infinite;
+}
+/* ==================== */
+/*      공통  */
+/* ==================== */
+
+// px을 rem으로 변환하는 함수
+@function rem($px) {
+  @return calc($px / 16) + rem;
+}
+
+// 마진 클래스 생성
+@for $i from 1 through 100 {
+  // margin
+  .mt-#{$i} {
+    margin-top: rem($i);
+  }
+  .mb-#{$i} {
+    margin-bottom: rem($i);
+  }
+  .ml-#{$i} {
+    margin-left: rem($i);
+  }
+  .mr-#{$i} {
+    margin-right: rem($i);
+  }
+  .my-#{$i} {
+    margin-top: rem($i);
+    margin-bottom: rem($i);
+  }
+  .mx-#{$i} {
+    margin-left: rem($i);
+    margin-right: rem($i);
+  }
+
+  // padding
+  .pt-#{$i} {
+    padding-top: rem($i);
+  }
+  .pb-#{$i} {
+    padding-bottom: rem($i);
+  }
+  .pl-#{$i} {
+    padding-left: rem($i);
+  }
+  .pr-#{$i} {
+    padding-right: rem($i);
+  }
+  .py-#{$i} {
+    padding-top: rem($i);
+    padding-bottom: rem($i);
+  }
+  .px-#{$i} {
+    padding-left: rem($i);
+    padding-right: rem($i);
+  }
+}

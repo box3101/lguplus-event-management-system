@@ -4,7 +4,17 @@
     "cors": "^2.8.5",
     "express": "^4.21.1"
   },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2",
+    "node-sass": "^9.0.0",
+    "sass": "^1.69.5"
+  },
   "scripts": {
-    "start": "nodemon server.js"
+    "server": "nodemon server.js",
+    "browser-sync": "browser-sync start --proxy \"localhost:3002\" --files \"public/**/*.*\" --port 3003",
+    "scss": "sass --watch public/preOrder/mobile/scss:public/preOrder/mobile/css",
+    "start": "concurrently \"npm run server\" \"npm run browser-sync\" \"npm run scss\""
   }
 }

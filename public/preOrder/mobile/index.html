@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사전예약</title>
+    <link rel="stylesheet" href="/preOrder/mobile/css/common.css" />
+    <link rel="stylesheet" href="/preOrder/mobile/css/ui.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div id="content" class="content-wrapper preorder-section">
+      <main class="container main-container">
+        <!-- 사전예약 기간 -->
+        <section class="preorder-content">
+          <!-- 메인 비쥬얼 -->
+          <article class="main-visual">
+            <div class="visual-content">
+              <div class="top-info">
+                <div class="promotion-text">
+                  사전예약 오픈날 전통누이 좋아하는
+                </div>
+                <div class="main-text">알람 신청하면</div>
+                <div class="price-swiper swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="price">200,000원</div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="price">300,000원</div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="price">400,000원</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mid-info">
+                <div class="date">1/23(월) ~ 소진 시까지</div>
+              </div>
+              <div class="balloon-tip dongdong-effect">
+                <div class="tip-text">사전예약 오픈날 전통누이 좋아하는</div>
+              </div>
+            </div>
+          </article>
+          <!-- 메인 비쥬얼 EEE -->
+
+          <!-- 모델 탭 -->
+          <article class="model-select-wrp">
+            <div class="tab-group model-select">
+              <div class="common-tab-menu-wrp common-inner">
+                <!-- 모델 선택 탭 메뉴 -->
+                <ul class="common-tab-menu model-tab">
+                  <li class="common-tab-menu-item active" data-tab="galaxy-s25">
+                    Galaxy S25
+                  </li>
+                  <li class="common-tab-menu-item" data-tab="galaxy-s25-plus">
+                    Galaxy S25+
+                  </li>
+                  <li class="common-tab-menu-item" data-tab="galaxy-s25-ultra">
+                    Galaxy S25 Ultra
+                  </li>
+                  <li
+                    class="common-tab-menu-item"
+                    data-tab="galaxy-s25-edition"
+                  >
+                    Galaxy S25 Edition
+                  </li>
+                </ul>
+
+                <!-- S25 모델 컨텐츠 -->
+                <div class="common-tab-content active" id="galaxy-s25">
+                  <div class="tab-group color-select">
+                    <!-- S25 색상 선택 탭 -->
+                    <ul class="common-tab-menu color-tab">
+                      <li
+                        class="common-tab-menu-item active"
+                        data-tab="s25-gray"
+                      >
+                        <button type="button" class="color-btn gray"></button>
+                      </li>
+                      <li class="common-tab-menu-item" data-tab="s25-white">
+                        <button type="button" class="color-btn white"></button>
+                      </li>
+                      <li class="common-tab-menu-item" data-tab="s25-black">
+                        <button type="button" class="color-btn black"></button>
+                      </li>
+                    </ul>
+
+                    <!-- S25 그레이 컨텐츠 -->
+                    <div class="common-tab-content active" id="s25-gray">
+                      <div class="color-swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25/gray/01.jpg"
+                              alt="Galaxy S25 그레이 이미지1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25/gray/02.jpg"
+                              alt="Galaxy S25 그레이 이미지2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25/gray/03.jpg"
+                              alt="Galaxy S25 그레이 이미지3"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-scrollbar mt-10"></div>
+                      </div>
+                    </div>
+
+                    <!-- S25 화이트 컨텐츠 -->
+                    <div class="common-tab-content" id="s25-white">
+                      <div class="color-swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25/white/01.jpg"
+                              alt="Galaxy S25 화이트 이미지1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25/white/02.jpg"
+                              alt="Galaxy S25 화이트 이미지2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25/white/03.jpg"
+                              alt="Galaxy S25 화이트 이미지3"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-scrollbar mt-10"></div>
+                      </div>
+                    </div>
+
+                    <!-- S25 블랙 컨텐츠 -->
+                    <div class="common-tab-content" id="s25-black">
+                      <div class="color-swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25/black/01.jpg"
+                              alt="Galaxy S25 블랙 이미지1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25/black/02.jpg"
+                              alt="Galaxy S25 블랙 이미지2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25/black/03.jpg"
+                              alt="Galaxy S25 블랙 이미지3"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-scrollbar mt-10"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- S25+ 모델 컨텐츠 -->
+                <div class="common-tab-content" id="galaxy-s25-plus">
+                  <div class="tab-group color-select">
+                    <!-- S25+ 색상 선택 탭 -->
+                    <ul class="common-tab-menu color-tab">
+                      <li
+                        class="common-tab-menu-item active"
+                        data-tab="s25-plus-gray"
+                      >
+                        <button type="button" class="color-btn gray"></button>
+                      </li>
+                      <li
+                        class="common-tab-menu-item"
+                        data-tab="s25-plus-white"
+                      >
+                        <button type="button" class="color-btn white"></button>
+                      </li>
+                      <li
+                        class="common-tab-menu-item"
+                        data-tab="s25-plus-black"
+                      >
+                        <button type="button" class="color-btn black"></button>
+                      </li>
+                    </ul>
+
+                    <!-- S25+ 그레이 컨텐츠 -->
+                    <div class="common-tab-content active" id="s25-plus-gray">
+                      <div class="color-swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-plus/gray/01.jpg"
+                              alt="Galaxy S25+ 그레이 이미지1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-plus/gray/02.jpg"
+                              alt="Galaxy S25+ 그레이 이미지2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-plus/gray/03.jpg"
+                              alt="Galaxy S25+ 그레이 이미지3"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-scrollbar mt-10"></div>
+                      </div>
+                    </div>
+
+                    <!-- S25+ 화이트 컨텐츠 -->
+                    <div class="common-tab-content" id="s25-plus-white">
+                      <div class="color-swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-plus/white/01.jpg"
+                              alt="Galaxy S25+ 화이트 이미지1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-plus/white/02.jpg"
+                              alt="Galaxy S25+ 화이트 이미지2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-plus/white/03.jpg"
+                              alt="Galaxy S25+ 화이트 이미지3"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-scrollbar mt-10"></div>
+                      </div>
+                    </div>
+
+                    <!-- S25+ 블랙 컨텐츠 -->
+                    <div class="common-tab-content" id="s25-plus-black">
+                      <div class="color-swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-plus/black/01.jpg"
+                              alt="Galaxy S25+ 블랙 이미지1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-plus/black/02.jpg"
+                              alt="Galaxy S25+ 블랙 이미지2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-plus/black/03.jpg"
+                              alt="Galaxy S25+ 블랙 이미지3"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-scrollbar mt-10"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- S25 Ultra 모델 컨텐츠 -->
+                <div class="common-tab-content" id="galaxy-s25-ultra">
+                  <div class="tab-group color-select">
+                    <!-- Ultra 색상 선택 탭 -->
+                    <ul class="common-tab-menu color-tab">
+                      <li
+                        class="common-tab-menu-item active"
+                        data-tab="s25-ultra-gray"
+                      >
+                        <button type="button" class="color-btn gray"></button>
+                      </li>
+                      <li
+                        class="common-tab-menu-item"
+                        data-tab="s25-ultra-white"
+                      >
+                        <button type="button" class="color-btn white"></button>
+                      </li>
+                      <li
+                        class="common-tab-menu-item"
+                        data-tab="s25-ultra-black"
+                      >
+                        <button type="button" class="color-btn black"></button>
+                      </li>
+                    </ul>
+
+                    <!-- Ultra 그레이 컨텐츠 -->
+                    <div class="common-tab-content active" id="s25-ultra-gray">
+                      <div class="color-swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-ultra/gray/01.jpg"
+                              alt="Galaxy S25 Ultra 그레이 이미지1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-ultra/gray/02.jpg"
+                              alt="Galaxy S25 Ultra 그레이 이미지2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-ultra/gray/03.jpg"
+                              alt="Galaxy S25 Ultra 그레이 이미지3"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-scrollbar mt-10"></div>
+                      </div>
+                    </div>
+
+                    <!-- Ultra 화이트 컨텐츠 -->
+                    <div class="common-tab-content" id="s25-ultra-white">
+                      <div class="color-swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-ultra/white/01.jpg"
+                              alt="Galaxy S25 Ultra 화이트 이미지1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-ultra/white/02.jpg"
+                              alt="Galaxy S25 Ultra 화이트 이미지2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-ultra/white/03.jpg"
+                              alt="Galaxy S25 Ultra 화이트 이미지3"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-scrollbar mt-10"></div>
+                      </div>
+                    </div>
+
+                    <!-- Ultra 블랙 컨텐츠 -->
+                    <div class="common-tab-content" id="s25-ultra-black">
+                      <div class="color-swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-ultra/black/01.jpg"
+                              alt="Galaxy S25 Ultra 블랙 이미지1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-ultra/black/02.jpg"
+                              alt="Galaxy S25 Ultra 블랙 이미지2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-ultra/black/03.jpg"
+                              alt="Galaxy S25 Ultra 블랙 이미지3"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-scrollbar mt-10"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- S25 Edition 모델 컨텐츠-->
+                <div class="common-tab-content" id="galaxy-s25-edition">
+                  <div class="tab-group color-select">
+                    <!-- Edition 색상 선택 탭 -->
+                    <ul class="common-tab-menu color-tab">
+                      <li
+                        class="common-tab-menu-item active"
+                        data-tab="s25-edition-gray"
+                      >
+                        <button type="button" class="color-btn gray"></button>
+                      </li>
+                      <li
+                        class="common-tab-menu-item"
+                        data-tab="s25-edition-white"
+                      >
+                        <button type="button" class="color-btn white"></button>
+                      </li>
+                      <li
+                        class="common-tab-menu-item"
+                        data-tab="s25-edition-black"
+                      >
+                        <button type="button" class="color-btn black"></button>
+                      </li>
+                    </ul>
+
+                    <!-- Edition 그레이 컨텐츠 -->
+                    <div
+                      class="common-tab-content active"
+                      id="s25-edition-gray"
+                    >
+                      <div class="color-swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-edition/gray/01.jpg"
+                              alt="Galaxy S25 Edition 그레이 이미지1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-edition/gray/02.jpg"
+                              alt="Galaxy S25 Edition 그레이 이미지2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-edition/gray/03.jpg"
+                              alt="Galaxy S25 Edition 그레이 이미지3"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-scrollbar mt-10"></div>
+                      </div>
+                    </div>
+
+                    <!-- Edition 화이트 컨텐츠 -->
+                    <div class="common-tab-content" id="s25-edition-white">
+                      <div class="color-swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-edition/white/01.jpg"
+                              alt="Galaxy S25 Edition 화이트 이미지1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-edition/white/02.jpg"
+                              alt="Galaxy S25 Edition 화이트 이미지2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-edition/white/03.jpg"
+                              alt="Galaxy S25 Edition 화이트 이미지3"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-scrollbar mt-10"></div>
+                      </div>
+                    </div>
+
+                    <!-- Edition 블랙 컨텐츠 -->
+                    <div class="common-tab-content" id="s25-edition-black">
+                      <div class="color-swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-edition/black/01.jpg"
+                              alt="Galaxy S25 Edition 블랙 이미지1"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-edition/black/02.jpg"
+                              alt="Galaxy S25 Edition 블랙 이미지2"
+                            />
+                          </div>
+                          <div class="swiper-slide">
+                            <img
+                              src="images/s25-edition/black/03.jpg"
+                              alt="Galaxy S25 Edition 블랙 이미지3"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-scrollbar mt-10"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- 모델 탭 EEE -->
+
+          <!-- 토스트 -->
+          <article class="toast-message" id="countdown-toast">
+            <span class="toast-text">마감 </span>
+            <span class="countdown" id="countdown">6일 1시간 55분</span>
+            <span class="toast-text"> 전</span>
+            <button class="toast-message-close" id="toast-close">
+              &times;
+            </button>
+          </article>
+          <!-- 토스트 EEE -->
+
+          <!-- 공통탭 -->
+          <article class="tab-group">
+            <div class="common-tab-menu-wrp common-inner">
+              <ul class="common-tab-menu">
+                <li class="common-tab-menu-item active" data-tab="tab1">
+                  Tab 1
+                </li>
+                <li class="common-tab-menu-item" data-tab="tab2">Tab 2</li>
+                <li class="common-tab-menu-item" data-tab="tab3">Tab 3</li>
+              </ul>
+
+              <div class="common-tab-content active" id="tab1">
+                <h2>Tab 1 Content</h2>
+                <p>This is the content for Tab 1.</p>
+              </div>
+
+              <div class="common-tab-content" id="tab2">
+                <h2>Tab 2 Content</h2>
+                <p>This is the content for Tab 2.</p>
+              </div>
+
+              <div class="common-tab-content" id="tab3">
+                <h2>Tab 3 Content</h2>
+                <p>This is the content for Tab 3.</p>
+              </div>
+            </div>
+          </article>
+          <!-- 공통탭 EEE -->
+
+          <!-- 공통 Notice -->
+          <article class="common-notice-wrp common-inner">
+            <ul class="common-notice-menu">
+              <li class="common-notice-menu-item" data-tab="notice1">
+                맛집 고객센터 문의 (백분상담)
+                <div class="common-notice-content" id="notice1">
+                  <ul>
+                    <li>
+                      lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="common-notice-menu-item" data-tab="notice2">
+                맛집 예약 및 이용 방법
+                <div class="common-notice-content" id="notice2">
+                  <ul>
+                    <li>예약 방법 및 절차에 대한 상세 안내</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="common-notice-menu-item" data-tab="notice3">
+                맛집 추천 서비스
+                <div class="common-notice-content" id="notice3">
+                  <ul>
+                    <li>맞춤형 맛집 추천 서비스 이용 방법</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="common-notice-menu-item" data-tab="notice4">
+                리뷰 작성 및 관리
+                <div class="common-notice-content" id="notice4">
+                  <ul>
+                    <li>리뷰 작성 가이드라인 및 관리 정책</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="common-notice-menu-item" data-tab="notice5">
+                포인트 적립 및 사용
+                <div class="common-notice-content" id="notice5">
+                  <ul>
+                    <li>포인트 적립 방법 및 사용 가능한 서비스 안내</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="common-notice-menu-item" data-tab="notice6">
+                개인정보 보호 정책
+                <div class="common-notice-content" id="notice6">
+                  <ul>
+                    <li>개인정보 수집 및 이용에 관한 안내</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="common-notice-menu-item" data-tab="notice7">
+                앱 사용 관련 문의
+                <div class="common-notice-content" id="notice7">
+                  <ul>
+                    <li>앱 설치 및 기능 이용에 대한 NOTICE</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </article>
+          <!-- 공통 Notice EEE -->
+
+          <!-- 아코디언 -->
+          <div class="accordion common-inner mt30">
+            자세히 보기
+            <div class="accordion-content">여기에 내용이 들어갑니다.</div>
+          </div>
+          <!-- 아코디언 EEE -->
+        </section>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script type="module" src="/preOrder/mobile/js/main.js"></script>
+  </body>
+</html>

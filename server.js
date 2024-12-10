@@ -126,6 +126,15 @@ app.get("/deviceManagement/m", (req, res) => {
   );
 });
 
+// 사전예약
+app.get("/preorder", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "preOrder/pc", "index.html"));
+});
+
+app.get("/preorder/m", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "preOrder/mobile", "index.html"));
+});
+
 app.listen(3002, () => {
   console.log("Server is running on port 3002");
 });
