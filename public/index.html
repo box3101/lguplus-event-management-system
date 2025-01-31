@@ -1,272 +1,237 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 링크</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        padding: 20px;
+        line-height: 1.6;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이벤트 링크</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      padding: 20px;
-      line-height: 1.6;
-    }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
+      th,
+      td {
+        padding: 6px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
 
-    th,
-    td {
-      padding: 6px;
-      text-align: left;
-      border: 1px solid #ddd;
-    }
+      th {
+        background-color: #f5f5f5;
+        font-weight: bold;
+      }
 
-    th {
-      background-color: #f5f5f5;
-      font-weight: bold;
-    }
+      tr:nth-child(even) {
+        background-color: #fafafa;
+      }
 
-    tr:nth-child(even) {
-      background-color: #fafafa;
-    }
+      .event-id {
+        color: red;
+        font-weight: bold;
+      }
 
-    .event-id {
-      color: red;
-      font-weight: bold;
-    }
+      .c-blue {
+        color: blue;
+        font-weight: bold;
+      }
 
-    .c-blue {
-      color: blue;
-      font-weight: bold;
-    }
+      a {
+        color: #333;
+        text-decoration: none;
+        padding: 4px 8px;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+        margin-right: 8px;
+      }
 
-    a {
-      color: #333;
-      text-decoration: none;
-      padding: 4px 8px;
-      background-color: #f0f0f0;
-      border-radius: 4px;
-      margin-right: 8px;
-    }
+      a:hover {
+        background-color: #e0e0e0;
+      }
 
-    a:hover {
-      background-color: #e0e0e0;
-    }
-  </style>
-</head>
+      .section {
+        margin-bottom: 40px;
+      }
+    </style>
+  </head>
 
-<body>
-  <h1>이벤트 링크</h1>
-  <table>
-    <colgroup>
-      <col style="width: 40%;">
-      <col style="width: 20%;">
-      <col style="width: 20%;">
-      <col style="width: 20%;">
-    </colgroup>
-    <thead>
-      <tr>
-        <th>이벤트 ID (STG)</th>
-        <th>이벤트 ID (운영)</th>
-        <th>비고</th>
-        <th>링크</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="event-id">387</span> <span class="c-blue">(컨텐츠코드 48)</span> - 인터넷/IPTV, 인터넷가입, 신규가입이벤트
-        </td>
-        <td><span class="event-id">387</span> <span class="c-blue">(컨텐츠코드 48)</span></td>
-        <td>운영 동일</td>
-        <td>
-          <a href="http://localhost:3002/event/387/" target="_blank">PC</a>
-          <a href="http://localhost:3002/event/387/m" target="_blank">Mobile</a>
-        </td>
-      </tr>
-      <tr>
-        <td><span class="event-id">80</span> - 인터넷+IPTV 최대 373만원 혜택(배너광고)</td>
-        <td><span class="event-id">80</span></td>
-        <td>운영 동일</td>
-        <td>
-          <a href="http://localhost:3002/event/80/" target="_blank">PC</a>
-          <a href="http://localhost:3002/event/80/m" target="_blank">Mobile</a>
-        </td>
-      </tr>
-      <tr>
-        <td><span class="event-id">121</span> - 20ㆍ30 전용 1년 약정 인터넷 다이렉트 요금제</td>
-        <td><span class="event-id">121</span></td>
-        <td>운영 동일</td>
-        <td>
-          <a href="http://localhost:3002/event/121/" target="_blank">PC</a>
-          <a href="http://localhost:3002/event/121/m" target="_blank">Mobile</a>
-        </td>
-      </tr>
-      <tr></tr>
-        <td><span class="event-id">506</span> - 20ㆍ30 전용 1년 약정 인터넷 다이렉트 요금제(히든)</td>
-        <td><span class="event-id">80447</span></td>
-        <td>STG/운영</td>
-        <td>
-          <a href="http://localhost:3002/event/506/" target="_blank">PC</a>
-          <a href="http://localhost:3002/event/506/m" target="_blank">Mobile</a>
-        </td>
-      </tr>
-      <tr>
-        <td><span class="event-id">632</span> - 홈(인터넷/IPTV) 온라인 가입 리뉴얼 오픈 이벤트</td>
-        <td><span class="event-id">80593</span></td>
-        <td>STG/운영</td>
-        <td>
-          <a href="http://localhost:3002/event/632/" target="_blank">PC</a>
-          <a href="http://localhost:3002/event/632/m" target="_blank">Mobile</a>
-        </td>
-      </tr>
-      <tr>
-        <td><span class="event-id">870</span> - 실속파를 위한 월 1만원대 요금 할인</td>
-        <td class="event-id">80820</td>
-        <td>STG/운영</td>
-        <td>
-          <a href="http://localhost:3002/event/870/" target="_blank">PC</a>
-          <a href="http://localhost:3002/event/870/m" target="_blank">Mobile</a>
-        </td>
-      </tr>
-      <tr>
-        <td><span class="event-id">1594</span> - 역대급 혜택으로 일레븐다</td>
-        <td class="event-id">81522</td>
-        <td>STG/운영</td>
-        <td>
-          <a href="http://localhost:3002/event/1594/" target="_blank">PC</a>
-          <a href="http://localhost:3002/event/1594/m" target="_blank">Mobile</a>
-        </td>
-      </tr>
-      <tr>
-        <td><span class="event-id">1586</span> - 갤럭시 Z 폴드 스페셜 에디션 이벤트</td>
-        <td class="event-id">81513</td>
-        <td>STG/운영</td>
-        <td>
-          <a href="http://localhost:3002/event/1586/" target="_blank">PC</a>
-          <a href="http://localhost:3002/event/1586/m" target="_blank">Mobile</a>
-        </td>
-      </tr>
-      <tr></tr>
-        <td><span class="event-id">1634</span> - U⁺키즈폰 무너 에디션 출시 알림 이벤트</td>
-        <td class="event-id">81560</td>
-        <td>STG/운영</td>
-        <td>
-          <a href="http://localhost:3002/event/1634/" target="_blank">PC</a>
-          <a href="http://localhost:3002/event/1634/m" target="_blank">Mobile</a>
-        </td>
-      </tr>
-      <tr></tr>
-        <td><span class="event-id">1636</span> - U⁺키즈폰 무너 에디션 경품 주소 입력 페이지</td>
-        <td class="event-id">81564</td>
-        <td>STG/운영</td>
-        <td>
-          <a href="http://localhost:3002/event/1636/" target="_blank">PC</a>
-          <a href="http://localhost:3002/event/1636/m" target="_blank">Mobile</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <body>
+    <div id="app"></div>
 
-  <!-- 팝업 -->
-  <h1>팝업</h1>
-  <table>
-    <colgroup>
-      <col style="width: 40%;">
-      <col style="width: 20%;">
-      <col style="width: 20%;">
-      <col style="width: 20%;">
-    </colgroup>
-    <thead>
-      <tr>
-        <th>이벤트 ID (STG)</th>
-        <th>이벤트 ID (운영)</th>
-        <th>비고</th>
-        <th>링크</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>공통 팝업 - 모바일 기기 / 전시관리 / 팝업관리 / 상세보기</td>
-        </td>
-        <td></td>
-        <td>
-          모바일 기기 공통 팝업
-        </td>
-        <td>
-          <a href="http://localhost:3002/popup/common/" target="_blank">PC</a>
-          <a href="http://localhost:3002/popup/common/m" target="_blank">Mobile</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <script>
+      const port = 4000;
+      const data = {
+        events: [
+          {
+            id: "387",
+            title: "인터넷/IPTV, 인터넷가입, 신규가입이벤트",
+            contentCode: "48",
+            prodId: "387",
+            type: "운영 동일",
+          },
+          {
+            id: "80",
+            title: "인터넷+IPTV 최대 373만원 혜택(배너광고)",
+            prodId: "80",
+            type: "운영 동일",
+          },
+          {
+            id: "121",
+            title: "20ㆍ30 전용 1년 약정 인터넷 다이렉트 요금제",
+            prodId: "121",
+            type: "운영 동일",
+          },
+          {
+            id: "506",
+            title: "20ㆍ30 전용 1년 약정 인터넷 다이렉트 요금제(히든)",
+            prodId: "80447",
+            type: "STG/운영",
+          },
+          {
+            id: "632",
+            title: "홈(인터넷/IPTV) 온라인 가입 리뉴얼 오픈 이벤트",
+            prodId: "80593",
+            type: "STG/운영",
+          },
+          {
+            id: "870",
+            title: "실속파를 위한 월 1만원대 요금 할인",
+            prodId: "80820",
+            type: "STG/운영",
+          },
+          {
+            id: "1594",
+            title: "역대급 혜택으로 일레븐다",
+            prodId: "81522",
+            type: "STG/운영",
+          },
+          {
+            id: "1586",
+            title: "갤럭시 Z 폴드 스페셜 에디션 이벤트",
+            prodId: "81513",
+            type: "STG/운영",
+          },
+          {
+            id: "1634",
+            title: "U⁺키즈폰 무너 에디션 출시 알림 이벤트",
+            prodId: "81560",
+            type: "STG/운영",
+          },
+          {
+            id: "1636",
+            title: "U⁺키즈폰 무너 에디션 경품 주소 입력 페이지",
+            prodId: "81564",
+            type: "STG/운영",
+          },
+        ],
+        popups: [
+          {
+            title: "공통 팝업 - 모바일 기기 / 전시관리 / 팝업관리 / 상세보기",
+            desc: "모바일 기기 공통 팝업",
+            path: "popup/common",
+          },
+        ],
+        deviceManagement: [
+          {
+            title: "단말관리 - 공통",
+            desc: "단말관리 공통",
+            path: "deviceManagement",
+          },
+        ],
+      };
 
-  <!-- 단말관리 -->
-  <h1>단말관리</h1>
-  <table>
-    <colgroup>
-      <col style="width: 40%;">
-      <col style="width: 20%;">
-      <col style="width: 20%;">
-      <col style="width: 20%;">
-    </colgroup>
-    <thead>
-      <tr>
-        <th>이벤트 ID (STG)</th>
-        <th>이벤트 ID (운영)</th>
-        <th>비고</th>
-        <th>링크</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr></tr>
-        <td>단말관리 - 공통</td>
-        <td></td>
-        <td>
-          단말관리 공통
-        </td>
-        <td>
-          <a href="http://localhost:3002/deviceManagement/" target="_blank">PC</a>
-          <a href="http://localhost:3002/deviceManagement/m" target="_blank">Mobile</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      // 테이블 생성 함수
+      function createTable(title, data, columns, renderRow) {
+        return `
+        <div class="section">
+          <h1>${title}</h1>
+          <table>
+            <colgroup>
+              <col style="width: 40%;">
+              <col style="width: 20%;">
+              <col style="width: 20%;">
+              <col style="width: 20%;">
+            </colgroup>
+            <thead>
+              <tr>
+                ${columns.map((col) => `<th>${col}</th>`).join("")}
+              </tr>
+            </thead>
+            <tbody>
+              ${data.map((item) => renderRow(item)).join("")}
+            </tbody>
+          </table>
+        </div>
+      `;
+      }
 
-  <!-- 사전예약 -->
-  <h1>사전예약</h1>
-  <table>
-    <colgroup>
-      <col style="width: 40%;">
-      <col style="width: 20%;">
-      <col style="width: 20%;">
-      <col style="width: 20%;">
-    </colgroup>
-    <thead>
-      <tr>
-        <th>이벤트 ID (STG)</th>
-        <th>이벤트 ID (운영)</th>
-        <th>비고</th>
-        <th>링크</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr></tr>
-        <td>사전예약 - 공통</td>
-        <td></td>
-        <td>
-          사전예약 공통
-        </td>
-        <td>
-          <a href="http://localhost:3002/preOrder/" target="_blank">PC</a>
-          <a href="http://localhost:3002/preOrder/m" target="_blank">Mobile</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</body>
+      // 이벤트 테이블 렌더링
+      const eventsTable = createTable(
+        "이벤트 링크",
+        data.events,
+        ["이벤트 ID (STG)", "이벤트 ID (운영)", "비고", "링크"],
+        (event) => `
+        <tr>
+          <td>
+            <span class="event-id">${event.id}</span>
+            ${event.contentCode ? `<span class="c-blue">(컨텐츠코드 ${event.contentCode})</span>` : ""} 
+            - ${event.title}
+          </td>
+          <td><span class="event-id">${event.prodId}</span></td>
+          <td>${event.type}</td>
+          <td>
+            <a href="http://localhost:${port}/event/${event.id}/" target="_blank">PC</a>
+            <a href="http://localhost:${port}/event/${event.id}/m" target="_blank">Mobile</a>
+          </td>
+        </tr>
+      `
+      );
 
+      // 팝업 테이블 렌더링
+      const popupsTable = createTable(
+        "팝업",
+        data.popups,
+        ["이벤트 ID (STG)", "이벤트 ID (운영)", "비고", "링크"],
+        (popup) => `
+        <tr>
+          <td>${popup.title}</td>
+          <td></td>
+          <td>${popup.desc}</td>
+          <td>
+            <a href="http://localhost:3002/${popup.path}/" target="_blank">PC</a>
+            <a href="http://localhost:3002/${popup.path}/m" target="_blank">Mobile</a>
+          </td>
+        </tr>
+      `
+      );
+
+      // 단말관리 테이블 렌더링
+      const deviceTable = createTable(
+        "단말관리",
+        data.deviceManagement,
+        ["이벤트 ID (STG)", "이벤트 ID (운영)", "비고", "링크"],
+        (device) => `
+        <tr>
+          <td>${device.title}</td>
+          <td></td>
+          <td>${device.desc}</td>
+          <td>
+            <a href="http://localhost:3002/${device.path}/" target="_blank">PC</a>
+            <a href="http://localhost:3002/${device.path}/m" target="_blank">Mobile</a>
+          </td>
+        </tr>
+      `
+      );
+
+      // 전체 렌더링
+      document.getElementById("app").innerHTML = eventsTable + popupsTable + deviceTable;
+    </script>
+  </body>
 </html>
