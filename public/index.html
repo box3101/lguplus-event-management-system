@@ -92,7 +92,7 @@
             id: "239",
             title: "유플러스 LIVE(중고폰)",
             prodId: "239",
-            type: "운영 동일 stg/운영 코드 다름 확인 필요! <br> 중고폰 전화상담 템플릿ID <br> stg TG00000033 / 운영 TG00000028 ",
+            type: "운영 동일 <br> stg/운영 코드 다름 확인 필요! <br> 중고폰 전화상담 템플릿ID <br> stg TG00000033 / 운영 TG00000028 <br> - <strong class='c-blue'>라방 교체 배너 이미지만</strong> - 운영에 넣을 것",
           },
           {
             id: "506",
@@ -105,6 +105,12 @@
             title: "홈(인터넷/IPTV) 온라인 가입 리뉴얼 오픈 이벤트",
             prodId: "80593",
             type: "STG/운영",
+          },
+          {
+            id: "768",
+            title: "넷플릭스, 유튜브 프리미엄 무제한 시청",
+            prodId: "80719",
+            type: "STG/운영  <br> stg/운영 코드 다름 확인 필요! ",
           },
           {
             id: "870",
@@ -187,7 +193,7 @@
         <tr>
           <td>
             <span class="event-id">${event.id}</span>
-            ${event.contentCode ? `<span class="c-blue">(컨텐츠코드 ${event.contentCode})</span>` : ""} 
+            ${event.contentCode ? `<span class="c-blue">(컨텐츠코드 ${event.contentCode})</span>` : ""}
             - ${event.title}
           </td>
           <td><span class="event-id">${event.prodId}</span></td>
