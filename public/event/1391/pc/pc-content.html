@@ -1,0 +1,2025 @@
+<!-- PC -->
+<link
+  rel="stylesheet"
+  as="style"
+  crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+/>
+<style type="text/css">
+  .new_evt_wrap {
+    position: relative;
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  .new_evt_wrap .section {
+    position: relative;
+  }
+
+  .section a,
+  .section button {
+    display: inline-block;
+    z-index: 2;
+  }
+
+  .event_detail_btn {
+    display: block;
+    position: absolute;
+    text-indent: -999999px;
+    overflow: hidden;
+  }
+
+  .tabs_conts_wrap.pb60 {
+    background: #051b48;
+    padding-bottom: 60px;
+  }
+
+  .btn_evt-wrap .event_detail + .event_detail {
+    margin-top: 10px;
+  }
+
+  /* 롤링 텍스트 */
+  .rolling-contents {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 80px;
+    background: #000;
+  }
+
+  .rolling-contents .line-wrap {
+    display: flex;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 7px 0;
+  }
+
+  .rolling-box-wrap + .rolling-box-wrap {
+    margin-left: 40px;
+  }
+
+  .rolling-box-wrap .rolling-box {
+    display: flex;
+    gap: 40px;
+    animation: rolling-text 20s linear infinite;
+  }
+
+  .rolling-box-wrap .rolling-box > li {
+    display: flex;
+    align-items: center;
+  }
+
+  .rolling-box-wrap .rolling-box .text {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.56px;
+    white-space: nowrap;
+  }
+
+  .rolling-box-wrap .rolling-box .icon {
+    display: inline-block;
+    width: 45px;
+    height: 46px;
+  }
+
+  .rolling-box-wrap .rolling-box .icon.icon-01 {
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240611-102612-999-0jVVRuWb.png")
+      no-repeat center / 100% auto;
+  }
+
+  .rolling-box-wrap .rolling-box .icon.icon-02 {
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240611-103834-457-eFKvoGRi.png")
+      no-repeat center / 100% auto;
+  }
+
+  .rolling-box-wrap .rolling-box .icon.icon-03 {
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240611-103853-036-fiBaPl2E.png")
+      no-repeat center / 100% auto;
+  }
+
+  .rolling-box-wrap .rolling-box .icon.icon-04 {
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240611-103913-670-eWvxxAR0.png")
+      no-repeat center / 100% auto;
+  }
+
+  .rolling-box-wrap .rolling-box .icon.icon-05 {
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240718-033056-123-MnBjxrbr.png")
+      no-repeat center / 100% auto;
+  }
+
+  .rolling-box-wrap .rolling-box .icon.icon-06 {
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240611-103946-600-dnknJaVD.png")
+      no-repeat center / 100% auto;
+  }
+
+  .rolling-box-wrap .rolling-box .icon.icon-07 {
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240723-012149-437-7ARoeAbj.png")
+      no-repeat center / 100% auto;
+  }
+
+  @keyframes rolling-text {
+    from {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+    to {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+
+  /* anchor_wrap */
+  .anchor_wrap {
+    height: 128px;
+    display: flex;
+    background: #06183c;
+  }
+
+  .anchor_wrap > li {
+    cursor: pointer;
+    flex: 1;
+    height: 100%;
+    position: relative;
+  }
+
+  .anchor_wrap > li button {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+  }
+
+  .anchor_wrap > li button:hover {
+    background: #143194;
+  }
+
+  .anchor_wrap > li.on button {
+    background: #143194;
+  }
+
+  .anchor_wrap > li .tit {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: -0.88px;
+  }
+
+  .anchor_wrap > li .txt {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.32px;
+  }
+
+  .anchor_wrap > li::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M1.5 1L6.74988 6L12.5001 1.2439' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 14px;
+    height: 8px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px;
+  }
+
+  /* tab */
+  .tabs_detail a {
+    display: inline-block;
+  }
+
+  .tabs_detail_a {
+    cursor: pointer;
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    background: rgba(0, 0, 0, 0);
+  }
+
+  /* 디테일 토글 */
+  .detail_view {
+    background: #000;
+  }
+
+  .detail_view .acco_btnwrap {
+    text-align: center;
+  }
+
+  .detail_view .acco_btnwrap .acco_detail_btn {
+    /* background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241126-033100-076-KHO3Xx7K.png) no-repeat 50% 0; */
+    width: 272px;
+    height: 80px;
+    background: #22338f;
+    padding: 0px 18px 0px 44px;
+    box-sizing: content-box;
+    border-radius: 9999px;
+    color: #fff;
+    text-align: left;
+    display: inline-flex;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .detail_view .acco_btnwrap .acco_detail_btn p {
+    position: relative;
+    font-size: 23px;
+    font-weight: 300;
+    letter-spacing: -0.96px;
+    top: -1px;
+  }
+
+  .detail_view .acco_btnwrap .acco_detail_btn .ico {
+    width: 44px;
+    height: 44px;
+    background: #ff3e73;
+    position: relative;
+    border-radius: 50%;
+  }
+
+  .detail_view .acco_btnwrap .acco_detail_btn .ico::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M1.5 1L6.74988 6L12.5001 1.2439' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 21px;
+    height: 12px;
+    background-size: contain;
+  }
+
+  .detail_view .acco_btnwrap .acco_detail_btn.ty02 {
+    background-image: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240611-014542-034-cVrTLtnh.png);
+  }
+
+  .detail_view .acco_btnwrap .on .ico::after {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  .detail_view .acco_btnwrap .on.ty02 {
+    background-image: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240611-014555-247-CoaHrt1E.png);
+  }
+
+  .detail_view .acco_detail {
+    position: relative;
+    margin: 60px 0 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+  }
+
+  .detail_view .acco_detail.show {
+    max-height: 1000px;
+    /* 충분한 크기로 설정 (요소가 실제로 열린 높이에 따라 조정) */
+  }
+
+  /* swiper */
+  .section .swiper-e-coverflow {
+    position: absolute;
+    top: 685px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .section .swiper-e-coverflow .swiper-container {
+    width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+  }
+
+  .section .swiper-e-coverflow .swiper-container .swiper-button-prev {
+    left: 33px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .section .swiper-e-coverflow .swiper-container .swiper-button-prev:after {
+    width: 100%;
+    height: 100%;
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240612-092930-883-diNHSgUB.png")
+      no-repeat 0 0;
+    background-size: contain;
+    transform: rotate(180deg);
+  }
+
+  .section .swiper-e-coverflow .swiper-container .swiper-button-next {
+    right: 33px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .section .swiper-e-coverflow .swiper-container .swiper-button-next:after {
+    width: 100%;
+    height: 100%;
+    background: url("https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240612-092930-883-diNHSgUB.png")
+      no-repeat 0 0;
+    background-size: contain;
+    transform: none;
+  }
+
+  /* 유의사항 */
+  .footerWrap {
+    background: #000;
+    padding: 50px;
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  .footerWrap h3 {
+    font-weight: bold;
+    color: #fafafa;
+    font-size: 20px;
+    display: inline;
+    border-bottom: 2px solid #fafafa;
+  }
+
+  .acType {
+    margin-top: 32px;
+    border-top: 1px solid #7d7d7e;
+  }
+
+  .acType .ui-accordion {
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .acType .titType {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #fafafa;
+    font-weight: bold;
+    padding: 29px 0 30px 9px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #8e8583;
+    background: transparent;
+    text-align: left;
+  }
+
+  .acType .titType:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220526-031420-695-csuo3I7a.png)
+      no-repeat 50% 50%;
+    width: 23px;
+    height: 23px;
+  }
+
+  .acType .titType span {
+    text-indent: -10px;
+    padding-left: 10px;
+  }
+
+  .acType .titType.ui-state-active:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220526-031403-132-d9oOmJNi.png)
+      no-repeat 50% 50%;
+    width: 23px;
+    height: 23px;
+  }
+
+  .acType .subDepth {
+    display: none;
+    padding: 0px 10px 30px 27px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #a0a0a0;
+    border-bottom: 1px solid #7d7d7e;
+    box-sizing: border-box;
+  }
+
+  .acType .subDepth p {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .acType .subDepth ul {
+    font-size: 16px;
+  }
+
+  .acType .subDepth ul + p {
+    margin-top: 20px;
+    color: #ccc;
+    margin-left: -10px;
+    font-weight: 500;
+  }
+
+  .acType .subDepth ul > li:before {
+    content: "- ";
+    margin-left: -9px;
+  }
+
+  .acType .subDepth ul.no_bg > li:before {
+    content: "";
+    margin-left: -9px;
+  }
+
+  .acType .subDepth ul > li.tit:before {
+    display: none;
+  }
+
+  .acType .subDepth ul > li + li {
+    margin-top: 10px;
+  }
+
+  .acType .subDepth ul > li strong {
+    color: #ccc;
+  }
+
+  .acType .subDepth ul a {
+    color: inherit;
+    vertical-align: top;
+  }
+
+  .acType .subDepth ul a.shortcut {
+    background: #767676;
+    display: inline-block;
+    border-radius: 30px;
+    color: #fff;
+    padding: 0 15px;
+    margin-left: 10px;
+  }
+
+  .acType button.ui-state-active {
+    border-bottom: none;
+    color: #ccc;
+  }
+
+  /* 플로팅배너 */
+  .float_area {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 30px 0 31px;
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(27, 27, 27, 0.8);
+    z-index: 30;
+    margin-top: 20px;
+    color: #fff;
+    overflow: hidden;
+    letter-spacing: -2px;
+  }
+
+  .float_area .inner_wrap {
+    width: 1120px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .float_area.on {
+    position: absolute;
+    bottom: 222px;
+    left: 0;
+  }
+
+  .float_area .call_wrap {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .float_area .call_wrap span {
+    font-size: 36px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding-left: 39px;
+    background: url("/common/images/hsvc/comm/ico_callMain_btn_new.png") no-repeat left top 12px;
+    background-size: 28px;
+  }
+
+  .float_area .txt_wrap {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 23px;
+  }
+
+  .float_area .txt_wrap .tit {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: -3px;
+  }
+
+  .float_area .txt_wrap .tit span {
+    color: #f9ea02;
+  }
+
+  .float_area .txt_wrap .tit_desc {
+    font-size: 15px;
+    color: #ddd;
+    margin-top: 10px;
+  }
+
+  .float_area .txt_wrap .tit_desc span {
+    color: #888;
+  }
+
+  .float_area .float_btn_wrap {
+    vertical-align: middle;
+    float: right;
+    line-height: 23px;
+  }
+
+  .float_area .float_btn_wrap a {
+    display: inline-block;
+    padding: 15px 20px;
+    color: #fff;
+    background: #ef1194;
+    border-radius: 50px;
+    line-height: 26px;
+    text-align: center;
+  }
+
+  .float_area .float_btn_wrap a + a {
+    margin-left: 6px;
+  }
+
+  .float_area .float_btn_wrap a span {
+    display: inline-block;
+    padding-left: 31px;
+    font-size: 17px;
+  }
+
+  .float_area .float_btn_wrap a.flt_btn_chat span {
+    background: url("/common/images/hsvc/comm/ico_call_btn_new.png") no-repeat left center;
+    background-size: 26px;
+  }
+
+  .float_area .float_btn_wrap a.flt_btn_cnl span {
+    background: url("/common/images/hsvc/comm/ico_reag_btn_new.png") no-repeat left center;
+    background-size: 18px;
+  }
+
+  .float_area .float_btn_wrap a.flt_btn_esim span {
+    background: url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240222-095108-042-kGiKliXH.png")
+      no-repeat left center;
+    background-size: 18px;
+  }
+</style>
+
+<div>
+  <div class="new_evt_wrap">
+    <!-- kv -->
+    <div class="section">
+      <img
+        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241227-042209-754-VL77ouNj.jpg"
+        alt="하단 내용 참조"
+      />
+      <div class="blind">
+        <p>유플러스닷컴 다이렉트 요금제, U+ 공식 온라인 스토어</p>
+        <h3>Happy 유플닷커 Year</h3>
+      </div>
+      <!-- scrollTxt_Bar -->
+      <div class="rolling-contents">
+        <div class="line-wrap">
+          <div class="rolling-box-wrap">
+            <ul class="rolling-box">
+              <li>
+                <span class="text">#무약정 요금제</span>
+                <i class="icon icon-01"></i>
+              </li>
+              <li>
+                <span class="text">#네이버페이 15만원</span>
+                <i class="icon icon-02"></i>
+              </li>
+              <li>
+                <span class="text">#넷플릭스+유튜브 프리미엄</span>
+                <i class="icon icon-03"></i>
+              </li>
+              <li>
+                <span class="text">#14,000원 결합할인</span>
+                <i class="icon icon-04"></i>
+              </li>
+              <li>
+                <span class="text">#유플닷컴 스페셜팩</span>
+                <i class="icon icon-05"></i>
+              </li>
+              <li>
+                <span class="text">#매월 쇼핑쿠폰 제공</span>
+                <i class="icon icon-06"></i>
+              </li>
+              <li>
+                <span class="text">#매월 스타벅스 3잔 제공</span>
+                <i class="icon icon-07"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="rolling-box-wrap">
+            <ul class="rolling-box">
+              <li>
+                <span class="text">#무약정 요금제</span>
+                <i class="icon icon-01"></i>
+              </li>
+              <li>
+                <span class="text">#네이버페이 15만원</span>
+                <i class="icon icon-02"></i>
+              </li>
+              <li>
+                <span class="text">#넷플릭스+유튜브 프리미엄</span>
+                <i class="icon icon-03"></i>
+              </li>
+              <li>
+                <span class="text">#14,000원 결합할인</span>
+                <i class="icon icon-04"></i>
+              </li>
+              <li>
+                <span class="text">#유플닷컴 스페셜팩</span>
+                <i class="icon icon-05"></i>
+              </li>
+              <li>
+                <span class="text">#매월 쇼핑쿠폰 제공</span>
+                <i class="icon icon-06"></i>
+              </li>
+              <li>
+                <span class="text">#매월 스타벅스 3잔 제공</span>
+                <i class="icon icon-07"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- //scrollTxt_Bar -->
+    </div>
+    <!-- //kv -->
+
+    <!-- anchor_wrap -->
+    <div class="section">
+      <ul class="anchor_wrap">
+        <li>
+          <button href="#anchor01" class="event_detail_a anchor01" onclick="clickTargetHandler(this); return false;">
+            <div class="txt">넷플릭스 +유투브 프리미엄을 한번에!</div>
+            <div class="tit">다이렉트 65</div>
+          </button>
+        </li>
+        <li>
+          <button href="#anchor02" class="event_detail_a anchor01" onclick="clickTargetHandler(this); return false;">
+            <div class="txt">매월 14,000원 플러스 할인</div>
+            <div class="tit">다이렉트 플러스 59/69</div>
+          </button>
+        </li>
+        <li>
+          <button href="#anchor03" class="event_detail_a anchor01" onclick="clickTargetHandler(this); return false;">
+            <div class="txt">실속 요금제</div>
+            <div class="tit">다이렉트 45/46/47.5/51</div>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- //anchor_wrap -->
+
+    <div class="section">
+      <img
+        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241227-042214-531-zY3jw6RB.jpg"
+        alt="하단 내용 참조"
+      />
+      <div class="blind">
+        <h3>다이렉트 요금제는요</h3>
+        <ul>
+          <li>무약정.2년 약정은 이제 안녕. 다이렉트는 약정이 없어요.</li>
+          <li>쉬운가입.언제 어디서든 닷컴에서 바로 가입해요</li>
+          <li>결합 할인.다이렉트 요금제끼리 결합 할인이 가능해요</li>
+          <li>U+멤버십. U+멤버십 혜택을 그대로 받을 수 있어요.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- tab -->
+    <div class="section">
+      <div class="event_detail tabs_conts_wrap pb60">
+        <!-- 1번탭 위치 -->
+        <button
+          class="tabs_detail_a"
+          style="width: 340px; height: 60px; top: 256px; left: 200px"
+          data-idx="1"
+          aria-controls="tab001"
+          onclick="tabsClick(this)"
+          data-route
+        ></button>
+        <!-- 2번탭 위치 -->
+        <button
+          class="tabs_detail_a"
+          style="width: 340px; height: 60px; top: 256px; right: 200px"
+          data-idx="2"
+          aria-controls="tab002"
+          onclick="tabsClick(this)"
+          data-route
+        ></button>
+        <div id="tabs001" class="tabs_conts" aria-labelledby="tabs001" role="tabpanel">
+          <img
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241227-042223-042-iL7UPM8F.png"
+            alt="하단내용참조"
+          />
+          <div class="blind">
+            <h3>유플닷컴에만 있는 프로모션 한 눈에 보여드려요.</h3>
+            <p>특별 프로모션 요금제. 5G완전 무제한 요금제.유플닷컴에만 있는 스페셜팩&결합할인</p>
+            <ul>
+              <li>네이버 페이 15만원 제공.5G다이렉트 65,5G다이렉트 플러스 59/69</li>
+              <li>넷플릭스,유투브 프리미엄 제공.5G다이렉트 65</li>
+              <li>매월 스타벅스 커피 3잔 제공 5G 다이렉트 65</li>
+              <li>누구나 14,000원 결합할인 14,000원 5G 다이렉트 플러스 59/69</li>
+            </ul>
+          </div>
+        </div>
+        <div id="tabs002" class="tabs_conts" aria-labelledby="tabs002" role="tabpanel" style="display: none">
+          <img
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241227-042218-845-5iViS8Ms.jpg"
+            alt=""
+          />
+          <div class="blind">
+            <h3>3만원대 5G/LTE 요금제</h3>
+            <p>네이버페이, 쇼핑쿠폰으로 통신비 부담 줄이기</p>
+            <ul>
+              <li>네이버 페이 15만원 제공.5G다이렉트 47.5, LTE다이렉트 45</li>
+              <li>매월 쇼핑쿠폰 최대 3,000원 제공. 5G 다이렉트 47.5 LTE 다이렉트 45</li>
+              <li>청년 데이터 40GB 추가제공 유쓰 5G 다이렉트 47.5</li>
+              <!-- <li>4-5&#41;제휴카드 22,000원 추가 할인. 다이렉트 전체 요금제</li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //tab -->
+
+    <div class="section detail_view" style="background: #051b48">
+      <div class="acco_btnwrap">
+        <button
+          type="button"
+          class="acco_detail_btn"
+          aria-expanded="true"
+          aria-controls="_accordion1_001"
+          onclick="togglesClick(this)"
+        >
+          <p>가입은 어떻게 하나요?</p>
+          <!-- 화살표 -->
+          <span class="ico"></span>
+        </button>
+        <div id="_accordion1_001" class="acco_detail">
+          <img
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241227-045140-230-jBQ89HpG.jpg"
+            alt="하단 내용 참조"
+          />
+          <div class="blind">
+            <p>가입은 어떻게 하나요?</p>
+            <dl>
+              <dt>새로운 번호로 가입하거니 LG U+로 통신사를 바꾸는 고객님이신가요? 가입은 이렇게 하세요.</dt>
+              <dd>
+                STEP1.마음에 드는 요금제 고르고 STEP2. 가입신청서 작성하고 STEP3.유심 개통 후 폰에 장착하면 STEP4.매달
+                혜택 받으며 통신비 절약 시작!
+              </dd>
+            </dl>
+            <p>LG U+고객님이신가요? 자급제폰 등록하고 지금 번호 그대로 다이렉트 요금제 가입하세요!</p>
+          </div>
+          <a
+            data-route
+            class="event_detail_btn"
+            href="/mobile/new-usim/activate?isUsimChange=Y"
+            style="bottom: 18.9%; left: 50%; transform: translateX(-50%); width: 680px; height: 140px"
+            data-gtm-event-name="link_click"
+            data-gtm-event-category="클릭"
+            data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+            data-gtm-event-label="컨텐츠 : 자급제폰 등록"
+            data-gtm-click-url="https://www.lguplus.com/mobile/new-usim/activate?isUsimChange=Y"
+            data-gtm-click-location="이벤트상세 영역"
+            data-gtm-click-direction="내부"
+            data-gtm-click-text="자급제폰 등록"
+          >
+            <span class="blind">자급제폰 등록</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="anchor01">
+      <img
+        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250123-024937-420-BpErov9C.png"
+        alt="하단 내용 참조"
+      />
+      <div class="blind">
+        <h3>판매량 1위 인기 요금제. 원하는 팩 골라쓰는 5G다이렉트65</h3>
+        <p>5G완전 무제한 데이터는 기본 원하는 팩을 고를 수 있어요.</p>
+        <p>넷플릭스+유투브 프리미엄, 아이패드 10세대, 갤럭시버즈3프로, 갤럭시 워치7, 커피쿠폰, 신한카드 Air</p>
+
+        <p>유플닷컴에만 있는 스페셜팩 5G 다이렉트 65</p>
+        <ul>
+          <li>
+            <span>타사에는 없는 더블 OTT팩</span>
+            <p>5G 완전 무제한.5G다이렉트65,넷플릭스+유투브프리미엄</p>
+            <p><del>월 65,000원</del>네이버페이, 쇼핑쿠폰 적용 시 57,000원</p>
+            <p>넷플릭스+유투브 프리미엄 제공.24,400원 상당,매월 이용권 제공</p>
+            <p>네이버페이 75,000원 제공 (월 5천원 x 15개월)</p>
+            <p>쇼핑쿠폰 월 3,000원 24개월 제공, 제휴사 8종 중 택1</p>
+          </li>
+          <li>
+            <span>스마트한 일상의 시작</span>
+            <p>5G 완전 무제한.5G다이렉트65 갤럭시 워치 7</p>
+            <p><del>월 65,000원</del>네이버페이, 쇼핑쿠폰 적용 시 52,000원</p>
+            <p>갤럭시 워치 7 제공.(24개월 할부금 전액 할인)</p>
+            <p>네이버페이 15만원 제공.월1만원 x 15개월</p>
+            <p>쇼핑쿠폰 월 3,000원 24개월 제공, 제휴사 8종 중 택1</p>
+          </li>
+        </ul>
+      </div>
+      <a
+        data-route
+        class="event_detail_btn"
+        href="/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ0002816"
+        style="bottom: 10.35%; left: 22.2%; width: 252px; height: 52px"
+        data-gtm-event-name="order_button_click"
+        data-gtm-event-category="클릭"
+        data-gtm-event-action="이벤트상세 영역 - 주문 버튼 클릭"
+        data-gtm-event-label="컨텐츠 : 5G다이렉트65 OTT 가입"
+        data-gtm-click-url="https://www.lguplus.com/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ0002816"
+        data-gtm-click-location="이벤트상세 영역"
+        data-gtm-click-direction="유심"
+        data-gtm-click-text="5G다이렉트65 OTT 가입"
+      >
+        <span class="blind">5G다이렉트65 OTT 가입</span>
+      </a>
+      <a
+        data-route
+        class="event_detail_btn"
+        href="/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ1002888"
+        style="bottom: 10.35%; right: 22.2%; width: 252px; height: 52px"
+        data-gtm-event-name="order_button_click"
+        data-gtm-event-category="클릭"
+        data-gtm-event-action="이벤트상세 영역 - 주문 버튼 클릭"
+        data-gtm-event-label="컨텐츠 : 5G다이렉트65 에어팟 프로 2세대 가입"
+        data-gtm-click-url="https://www.lguplus.com/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ1002888"
+        data-gtm-click-location="이벤트상세 영역"
+        data-gtm-click-direction="유심"
+        data-gtm-click-text="5G다이렉트65 에어팟 프로 2세대 가입"
+      >
+        <span class="blind">5G다이렉트65 에어팟 프로 2세대 가입</span>
+      </a>
+    </div>
+
+    <div class="section" id="anchor02" style="padding-bottom: 120px; background: #f8f8f8">
+      <img
+        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241227-042250-142-IMeP3wWg.png"
+        alt="하단 내용 참조"
+      />
+      <div class="blind">
+        <h3>
+          <span>14,000원 결합할인은 유플닷컴 뿐</span>
+          5G다이렉트 플러스 59/69
+        </h3>
+        <p>아무나 2명만 모여도 매월 14,000원 할인</p>
+        <p>만 19세~39세 가입자 대상. 최대 4명까지 1명당 14,000원 할인.가입 이후 26년 12월 31일까지 할인 제공</p>
+      </div>
+      <div class="blind">
+        <ul>
+          <li>
+            <span>아무나 2명만 모여도 할인</span>
+            <p>5G완전 무제한 5G다이렉트 플러스59</p>
+            <p>네이버페이, 쇼핑쿠폰 적용 시 52,000원</p>
+            <p>2명만 모여도 월 14,000원 할인</p>
+            <p>네이버페이 15만원 제공 월 1만원 씩 15개월</p>
+            <p>유독 디즈니+구독료 30% 할인</p>
+          </li>
+          <li>
+            <span>아무나 2명만 모여도 할인</span>
+            <p>5G완전 무제한 5G다이렉트 플러스69</p>
+            <p>네이버페이, 쇼핑쿠폰 적용 시 45,000원</p>
+            <p>2명만 모여도 월 14,000원 할인</p>
+            <p>네이버페이 15만원 제공 월 1만원 씩 15개월</p>
+            <p>갤럭시 버즈2프로 제공. 24개월 할부금 전액 할인</p>
+            <p>미디어 서비스 제공.바이브.밀리의 서재.아이들나라.U+영화월정액 중 택 1</p>
+          </li>
+        </ul>
+      </div>
+      <a
+        data-route
+        class="event_detail_btn"
+        href="/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ0002881"
+        style="top: 1296px; left: 22.2%; width: 252px; height: 52px"
+        data-gtm-event-name="order_button_click"
+        data-gtm-event-category="클릭"
+        data-gtm-event-action="이벤트상세 영역 - 주문 버튼 클릭"
+        data-gtm-event-label="컨텐츠 : 5G다이렉트59 가입"
+        data-gtm-click-url="https://www.lguplus.com/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ0002881"
+        data-gtm-click-location="이벤트상세 영역"
+        data-gtm-click-direction="유심"
+        data-gtm-click-text="5G다이렉트59 가입"
+      >
+        <span class="blind">5G다이렉트59 가입</span>
+      </a>
+      <a
+        data-route
+        class="event_detail_btn"
+        href="/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ1002901"
+        style="top: 1296px; right: 22.2%; width: 252px; height: 52px"
+        data-gtm-event-name="order_button_click"
+        data-gtm-event-category="클릭"
+        data-gtm-event-action="이벤트상세 영역 - 주문 버튼 클릭"
+        data-gtm-event-label="컨텐츠 : 5G다이렉트69 가입"
+        data-gtm-click-url="https://www.lguplus.com/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ1002901"
+        data-gtm-click-location="이벤트상세 영역"
+        data-gtm-click-direction="유심"
+        data-gtm-click-text="5G다이렉트69 가입"
+      >
+        <span class="blind">5G다이렉트69 가입</span>
+      </a>
+
+      <div class="section detail_view">
+        <div class="acco_btnwrap" style="background: #f8f8f8">
+          <button
+            type="button"
+            style="margin-top: 60px"
+            class="acco_detail_btn ty02"
+            aria-expanded="true"
+            aria-controls="_accordion1_002"
+            onclick="togglesClick(this)"
+          >
+            <p>결합 방법 자세히 보기</p>
+            <div class="ico"></div>
+          </button>
+          <div id="_accordion1_002" class="acco_detail -mt-0">
+            <img
+              src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241227-042237-630-vRDC5Ouf.jpg"
+              alt="하단 내용 참조"
+            />
+            <div class="blind">
+              <p>결합 방법 자세히 보기</p>
+              <dl>
+                <dt>결합은 이렇게 하세요</dt>
+                <dd>
+                  <p>
+                    1. 최소 2명부터 4명까지 결합할 사람찾기 - 가족이 아니더라도 친구, 지인 누구나 함께 결합할 수 있어요.
+                  </p>
+                  <p>2.결합 신청하기 - 결합할 사람을 찾으셨다면 아래 버튼을 눌러 결합 할인을 신청해주세요.</p>
+                  <p>결합할 사람을 못 찾으셨다면 아래 버튼을 눌러 결합 할인을 신청해주세요.</p>
+                  <p>3. 결합 할인 시작! - 신청일로부터 약 3일 내로 결합 할인 완료 문자가 발송돼요.</p>
+                </dd>
+              </dl>
+            </div>
+            <a
+              data-route
+              class="event_detail_btn"
+              href="/direct/mgm"
+              style="bottom: 47.4%; left: 29.6%; width: 201px; height: 36px"
+              data-gtm-event-name="link_click"
+              data-gtm-event-category="클릭"
+              data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+              data-gtm-event-label="컨텐츠 : 다이렉트 플러스 결합 신청하기"
+              data-gtm-click-url="https://www.lguplus.com/direct/mgm"
+              data-gtm-click-location="이벤트상세 영역"
+              data-gtm-click-direction="내부"
+              data-gtm-click-text="다이렉트 플러스 결합 신청하기"
+            >
+              <span class="blind">다이렉트 플러스 결합 신청하기</span>
+            </a>
+            <a
+              title="새 창 열림"
+              target="_blank"
+              data-route
+              class="event_detail_btn"
+              href="https://cafe.naver.com/directgroup"
+              style="bottom: 36.7%; left: 29.2%; width: 201px; height: 35px"
+              data-gtm-event-name="link_click"
+              data-gtm-event-category="클릭"
+              data-gtm-event-action="이벤트상세 영역 - 링크 클릭"
+              data-gtm-event-label="컨텐츠 : 네이버카페에서 결합원 찾기"
+              data-gtm-click-url="https://cafe.naver.com/directgroup"
+              data-gtm-click-location="이벤트상세 영역"
+              data-gtm-click-direction="외부"
+              data-gtm-click-text="네이버카페에서 결합원 찾기"
+            >
+              <span class="blind">네이버카페에서 결합원 찾기</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="anchor03">
+      <img
+        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241227-042246-209-ITo4TTnj.png"
+        alt="하단 내용 참조"
+      />
+      <div class="blind">
+        <p>네이버페이&쇼핑쿠폰으로 통신비 절약</p>
+        <h3>LTE다이렉트 45&5G 다이렉트 47.5/47.5/51</h3>
+        <ul>
+          <li>
+            <span>네이버페이 15만원 제공</span>
+            <p>LTE다이렉트 45</p>
+            <p>데이터 매일 5GB+최대 5Mbps</p>
+            <p><del>월 45,000원</del>네이버페이, 쇼핑쿠폰 적용 시 32,000원</p>
+            <p>네이버페이 15만원 제공 월 1만원 씩 15개월</p>
+            <p>쇼핑쿠폰 월 3,000원. 24개월 제공,제휴사 8종 중 택1</p>
+          </li>
+          <li>
+            <span>네이버페이 15만원 제공</span>
+            <p>5G 다이렉트 46</p>
+            <p>데이터 월 80GB+최대 1Mbps</p>
+            <p><del>월 46,000원</del>네이버페이, 쇼핑쿠폰 적용 시 34,500원</p>
+            <p>네이버페이 15만원 제공 월 1만원 씩 15개월</p>
+            <p>쇼핑쿠폰 월 3,000원. 24개월 제공,제휴사 8종 중 택1</p>
+          </li>
+          <li>
+            <span>네이버페이 15만원 제공</span>
+            <p>5G 다이렉트 47.5</p>
+            <p>데이터 매일 95GB+최대 3Mbps</p>
+            <p><del>월 47,500원</del>네이버페이, 쇼핑쿠폰 적용 시 36,000원</p>
+            <p>네이버페이 15만원 제공 월 1만원 씩 15개월</p>
+            <p>쇼핑쿠폰 월 1,500원. 24개월 제공,제휴사 8종 중 택1</p>
+            <p>유쓰 데이터 40GB 추가 제공 (만 19세~34세 가입자 대상)</p>
+          </li>
+          <li>
+            <span>네이버페이 15만원 제공</span>
+            <p>5G 다이렉트 51</p>
+            <p>데이터 매일 150GB+최대 5Mbps</p>
+            <p><del>월 51,000원</del>네이버페이, 쇼핑쿠폰 적용 시 39,500원</p>
+            <p>네이버페이 15만원 제공 월 1만원 씩 15개월</p>
+            <p>쇼핑쿠폰 월 1,500원. 24개월 제공,제휴사 8종 중 택1</p>
+            <p>유쓰 데이터 60GB 추가 제공 (만 19세~34세 가입자 대상)</p>
+          </li>
+        </ul>
+      </div>
+      <a
+        data-route
+        class="event_detail_btn"
+        href="/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-LTE&cnslAppFormYn=NLPZ0001600"
+        style="bottom: 48.5%; left: 22.2%; width: 252px; height: 52px"
+        data-gtm-event-name="order_button_click"
+        data-gtm-event-category="클릭"
+        data-gtm-event-action="이벤트상세 영역 - 주문 버튼 클릭"
+        data-gtm-event-label="컨텐츠 : LTE다이렉트45 가입"
+        data-gtm-click-url="https://www.lguplus.com/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-LTE&cnslAppFormYn=NLPZ0001600"
+        data-gtm-click-location="이벤트상세 영역"
+        data-gtm-click-direction="유심"
+        data-gtm-click-text="LTE다이렉트45 가입"
+      >
+        <span class="blind">LTE다이렉트45 가입</span>
+      </a>
+      <a
+        data-route
+        class="event_detail_btn"
+        href="/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ1000160"
+        style="bottom: 48.5%; right: 22.2%; width: 252px; height: 52px"
+        data-gtm-event-name="order_button_click"
+        data-gtm-event-category="클릭"
+        data-gtm-event-action="이벤트상세 영역 - 주문 버튼 클릭"
+        data-gtm-event-label="컨텐츠 : 5G다이렉트46 가입"
+        data-gtm-click-url="https://www.lguplus.com/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ1000160"
+        data-gtm-click-location="이벤트상세 영역"
+        data-gtm-click-direction="유심"
+        data-gtm-click-text="5G다이렉트46 가입"
+      >
+        <span class="blind">5G다이렉트46 가입</span>
+      </a>
+      <a
+        data-route
+        class="event_detail_btn"
+        href="/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ1000159"
+        style="bottom: 10.8%; left: 22.2%; width: 252px; height: 52px"
+        data-gtm-event-name="order_button_click"
+        data-gtm-event-category="클릭"
+        data-gtm-event-action="이벤트상세 영역 - 주문 버튼 클릭"
+        data-gtm-event-label="컨텐츠 : 5G다이렉트47.5 가입"
+        data-gtm-click-url="https://www.lguplus.com/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ1000159"
+        data-gtm-click-location="이벤트상세 영역"
+        data-gtm-click-direction="유심"
+        data-gtm-click-text="5G다이렉트47.5 가입"
+      >
+        <span class="blind">5G다이렉트47.5 가입</span>
+      </a>
+      <a
+        data-route
+        class="event_detail_btn"
+        href="/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ0002630"
+        style="bottom: 10.8%; right: 22.2%; width: 252px; height: 52px"
+        data-gtm-event-name="order_button_click"
+        data-gtm-event-category="클릭"
+        data-gtm-event-action="이벤트상세 영역 - 주문 버튼 클릭"
+        data-gtm-event-label="컨텐츠 : 5G다이렉트51 가입"
+        data-gtm-click-url="https://www.lguplus.com/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N&cPlan=LPZ0002630"
+        data-gtm-click-location="이벤트상세 영역"
+        data-gtm-click-direction="유심"
+        data-gtm-click-text="5G다이렉트51 가입"
+      >
+        <span class="blind">5G다이렉트51 가입</span>
+      </a>
+    </div>
+
+    <!-- 익시오 -->
+    <div class="section">
+      <img
+        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20250117-013624-129-HVsGRAUq.png"
+        alt="하단 내용 참조"
+      />
+      <div class="blind">
+        <p>유플러스 고객이라면 누구나!</p>
+        <p>다이렉트 요금제 유심 가입하고 누릴 수 있는 추가 혜택</p>
+        <p>보이스피싱 위험까지 알려주는</p>
+        <p>나만의 AI 에이전트, 익시오</p>
+        <p>ixi O</p>
+        <p>익시오 ixi O 는 아이폰용 유플러스 AI 통화 서비스(무료)입니다.</p>
+        <p>* LG유플러스 아이폰 고객이 이용 가능하나, 단말 사양에 따라 제약이 있을 수 있음.</p>
+
+        <p>통화 요약 AI 제안</p>
+        <p>통화 요약부터 다음 할 일까지 제안해드려요</p>
+        <p>(일정 요약해둔 휴대폰 화면 이미지)</p>
+
+        <p>AI 전화 대신 받기</p>
+        <p>바쁠 땐 AI가 전화를 대신 받아 깔끔하게 전달해드려요</p>
+        <p>(AI 전화 대신 받기 실행한 휴대폰 화면 이미지)</p>
+
+        <p>보이는 전화</p>
+        <p>실시간 자막으로 어떤 환경에서도 내용을 놓칠 일 없어요</p>
+        <p>(통화 연결 중 실시간 자막 실행한 휴대폰 화면 이미지)</p>
+
+        <p>AI 안심 통화</p>
+        <p>스팸은 물론, 보이스피싱도 실시간 탐지해드려요</p>
+        <p>(보이스피싱 위험 알림 뜬 휴대폰 화면 이미지)</p>
+      </div>
+    </div>
+    <!-- //익시오 -->
+
+    <!-- eSIm -->
+    <div class="section">
+      <img
+        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241227-042241-935-ngid7r4O.png"
+        alt="하단 내용 참조"
+      />
+      <div class="blind">
+        <p>16&#41;아이폰XS,갤럭시Z플립4, 폴드4 이후 휴대폰 사용 고객님이라면?</p>
+        <h3>16-1&#41;유심 배송 필요없이 eSIM으로 지금 가입하세요!</h3>
+      </div>
+    </div>
+    <!-- //eSIm -->
+
+    <!-- 하단 배너 영역 -->
+    <div class="btn_evt-wrap -mt-10">
+      <!-- 81356 -->
+      <!-- <div class="event_detail">
+        <a
+          class="banner_evt_1"
+          data-gtm-click-direction="내부"
+          data-gtm-click-location="중단배너 영역"
+          data-gtm-click-text="Galaxy Z Flip6 | Z Fold6 자급제엔 다이렉트"
+          data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/81356"
+          data-gtm-event-action="중단배너 영역 - 링크 클릭"
+          data-gtm-event-category="클릭"
+          data-gtm-event-label="컨텐츠 : Galaxy Z Flip6 | Z Fold6 자급제엔 다이렉트"
+          data-gtm-event-name="link_click"
+          data-route=""
+          href="https://www.lguplus.com/benefit-event/ongoing/81356"
+          ><img
+            alt="하단 참조"
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240731-024836-581-3QI8sRSl.png">
+          <div class="blind">
+            <p>Galaxy Z Flip6 | Z Fold6 자급제엔 다이렉트</p>
+            <p>약정도, 속도도 자유다! 자급제엔 다이렉트 요금제</p>
+            <span>자세히 보기</span>
+          </div>
+        </a>
+      </div> -->
+
+      <!-- 80719 -->
+      <!-- <div class="event_detail">
+        <a data-route class="banner_evt_1" href="https://www.lguplus.com/benefit-event/ongoing/80719"
+          data-gtm-event-name="link_click" data-gtm-event-category="클릭" data-gtm-event-action="중단배너 영역 - 링크 클릭"
+          data-gtm-event-label="컨텐츠 : 유플러스닷컴에서 만나는 극한혜택! 유튜브 프리미엄, 넷플릭스 무제한 시청 5G 완전 무제한부터 유튜브프리미엄 넷플릭스까지 극한혜택 혜택 보기"
+          data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80719" data-gtm-click-location="중단배너 영역"
+          data-gtm-click-direction="내부"
+          data-gtm-click-text="유플러스닷컴에서 만나는 극한혜택! 유튜브 프리미엄, 넷플릭스 무제한 시청 5G 완전 무제한부터 유튜브프리미엄 넷플릭스까지 극한혜택 혜택 보기">
+          <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241018-045642-252-dYmX6QLG.jpg"
+            alt="하단 참조" />
+          <div class="blind">
+            <p>유플러스닷컴에서 만나는 극한혜택!</p>
+            <p>유튜브 프리미엄, 넷플릭스 무제한 시청</p>
+            <p>5G 완전 무제한부터 유튜브프리미엄 넷플릭스까지 극한혜택</p>
+            <p>NETFLIX &amp; Youtube Premium</p>
+            <span>혜택 받기</span>
+          </div>
+        </a>
+      </div> -->
+      <!-- 80920 -->
+      <div class="event_detail">
+        <a
+          data-route
+          class="banner_evt_1"
+          href="https://www.lguplus.com/benefit-event/ongoing/80920"
+          data-gtm-event-name="link_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="중단배너 영역 - 링크 클릭"
+          data-gtm-event-label="컨텐츠 : 요금은 더 알뜰!혜택은 더 많이! 알뜰 보다 더 알뜰한 5G 다이렉트 혜택 받기"
+          data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80920"
+          data-gtm-click-location="중단배너 영역"
+          data-gtm-click-direction="내부"
+          data-gtm-click-text="요금은 더 알뜰!혜택은 더 많이! 알뜰 보다 더 알뜰한 5G 다이렉트 혜택 받기"
+        >
+          <img
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240718-042632-370-6QtbmlfZ.png"
+            alt="하단 참조"
+          />
+          <!-- <img
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240711-092157-326-M7YXmAp9.jpg"
+            alt="하단 참조"
+          />6만 -->
+          <div class="blind">
+            <p>요금은 더 알뜰! 혜택은 더 많이!</p>
+            <p>3만원대 갓성비! 더 알뜰한 5G 다이렉트</p>
+            <p>네이버페이 총 6만원(월 1만원 X 6개월)</p>
+            <p>5G 다이렉트37.5 쇼핑쿠폰백 1,000원 (요기요, GS25)</p>
+            <span>혜택 받기</span>
+          </div>
+        </a>
+      </div>
+      <!-- 80903 -->
+      <!-- <div class="event_detail">
+        <a
+          data-route
+          class="banner_evt_1"
+          href="https://www.lguplus.com/benefit-event/ongoing/80903"
+          data-gtm-event-name="link_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="중단배너 영역 - 링크 클릭"
+          data-gtm-event-label="컨텐츠 : 최대 60GB 이득! 20대를 위한 유쓰 5G 청년다이렉트 혜택 받기"
+          data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80903"
+          data-gtm-click-location="중단배너 영역"
+          data-gtm-click-direction="내부"
+          data-gtm-click-text="최대 60GB 이득! 20대를 위한 유쓰 5G 청년다이렉트 혜택 받기"
+        >
+          <img
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240329-102206-040-ZFDZ9dTJ.jpg"
+            alt="하단 참조"
+          />
+          <div class="blind">
+            <p>최대 60GB 이득!</p>
+            <p>20대를 위한 유쓰 5G 청년다이렉트</p>
+            <p>네이버페이 총 15만원(월 1만원 X 15개월)</p>
+            <span>혜택 받기</span>
+          </div>
+        </a>
+      </div> -->
+      <!-- 80721 -->
+      <!-- <div class="event_detail">
+        <a
+          data-route
+          class="banner_evt_3"
+          href="https://www.lguplus.com/benefit-event/ongoing/80721"
+          data-gtm-event-name="link_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="중단배너 영역 - 링크 클릭"
+          data-gtm-event-label="컨텐츠 : 네이버페이 & 사은품 100%. 요금도 혜택도 빈틈없는 1만 원대 알뜰 유심 요금 혜택 받기"
+          data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/80721"
+          data-gtm-click-location="중단배너 영역"
+          data-gtm-click-direction="내부"
+          data-gtm-click-text="네이버페이 & 사은품 100%. 요금도 혜택도 빈틈없는 1만 원대 알뜰 유심 요금 혜택 받기"
+        >
+          <img
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240329-102154-080-P6enjFKw.jpg"
+            alt="하단 참조"
+          />
+          <div class="blind">
+            <p>네이버페이 &amp; 사은품 100%</p>
+            <p>요금도 혜택도 빈틈없는 3만 원대 알뜰 유심 요금</p>
+            <p>
+              3만원대 무약정 5G / 네이버페이 150,000원 / 요기요 GS25 쇼핑쿠폰팩
+              3,000원
+            </p>
+            <span>혜택 받기</span>
+          </div>
+        </a>
+      </div> -->
+      <!-- 자급제폰 -->
+      <div class="event_detail">
+        <a
+          data-route
+          class="banner_evt_4"
+          href="https://www.lguplus.com/mobile/direct-smart-device/mem-rate"
+          data-gtm-event-name="link_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="중단배너 영역 - 링크 클릭"
+          data-gtm-event-label="컨텐츠 : 기존 LGU+ 고객님 주목! 최대 31% 쓰던 번호 그대로 알뜰한 다이렉트 요금제 혜택을! 자급제폰 등록 & 가입하기"
+          data-gtm-click-url="https://www.lguplus.com/mobile/direct-smart-device/mem-rate"
+          data-gtm-click-location="중단배너 영역"
+          data-gtm-click-direction="내부"
+          data-gtm-click-text="기존 LGU+ 고객님 주목! 최대 31% 쓰던 번호 그대로 알뜰한 다이렉트 요금제 혜택을! 자급제폰 등록 & 가입하기"
+        >
+          <img
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240104-110719-710-38s0rn73.png"
+            alt="하단 참조"
+          />
+          <div class="blind">
+            <p>기존 LGU+ 고객님 주목! 최대 31%</p>
+            <p>쓰던 번호 그대로 알뜰한 다이렉트 요금제 혜택을!</p>
+            <span>자급제폰 등록 &amp; 가입하기</span>
+          </div>
+        </a>
+      </div>
+      <!-- 121 -->
+      <div class="event_detail">
+        <a
+          data-route
+          class="banner_evt_5"
+          href="https://www.lguplus.com/benefit-event/ongoing/121"
+          data-gtm-event-name="link_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="중단배너 영역 - 링크 클릭"
+          data-gtm-event-label="컨텐츠 : 잠깐! 인터넷 다이렉트 요금제도 있어요. 2030만을 위한 1년 약정+1만원대 요금 자세히 보기"
+          data-gtm-click-url="https://www.lguplus.com/benefit-event/ongoing/121"
+          data-gtm-click-location="중단배너 영역"
+          data-gtm-click-direction="내부"
+          data-gtm-click-text="잠깐! 인터넷 다이렉트 요금제도 있어요. 2030만을 위한 1년 약정+1만원대 요금 자세히 보기"
+        >
+          <img
+            src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240104-110731-573-V2bpwHO1.png"
+            alt="하단 참조"
+          />
+          <div class="blind">
+            <p>잠깐! 인터넷 다이렉트 요금제도 있어요</p>
+            <p>2030만을 위한 1년 약정+1만원대 요금</p>
+            <span>자세히 보기</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- //하단 배너 영역 -->
+
+    <!-- 플로팅 버튼 -->
+    <div class="float_area fdp_open" id="floatArea">
+      <div class="inner_wrap">
+        <!-- <div class="call_wrap"><span>1644-7009</span></div> -->
+        <div class="txt_wrap">
+          <p class="tit">고민되는, 찾기 힘든 부분이 있으세요?</p>
+          <p class="tit"><span>24시간 365일</span> 다이렉트로 상담해드립니다.</p>
+        </div>
+
+        <div class="float_btn_wrap">
+          <a
+            data-route
+            class="flt_btn_chat"
+            href="javascript:void(0)"
+            onclick="openMobileCnslPopup(); return false;"
+            data-gtm-event-name="order_consultation_button_click"
+            data-gtm-event-category="클릭"
+            data-gtm-event-action="플로팅 영역 - 컨설팅 버튼 클릭"
+            data-gtm-event-label="컨텐츠 : 상담예약하기"
+            data-gtm-click-url=""
+            data-gtm-click-location="플로팅 영역"
+            data-gtm-click-direction="유심"
+            data-gtm-click-text="상담예약하기"
+          >
+            <span>상담예약하기</span>
+          </a>
+          <a
+            data-route
+            class="flt_btn_cnl"
+            href="/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N"
+            data-gtm-event-name="order_button_click"
+            data-gtm-event-category="클릭"
+            data-gtm-event-action="플로팅 영역 - 주문 버튼 클릭"
+            data-gtm-event-label="컨텐츠 : 5G 신규 가입"
+            data-gtm-click-url="https://www.lguplus.com/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&cnslAppFormYn=N"
+            data-gtm-click-location="플로팅 영역"
+            data-gtm-click-direction="유심"
+            data-gtm-click-text="5G 신규 가입"
+          >
+            <span>5G 신규 가입</span>
+          </a>
+          <a
+            data-route
+            class="flt_btn_esim"
+            href="/mobile/new-esim/activate?regType=bgnEntr&selfYn=false&dvicType=E-5G&cnslAppFormYn=Y"
+            data-gtm-event-name="order_button_click"
+            data-gtm-event-category="클릭"
+            data-gtm-event-action="플로팅 영역 - 주문 버튼 클릭"
+            data-gtm-event-label="컨텐츠 : eSIM 신규 가입"
+            data-gtm-click-url="https://www.lguplus.com/mobile/new-esim/activate?regType=bgnEntr&selfYn=false&dvicType=E-5G&cnslAppFormYn=Y"
+            data-gtm-click-location="플로팅 영역"
+            data-gtm-click-direction="유심"
+            data-gtm-click-text="eSIM 신규 가입"
+          >
+            <span>eSIM 신규 가입</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- //플로팅 버튼 -->
+
+    <!-- 유의사항 영역 -->
+    <div class="footerWrap">
+      <h3>꼭 확인하세요!</h3>
+      <div class="acType">
+        <div id="accordion">
+          <button onclick="accordianClick(this)" class="titType">공통</button>
+          <div class="subDepth" style="display: none">
+            <ul>
+              <li>유플러스닷컴에서 가입할 수 있는 전용 요금제입니다.</li>
+              <li>
+                공시지원금(휴대폰 가격할인), 선택약정 할인(통신료 25%할인) 등 약정할인 혜택을 받고 있지 않은 고객만
+                가입할 수 있습니다. (약정이 있을 경우, 해지해야 가입 가능함)
+              </li>
+              <li>참 쉬운 가족 결합이 가능합니다. (LTE 다이렉트 22 제외)</li>
+              <li>다이렉트 요금제로 ‘참 쉬운 가족 결합’ 시 쇼핑쿠폰팩이 지급되지 않습니다. (매월 말일 기준)</li>
+              <li>프로모션 및 특별 혜택에 대한 상세 내용은 유플러스닷컴을 통해 확인 가능합니다.</li>
+              <li>
+                제공되는 혜택은 제휴사 또는 당사 사정에 따라 변경될 수 있으며, 1개월 전 고객센터 앱, 문자메시지, 청구서,
+                U+홈페이지 등을 통해 안내해 드립니다.
+              </li>
+              <li>유플러스닷컴 외의 판매채널에서 기기변경 시 요금제를 유지하실 수 없습니다.</li>
+              <li>
+                프로모션 혜택이 제공되는 기간 동안 요금제를 해지하거나 변경할 경우 혜택이 중단될 수 있습니다. (프로모션
+                해당 요금제 간 변경은 혜택 제공)
+              </li>
+            </ul>
+          </div>
+          <!-- 네이버페이 혜택 -->
+          <button onclick="accordianClick(this)" class="titType">네이버페이</button>
+          <div class="subDepth" style="display: none">
+            <ul>
+              <li>
+                다이렉트 요금제 개통 후 요금제 유지 시 익월 말일부터 월별 분할 지급되며, 개통된 휴대폰 번호로 MMS
+                발송됩니다. (지급일 예시: 25년 2월 개통 시 25년 3월 말일에 1차 발송, 1차 발송 후 매월 말일 발송)
+              </li>
+              <li>
+                150,000원 지급 요금제 (월 10,000원 X 15개월)<br />
+                *5G 다이렉트 65 / 51 / 47.5 / 46, 5G 다이렉트 플러스 69 / 59, 유쓰 5G 다이렉트 51 / 47.5 / 46, LTE
+                다이렉트 45<br />
+                *(넷플릭스+유튜브 프리미엄) 5G 다이렉트 65 제외
+              </li>
+              <li>
+                75,000원 지급 요금제 (월 5,000원 X 15개월)<br />
+                (넷플릭스+유튜브 프리미엄) 5G 다이렉트 65
+              </li>
+              <li>
+                60,000원 지급 요금제 (월 10,000원 X 6개월)<br />
+                5G 다이렉트 44 / 42 / 37.5 / 34, LTE 다이렉트 34.5, 유쓰 5G 다이렉트 44 / 42 / 37.5 / 34
+              </li>
+              <li>이벤트 기간 내 개통 완료되어야 지급 가능합니다.</li>
+              <li>
+                요금제 개통 익월 이후 지급액이 상이한 요금제로 변경하시면 혜택 지급은 불가하며, 지급액이 같은 요금제
+                간의 변경은 지급 가능합니다.<br />
+                (예시: 150,000원 지급 요금제 개통 및 익월 이후 75,000원 지급 요금제로 변경 시 혜택 지급 불가)
+              </li>
+              <li>
+                개통한 휴대폰 번호를 통해 문자로 발송합니다.<br />
+                (일시정지 / 해지 / 연체 / 미납고객 / 프로모션 비대상 요금제 변경 / 유심, eSIM 신규가입 이후 기기변경
+                고객 발송 제외)
+              </li>
+            </ul>
+            <p>네이버페이 포인트 등록 안내</p>
+            <ul>
+              <li>포인트 발송 후 기간 내 등록 및 사용하시기 바랍니다.<br /></li>
+              <li>
+                등록기간은 발송일로부터 2개월이며, 사용기간은 쿠폰 등록일로부터 10년입니다.<br />
+                (등록일 예시: 25년 3월 31일 발송 → 25년 5월 31일까지 쿠폰 등록 가능)
+              </li>
+              <li>포인트로 적립되며 취소하거나, 현금으로 찾으실 수 없고 요금수납 또한 불가합니다.</li>
+              <li>해당 쿠폰은 프로모션 사은품으로 등록/유효기간을 연장하거나 환불하실 수 없습니다.</li>
+              <li>자세한 내용은 네이버페이 이용 약관을 참고해 주시기 바랍니다.</li>
+            </ul>
+            <p>쿠폰사용 방법 :</p>
+            <ul class="no_bg">
+              <li>
+                ① 네이버페이 홈 접속 ☞ 
+                <a data-route href="https://pay.naver.com/" target="_blank" title="새 창 열림">pay.naver.com</a>
+              </li>
+              <li>② 네이버 아이디와 비밀번호로 로그인(네이버페이 이용 약관 동의 필수)</li>
+              <li>
+                ③ 쿠폰 등록<br />
+                PC: [홈] → [혜택, 쿠폰] → [쿠폰] → [네이버페이 포인트 쿠폰 등록] → 쿠폰 번호 입력<br />
+                모바일: [홈] → [메뉴] → [이벤트] → [쿠폰] → [네이버페이 포인트 쿠폰 등록] → 쿠폰 번호 입력
+              </li>
+            </ul>
+          </div>
+          <button onclick="accordianClick(this)" class="titType">5G 다이렉트 65 팩</button>
+          <div class="subDepth" style="display: none">
+            <p>커피 쿠폰 팩</p>
+            <ul>
+              <li>개인/개인사업자 고객만 가입할 수 있으며, 외국인/법인 고객은 가입이 어렵습니다.</li>
+              <li>부가세가 포함된 금액입니다.</li>
+              <li>중간에 다른 요금제로 변경하면 변경일로부터 1개월이 지나야 다시 가입할 수 있습니다.</li>
+              <li>
+                제휴사, LG유플러스 사정에 따라 혜택은 변경될 수 있으며, 변경 1개월 전 당신의 U+앱, 문자메시지, 청구서,
+                LG유플러스 홈페이지 등을 통해 안내해드릴 예정입니다.
+              </li>
+            </ul>
+            <p>[쿠폰 발송 안내]</p>
+            <ul>
+              <li>
+                월말까지 ‘(커피쿠폰) 5G 다이렉트 65’ 요금제를 유지하면 다음 달 10일에 스타벅스 커피 쿠폰(카페 아메리카노
+                T) 3매가 문자 메시지로 발송되며, 문자를 수신하는 시간대는 고객마다 다를 수 있습니다.
+              </li>
+              <li>
+                모바일 정지 상태인 경우 혜택을 받을 수 없으며, 가입 후 다른 요금제로 변경하거나 휴대폰을 해지하면
+                익월부터 쿠폰이 발송되지 않습니다.
+              </li>
+            </ul>
+            <p>[쿠폰 이용 안내]</p>
+            <ul>
+              <li>쿠폰의 유효기간은 쿠폰 수신 후 60일이며, 캡쳐 이미지는 사용 불가합니다.</li>
+              <li>가입 후 다른 요금제로 변경하거나 휴대폰을 해지하였더라도 이미 받으신 쿠폰은 사용 가능합니다.</li>
+              <li>해당 쿠폰으로 차액을 지불하고 다른 상품을 구매하실 수 있습니다.</li>
+              <li>
+                커피 쿠폰 발송은 (주)쿠프마케팅에서 발송하며, 발송 문의는 (주)쿠프마케팅 고객센터 (1644-4706)로 문의
+                부탁드립니다.
+                <br />(업무 시간: 평일 9시 30분~18시 주말/공휴일 제외, 점심시간 :12시~13시)
+              </li>
+            </ul>
+            <p>넷플릭스 + 유튜브 프리미엄 팩</p>
+            <ul>
+              <li>부가세가 포함된 금액입니다.</li>
+              <li>넷플릭스 베이식과 유튜브 프리미엄을 기본으로 포함하고 있는 요금제입니다.</li>
+              <li>만19세 이상 고객만 가입할 수 있습니다.</li>
+              <li>
+                해당 요금제는 가입 후 반드시 아래 안내된 경로 중 한가지를 선택해 넷플릭스와 유튜브 프리미엄 계정을
+                별도로 등록해야 합니다.
+              </li>
+              <li>
+                요금제 가입 후, U+고객 인증을 하지 않고, 넷플릭스 또는 유튜브 프리미엄의 홈페이지/앱을 통해 바로
+                이용하실 경우, 추가 요금이 발생할 수 있습니다.<br />
+                - 요금제 가입 안내문자: 문자메시지 내 인터넷주소(URL)을 통해 등록<br />
+                - U<sup>+</sup>홈페이지 : 바로 옆 ‘넷플릭스 계정 등록하기’ / ‘유튜브 프리미엄 이용하기’를 눌러 등록
+              </li>
+              <li>
+                해당 요금제를 이용하는 동안에는 휴대폰 명의를 변경할 수 없습니다. 명의를 변경하려면 넷플릭스와 유튜브
+                프리미엄이 제공되지 않는 요금제로 변경한 뒤 신청해 주세요. 명의를 변경한 뒤에는 변경된 명의자의
+                넷플릭스와 유튜브 프리미엄 계정을 등록해야 합니다.
+              </li>
+            </ul>
+            <p>갤럭시 버즈3프로 팩</p>
+            <ul>
+              <li>부가세가 포함된 금액입니다.</li>
+              <li>갤럭시 버즈3프로를 기본으로 포함하고 있는 요금제 입니다.</li>
+              <li>
+                해당 요금제를 24개월 동안 유지해야 갤럭시 버즈3프로 24개월 할부금을 할인 받을 수 있습니다. 할부 수수료는
+                별도로 청구됩니다.
+              </li>
+              <li>
+                가입 후 24개월 이내 다른 요금제로 변경하거나 정지하더라도 이미 갤럭시 버즈3프로는 고객님 소유 입니다.
+                다만, 요금제를 변경한 달부터 24개월이 되는 달까지 기기 할부금을 내야 합니다.
+              </li>
+              <li>휴대폰을 해지하면, 할인이 안된 정상가의 할부금을 남은 기간 동안 내야 합니다.</li>
+              <li>만 18세 이하 청소년 고객은 법정대리인의 동의가 있어야 24개월 할부금 무료 혜택을 받을 수 있습니다.</li>
+              <li>외국인 또는 신용불량자 등 할부로 구매할 수 없는 고객님은 할부금 무료 혜택을 받을 수 없습니다.</li>
+            </ul>
+            <p>갤럭시워치7 팩</p>
+            <ul>
+              <li>부가세가 포함된 금액입니다.</li>
+              <li>갤럭시워치7를 기본으로 포함하고 있는 요금제입니다.</li>
+              <li>
+                해당 요금제를 24개월 동안 유지해야 갤럭시워치7 24개월 할부금이 무료 입니다. 다만, 할부 수수료는 별도로
+                내야 합니다.
+              </li>
+              <li>
+                가입 후 24개월 이내 다른 요금제로 변경하거나 정지하더라도 이미 받은 갤럭시워치7는 고객님 소유 입니다.
+                <br />다만, 요금제를 변경한 달부터 24개월이 되는 달까지 기기 할부금을 내야 합니다.
+              </li>
+              <li>휴대폰을 해지하면, 할인이 안된 정상가의 할부금을 남은 기간 동안 내야 합니다.</li>
+              <li>만 18세 이하 청소년 고객은 법정대리인의 동의가 있어야 24개월 할부금 무료 혜택을 받을 수 있습니다.</li>
+              <li>외국인 또는 신용불량자 등 할부로 구매할 수 없는 고객님은 할부금 무료 혜택을 받을 수 없습니다.</li>
+            </ul>
+            <!-- <p>Apple Watch SE 2세대 GPS 팩</p>
+            <ul>
+              <li>부가세가 포함된 금액입니다.</li>
+              <li>애플워치SE2를 기본으로 포함하고 있는 요금제 입니다.</li>
+              <li>
+                해당 요금제를 24개월 동안 유지해야 애플워치SE2 24개월 할부금이
+                무료 입니다. 다만, 할부 수수료는 별도로 내야 합니다.
+              </li>
+              <li>
+                가입 후 24개월 이내 다른 요금제로 변경하거나 정지하더라도 이미
+                받은 애플워치SE2는 고객님 소유 입니다. <br />
+                다만, 요금제를 변경한 달부터 24개월이 되는 달까지 기기 할부금을
+                내야 합니다.
+              </li>
+              <li>
+                휴대폰을 해지하면, 할인이 안된 정상가의 할부금을 남은 기간 동안
+                내야 합니다.
+              </li>
+              <li>
+                만 18세 이하 청소년 고객은 법정대리인의 동의가 있어야 24개월
+                할부금 무료 혜택을 받을 수 있습니다.
+              </li>
+              <li>
+                외국인 또는 신용불량자 등 할부로 구매할 수 없는 고객님은 할부금
+                무료 혜택을 받을 수 없습니다.
+              </li>
+            </ul> -->
+            <p>AirPods Pro 2세대 팩</p>
+            <ul>
+              <li>부가세가 포함된 금액입니다.</li>
+              <li>AirPods Pro 2세대를 기본으로 포함하고 있는 요금제 입니다.</li>
+              <li>
+                해당 요금제를 24개월 동안 유지해야 AirPods Pro 2세대 24개월 할부금이 무료 입니다. 다만, 할부 수수료는
+                별도로 내야 합니다.
+              </li>
+              <li>
+                가입 후 24개월 이내 다른 요금제로 변경하거나 정지하더라도 이미 받은 AirPods Pro 2세대는 고객님 소유
+                입니다. 다만, 요금제를 변경한 달부터 24개월이 되는 달까지 기기 할부금을 내야 합니다.
+              </li>
+              <li>휴대폰을 해지하면, 할인이 안된 정상가의 할부금을 남은 기간 동안 내야 합니다.</li>
+              <li>만 18세 이하 청소년 고객은 법정대리인의 동의가 있어야 24개월 할부금 무료 혜택을 받을 수 있습니다.</li>
+              <li>외국인 또는 신용불량자 등 할부로 구매할 수 없는 고객님은 할부금 무료 혜택을 받을 수 없습니다.</li>
+            </ul>
+            <p>유독 팩</p>
+            <ul>
+              <li>부가세가 포함된 금액입니다.</li>
+              <li>
+                바이브 앱 음악감상과, 유독 상품 중 리디셀렉트 도서멤버쉽 월정액을 기본제공하고, 유독 상품 중 요기요
+                할인쿠폰 6장,
+                <br />세탁특공대 1만원 쿠폰, 룩핀 20% 할인권 중 하나를 선택할 수 있습니다.
+              </li>
+              <li>요금제 가입 후 당신의 U<wup>+</wup> 앱-유독 메뉴에서 구독 상품 선택을 완료해야 쿠폰이 발급됩니다.</li>
+              <li>
+                선택 구독 중인 상품은 월 1회 변경할 수 있고, 다음 회차 구독 시작일에 변경된 상품이 적용됩니다. 가입 후
+                다른 요금제로 변경하면 3개월이 지나야만 유독 팩 요금제로 다시 가입할 수 있습니다.
+              </li>
+            </ul>
+            <p>아이패드 10세대 팩</p>
+            <ul>
+              <li>부가세가 포함된 금액입니다.</li>
+              <li>아이패드 10세대를 기본으로 포함하고 있는 요금제 입니다.</li>
+              <li>
+                해당 요금제를 36개월 동안 유지해야 아이패드 10세대 36개월 할부금을 할인 받을 수 있습니다. 할부 수수료
+                5.9%는 별도로 청구됩니다.
+              </li>
+              <li>
+                가입 후 36개월 이내 다른 요금제로 변경하거나 정지하더라도 이미 아이패드 10세대는 고객님 소유 입니다.
+                다만, 요금제를 변경한 달부터 36개월이 되는 달까지 기기 할부금을 내야 합니다.
+              </li>
+              <li>휴대폰을 해지하면, 할인이 안된 정상가의 할부금을 남은 기간 동안 내야 합니다.</li>
+              <li>만 18세 이하 청소년 고객은 법정대리인의 동의가 있어야 36개월 할부금 무료 혜택을 받을 수 있습니다.</li>
+              <li>외국인 또는 신용불량자 등 할부로 구매할 수 없는 고객님은 할부금 무료 혜택을 받을 수 없습니다.</li>
+            </ul>
+          </div>
+          <button onclick="accordianClick(this)" class="titType">5G 다이렉트플러스69 갤럭시버즈3 팩</button>
+          <div class="subDepth" style="display: none">
+            <ul>
+              <li>부가세가 포함된 금액입니다.</li>
+              <li>갤럭시 버즈3를 기본으로 포함하고 있는 요금제 입니다.</li>
+              <li>
+                해당 요금제를 24개월 동안 유지해야 갤럭시 버즈3 24개월 할부금이 무료 입니다. 다만, 할부 수수료는 별도로
+                내야 합니다.
+              </li>
+              <li>
+                가입 후 24개월 이내 다른 요금제로 변경하거나 정지하더라도 이미 받은 갤럭시 버즈3는 고객님 소유
+                입니다.<br />
+                다만, 요금제를 변경한 달 부터 24개월이 되는 달까지 기기 할부금을 내야 합니다.
+              </li>
+              <li>휴대폰을 해지하면, 할인이 안된 정상가의 할부금을 남은 기간 동안 내야 합니다.</li>
+              <li>만 18세 이하 청소년 고객은 법정대리인의 동의가 있어야 24개월 할부금 무료 혜택을 받을 수 있습니다.</li>
+              <li>외국인 또는 신용불량자등 할부로 구매할 수 없는 고객님은 할부금 무료 혜택을 받을 수 없습니다.</li>
+            </ul>
+          </div>
+          <button onclick="accordianClick(this)" class="titType">다이렉트 플러스 결합</button>
+          <div class="subDepth" style="display: none">
+            <p>결합 조건</p>
+            <ul>
+              <li>
+                결합 조건: U+휴대폰에 또는 가족/지인의 U<sup>+</sup>휴대폰을 두 개 이상 결합해야 할인을 받을 수
+                있습니다.
+              </li>
+              <li>
+                결합 가능한 요금제는 5G 다이렉트 플러스 69, 5G 다이렉트 플러스 59만 해당되며, 결합의 경우 <br />5G
+                다이렉트 플러스 요금제를 이용하는 만 19~39세 고객일 경우에만 결합 가능합니다.
+              </li>
+            </ul>
+            <p>유의사항</p>
+            <ul>
+              <li>타 결합할인, 제휴할인 등 할인 혜택과 중복으로 할인 받을 수 없습니다.</li>
+              <li>구성원 개별 할인 혜택 제공(1인 지정 할인 불가)됩니다.</li>
+              <li>
+                결합 구성원이 해지해도 최소 2회선을 유지한다면 결합 할인은 계속 제공되며 '27년 3월 31일까지 구성원을
+                추가할 수 있습니다.
+              </li>
+              <li>최대 결합 인원은 4명이며, 한 회선당 온라인 신청은 한번 가능합니다.</li>
+              <li>신청이 완료된 후에는 고객센터를 통해 가입 해지, 변경이 가능합니다.</li>
+            </ul>
+            <p>할부 조건</p>
+            <ul>
+              <li>결합일 부터 바로 할인이 적용됩니다.</li>
+              <li>
+                월 중간에 결합하는 경우 사용 일수만큼 계산하여 할인이 적용됩니다. 서비스 일시 정지 기간은 사용 일수에
+                포함하지 않습니다.
+              </li>
+              <li>
+                휴대폰 요금 할인은 결합한 휴대폰 각각의 청구서에 반영되며, 할인금액을 합산하여 1명이 대표로 받을 수는
+                없습니다.
+              </li>
+              <li>할인 금액이 월 정액보다 많은 경우 월정액만큼만 할인 받을 수 있습니다.</li>
+            </ul>
+            <p>할인을 받을 수 없는 경우</p>
+            <ul>
+              <li>
+                휴대폰 이용을 일시정지한 경우 해당 기간 동안은 결합한 휴대폰 개수에서 제외합니다.<br />
+                (예시) 결합한 3개의 휴대폰 중 1개의 휴대폰이 일시정지인 기간 동안은 나머지 회선은 휴대폰 2개를 결합한
+                기준으로 할인 적용
+              </li>
+            </ul>
+            <p>네이버카페</p>
+            <ul class="no_bg">
+              <li>
+                ① 네이버카페
+                <a data-route href="https://cafe.naver.com/directgroup" target="_blank" title="새 창 열림"
+                  >(https://cafe.naver.com/directgroup)</a
+                >
+                접속하기
+              </li>
+              <li>② 카페 내 게시글 작성을 통해 결합할 구성원 찾기</li>
+              <li>
+                ③ 대표자가 구성원의 정보를 유플러스닷컴 홈페이지에서 다이렉트 플러스 결합 최종 신청하기<br />
+                <a data-route href="/mobile/combined/direct-plus"
+                  >(https://www.lguplus.com/mobile/combined/direct-plus)</a
+                >
+              </li>
+            </ul>
+          </div>
+          <button onclick="accordianClick(this)" class="titType">유심 가입</button>
+          <div class="subDepth" style="display: none">
+            <ul>
+              <li>유심 가입신청은 개인 고객의 신규가입, 번호이동만 가능합니다.</li>
+              <li>
+                유플러스닷컴, U<sup>+</sup>직영점 외 온/오프라인 제휴처를 통해 유심을 직접 구매하신 경우, 7% 요금할인은
+                동일하게 적용되나 유심비용은 유료입니다.<br />
+                (5G 요금제 및 다이렉트 요금제는 7% 할인 제외, 7% 할인을 대체하는 사은품 제공 프로모션 진행 시 제외)
+              </li>
+              <li>가입 신청을 완료하시면 신청내역 확인 및 개통 안내를 위해 전문 상담사가 고객님께 전화를 드립니다.</li>
+              <li>셀프개통으로 가입 신청하실 경우, 별도 안내 전화없이 바로 유심 배송이 진행됩니다.</li>
+              <li>가입 관련하여 궁금하신 사항은 전문 상담사에게 문의해 주시기 바랍니다.(1644-7009)</li>
+              <li>단말기는 유심을 기기에 장착한 후 사용할 수 있습니다.</li>
+              <li>
+                신규가입 시 개통된 유심을 1~2일 내에 받을 수 있으며, 번호이동은 유심을 배송받은 후 고객센터(1644-7009)를
+                통해 개통요청을 해주시기 바랍니다.
+              </li>
+              <li>미납, 연체, 정지, 일시정지 중에는 개통할 수 없습니다.</li>
+              <li>5G 요금제의 경우 전국망 구축 전까지 미구축 지역에서는 LTE로 이용됩니다.</li>
+              <li>단말기 종류 및 상태에 따라 LG U<sup>+</sup> 주요 서비스가 이용되지 않을 수 있습니다.</li>
+            </ul>
+          </div>
+          <button onclick="accordianClick(this)" class="titType">eSIM 가입</button>
+          <div class="subDepth" style="display: none">
+            <ul>
+              <li>eSIM 가입신청은 개인 고객의 신규가입, 번호이동만 가능합니다.</li>
+              <li>신청 가능한 휴대폰 리스트는 유플러스닷컴을 통해 확인 가능합니다.</li>
+              <li>가입 신청을 완료하시면 신청내역 확인 및 개통 안내를 위해 전문 상담사가 고객님께 전화를 드립니다.</li>
+              <li>셀프개통으로 가입 신청하실 경우, 별도 안내 전화 없이 바로 eSIM의 개통 과정이 진행됩니다.</li>
+              <li>가입 관련하여 궁금하신 사항은 전문 상담사에게 문의해 주시기 바랍니다.(1644-7009)</li>
+              <li>단말기는 eSIM 활성화를 진행하신 후 사용할 수 있습니다.</li>
+              <li>
+                신규가입시 개통 처리가 되면 eSIM 활성화가 가능하며, 번호이동은 가입 신청 후 고객센터(1644-7009)를 통해
+                개통요청을 해주시기 바랍니다.
+              </li>
+              <li>미납, 연체, 정지, 일시정지 중에는 개통할 수 없습니다.</li>
+              <li>5G 요금제의 경우 전국망 구축 전까지 미구축 지역에서는 LTE로 이용됩니다.</li>
+              <li>단말기 종류 및 상태에 따라 LG U<sup>+</sup> 주요 서비스가 이용되지 않을 수 있습니다.</li>
+            </ul>
+          </div>
+          <button onclick="accordianClick(this)" class="titType">익시오 서비스 가입안내</button>
+          <div class="subDepth" style="display: none">
+            <ul>
+              <li>
+                익시오 서비스는 자사 모바일 고객만 이용 가능합니다. <br />(타 통신사,14세 미만, MVNO, 법인폰, 선불폰
+                고객 불가)
+              </li>
+              <li>원활한 사용을 위해 iOS 앱스토어를 통해 익시오(ixi-O) 앱 설치가 필요합니다.</li>
+              <li>익시오 App의 최소 사용 OS는 iOS 17, 아이폰14 이상입니다.</li>
+              <li>익시오를 이용하기 위해서는 익시오 회원가입 및 부가서비스 가입이 필요합니다. (부가서비스 : 무료)</li>
+              <li>iOS 전용 앱으로 아이폰을 사용하는 고객만 이용이 가능합니다.</li>
+              <li>앱스토어를 통해 앱 다운로드 가능합니다. “익시오” 또는 “ixi-O” 검색</li>
+              <li>익시오를 통해 통화하기 위해서는, 셀룰러 데이터가 연결돼있어야 합니다.</li>
+              <li>통화 시 사용되는 데이터통화료는 무료이며 음성통화료가 부과됩니다. <br />(기본 음성 전화와 동일)</li>
+              <li>
+                익시오 전화로 통화 수신 설정을 하고 앱만 삭제하는 경우, 일시적으로 전화가 오지 않을 수 있습니다. 앱을
+                삭제하기 전에 로그아웃 또는 익시오 전화 통화 수신 설정을 ‘발신만’으로 변경 또는 ‘익시오 전화
+                부가서비스’를 해지하신 후 앱 삭제 부탁드립니다.
+              </li>
+            </ul>
+          </div>
+          <!-- 네이버페이 1만원 추가 지급 이벤트 관련 유의사항 -->
+        </div>
+      </div>
+    </div>
+    <!-- //유의사항 영역 -->
+  </div>
+</div>
+
+<script>
+  (function (window) {
+    function accordianClick(target) {
+      var parent = target.closest("#accordion");
+      var titTypes = parent.querySelectorAll(".titType");
+      var subDepths = parent.querySelectorAll(".subDepth");
+      var content = target.nextElementSibling;
+      var on = "ui-state-active";
+      var re = new RegExp(on);
+      var checkActive = re.test(target.className);
+
+      if (checkActive) {
+        target.classList.remove(on);
+        content.style.display = "none";
+      } else {
+        titTypes.forEach(function (titType) {
+          titType.classList.remove(on);
+        });
+        subDepths.forEach(function (subDepth) {
+          subDepth.style.display = "none";
+        });
+        target.classList.add(on);
+        content.style.display = "block";
+      }
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      window.scrollTo(0, 0);
+    });
+    setTimeout(function () {
+      //console.log(window.evtDetailSwiperIns)
+      if (window.evtDetailSwiperIns) {
+        window.evtDetailSwiperIns.destroy();
+        window.evtDetailSwiperIns = null;
+      }
+      window.evtDetailSwiperIns = new Swiper(".swiper-e-coverflow .swiper-container", {
+        // Optional parameters
+        loop: false,
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-e-coverflow .swiper-button-next",
+          prevEl: ".swiper-e-coverflow .swiper-button-prev",
+        },
+      });
+    }, 2000);
+
+    function tabsClick(target) {
+      var parent = target.closest(".tabs_conts_wrap");
+      var tabsBtns = parent.querySelectorAll(".tabs_detail_a");
+      var tabsConts = parent.querySelectorAll(".tabs_conts");
+      var on = "on";
+      var content = target.nextElementSibling;
+      var targetIdx = target.getAttribute("data-idx") - 1;
+
+      tabsBtns.forEach(function (tabsBtn, idx) {
+        if (targetIdx === idx) {
+          target.classList.add(on);
+          target.setAttribute("aria-selected", true);
+        } else {
+          tabsBtn.classList.remove(on);
+          tabsBtn.setAttribute("aria-selected", false);
+        }
+      });
+      tabsConts.forEach(function (tabsCont, idx) {
+        if (targetIdx === idx) {
+          tabsCont.classList.add(on);
+          tabsCont.style.display = "block";
+        } else {
+          tabsCont.classList.remove(on);
+          tabsCont.style.display = "none";
+        }
+      });
+    }
+
+    function togglesClick(target) {
+      var content = target.nextElementSibling;
+      var on = "on";
+      var re = new RegExp(" " + on);
+      var checkActive = re.test(target.className);
+
+      if (checkActive) {
+        target.classList.remove(on);
+        target.setAttribute("aria-expanded", false);
+        content.classList.remove("show");
+      } else {
+        target.classList.add(on);
+        target.setAttribute("aria-expanded", true);
+        content.classList.add("show");
+      }
+    }
+    // function togglesClickClose(target) {
+    //     var parent = target.parentNode;
+    //     var toggleBt = parent.previousElementSibling;
+    //     var on = "on";
+
+    //     toggleBt.classList.remove(on);
+    //     toggleBt.setAttribute("aria-expanded", false);
+    //     parent.style.display = "none";
+    // }
+
+    function scrollTo(to, duration) {
+      var element = document.scrollingElement || document.documentElement;
+      var start = element.scrollTop;
+      var change = to - start;
+      var startDate = +new Date();
+      // t = current time
+      // b = start value
+      // c = change in value
+      // d = duration
+      var easeInOutQuad = function (t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return (c / 2) * t * t + b;
+        t--;
+        return (-c / 2) * (t * (t - 2) - 1) + b;
+      };
+      var animateScroll = function () {
+        var currentDate = +new Date();
+        var currentTime = currentDate - startDate;
+        element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+        // console.log(currentTime, duration)
+        if (currentTime < duration) {
+          requestAnimationFrame(animateScroll);
+        } else {
+          element.scrollTop = to;
+        }
+      };
+      animateScroll();
+    }
+
+    function clickTargetHandler(e) {
+      var reductionHeight = 100;
+      var target = e.getAttribute("href");
+      var targetOffsetTop =
+        window.pageYOffset + document.querySelector(target).getBoundingClientRect().top - reductionHeight;
+      // console.log('target', targetOffsetTop)
+      scrollTo(targetOffsetTop, 500);
+
+      var anchor_tabs = document.querySelectorAll(".anchor_wrap > li");
+      anchor_tabs.forEach((anchor_tab) => {
+        anchor_tab.addEventListener("click", () => {
+          anchor_tabs.forEach((anchor_tab) => {
+            anchor_tab.classList.remove("on");
+          });
+          // 클릭된 요소에만 on 클래스 추가
+          anchor_tab.classList.add("on");
+        });
+      });
+    }
+
+    function postParam(e) {
+      var reductionHeight = 100;
+      var loc = new URL(window.location.href);
+      var index = loc.searchParams.get("postParam");
+      var target = document.getElementById(index);
+      var targetOffsetTop = target ? window.pageYOffset + target.getBoundingClientRect().top - reductionHeight : 0;
+      var bnf1 = "anchor01";
+      var bnf2 = "anchor02";
+      var bnf3 = "anchor03";
+
+      //앵커이동 트리거
+      if (index === tb2 || index === bnf1 || index === bnf2 || index === bnf3) {
+        setTimeout(function () {
+          document.getElementById("triggerTab02").click();
+        }, 300);
+      }
+      if (index === bnf1) {
+        setTimeout(function () {
+          document.getElementById("anchor01").click();
+        }, 400);
+      }
+      if (index === bnf2) {
+        setTimeout(function () {
+          document.getElementById("anchor02").click();
+        }, 400);
+      }
+      if (index === bnf3) {
+        setTimeout(function () {
+          document.getElementById("anchor03").click();
+        }, 400);
+      }
+
+      console.log("indexEl", targetOffsetTop);
+      scrollTo(targetOffsetTop, 500);
+    }
+
+    setTimeout(function () {
+      postParam();
+    }, 100);
+
+    function openMobileCnslPopup() {
+      const props = {
+        title: "전화상담신청", // 팝업 타이틀과 버튼명에 들어가는 텍스트
+        urcCnslRqstTmptId: "TG00000071",
+        // 사용하고자하는 템플릿 번호 (템플릿에 따라 사용자 입력 필드 노출 여부가 달라집니다. 사용자 입력 필드 노출을 하고 싶을 경우 BO 템플릿을 새로 만드시거나,
+        //기존 템플릿에 추가하셔야 합니다.)
+        appfLednDivsCd: "09", // 신청서인입구분코드 (01: 유플러스닷컴, 02: 프로모션, 03: 챗봇, 04: 자급제폰주문, 05: 불용폰, 06: 카카오비즈폼, 07: 라방, 08: 라이프케어,09: 유플닷컴이벤트)
+        eventTitle: "(다이렉트) 알면 알수록 플러스, U+ 다이렉트 기획전",
+      };
+      externalServices.dispatchMessageEvent("EventTelMobileCnslPopup", props);
+    }
+    //[템플릿 코드] STG TG00000071 / 운영 TG00000060
+
+    // 전역 스코프 (window)에 필요한 함수들을 바인딩합니다.
+    window.accordianClick = accordianClick;
+    window.tabsClick = tabsClick;
+    window.togglesClick = togglesClick;
+    window.scrollTo = scrollTo;
+    window.clickTargetHandler = clickTargetHandler;
+    window.postParam = postParam;
+    window.openMobileCnslPopup = openMobileCnslPopup;
+  })(window);
+</script>
+<!-- //PC -->
