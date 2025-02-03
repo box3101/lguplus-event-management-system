@@ -1,0 +1,1273 @@
+<!-- MW -->
+<style type="text/css">
+  .event_detail {
+    position: relative;
+  }
+
+  .event_detail_btn {
+    display: block;
+    position: absolute;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+
+  .event_detail_btn2 {
+    position: absolute;
+    overflow: hidden;
+    color: #fff;
+    font-size: 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .event_detail_btn2 span {
+    display: block;
+    text-align: center;
+    margin-top: -1px
+  }
+
+  .event_detail_btn2:hover,
+  .event_detail_btn2:focus,
+  .event_detail_btn2:active {
+    color: #fff;
+  }
+
+  .footerWrap {
+    background: #333;
+    padding: 30px 22px;
+  }
+
+  .footerWrap>p {
+    color: #fafafa;
+    font-size: 13px;
+    padding-top: 20px;
+    letter-spacing: -2px;
+  }
+
+  .footerWrap h3 {
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+
+  .footerWrap h3 img {
+    max-width: 83.5px;
+  }
+
+  .footerWrap .subDepth {
+    padding-top: 7px;
+  }
+
+  .footerWrap .subDepth>ul {
+    color: #b1b1b1;
+    counter-reset: title;
+  }
+
+  .footerWrap .subDepth>ul>li {
+    font-size: 12px;
+    padding-left: 10px;
+    position: relative;
+    color: #b1b1b1;
+    line-height: 18px;
+    counter-increment: title;
+  }
+
+  .footerWrap .subDepth>ul>li strong {
+    color: #b1b1b1;
+  }
+
+  /* .footerWrap .subDepth > ul > li::before{content:counter(title)".";position:absolute;top:0;left:0;} */
+  .footerWrap .subDepth>ul>li>a {
+    color: #b1b1b1;
+  }
+
+  .footerWrap .subDepth>ul>li+li {
+    margin-top: 10px;
+  }
+
+  .footerWrap .subDepth>ul>li>ul.subList {
+    margin-top: 5px;
+  }
+
+  .footerWrap .subDepth>ul>li>ul.subList>li {
+    position: relative;
+  }
+
+  .footerWrap .subDepth>ul>li>ul.subList>li::before {
+    content: "- ";
+  }
+
+  .footerWrap .subDepth>ul>li>ul.subList>li+li {
+    margin-top: 5px;
+  }
+
+  .footerWrap .subDepth>ul>li>.subListTitle {
+    margin-top: 10px;
+  }
+
+  .live {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* 레이어 팝업 */
+  .ui_modal_wrap {
+    display: none;
+    position: fixed;
+    inset: 0px;
+    overflow: auto;
+    z-index: 9000;
+  }
+
+  .ui_modal_wrap.on {
+    display: block;
+  }
+
+  .ui_modal_wrap .ui_modal_dim {
+    position: fixed;
+    inset: 0px;
+    background: rgb(0, 0, 0);
+    opacity: 0.6;
+  }
+
+  .ui_modal_wrap .ui_modal_container {
+    display: block;
+    position: absolute;
+    outline: none;
+    background-clip: padding-box;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    top: 50%;
+    width: 90%;
+  }
+
+  .modal_layer .modal_layer_inner {
+    position: relative;
+    width: auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    /*z-index:9001;*/
+  }
+
+  .modal_layer .modal_layer_inner .modal_pop_cont {
+    padding: 0 15px 20px;
+    text-align: center;
+    font-size: 0;
+  }
+
+  .modal_layer .modal_layer_inner .modal_pop_cont .desc {
+    margin: 20px 0 15px;
+    font-size: 13px;
+    color: #777;
+  }
+
+  .modal_layer .modal_layer_inner .modal_pop_cont ul {
+    margin: 20px 0 0;
+  }
+
+  .modal_layer .modal_layer_inner .modal_pop_cont ul li {
+    font-size: 13px;
+    color: #777;
+  }
+
+  .modal_layer .modal_layer_inner .modal_pop_cont .popup_btn_wrap {
+    margin: 25px 0 0;
+  }
+
+  .modal_layer .modal_layer_inner .modal_pop_cont .popup_btn_wrap .pop_btn_sc {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    padding: 3% 0;
+    background-color: #323292;
+    border-radius: 7px;
+  }
+
+  .modal_layer .modal_layer_inner .modal_pop_cont .popup_btn_wrap .pop_btn_sc+.pop_btn_sc {
+    margin-top: 20px;
+  }
+
+  .modal_layer .modal_layer_inner .modal_pop_cont .popup_btn_wrap .pop_btn_sc span {
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .modal_layer .modal_layer_inner .layer_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: url(/common/images/iot/cont_img/iot_event/new2/pop_close.png) no-repeat;
+    background-size: 100%;
+    font-size: 0;
+  }
+
+  .modal_layer .modal_layer_inner .layer_close button {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 초성 레이어 팝업 */
+  .layer-btn {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .share_layer .share_layer_inner {
+    position: relative;
+    width: auto;
+    margin: 10px 0 140px;
+    background: #fff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    /*z-index:9001*/
+  }
+
+  .share_layer .share_layer_inner .share_layer_tit {
+    padding: 5%;
+    border-bottom: 3px solid #eeeeee;
+  }
+
+  .share_layer .share_layer_inner .share_layer_tit h4 {
+    font-size: 15px;
+  }
+
+  .share_layer .share_layer_inner .share_pop_cont {
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 87vh;
+  }
+
+  .share_layer .share_layer_inner .share_pop_cont table {
+    border: 1px solid #ccc;
+    font-size: 12px;
+  }
+
+  .share_layer .share_layer_inner .share_pop_cont th,
+  td {
+    border: 1px solid #ccc;
+    padding: 1px;
+  }
+
+  .share_layer .share_layer_inner .share_pop_cont tr td.txt_left {
+    text-align: left;
+  }
+
+  .share_layer .share_layer_inner .share_pop_cont img {
+    width: 100%;
+  }
+
+  .share_layer .share_layer_inner .layer_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: url(/common/images/iot/cont_img/iot_event/new2/pop_close.png) no-repeat;
+    background-size: 100%;
+    font-size: 0;
+  }
+
+  .share_layer .share_layer_inner .layer_close button {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ui_modal_wrap {
+    display: none;
+    position: fixed;
+    inset: 0px;
+    overflow: auto;
+    z-index: 9000;
+  }
+
+  .ui_modal_wrap.on {
+    display: block;
+  }
+
+  .ui_modal_wrap .ui_modal_container {
+    display: block;
+    position: absolute;
+    outline: none;
+    background-clip: padding-box;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 0;
+    width: 90%;
+  }
+
+  .ui_modal_wrap .ui_modal_dim {
+    position: fixed;
+    inset: 0px;
+    background: rgb(0, 0, 0);
+    opacity: 0.6;
+  }
+
+  .popcont img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 상단 공유하기 */
+  .sharing_area {
+    position: absolute;
+    top: 16.667vw;
+    right: 2.778vw;
+    z-index: 4;
+  }
+  .sharing_area ul {
+    display: flex;
+  }
+  .sharing_area ul li {
+    width: 8.889vw;
+    height: 8.889vw;
+  }
+  .sharing_area ul li + li {
+    margin-left: 2.778vw;
+  }
+  .sharing_area ul li button {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  .ui_modal_wrap.share_notice .share_layer {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .ui_modal_wrap.share_notice .share_layer .share_layer_inner {
+    margin: 0;
+  }
+  .ui_modal_wrap.share_notice .share_layer .share_layer_inner .share_layer_tit {
+    height: 52px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border: 0;
+  }
+  .ui_modal_wrap.share_notice .share_layer .share_layer_inner .share_layer_tit h4 {
+    font-size: 16px;
+  }
+  .ui_modal_wrap.share_notice .share_layer .share_layer_inner .layer_close {
+    width: 40px;
+    height: 40px;
+    top: 6px;
+    background: url('https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241227-104610-026-b4hLzxx3.png') no-repeat;
+    background-size: 100%;
+  }
+  .ui_modal_wrap.share_notice .share_layer .share_layer_inner .share_pop_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 30px;
+    padding: 0 20px;
+  }
+  .ui_modal_wrap.share_notice .share_layer .share_layer_inner .share_pop_cont .txt {
+    line-height: 27px;
+  }
+  .ui_modal_wrap.share_notice .share_layer .share_layer_inner .share_pop_cont .txt + .c-btn-group {
+    margin-top: 24px;
+  }
+  .ui_modal_wrap.share_notice .share_layer .share_layer_inner .share_pop_cont .c-btn-group .c-btn-outline-2-m {
+    min-width: 120px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 0 20px;
+    color: #000;
+    border: 1px solid #bbb;
+  }
+
+  /* 팝업 열고 닫았을때 css */
+  .layer-open {
+    overflow: hidden;
+  }
+</style>
+
+<div class="wrap">
+  <!-- 상단 공유하기 영역 -->
+  <div class="sharing_area">
+    <ul>
+      <li>
+        <button id="kakao-share-btn">
+          <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241227-100057-855-VcteXYBA.png" alt="">
+        </button>
+      </li>
+      <li>
+        <button id="url-share-btn" data-layer="event_modal_layer5" onclick="openLayerEvent(this)" title="새창열림">
+          <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241227-100102-859-mtUvlmIx.png" alt="">
+        </button>
+      </li>
+    </ul>
+  </div>
+  <!-- //상단 공유하기 영역 -->
+  
+
+  <div class="event_detail">
+      <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241015-124710-648-yuI6hvpV.png"
+        alt="구매고객이 입증한 최고 퀄리티, 중고폰 구매의 표준" /> 
+  </div>
+
+  <div class="event_detail">
+    <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230524-093102-439-PagWOW8b.png"
+      alt="자세한 내용 하단 참고" />
+    <div class="blind">
+      <p>Galaxy</p>
+      <h3>프리미엄 중고폰 갤럭시 시리즈를 단말구매와 요금제 개통을 한번에!</h3>
+    </div>
+  </div>
+
+  <div class="event_detail">
+    <!-- LIVE -->
+    <a data-route href="https://sflex.us/VsVUcu3?utm_source=device_dp&utm_medium=live_internal&fc=main" target="_blank"
+      title="새 창 열림">
+      <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250117-102715-890-uRyeR9FW.png"
+        style="border:0;" alt="유플러스 LIVE 01.13(월) 18:00~19:00, 신념특집! 프리미엄 중고폰 무상교환 | 보험가능 라이브 단독 체감가 0원부터" />
+    </a>
+    <div class="blind">
+      <h2>유플러스 LIVE 방송 안내</h2>
+      <p>유플러스 LIVE 01.20(월) 12:00~13:00</p>
+      <ul>
+        <li>유플러스 LIVE</li>
+        <li>프리미엄 중고폰 X 버즈 FE</li>
+        <li>무상교환 | 보험가능 <em>라이브 단독 체감가 0원부터</em></li>
+        <li>방송일시 01.20(월) 12:00~13:00</li> 
+      </ul>
+      <ul> 
+        <li>※ 체감가 0원 : 5G 라이트 + 공시지원금</li>
+        <li>+ 혜택 적용 시 S22, 플립4 중고 기기값</li>          
+      </ul>
+      <p>믿을 수 있는 프리미엄 중고폰</p>
+  </div>
+    <!--// LIVE -->
+    <!-- <a data-route class="event_detail_btn2" href="https://sflex.us/NA3EfG5" target="_blank" style="left: 6%; bottom: 17.6%; width: 28%; height: 14%;"
+      data-gtm-event-name = 'link_click' 	
+      data-gtm-event-category = '클릭'	
+      data-gtm-event-action = '이벤트상세 영역 - 버튼 클릭'	
+      data-gtm-event-label = '컨텐츠 : LIVE 방송 보기'	
+      data-gtm-click-url ='https://sflex.us/NA3EfG5'
+      data-gtm-click-location = '이벤트상세 영역'	
+      data-gtm-click-direction ='외부'
+      data-gtm-click-text = 'LIVE 방송 보기'
+    >
+      <span>LIVE 방송 보기 ></span>
+    </a>
+    <a data-route class="event_detail_btn2" href="/mobile/5g-phone/samsung/galaxy-note20-ru-nd/RU-SM-N981ND?dcntKdCd=1&urcMblPpCd=LPZ0000437&mblUrcMenuId=M20833&tabId=POSTSCRIPT"
+      style="left: 35%; bottom: 17.6%; width: 28%; height: 14%;"
+      data-gtm-event-name = 'link_click' 
+      data-gtm-event-category = '클릭'	
+      data-gtm-event-action = '이벤트상세 영역 - 버튼 클릭'	
+      data-gtm-event-label = '컨텐츠 : 구매후기 보기'	
+      data-gtm-click-url ='https://m.lguplus.com/mobile/5g-phone/samsung/galaxy-note20-ru-nd/RU-SM-N981ND?dcntKdCd=1&urcMblPpCd=LPZ0000437&mblUrcMenuId=M20833&tabId=POSTSCRIPT'
+      data-gtm-click-location = '이벤트상세 영역'	
+      data-gtm-click-direction ='내부'
+      data-gtm-click-text = '구매후기 보기'
+    >
+      <span>구매후기 보기 ></span>
+    </a> -->
+  </div>
+
+
+  <!-- Galaxy Z 폴더블 4 시리즈 -->
+  <div class="event_detail" style="margin-bottom:45px;">
+    <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240924-014120-905-NHdSWUFE.png"
+      alt="자세한 내용 하단 참고" />
+
+    <div class="blind">
+      <p>갤럭시 Z 폴더블 4 시리즈</p>
+
+      <p>갤럭시 Z Flip 4 256GB</p>
+      <p>정상판매가 396,500원 &rarr; 구매가격 69,900원</p>
+    </div>
+    <button class="event_detail_btn" onclick="openMobileCnslPopup(); return false;"
+      style="left: 48%; top:40.23%; width: 42%; height: 9vw;" data-gtm-event-name='button_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 버튼 클릭'
+      data-gtm-event-label='컨텐츠 : 갤럭시 Z Flip 4 전화상담 버튼' data-gtm-click-location='이벤트상세 영역'
+      data-gtm-click-text='갤럭시 Z Flip 4 전화상담 버튼'>갤럭시 Z Flip 4 전화상담 버튼</button>
+    <a data-route class="event_detail_btn" href="/mobile/device/samsung/ru-galaxy-zflip4/RU-SM-F721N"
+      style="left: 48%; top:47%; width: 42%; height: 9vw;" data-gtm-event-name='link_click' data-gtm-event-category='클릭'
+      data-gtm-event-action='이벤트상세 영역 - 링크 클릭' data-gtm-event-label='컨텐츠 : 갤럭시 Z Flip 4 구매하기 버튼'
+      data-gtm-click-url='https://m.lguplus.com/mobile/device/samsung/ru-galaxy-zflip4/RU-SM-F721N'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='갤럭시 Z Flip 4 구매하기 버튼'>갤럭시 Z
+      Flip 4 구매하기 버튼</a>
+
+    <div class="blind">
+      <p>갤럭시 Z Fold 4 256GB</p>
+      <p>정상판매가 704,600원 &rarr; 구매가격 378,000원</p>
+    </div>
+    <button class="event_detail_btn" onclick="openMobileCnslPopup(); return false;"
+      style="left: 48%; bottom: 10.3%; width: 42%; height: 9vw;" data-gtm-event-name='button_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 버튼 클릭'
+      data-gtm-event-label='컨텐츠 : 갤럭시 Z Fold 4 전화상담 버튼' data-gtm-click-location='이벤트상세 영역'
+      data-gtm-click-text='갤럭시 Z Fold 4 전화상담 버튼'>갤럭시 Z Fold 4 전화상담 버튼</button>
+    <a data-route class="event_detail_btn" href="/mobile/device/samsung/ru-galaxy-zfold4/RU-SM-F936N"
+      style="left: 48%; bottom: 3.5%; width: 42%; height: 9vw;" data-gtm-event-name='link_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+      data-gtm-event-label='컨텐츠 : 갤럭시 Z Fold 4 구매하기 버튼'
+      data-gtm-click-url='https://m.lguplus.com/mobile/device/samsung/ru-galaxy-zfold4/RU-SM-F936N'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='갤럭시 Z Fold 4 구매하기 버튼'>갤럭시 Z
+      Fold 4 구매하기 버튼</a>
+  </div>
+
+
+  <!-- Galaxy S22 시리즈 -->
+  <div class="event_detail">
+    <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240530-053404-897-be82QidW.jpg"
+      alt="자세한 내용 하단 참고">
+    <div class="blind">
+      <p>Galaxy S22시리즈</p>
+      <!-- S22 -->
+      <p>Galaxy S22 256GB</p>
+      <p>정상판매가 426,100 &rarr; 구매가격 99,500원</p>
+    </div>
+    <button class="event_detail_btn" onclick="openMobileCnslPopup(); return false;"
+      style="left: 48%; top: 22.6%; width: 42%; height: 4%;" data-gtm-event-name='button_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 버튼 클릭' data-gtm-event-label='컨텐츠 : 갤럭시 S22 전화상담 버튼'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-text='갤럭시 S22 전화상담 버튼'>
+      갤럭시 S22 전화상담 버튼
+    </button>
+    <a data-route class="event_detail_btn" href="/mobile/device/samsung/ru-galaxy-s22/RU-SM-S901N"
+      style="left: 48%; top: 27.3%; width: 42%; height: 4%;" data-gtm-event-name='link_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭' data-gtm-event-label='컨텐츠 : 갤럭시 S22 구매하기'
+      data-gtm-click-url='https://www.lguplus.com/mobile/device/samsung/ru-galaxy-s22/RU-SM-S901N'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='갤럭시 S22 구매하기'>
+      갤럭시 S22 구매하기 버튼
+    </a>
+    <div class="blind">
+      <!-- S22+ -->
+      <p>Galaxy S22+ 256GB</p>
+      <p>정상판매가 525,100 &rarr; 구매가격 198,500원</p>
+    </div>
+    <button class="event_detail_btn" onclick="openMobileCnslPopup(); return false;"
+      style="left: 48%; top: 52.8%; width: 42%; height: 4%;" data-gtm-event-name='button_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 버튼 클릭'
+      data-gtm-event-label='컨텐츠 : 갤럭시 S22+ 전화상담 버튼' data-gtm-click-location='이벤트상세 영역'
+      data-gtm-click-text='갤럭시 S22+ 전화상담 버튼'>
+      갤럭시 S22+ 전화상담 버튼
+    </button>
+    <a data-route class="event_detail_btn" href="/mobile/device/samsung/ru-galaxy-s22-plus/RU-SM-S906N"
+      style="left: 48%; top: 57.5%; width: 42%; height: 4%;" data-gtm-event-name='link_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭' data-gtm-event-label='컨텐츠 : 갤럭시 S22+ 구매하기'
+      data-gtm-click-url='https://www.lguplus.com/mobile/device/samsung/ru-galaxy-s22-plus/RU-SM-S906N'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='갤럭시 S22+ 구매하기'>
+      갤럭시 S22+ 구매하기 버튼
+    </a>
+    <div class="blind">
+      <!-- S22 Ultra -->
+      <p>Galaxy S22 Ultra 256GB</p>
+      <p>정상판매가 682,100 &rarr; 구매가격 355,500원</p>
+    </div>
+    <button class="event_detail_btn" onclick="openMobileCnslPopup(); return false;"
+      style="left: 48%; top: 83%; width: 42%; height: 4%;" data-gtm-event-name='button_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 버튼 클릭'
+      data-gtm-event-label='컨텐츠 : 갤럭시 S22 Ultra 전화상담 버튼' data-gtm-click-location='이벤트상세 영역'
+      data-gtm-click-text='갤럭시 S22 Ultra 전화상담 버튼'>
+      갤럭시 S22 Ultra 전화상담 버튼
+    </button>
+    <a data-route class="event_detail_btn" href="/mobile/device/samsung/ru-galaxy-s22-ultra/RU-SM-S908N"
+      style="left: 48%; top: 87.8%; width: 42%; height: 4%;" data-gtm-event-name='link_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+      data-gtm-event-label='컨텐츠 : 갤럭시 S22 Ultra 구매하기'
+      data-gtm-click-url='https://www.lguplus.com/mobile/device/samsung/ru-galaxy-s22-ultra/RU-SM-S908N'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='갤럭시 S22 Ultra 구매하기'>
+      갤럭시 S22 Ultra 구매하기 버튼
+    </a>
+  </div>
+
+
+  <!-- Galaxy S21 시리즈 -->
+  <div class="event_detail">
+    <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241002-033309-977-hCu6NhGz.png"
+      alt="S21 자세한 내용 하단 참고" />
+    <div class="blind">
+      <p>갤럭시 S21 시리즈</p>
+
+      <p>갤럭시 S21 256GB</p>
+      <p>정상판매가 365,200원 &rarr; 구매가격 38,600원</p>
+    </div>
+    <button class="event_detail_btn" onclick="openMobileCnslPopup(); return false;"
+      style="left: 48%; top: 27.99%; width: 42%; height: 9vw;" data-gtm-event-name='button_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 버튼 클릭' data-gtm-event-label='컨텐츠 : 갤럭시 S21 전화상담 버튼'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-text='갤럭시 S21 전화상담 버튼'>갤럭시 S21 전화상담 버튼</button>
+    <a data-route class="event_detail_btn" href="/mobile/5g-phone/samsung/galaxy-s21-ru-nd/RU-SM-G991ND"
+      style="left: 48%; top: 32.7%; width: 42%; height: 9vw;" data-gtm-event-name='link_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭' data-gtm-event-label='컨텐츠 : 갤럭시 S21 구매하기'
+      data-gtm-click-url='https://m.lguplus.com/mobile/5g-phone/samsung/galaxy-s21-ru-nd/RU-SM-G991ND'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='갤럭시 S21 구매하기'>갤럭시 S21 구매하기
+      버튼</a>
+
+    <div class="blind">
+      <p>갤럭시 S21+ 256GB</p>
+      <p>정상판매가 406,450원 &rarr; 구매가격 79,850원</p>
+    </div>
+    <button class="event_detail_btn" onclick="openMobileCnslPopup(); return false;"
+      style="left: 48%; top: 58%; width: 42%; height: 9vw;" data-gtm-event-name='button_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 버튼 클릭'
+      data-gtm-event-label='컨텐츠 : 갤럭시 S21+ 전화상담 버튼' data-gtm-click-location='이벤트상세 영역'
+      data-gtm-click-text='갤럭시 S21+ 전화상담 버튼'>갤럭시 S21+ 전화상담 버튼</button>
+    <a data-route class="event_detail_btn" href="/mobile/5g-phone/samsung/galaxy-s21plus-ru-nd/RU-SM-G996ND"
+      style="left: 48%; top: 63%; width: 42%; height: 9vw;" data-gtm-event-name='link_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+      data-gtm-event-label='컨텐츠 : 갤럭시 S21+ 구매하기 버튼'
+      data-gtm-click-url='https://m.lguplus.com/mobile/5g-phone/samsung/galaxy-s21plus-ru-nd/RU-SM-G996ND'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='갤럭시 S21+ 구매하기 버튼'>갤럭시 S21+
+      구매하기 버튼</a>
+
+    <div class="blind">
+      <p>갤럭시 S21 ultra 256GB</p>
+      <p>정상판매가 583,000원 &rarr; 구매가격 256,400원</p>
+    </div>
+    <button class="event_detail_btn" onclick="openMobileCnslPopup(); return false;"
+      style="left: 48%; top: 88.6%; width: 42%; height: 9vw;" data-gtm-event-name='button_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 버튼 클릭'
+      data-gtm-event-label='컨텐츠 : 갤럭시 S21 Ultra 전화상담 버튼' data-gtm-click-location='이벤트상세 영역'
+      data-gtm-click-text='갤럭시 S21 Ultra 전화상담 버튼'>갤럭시 S21 Ultra 전화상담 버튼</button>
+    <a data-route class="event_detail_btn" href="/mobile/5g-phone/samsung/galaxy-s21ultra-ru-nd/RU-SM-G998ND"
+      style="left: 48%; top: 93.2%; width: 42%; height: 9vw;" data-gtm-event-name='link_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+      data-gtm-event-label='컨텐츠 : 갤럭시 S21 Ultra 구매하기 버튼'
+      data-gtm-click-url='https://m.lguplus.com/mobile/5g-phone/samsung/galaxy-s21ultra-ru-nd/RU-SM-G998ND'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='갤럭시 S21 Ultra 구매하기 버튼'>갤럭시
+      S21 Ultra 구매하기 버튼</a>
+  </div>
+
+  
+  <!-- Galaxy Z 폴더블 3 시리즈 -->
+  <div class="event_detail">
+    <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20241002-033315-954-cqcftPUw.png"
+      alt="자세한 내용 하단 참고" />
+
+    <div class="blind">
+      <p>갤럭시 Z 폴더블 3 시리즈</p>
+
+      <p>갤럭시 Z Flip 3 256GB</p>
+      <p>정상판매가 346,500원 &rarr; 구매가격 19,900원</p>
+    </div>
+    <button class="event_detail_btn" onclick="openMobileCnslPopup(); return false;"
+      style="left: 48%; top:40.23%; width: 42%; height: 9vw;" data-gtm-event-name='button_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 버튼 클릭'
+      data-gtm-event-label='컨텐츠 : 갤럭시 Z Flip 3 전화상담 버튼' data-gtm-click-location='이벤트상세 영역'
+      data-gtm-click-text='갤럭시 Z Flip 3 전화상담 버튼'>갤럭시 Z Flip 3 전화상담 버튼</button>
+    <a data-route class="event_detail_btn" href="/mobile/5g-phone/samsung/RU-zflip3/RU-SM-F711ND"
+      style="left: 48%; top:47%; width: 42%; height: 9vw;" data-gtm-event-name='link_click' data-gtm-event-category='클릭'
+      data-gtm-event-action='이벤트상세 영역 - 링크 클릭' data-gtm-event-label='컨텐츠 : 갤럭시 Z Flip 3 구매하기 버튼'
+      data-gtm-click-url='https://m.lguplus.com/mobile/5g-phone/samsung/RU-zflip3/RU-SM-F711ND'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='갤럭시 Z Flip 3 구매하기 버튼'>갤럭시 Z
+      Flip 3 구매하기 버튼</a>
+
+    <div class="blind">
+      <p>갤럭시 Z Fold 3 256GB</p>
+      <p>정상판매가 594,000원 &rarr; 구매가격 267,400원</p>
+    </div>
+    <button class="event_detail_btn" onclick="openMobileCnslPopup(); return false;"
+      style="left: 48%; bottom: 10.3%; width: 42%; height: 9vw;" data-gtm-event-name='button_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 버튼 클릭'
+      data-gtm-event-label='컨텐츠 : 갤럭시 Z Fold 3 전화상담 버튼' data-gtm-click-location='이벤트상세 영역'
+      data-gtm-click-text='갤럭시 Z Fold 3 전화상담 버튼'>갤럭시 Z Fold 3 전화상담 버튼</button>
+    <a data-route class="event_detail_btn" href="/mobile/5g-phone/samsung/RU-zfold3/RU-SM-F926ND"
+      style="left: 48%; bottom: 3.5%; width: 42%; height: 9vw;" data-gtm-event-name='link_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+      data-gtm-event-label='컨텐츠 : 갤럭시 Z Fold 3 구매하기 버튼'
+      data-gtm-click-url='https://m.lguplus.com/mobile/5g-phone/samsung/RU-zfold3/RU-SM-F926ND'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='갤럭시 Z Fold 3 구매하기 버튼'>갤럭시 Z
+      Fold 3 구매하기 버튼</a>
+  </div>
+
+  <!-- 유의사항 문구 -->
+  <div class="event_detail">
+    <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250107-054244-406-Am0mrlv8.jpg"
+      alt="자세한 내용 하단 참고" />
+      <div class="blind">
+        <ul>
+          <li>- 제공되는 단말은 타사(SKT, KT 등) 중고 단말로 타 통신사의 로고 / 앱이 존재할 수 있습니다.</li>
+          <li>- “구매가격”은 5G 라이트 요금제 이상 가입 시 제공 가격입니다. 제공된 공시 지원금은 요금제에 따라 다를 수 있습니다.</li>
+        </ul>
+      </div>
+      <!-- <button class="event_detail_btn" onclick="javascript:alert('Galaxy S20+ 세종큐비즈 제품은 추후 입고 예정입니다.')" style="left: 48%; top: 48.3%; width: 42%; height: 4.3%;">갤럭시 S20+ 구매하기 버튼</button> -->
+  </div>
+  
+  <!-- 중고폰 구매 혜택 -->
+  <div class="event_detail">
+    <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250106-040206-430-UKBDDoPZ.jpg"
+      alt="자세한 내용 하단 참고" />
+    <div class="blind">
+      <h2><em>중고폰 구매 혜택</em> 신폰과 동일한 혜택 + 중고폰 추가 혜택은 덤~!</h2>
+    </div>
+    <div class="blind">
+      <ul>
+        <li>
+          <h3>악세사리몰 3만원 쿠폰 제공~!(LG U+ 3만원 쿠폰 이미지)</h3>
+          <p>중고폰 구매시, 사은품 중 택1로 제공</p>
+          <p>폰 케이스, 필름 등을 쿠폰으로 구매</p>
+        </li>
+        <li>
+          <h3>내폰을 바로 판매하고, 혜택은 팡팡~!</h3>
+          <p>기간 : 매월1일 ~ 매월 말일</p>
+          <p>대상 : 유플닷컴에서 중고폰 개통하신 고객님</p>
+          <p>조건 : 최종 판매가 10만원 이상의 중고폰 판매 시</p>
+          <p>* 이벤트 상세 내용은 셀로 홈페이지 참고 하세요. 제휴가 이벤트로 매월 변경 될 수 있습니다.</p>
+        </li>
+      </ul>
+    </div>
+    <!-- stg/운영 url 상이 : https://m.lguplus.com/benefit-event/ongoing/81581 -->
+    <a class="event_detail_btn" href="https://mstg.lguplus.com/benefit-event/ongoing/1649"
+    data-gtm-event-name='link_click' data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+    data-gtm-event-label='컨텐츠 : 프리미엄 경품 뽑기 버튼'
+    data-gtm-click-url='https://m.lguplus.com/benefit-event/ongoing/81581'
+    data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='프리미엄 경품 뽑기 버튼'
+    style="width: 62.4%; height: 12.5vw; left: 50%;top:26.2%; transform: translateX(-50%);">
+    <span>프리미엄 경품 뽑기 버튼</span>
+  </a>
+
+    <a class="event_detail_btn" href="/mobile/usim/mgm"
+      data-gtm-event-name='link_click' data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+      data-gtm-event-label='컨텐츠 : 친구추천하러 가기 버튼'
+      data-gtm-click-url='https://www.lguplus.com/mobile/usim/mgm'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='친구추천하러 가기 버튼'
+      style="width: 46.5%; height: 10vw; left: 50%;top:48.3%; transform: translateX(-50%);">
+      <span>친구추천하러 가기 버튼</span>
+    </a>
+    <a class="event_detail_btn" href="/mobile/device/accessory?URC_TRM_MANF_CD=all" target="_blank" title="새 창"
+      data-gtm-event-name='link_click' data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+      data-gtm-event-label='컨텐츠 : 악세서리몰 가기 버튼'
+      data-gtm-click-url='https://www.lguplus.com/mobile/device/accessory?URC_TRM_MANF_CD=all'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='외부' data-gtm-click-text='악세서리몰 가기 버튼'
+      style="width: 46.5%; height: 10vw; left: 50%;top:69%; transform: translateX(-50%);">
+      <span>악세서리몰 가기 버튼</span>
+    </a>
+    <a class="event_detail_btn" href="https://sell-o.kr/events/ucomB2c_f_2025?event=upluscomB2C" target="_blank" title="새 창"
+      data-gtm-event-name='link_click' data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+      data-gtm-event-label='컨텐츠 : Sello 보상 신청하기 버튼' data-gtm-click-url='https://sell-o.kr/events/ucomB2c_f_2025?event=upluscomB2C'
+      data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='외부' data-gtm-click-text='Sello 보상 신청하기 버튼'
+      style="width: 46.5%; height:10vw; left: 50%; bottom:5.1%; transform: translateX(-50%);">
+      <span>Sello 보상 신청하기 버튼</span>
+    </a>
+  </div>
+
+  <!-- 유플러스닷컴에서 사야하는 이유 -->
+  <div class="event_detail">
+    <img src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240925-035547-527-79S8pV9K.jpg"
+      alt="자세한 내용 하단 참고" />
+
+    <div class="blind">
+      <p>당근, 번개 대신 유플러스닷컴에서 사야 하는 이유</p>
+
+      <p>중고폰 구매해도 괜찮을까?</p>
+
+      <p>전문가가 검증한 폰! - 외관, 배터리효율, 기능을 전문 엔지니어가 철저히 검수해 고른 특 A급 중고폰 입니다.</p>
+
+      <p>멀쩡해 보였는데, 한달 뒤 먹통이 되면 어쩌지...</p>
+
+      <p>불량시 구매 후 90일 내 무상 교환! - 구매 후 90일 내 단말기 불량 발생시 동일 모델로 무상 교환해드립니다.</p>
+
+      <p>중고폰 파손 보험으로 든든하게 ~</p>
+
+      <p>“중고폰 보험으로  보다 안심하고 사용 하실 수 있어요” 가입시 보험 선택 가능 (유료보험) ※ 개통후 2일 이내에만 보험 가입가능</p>
+
+      <p>구매는 했는데 어떻게 개통하지?</p>
+
+      <p>복잡한 개통걱정 끝! 유플러스닷컴이라서 가능한 혜택! - 갤럭시폰을 구매와 개통까지 한번에 편하게!</p>
+
+      <p>신폰과 동일한 쇼핑쿠폰팩 혜택도 드려요~</p>
+
+      <p>2년간 매달 채워주는 쇼핑쿠폰팩 - 매월 1회, 최대 7,500원 쿠폰을 받아보세요</p>
+    </div>
+    <a data-route class="event_detail_btn" href="/benefit-event/ongoing/248"
+      style="left: 34.6%; width: 31%; height: 1.23%; bottom: 16.2%;" data-gtm-event-name='link_click'
+      data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭' data-gtm-event-label='컨텐츠 : 쇼핑쿠폰팩 자세히 보기 버튼'
+      data-gtm-click-url='https://m.lguplus.com/benefit-event/ongoing/248' data-gtm-click-location='이벤트상세 영역'
+      data-gtm-click-direction='내부' data-gtm-click-text='쇼핑쿠폰팩 자세히 보기 버튼'>
+      <span>쇼핑쿠폰팩 자세히 보기 버튼</span>
+    </a>
+    <!-- <a class="event_detail_btn" href="javascript:alert('추후 입고 예정입니다.')">제품 구매하기 버튼</a> -->
+    <div class="blind">
+      <p>+ 유심카드 무료 제공 - 신규/번호이동 고객</p>
+      <p>+ 무료배송 - 유플러스닷컴이라서 가능한 무료배송</p>
+    </div>
+  </div>
+
+
+  <!-- 꼭 확인하세요 -->
+  <div class="footerWrap">
+    <h3><img src="/common/images/hphn/event/common/footer_title_m_8px.png" alt="꼭 확인하세요!" style="width:initial;" />
+    </h3>
+
+    <p>[이벤트 유의사항]</p>
+
+    <div class="subDepth">
+      <ul>
+        <li>
+          <p class="subListTitle">1. 해당 이벤트는 당사 사정에 따라 예고없이 조기 종료 또는 변경 될 수 있습니다. (※ 본 이벤트 한정 수량으로 재고 소진시 자동 종료 됩니다.)
+          </p>
+          <p class="subListTitle">2. 제공된 기기별 판매가격 및 공시지원금(휴대폰 가격 할인)은 요금제에 따라 상이 할 수 있으며, 변경 될 수 있습니다.</p>
+          <p class="subListTitle">3. 신규/번호이동 고객만 USIM 무료제공 됩니다.</p>
+          <p class="subListTitle">4. 제공 중고 단말 관련</p>
+          <ul class="subList">
+            <li> eSIM을 통한 가입/개통은 미제공 합니다.(USIM만 가능함)</li>
+            <li> 고객님이 구매한 중고폰은 타사 또는 자급제 중고단말로, 통신사별 규격 차이로 인해 유플러스가 제공하는 하기의 일부 서비스는 미제공 되거나 호환 되지 않을 수 있습니다.</li>
+            <li> 타사 중고폰 특성상, 부팅시 타 통신사(SKT, KT)의 로고 및 어플리케이션(앱)이 존재 할 수 있습니다.</li>
+            <li> 제공 되는 단말은 A급 중고 단말로, 평균 배터리 효율이 80% 이상인 단말 입니다.</li>
+            <li> 중고폰 특성상 단말 파손보험 가입이 불가 할 수 있습니다.</li>
+            <li> 제공 단말외 악세서리(충전기 등)은 기본 제공 되지 않습니다.</li>
+          </ul>
+          <p class="subListTitle">&lt;미제공 서비스&gt;</p>
+          <ul class="subList">
+            <li>듀얼넘버 서비스</li>
+            <li>통화중 대기</li>
+            <li>그룹영상 통화, 채팅 플러스</li>
+            <li>N Real AR Glass, 테더드VR 등</li>
+          </ul>
+          <p class="subListTitle">&lt;기타&gt;</p>
+          <ul class="subList">
+            <li>Pass앱 : 확정 기기 변경 상태가 아닐경우, Pass앱 정책상 서비스 이용이 제한 될수 있습니다.</br>
+              ※ 구매하신 중고폰은 개통시 확정 기변 상태로 출시되나 구매 이후, 확정 기변 상태가 아닐경우 유플러스닷컴 1644-7009로 연락 주시면 변경 하여 드립니다.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <p>[갤럭시 중고폰 유의 사항]</p>
+
+    <div class="subDepth">
+      <ul>
+        <li>1. 불량 시 교환 관련
+          <p>
+            중고 단말의 기능상 주요 불량이 발생할 경우, 개통 후 90일 이내 중고 단말 공급사를 통해 동일 단말 모델로 무상 교환 받으실 수 있습니다.<br />
+            (※ 상세한 내용은 단말 구매 시 동봉된 제품 보증서를 참고 하시면 됩니다.)
+          </p>
+
+          <p class="subListTitle">&lt;결함확인 방법&gt;</p>
+          <p>제조사 공식 서비스 센터 방문하시어 기능 불량 체크 후, 불량으로 확인된 경우 확인증(수리 견적서 등)을 발급받으셔야 합니다.</p>
+
+          <p class="subListTitle">&lt;불량 시 교환 안내&gt;</p>
+          <p>제품 결함이 발생한 경우, 개통 후 90일 이내에 해당 공급사 고객센터로 교환 신청하시면 됩니다.</p>
+
+          <p class="-mt-10 fw-b">미디어로그 고객센터(1644-6468) / 평일 오전 9시~오후18시, 주말 및 공휴일 제외</p>
+
+          <p class="-mt-10" style="text-decoration: underline">구매 휴대폰 상태 사진을 필수로 제출해 주셔야 합니다.</p>
+          <p>※ 메일 발송 후 고객센터 1644-6468로 무상교환 접수해 주셔야 합니다.</p>
+          <ul class="subList">
+            <li>제출 메일 주소: sellocs1@medialogpartners.co.kr</li>
+            <li>메일 제목: 가입자명 / 휴대폰 번호</li>
+            <li>사진 첨부 총 8장 필요</li>
+          </ul>
+          <ul class="-mt-10">
+            <li>① 단말기 앞면 (화면 켜진 상태 1장 / 화면 꺼진 상태 1장) 총 2장</li>
+            <li>② 단말기 뒷면 1장</li>
+            <li>③ 상단/ 하단/ 좌측면/ 우측면 총 4장</li>
+            <li>④ AS센터 수리비 견적서 혹은 불량 확인증 1장</li>
+          </ul>
+
+          <p class="subListTitle">&lt;교환 불가 사항&gt;</p>
+          <ul class="subList">
+            <li>단순 변심에 의한 교환 요청 사항 (색상변경, 생활 기스 등)</li>
+            <li>고객 부주의 및 과실의 경우 (침수/파손/손상 등)</li>
+            <li>고객 임의 분해, 개조, 변조 등으로 인한 파손</li>
+            <li>천재지변(화재, 지진, 수해, 낙뢰)으로 인한 고장 및 손상</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <p>[사용폰 보상받기]</p>
+    <div class="subDepth">
+      <ul>
+        <li>
+          - ‘사용폰 보상받기’ 는 Sello 에서 진행하는 프로모션이며, 상세 보상 조건, 제공 혜택 등은 제휴사 정책에 의거 합니다.
+          해당 프로모션은 제휴사 사정에 따라 조기종료, 변경 될 수 있습니다.
+        </li>
+      </ul>
+    </div>
+    <p>[중고폰 파손 보험 가입 방법]</p>
+    <div class="subDepth">
+      <ul class="subList">
+        <li class="subListTitle">&lt;가입 방법&gt;
+          <ul class="subList">
+            <li>가입 신청서 작성시, 중고폰 파손 보험 선택 하셔서 가입 하시면 됩니다.</li>
+            <li>(유료보험) 상세 내용은 가입시 ‘보험약관’,’자세히보기’를 참고 하시면 됩니다.</li>
+          </ul>
+        </li>
+        <li class="subListTitle">&lt;유의 사항&gt;
+          <ul class="subList">
+            <li>보험사 정책상, 개통후 2일 이내에만 가입 할 수 있습니다.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 레이어 팝업 -->
+  <div class="ui_modal_wrap event_modal event_modal_layer1">
+    <div class="ui_modal_dim"></div>
+    <div class="modal_layer ui_modal_container">
+      <div class="modal_layer_inner">
+        <div class="modal_pop_cont">
+          <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230103-044106-410-QjL9a59l.png"
+            alt="자세한 내용 하단 참고" />
+          <div class="blind">
+            <p>Galaxy</p>
+            <p>프리미엄 중고폰 갤럭시 S20시리즈를 단말구매와 요금제 개통을 한번에!</p>
+          </div>
+          <p class="desc">단말구매가는 다원 트레이드와 세종 큐비즈 모두 동일합니다.<br />
+            원하는 판매사를 선택하세요.</p>
+          <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230103-044116-337-93lomBUm.png"
+            alt="자세한 내용 하단 참고" />
+          <div class="blind">
+            <p>Galaxy S20 128GB</p>
+            <p>정상판매가 : <del>367,000원</del></p>
+            <p>구매가격 : 45,000원</p>
+          </div>
+          <ul>
+            <li>- 제공되는 단말은 타사(SKT, KT 등) 중고 단말로 타 통신사의 로고/앱이 존재할 수 있습니다.</li>
+            <li>- “구매가격”은 5G 라이트 요금제 이상 가입 시 제공 가격입니다.<br />
+              제공된 공시지원금은 요금제에 따라 다를 수 있습니다.</li>
+          </ul>
+          <div class="popup_btn_wrap">
+            <a data-route class="pop_btn_sc" href="/mobile/5g-phone/samsung/galaxy-s20-ru/RU-SM-G981N"
+              data-gtm-event-name='link_click' data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+              data-gtm-event-label='컨텐츠 : 다원 트레이드 제품 구매하기'
+              data-gtm-click-url='https://m.lguplus.com/mobile/5g-phone/samsung/galaxy-s20-ru/RU-SM-G981N'
+              data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='다원 트레이드 제품 구매하기'>
+              <span>다원 트레이드 제품 구매하기 ></span>
+            </a>
+            <a data-route class="pop_btn_sc" href="/mobile/5g-phone/samsung/galaxy-s20-ru-nd/RU-SM-G981ND"
+              data-gtm-event-name='link_click' data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+              data-gtm-event-label='컨텐츠 : 세종 큐비즈 제품 구매하기'
+              data-gtm-click-url='https://m.lguplus.com/mobile/5g-phone/samsung/galaxy-s20-ru-nd/RU-SM-G981ND'
+              data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='세종 큐비즈 제품 구매하기'>
+              <span>세종 큐비즈 제품 구매하기 ></span>
+            </a>
+          </div>
+          <button type="button" class="ui_modal_close" data-reverse="event_modal_open1" onclick="closeLayerEvent(this)">
+            <span class="blind">닫기</span>
+          </button>
+        </div>
+        <div class="layer_close">
+          <button type="button" class="ui_modal_close" data-reverse="event_modal_open1" onclick="closeLayerEvent(this)">
+            <span class="blind">닫기</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui_modal_wrap event_modal event_modal_layer2">
+    <div class="ui_modal_dim"></div>
+    <div class="modal_layer ui_modal_container">
+      <div class="modal_layer_inner">
+        <div class="modal_pop_cont">
+          <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230103-044106-410-QjL9a59l.png"
+            alt="자세한 내용 하단 참고" />
+          <div class="blind">
+            <p>Galaxy</p>
+            <p>프리미엄 중고폰 갤럭시 S20시리즈를 단말구매와 요금제 개통을 한번에!</p>
+          </div>
+          <p class="desc">단말구매가는 다원 트레이드와 세종 큐비즈 모두 동일합니다.<br />
+            원하는 판매사를 선택하세요.</p>
+          <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230103-044125-736-ZyTqKdFM.png"
+            alt="자세한 내용 하단 참고" />
+          <div class="blind">
+            <p>Galaxy S20+ 256GB</p>
+            <p>정상판매가 : <del>428,000원</del></p>
+            <p>구매가격 : 106,000원</p>
+          </div>
+          <ul>
+            <li>- 제공되는 단말은 타사(SKT, KT 등) 중고 단말로 타 통신사의 로고/앱이 존재할 수 있습니다.</li>
+            <li>- “구매가격”은 5G 라이트 요금제 이상 가입 시 제공 가격입니다.<br />
+              제공된 공시지원금은 요금제에 따라 다를 수 있습니다.</li>
+          </ul>
+          <div class="popup_btn_wrap">
+            <a data-route class="pop_btn_sc" href="/mobile/5g-phone/samsung/galaxy-s20-plus-ru/RU-SM-G986N"
+              data-gtm-event-name='link_click' data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+              data-gtm-event-label='컨텐츠 : 다원 트레이드 제품 구매하기'
+              data-gtm-click-url='https://m.lguplus.com/mobile/5g-phone/samsung/galaxy-s20-plus-ru/RU-SM-G986N'
+              data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='다원 트레이드 제품 구매하기'>
+              <span>다원 트레이드 제품 구매하기 ></span>
+            </a>
+            <button class="pop_btn_sc" onclick="javascript:alert('Galaxy S20+ 세종큐비즈 제품은 추후 입고 예정입니다.')">
+              <span>세종 큐비즈 제품 구매하기 ></span>
+            </button>
+            <!-- <a data-route class="pop_btn_sc" href="/mobile/5g-phone/samsung/galaxy-s20-plus-ru-nd/RU-SM-G986ND">
+              <span>세종 큐비즈 제품 구매하기 ></span>
+            </a> -->
+          </div>
+          <button type="button" class="ui_modal_close" data-reverse="event_modal_open1" onclick="closeLayerEvent(this)">
+            <span class="blind">닫기</span>
+          </button>
+        </div>
+        <div class="layer_close">
+          <button type="button" class="ui_modal_close" data-reverse="event_modal_open2" onclick="closeLayerEvent(this)">
+            <span class="blind">닫기</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui_modal_wrap event_modal event_modal_layer3">
+    <div class="ui_modal_dim"></div>
+    <div class="modal_layer ui_modal_container">
+      <div class="modal_layer_inner">
+        <div class="modal_pop_cont">
+          <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230103-044106-410-QjL9a59l.png"
+            alt="자세한 내용 하단 참고" />
+          <div class="blind">
+            <p>Galaxy</p>
+            <p>프리미엄 중고폰 갤럭시 S20시리즈를 단말구매와 요금제 개통을 한번에!</p>
+          </div>
+          <p class="desc">단말구매가는 다원 트레이드와 세종 큐비즈 모두 동일합니다.<br />
+            원하는 판매사를 선택하세요.</p>
+          <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20230105-023050-207-QvYhho1x.jpg"
+            alt="자세한 내용 하단 참고" />
+          <div class="blind">
+            <p>Galaxy S20 Ultra 256GB</p>
+            <p>정상판매가 : <del>500,000원</del></p>
+            <p>구매가격 : 178,000원</p>
+          </div>
+          <ul>
+            <li>- 제공되는 단말은 타사(SKT, KT 등) 중고 단말로 타 통신사의 로고/앱이 존재할 수 있습니다.</li>
+            <li>- “구매가격”은 5G 라이트 요금제 이상 가입 시 제공 가격입니다.<br />
+              제공된 공시지원금은 요금제에 따라 다를 수 있습니다.</li>
+          </ul>
+          <div class="popup_btn_wrap">
+            <a data-route class="pop_btn_sc" href="/mobile/5g-phone/samsung/galaxy-s20ultra-ru/RU-SM-G988N"
+              data-gtm-event-name='link_click' data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+              data-gtm-event-label='컨텐츠 : 다원 트레이드 제품 구매하기'
+              data-gtm-click-url='https://m.lguplus.com/mobile/5g-phone/samsung/galaxy-s20ultra-ru/RU-SM-G988N'
+              data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='다원 트레이드 제품 구매하기'>
+              <span>다원 트레이드 제품 구매하기 ></span>
+            </a>
+            <a data-route class="pop_btn_sc" href="/mobile/5g-phone/samsung/galaxy-s20ultra-ru-nd/RU-SM-G988ND"
+              data-gtm-event-name='link_click' data-gtm-event-category='클릭' data-gtm-event-action='이벤트상세 영역 - 링크 클릭'
+              data-gtm-event-label='컨텐츠 : 세종 큐비즈 제품 구매하기'
+              data-gtm-click-url='https://m.lguplus.com/mobile/5g-phone/samsung/galaxy-s20ultra-ru-nd/RU-SM-G988ND'
+              data-gtm-click-location='이벤트상세 영역' data-gtm-click-direction='내부' data-gtm-click-text='세종 큐비즈 제품 구매하기'>
+              <span>세종 큐비즈 제품 구매하기 ></span>
+            </a>
+          </div>
+          <button type="button" class="ui_modal_close" data-reverse="event_modal_open1" onclick="closeLayerEvent(this)">
+            <span class="blind">닫기</span>
+          </button>
+        </div>
+        <div class="layer_close">
+          <button type="button" class="ui_modal_close" data-reverse="event_modal_open3" onclick="closeLayerEvent(this)">
+            <span class="blind">닫기</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 초성 프로모션 -->
+  <div class="ui_modal_wrap event_modal event_modal_layer4" tabindex="0">
+    <div class="ui_modal_dim ui_modal_close" data-reverse="event_modal_open4" onclick="closeLayerEvent(this)">&nbsp;
+    </div>
+    <div class="share_layer ui_modal_container">
+      <div class="share_layer_inner">
+        <div class="share_layer_tit">
+          <h4>액세서리몰 3만원 쿠폰</h4>
+          <div class="layer_close">
+            <button type="button" class="ui_modal_close" data-reverse="event_modal_open4"
+              onclick="closeLayerEvent(this)">
+              <span class="blind">닫기</span>
+            </button>
+          </div>
+        </div>
+        <div class="share_pop_cont">
+          <div class="popcont">
+            <img
+              src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20240223-050715-669-6iFw2ASQ.jpg"
+              alt="">
+            <div class="blind">
+              <p>U+ 공식온라인 스토어</p>
+              <h3>액세서리몰</h3>
+              <p>휴대폰 구매 시 필요한 용품부터 생활용품까지!<em>특가</em>로 만나보세요!</p>
+              <ul>
+                <li>케이스</li>
+                <li>액정 보호 필름</li>
+                <li>충전기기</li>
+                <li>음향기기</li>
+                <li>생활용품</li>
+              </ul>
+              <h4>쿠폰 유의사항</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 게시물 URL 복사팝업 -->
+  <div class="ui_modal_wrap share_notice event_modal event_modal_layer5">
+    <div class="ui_modal_dim ui_modal_close" data-reverse="event_modal_open5" onclick="closeLayerEvent(this)">&nbsp;
+    </div>
+    <div class="share_layer ui_modal_container">
+      <div class="share_layer_inner">
+        <div class="share_layer_tit">
+          <h4>공유하기</h4>
+          <div class="layer_close">
+            <button type="button" class="ui_modal_close" data-reverse="event_modal_open4"
+              onclick="closeLayerEvent(this)">
+              <span class="blind">닫기</span>
+            </button>
+          </div>
+        </div>
+        <div class="share_pop_cont">
+          <div class="popcont">
+            <p class="txt">클립보드에 복사되었습니다.<br>원하는 곳에 붙여넣기(ctrl+V)하세요.</p>
+            <div class="c-btn-group">
+              <button class="c-btn-outline-2-m" onclick="closeLayerEvent(this)">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //레이어 팝업 -->
+</div>
+
+
+<!-- <script src="https://developers.kakao.com/sdk/js/kakao.js"></script> -->
+<script>
+  (function (window) {
+    // script 태그 추가
+    const script = document.createElement("script");
+    script.src =
+      "https://developers.kakao.com/sdk/js/kakao.js";
+    document.head.appendChild(script);
+    
+
+    // 레이어 팝업
+    function openLayerEvent(target) {
+      var targetLayer = '.event_modal.' + target.getAttribute('data-layer')
+      var elemLayer = document.querySelector(targetLayer)
+      var on = 'on'
+      elemLayer.classList.add(on)
+      elemLayer.setAttribute('tabindex', 0)
+      elemLayer.focus();
+      document.body.classList.add("layer-open");
+    }
+
+    function closeLayerEvent(target) {
+      var elemLayer = target.closest('.event_modal')
+      var reverse = '.' + target.getAttribute('data-reverse')
+      var reverseBt = document.querySelector(reverse)
+      var on = 'on'
+      elemLayer.classList.remove(on)
+      elemLayer.removeAttribute('tabindex')
+      // reverseBt.focus();
+      document.body.classList.remove("layer-open");
+    }
+
+
+    // 초기화 변수 설정
+    let isKeyInitialized = false;
+
+    // 카카오톡 공유 함수
+    function goKakaoTalk() {
+      // 카카오 초기화
+      if (!isKeyInitialized) {
+        Kakao.init('d31ffd487de87fc8ffdfc7557cef21c0'); // 개발자 키로 대체하세요.
+        isKeyInitialized = true;
+      }
+
+      // 공유할 데이터
+      const objectType = 'feed'; // 'feed' 또는 'text'로 설정
+      const title = '중고폰 갤럭시 시리즈의 특별혜택';
+      const description = '새폰과 같은 구매 혜택';
+      const imageUrl = 'https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20241231-010948-469-lE0Mvabx.jpg'; // 이미지 URL
+      const linkUrl = 'https://m.lguplus.com/benefit-event/ongoing/239'; // 공유할 링크
+
+      if (objectType === 'feed') {
+        Kakao.Link.sendDefault({
+          objectType: 'feed',
+          content: {
+            title: title,
+            description: description,
+            imageUrl: imageUrl,
+            link: {
+              mobileWebUrl: linkUrl,
+              webUrl: linkUrl,
+            },
+          },
+        });
+      } else {
+        Kakao.Link.sendDefault({
+          objectType: 'text',
+          text: title,
+          link: {
+            mobileWebUrl: linkUrl,
+            webUrl: linkUrl,
+          },
+        });
+      }
+    }
+
+    // 버튼 클릭 이벤트 추가
+    const kakaoShareBtn = document.getElementById('kakao-share-btn');
+    kakaoShareBtn.addEventListener('click', (event) => {
+      event.preventDefault(); // 기본 동작 방지
+      goKakaoTalk(); // 공유 함수 호출
+    });
+
+
+    function onCopyClipboard() {
+      const currentUrl = window.location.href;
+
+      // 임시로 textarea 생성하여 URL을 복사
+      const textarea = document.createElement('textarea');
+      textarea.value = currentUrl;
+      document.body.appendChild(textarea);
+      textarea.select(); // 텍스트 선택
+      document.execCommand('copy'); // 복사 실행
+      document.body.removeChild(textarea); // textarea 제거
+
+      // 복사 완료 메시지 출력
+      // alert('URL이 클립보드에 복사되었습니다!');
+    }
+
+    // 버튼 클릭 이벤트 추가
+    const urlShareBtn = document.getElementById('url-share-btn');
+    urlShareBtn.addEventListener('click', (event) => {
+      event.preventDefault(); // 기본 동작 방지
+      onCopyClipboard(); // 복사 함수 호출
+      openLayerEvent(urlShareBtn); // 복사 완료팝업 호출
+    });
+
+
+    //전화상담 팝업
+    function openMobileCnslPopup() {
+      const props = {
+        title: '전화상담', // 팝업 타이틀과 버튼명에 들어가는 텍스트
+        urcCnslRqstTmptId: 'TG00000033', // 사용하고자하는 템플릿 번호 (템플릿에 따라 사용자 입력 필드 노출 여부가 달라집니다. 사용자 입력 필드 노출을 하고 싶을 경우 BO 템플릿을 새로 만드시거나, 기존 템플릿에 추가하셔야 합니다.)
+        appfLednDivsCd: '09', // 신청서인입구분코드 (01: 유플러스닷컴, 02: 프로모션, 03: 챗봇, 04: 자급제폰주문, 05: 불용폰, 06: 카카오비즈폼, 07: 라방, 08: 라이프케어, 09: 유플닷컴이벤트)
+        eventTitle: '중고폰 갤럭시 시리즈' //이벤트 타이틀명 전달 필요 (23.02.08 수정)
+      };
+
+      externalServices.dispatchMessageEvent('EventTelMobileCnslPopup', props);
+    }
+    // 중고폰 전화상담 템플릿ID stg TG00000033 / 운영 TG00000028
+
+    // 전역 스코프 (window)에 필요한 함수들을 바인딩합니다.
+    window.openLayerEvent = openLayerEvent;
+    window.closeLayerEvent = closeLayerEvent;
+    window.openMobileCnslPopup = openMobileCnslPopup;
+    window.goKakaoTalk = goKakaoTalk;
+  })(window);
+</script>
+<!-- stg/운영기 상이 -->
+<!-- //MW -->
