@@ -1,0 +1,871 @@
+<!-- MW -->
+<link
+  rel="stylesheet"
+  as="style"
+  crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+/>
+<style type="text/css">
+  button:focus:not(.focus-visible),
+  button:focus:not(:focus-visible) {
+    outline: 0 !important;
+  }
+
+  .new_evt_wrap {
+    position: relative;
+  }
+
+  .new_evt_wrap .section {
+    position: relative;
+  }
+
+  .new_evt_wrap img {
+    display: block;
+    margin-top: -1px;
+  }
+
+  .section a,
+  .section button {
+    display: inline-block;
+    z-index: 2;
+  }
+
+  .section.bg_00 {
+    background: #f8f8f8;
+  }
+
+  .event_detail_btn {
+    display: block;
+    position: absolute;
+    text-indent: -999999px;
+    overflow: hidden;
+  }
+
+  .btn_evt-wrap .event_detail + .event_detail {
+    margin-top: 8px;
+  }
+
+  /* 디테일 토글 */
+  .detail_view {
+    background: #051b48;
+  }
+
+  .detail_view .acco_btnwrap {
+    text-align: center;
+  }
+
+  .detail_view .acco_btnwrap .acco_detail_btn {
+    /* margin-top: 60px; */
+    width: 100%;
+    height: 61px;
+    background: #22338f;
+    border-radius: 9999px;
+    color: #fff;
+    text-align: left;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 68.8%;
+    padding: 14px 14px 14px 34px;
+    box-sizing: border-box;
+  }
+
+  .detail_view .acco_btnwrap .acco_detail_btn p {
+    position: relative;
+    display: block;
+    width: 70%;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.96px;
+    top: -1px;
+  }
+
+  .detail_view .acco_btnwrap .acco_detail_btn .ico {
+    width: 44px;
+    height: 44px;
+    background: #ff3e73;
+    position: relative;
+    border-radius: 50%;
+  }
+
+  .detail_view .acco_btnwrap .acco_detail_btn .ico::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M1.5 1L6.74988 6L12.5001 1.2439' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 21px;
+    height: 12px;
+    background-size: contain;
+  }
+
+  .detail_view .acco_btnwrap .on .ico::after {
+    transform: translate(-50%, -63%) rotate(180deg);
+  }
+
+  .detail_view .acco_detail {
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+  }
+
+  .detail_view .acco_detail.show {
+    max-height: 1000px;
+    /* 충분한 크기로 설정 (요소가 실제로 열린 높이에 따라 조정) */
+  }
+
+  /* 유의사항 */
+  .footerWrap {
+    background: #434446;
+    padding: 39px 16px;
+  }
+
+  .footerWrap h3 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    padding: 0 10px 10px;
+  }
+
+  .footerWrap .depth_anchor {
+    font-size: 13px;
+    color: #637cda;
+    display: inline-block;
+    margin: 3px 0 5px;
+    border-bottom: 1px solid #637cda;
+  }
+
+  .acType .ui-accordion {
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .acType .titType {
+    position: relative;
+    width: 100%;
+    display: block;
+    font-size: 13px;
+    color: #dedede;
+    padding: 16px 0 16px 10px;
+    border-bottom: 1px solid #8e8583;
+    box-sizing: border-box;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .acType .titType:first-child {
+    border-top: 1px solid #5d6164;
+  }
+
+  .acType .titType:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220526-031420-695-csuo3I7a.png)
+      no-repeat 50% 50%;
+    width: 15px;
+    height: 15px;
+  }
+
+  .acType .titType span {
+    text-indent: -10px;
+    padding-left: 10px;
+  }
+
+  .acType .titType.active:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    background: url(https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220526-031403-132-d9oOmJNi.png)
+      no-repeat 50% 50%;
+    background-size: 100%;
+    width: 15px;
+    height: 15px;
+  }
+
+  .acType .titType.mul {
+    line-height: 1.3em;
+  }
+
+  .acType .titType.mul:before,
+  .acType .titType.active.mul:before {
+    top: 25px;
+  }
+
+  .acType .titType.active {
+    border-bottom: none;
+    color: #fff;
+  }
+
+  .acType .subDepth {
+    display: none;
+    padding: 20px 10px 20px 28px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fafafa;
+    border-bottom: 1px solid #756966;
+    box-sizing: border-box;
+  }
+
+  .acType .subDepth ul {
+    font-size: 13px;
+  }
+
+  .acType .subDepth ul > li {
+    position: relative;
+    margin-left: -10px;
+    word-break: break-all;
+  }
+
+  .acType .subDepth ul > li + li {
+    margin-top: 6px;
+  }
+
+  .acType .subDepth ul > li:before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 1px;
+    top: 9px;
+    left: -7px;
+    background-color: #fafafa;
+  }
+
+  /* 플로팅배너 */
+  .float_area {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(27, 27, 27, 0.8);
+    padding: 13px 0;
+    z-index: 2;
+    display: flex;
+  }
+
+  .float_area a {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: initial;
+    flex: 1;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    position: relative;
+  }
+
+  .float_area a + a:before {
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: #7f7f7f;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .float_area a strong {
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 18px;
+    padding-left: 48px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .float_area a strong:before {
+    content: "";
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    box-shadow: 2px 3px 5px 0px rgb(0 0 0 / 20%);
+  }
+
+  .float_area a strong.flt_btn_mainCall:before {
+    background: #ef1194 url("/common/images/hsvc/comm/ico_m_callMain_btn_new.png") no-repeat top 11px left 10px;
+    background-size: 20px;
+  }
+
+  .float_area a strong.flt_btn_chat:before {
+    background: #ef1194 url("/common/images/hsvc/comm/ico_call_btn_new.png") no-repeat top 11px left 10px;
+    background-size: 20px;
+  }
+
+  .float_area a strong.flt_btn_cnl:before {
+    background: #ef1194 url("/common/images/hsvc/comm/ico_m_reag_btn_new.png") no-repeat top 11px left 10px;
+    background-size: 20px;
+  }
+
+  .float_area a strong.flt_btn_esim:before {
+    background: #ef1194
+      url("https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240222-095108-042-kGiKliXH.png")
+      no-repeat 50% 50%;
+    background-size: 15px auto;
+  }
+
+  .-mt-8 {
+    margin-top: 8px !important;
+  }
+  .-mt-15 {
+    margin-top: 15px !important;
+  }
+
+  .-mt-30 {
+    margin-top: 30px !important;
+  }
+
+  .-pt-60 {
+    padding-top: 60px !important;
+  }
+
+  .-pb-60 {
+    padding-bottom: 60px !important;
+  }
+</style>
+
+<div>
+  <div class="new_evt_wrap">
+    <!-- kv -->
+    <div class="section">
+      <img
+        src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250122-052025-661-b7jMoolo.jpg"
+        alt="하단 내용 참조"
+      />
+      <div class="blind">
+        <p>유플러스닷컴, U+ 공식 온라인 스토어</p>
+        <h3>신학기가 되었으니 자녀에게 새 번호 개통은 필수!</h3>
+
+        <p>(아이들이 핸드폰을 들고 신나게 뛰어들어오는 이미지)</p>
+
+        <p>2025년 2월1일(토)~2월28일(금)</p>
+        <p>USIM/eSIM으로 키즈/청소년 요금제 개통한 고객님께</p>
+        <p>교촌치킨 교환권 (3만원 상당) 총 2매 드려요</p>
+
+        <p>대상요금제</p>
+        <p>- 5G 라이트 청소년, 5G 키즈 45, 39, 29</p>
+        <p>- (LTE) 추가 요금 걱정 없는 데이터 청소년 69, 59, 33</p>
+        <p>- LTE 키즈 22</p>
+
+        <p>(신학기 맞이 유심 신청하러 가기 버튼)</p>
+
+        <p>신학기 준비도 유플닷컴과 함께 하세요</p>
+        <p>2개월 간 치킨교환권 (3만원 상당) 2매 100% 증정!</p>
+
+        <p>(교촌치킨 허니콤보웨지감자세트 이미지)</p>
+      </div>
+
+      <a
+        class="event_detail_a"
+        href="https://m.lguplus.com/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-LTE&usimYn=N&cPlan=LPZ0002473"
+        style="
+          position: absolute;
+          top: 60.6%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 331px;
+          height: 63px;
+          text-indent: -9999px;
+        "
+        data-gtm-event-name="link_click"
+        data-gtm-event-category="클릭"
+        data-gtm-event-action="이벤트상세 영역- 링크 클릭"
+        data-gtm-event-label="컨텐츠 : 바로가기"
+        data-gtm-click-url="https://m.lguplus.com/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-LTE&usimYn=N&cPlan=LPZ0002473"
+        data-gtm-click-location="이벤트상세 영역"
+        data-gtm-click-direction="내부"
+        data-gtm-click-text="바로가기"
+      >
+        <span>신학기 맞이 유심 신청하러 가기</span>
+      </a>
+    </div>
+    <!-- //kv -->
+
+    <!-- 유의사항 영역 -->
+    <div class="footerWrap">
+      <h3>꼭 확인하세요!</h3>
+      <div class="acType">
+        <div id="accordion" class="accordions_conts_wrap">
+          <button class="titType" aria-controls="_accordion_001" aria-expanded="false" onclick="accordianClick(this)">
+            유의사항
+          </button>
+          <div id="_accordion_001" class="subDepth">
+            <ul>
+              <li>유플러스 닷컴에서 가입할 수 있는 전용 요금제 입니다.</li>
+              <li>eSIM 가입신청 가능한 휴대폰 리스트는 유플러스닷컴을 통해 확인 가능합니다.</li>
+              <li>
+                공시지원금(휴대폰 가격할인), 선택약정할인(통신료 25%할인) 등 약정할인 혜택을 받고 있지 않은 고객만
+                가입할 수 있습니다. (약정이 있을 경우, 약정을 해지해야 가입 가능함)
+              </li>
+              <li>참 쉬운 가족 결합이 가능합니다. (LTE 다이렉트22 제외)</li>
+              <li>다이렉트 요금제로 참 쉬운 가족 결합 시 쇼핑쿠폰팩이 지급되지 않습니다. (매월 말일 기준)</li>
+              <li>프로모션 및 특별혜택에 대한 상세내용은 유플러스닷컴을 통해 확인 가능합니다.</li>
+              <li>
+                제공되는 혜택은 제휴사 또는 당사 사정에 따라 변경될 수 있습니다. 변경되는 경우, 1개월 전 고객센터 앱,
+                문자메시지, 청구서, U+홈페이지 등을 통해 안내해 드립니다.
+              </li>
+              <li>유플러스닷컴 외의 판매채널에서 기기 변경시 요금제를 유지하실 수 없습니다.</li>
+              <li>
+                프로모션 혜택이 제공되는 기간 동안 서비스를 해지하거나 타 요금제로 변경할 경우 혜택이 중단됩니다.
+                (프로모션 해당 요금제간의 변경은 혜택 제공)
+              </li>
+            </ul>
+          </div>
+          <button class="titType" aria-controls="_accordion_002" aria-expanded="false" onclick="accordianClick(this)">
+            교촌치킨 허니콤보웨지감자세트 증정 혜택 안내
+          </button>
+          <div id="_accordion_002" class="subDepth">
+            <ul>
+              <li>
+                경품 대상자의 경우 2/1~2/28 이벤트 기간 내 키즈/청소년 요금제 유심/eSIM 가입 완료한 고객에게 지급됩니다.
+                <br />[5G 라이트 청소년, 5G 키즈 45, 39, 29 (LTE) 추가 요금 걱정 없는 데이터 청소년 69, 59, 33 , LTE
+                키즈 22]
+              </li>
+              <li>
+                2024년 3월 31일 , 4월 30일까지 회선 정상 유지 시 지급 대상이 됩니다. (일시정지/해지/연체/미납고객 /
+                유심,eSIM 가입 후 기기변경 고객 제외)
+              </li>
+              <li>
+                고객님께서 개통한 휴대폰 번호를 통해 25년 3월 31일 , 25년 4월 30일 당첨자에게 개별적으로 경품 지급 안내
+                연락을 드립니다.
+              </li>
+              <li>경품은 부득이한 경우 해당 경품과 동일한 금액의 상품권으로 변경될 수 있습니다.</li>
+              <li>당첨자의 경품 수령자는 동일해야 하며, 경품 양도는 불가합니다.</li>
+              <li>
+                타인의 명의를 도용하여 부정 인증을 시도한 경우 관련 법령에 따라 처벌(3년 이하의 징역 또는 1천만원 이하의
+                벌금형)을 받을 수 있습니다.
+              </li>
+              <li>
+                타인의 개인정보 도용, 컴퓨터 프로그램 등을 이용한 응모 등 부정한 방법으로 이벤트에 참여하는 경우 당첨이
+                취소됩니다.
+              </li>
+              <li>
+                상시 내용은 당사 사정에 의해 사전 예고없이 종료될 수 있으며, 이벤트 기간이 지난 경우 지급 대상에서
+                제외됩니다.
+              </li>
+              <li>
+                이용 중인 휴대폰에 스팸 설정이 되어 있는 경우, 경품 대행사의 당첨 및 배송 안내 연락을 받지 못할 수
+                있습니다.
+              </li>
+              <li>프로모션 해당 요금제 간의 변경은 지급 가능합니다.</li>
+            </ul>
+          </div>
+          <button class="titType" aria-controls="_accordion_003" aria-expanded="false" onclick="accordianClick(this)">
+            유심 / eSIM 가입
+          </button>
+          <div id="_accordion_003" class="subDepth">
+            <ul>
+              <li>유심/eSIM 가입 신청은 신규가입, 번호이동만 가능합니다.</li>
+              <li>
+                심가입 신청하시면 신청내역 확인 및 개통 안내를 위해 유플러스닷컴 고객센터에서 전문 상담사가 고객님께
+                전화를 드립니다.
+              </li>
+              <li>셀프개통으로 가입 신청하실 경우, 별도 안내 전화없이 바로 유심 배송이 진행됩니다.</li>
+              <li>유심가입 관련된 궁금하신 사항은 전문 상담사에게 문의해 주시기 바랍니다. (1644-7009)</li>
+              <li>단말기는 유심카드를 받고 기기에 넣어야 사용할 수 있습니다.</li>
+              <li>
+                신규가입 시 유심은 개통된 유심을 1~2일 내에 받을 수 있으며, 번호이동은, 유심을 배송받은 후 고객센터
+                (1644-7009)를 통해 별도 개통요청을 주시면 됩니다.
+              </li>
+              <li>미납, 연체, 정지, 일시 정지 중에는 개통할 수 없습니다.</li>
+              <li>개인 고객만 가능합니다.</li>
+              <li>5G 요금제의 경우 전국망 구축 전까지 미구축 지역에서는 LTE로 이용됩니다.</li>
+              <li>단말기 종류 및 상태에 따라 LG U+주요 서비스가 이용되지 않을 수 있습니다.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //유의사항 영역 -->
+
+    <!-- 하단 배너 영역 -->
+    <div class="btn_evt-wrap -mt-8">
+      <!-- 다이렉트 -->
+      <div class="event_detail">
+        <a
+          data-route
+          href="https://m.lguplus.com/benefit-event/ongoing/81325"
+          data-gtm-event-name="link_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="중단배너 영역 - 링크 클릭"
+          data-gtm-event-label="컨텐츠 : U+다이렉트와 함께 혜택 뉴이어 네이버페이부터 OTT팩을 한 번에! 혜택 받기"
+          data-gtm-click-url="https://m.lguplus.com/benefit-event/ongoing/81325"
+          data-gtm-click-location="중단배너 영역"
+          data-gtm-click-direction="내부"
+          data-gtm-click-text="U+다이렉트와 함께 혜택 뉴이어 네이버페이부터 OTT팩을 한 번에! 혜택 받기"
+        >
+          <img
+            src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20250122-052050-402-lkMaShoy.jpg"
+            alt="하단 참조"
+          />
+          <div class="blind">
+            <p>U+다이렉트와 함께</p>
+            <p>혜택 뉴이어</p>
+            <span>네이버페이부터 OTT팩을 한 번에!</span>
+            <span>혜택 받기</span>
+          </div>
+        </a>
+      </div>
+      <!-- END 다이렉트 -->
+
+      <div class="event_detail">
+        <a
+          data-route
+          href="https://m.lguplus.com/benefit-event/ongoing/80920"
+          data-gtm-event-name="link_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="중단배너 영역 - 링크 클릭"
+          data-gtm-event-label="컨텐츠 : 요금은 더 알뜰!혜택은 더 많이! 알뜰 보다 더 알뜰한 5G 다이렉트 혜택 받기"
+          data-gtm-click-url="https://m.lguplus.com/benefit-event/ongoing/80920"
+          data-gtm-click-location="중단배너 영역"
+          data-gtm-click-direction="내부"
+          data-gtm-click-text="요금은 더 알뜰!혜택은 더 많이! 알뜰 보다 더 알뜰한 5G 다이렉트 혜택 받기"
+        >
+          <img
+            src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240718-042639-982-0jbMAz91.png"
+            alt="하단 참조"
+          />
+          <!-- <img
+                src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240711-092210-228-rHBo7eCk.jpg"
+                alt="하단 참조"
+              /> 6만 -->
+          <div class="blind">
+            <p>요금은 더 알뜰! 혜택은 더 많이!</p>
+            <p>3만원대 갓성비! 더 알뜰한 5G 다이렉트</p>
+            <p>네이버페이 총 6만원(월 1만원 X 6개월)</p>
+            <p>5G 다이렉트37.5 쇼핑쿠폰백 1,000원 (요기요, GS25)</p>
+            <span>혜택 받기</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 자급제폰 -->
+      <div class="event_detail">
+        <a
+          data-route
+          href="https://m.lguplus.com/mobile/direct-smart-device/mem-rate"
+          data-gtm-event-name="link_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="중단배너 영역 - 링크 클릭"
+          data-gtm-event-label="컨텐츠 : 기존 LGU+ 고객님 주목! 최대 31% 쓰던 번호 그대로 알뜰한 다이렉트 요금제 혜택을! 자급제폰 등록 & 가입하기"
+          data-gtm-click-url="https://m.lguplus.com/mobile/direct-smart-device/mem-rate"
+          data-gtm-click-location="중단배너 영역"
+          data-gtm-click-direction="내부"
+          data-gtm-click-text="기존 LGU+ 고객님 주목! 최대 31% 쓰던 번호 그대로 알뜰한 다이렉트 요금제 혜택을! 자급제폰 등록 & 가입하기"
+        >
+          <img
+            src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240312-104528-954-BQ8ODub4.jpg"
+            alt="하단 참조"
+          />
+          <div class="blind">
+            <p>기존 LGU+ 고객님 주목! 최대 31%</p>
+            <p>쓰던 번호 그대로 알뜰한 다이렉트 요금제 혜택을!</p>
+            <span>자급제폰 등록 &amp; 가입하기</span>
+          </div>
+        </a>
+      </div>
+      <!-- 121 -->
+      <div class="event_detail">
+        <a
+          data-route
+          href="https://m.lguplus.com/benefit-event/ongoing/121"
+          data-gtm-event-name="link_click"
+          data-gtm-event-category="클릭"
+          data-gtm-event-action="중단배너 영역 - 링크 클릭"
+          data-gtm-event-label="컨텐츠 : 잠깐! 인터넷 다이렉트 요금제도 있어요. 2030만을 위한 1년 약정+1만원대 요금 자세히 보기"
+          data-gtm-click-url="https://m.lguplus.com/benefit-event/ongoing/121"
+          data-gtm-click-location="중단배너 영역"
+          data-gtm-click-direction="내부"
+          data-gtm-click-text="잠깐! 인터넷 다이렉트 요금제도 있어요. 2030만을 위한 1년 약정+1만원대 요금 자세히 보기"
+        >
+          <img
+            src="https://image.lguplus.com/static/mb-contents/images/fcmm/cnts/imge/20240312-104624-161-FOQ8wd1O.jpg"
+            alt="하단 참조"
+          />
+          <div class="blind">
+            <p>잠깐! 인터넷 다이렉트 요금제도 있어요</p>
+            <p>2030만을 위한 1년 약정+1만원대 요금</p>
+            <span>자세히 보기</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- //하단 배너 영역 -->
+
+    <!-- 플로팅 버튼 -->
+    <div class="float_area">
+      <a
+        data-route
+        href="javascript:void(0)"
+        onclick="openMobileCnslPopup(); return false;"
+        data-gtm-event-name="link_click"
+        data-gtm-event-category="클릭"
+        data-gtm-event-action="플로팅 영역 - 링크 클릭"
+        data-gtm-event-label="컨텐츠 : 상담예약하기"
+        data-gtm-click-url=""
+        data-gtm-click-location="플로팅 영역"
+        data-gtm-click-direction="유심"
+        data-gtm-click-text="상담예약하기"
+      >
+        <strong class="flt_btn_chat">상담<br />예약하기</strong>
+      </a>
+      <a
+        data-route
+        href="/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&usimYn=N&cPlan=LPZ0002811"
+        data-gtm-event-name="link_click"
+        data-gtm-event-category="클릭"
+        data-gtm-event-action="플로팅 영역 - 링크 클릭"
+        data-gtm-event-label="컨텐츠 : 5G 신규 가입"
+        data-gtm-click-url="https://m.lguplus.com/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-5G&usimYn=N&cPlan=LPZ0002811"
+        data-gtm-click-location="플로팅 영역"
+        data-gtm-click-direction="유심"
+        data-gtm-click-text="5G 신규 가입"
+      >
+        <strong class="flt_btn_cnl">5G<br />신규 가입</strong>
+      </a>
+      <a
+        data-route
+        class="flt_btn_esim"
+        href="/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-LTE&usimYn=N&cPlan=LPZ0002473"
+        data-gtm-event-name="link_click"
+        data-gtm-event-category="클릭"
+        data-gtm-event-action="플로팅 영역 - 링크 클릭"
+        data-gtm-event-label="컨텐츠 : LTE 신규 가입"
+        data-gtm-click-url="https://m.lguplus.com/mobile/new-usim/activate?regType=bgnEntr&selfYn=false&dvicType=U-LTE&usimYn=N&cPlan=LPZ0002473"
+        data-gtm-click-location="플로팅 영역"
+        data-gtm-click-direction="유심"
+        data-gtm-click-text="LTE 신규 가입"
+      >
+        <strong class="flt_btn_esim">LTE<br />신규 가입</strong>
+      </a>
+    </div>
+    <!-- //플로팅 버튼 -->
+  </div>
+</div>
+
+<script>
+  (function (window) {
+    function accordianClick(target) {
+      var parent = target.closest("#accordion");
+      var titTypes = parent.querySelectorAll(".titType");
+      var subDepths = parent.querySelectorAll(".subDepth");
+      var content = target.nextElementSibling;
+      var on = "ui-state-active";
+      var re = new RegExp(on);
+      var checkActive = re.test(target.className);
+
+      if (checkActive) {
+        target.classList.remove(on);
+        content.style.display = "none";
+      } else {
+        titTypes.forEach(function (titType) {
+          titType.classList.remove(on);
+        });
+        subDepths.forEach(function (subDepth) {
+          subDepth.style.display = "none";
+        });
+        target.classList.add(on);
+        content.style.display = "block";
+      }
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      window.scrollTo(0, 0);
+    });
+    setTimeout(function () {
+      //console.log(window.evtDetailSwiperIns)
+      if (window.evtDetailSwiperIns) {
+        window.evtDetailSwiperIns.destroy();
+        window.evtDetailSwiperIns = null;
+      }
+      window.evtDetailSwiperIns = new Swiper(".swiper-e-coverflow .swiper-container", {
+        // Optional parameters
+        loop: false,
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-e-coverflow .swiper-button-next",
+          prevEl: ".swiper-e-coverflow .swiper-button-prev",
+        },
+      });
+    }, 2000);
+
+    function tabsClick(target) {
+      var parent = target.closest(".tabs_conts_wrap");
+      var tabsBtns = parent.querySelectorAll(".tabs_detail_a");
+      var tabsConts = parent.querySelectorAll(".tabs_conts");
+      var on = "on";
+      var content = target.nextElementSibling;
+      var targetIdx = target.getAttribute("data-idx") - 1;
+
+      tabsBtns.forEach(function (tabsBtn, idx) {
+        if (targetIdx === idx) {
+          target.classList.add(on);
+          target.setAttribute("aria-selected", true);
+        } else {
+          tabsBtn.classList.remove(on);
+          tabsBtn.setAttribute("aria-selected", false);
+        }
+      });
+      tabsConts.forEach(function (tabsCont, idx) {
+        if (targetIdx === idx) {
+          tabsCont.classList.add(on);
+          tabsCont.style.display = "block";
+        } else {
+          tabsCont.classList.remove(on);
+          tabsCont.style.display = "none";
+        }
+      });
+    }
+
+    function togglesClick(target) {
+      var content = target.nextElementSibling;
+      var on = "on";
+      var re = new RegExp(" " + on);
+      var checkActive = re.test(target.className);
+
+      if (checkActive) {
+        target.classList.remove(on);
+        target.setAttribute("aria-expanded", false);
+        content.classList.remove("show");
+      } else {
+        target.classList.add(on);
+        target.setAttribute("aria-expanded", true);
+        content.classList.add("show");
+      }
+    }
+    // function togglesClickClose(target) {
+    //     var parent = target.parentNode;
+    //     var toggleBt = parent.previousElementSibling;
+    //     var on = "on";
+
+    //     toggleBt.classList.remove(on);
+    //     toggleBt.setAttribute("aria-expanded", false);
+    //     parent.style.display = "none";
+    // }
+
+    function scrollTo(to, duration) {
+      var element = document.scrollingElement || document.documentElement;
+      var start = element.scrollTop;
+      var change = to - start;
+      var startDate = +new Date();
+      // t = current time
+      // b = start value
+      // c = change in value
+      // d = duration
+      var easeInOutQuad = function (t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return (c / 2) * t * t + b;
+        t--;
+        return (-c / 2) * (t * (t - 2) - 1) + b;
+      };
+      var animateScroll = function () {
+        var currentDate = +new Date();
+        var currentTime = currentDate - startDate;
+        element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+        // console.log(currentTime, duration)
+        if (currentTime < duration) {
+          requestAnimationFrame(animateScroll);
+        } else {
+          element.scrollTop = to;
+        }
+      };
+      animateScroll();
+    }
+
+    function clickTargetHandler(e) {
+      var reductionHeight = 100;
+      var target = e.getAttribute("href");
+      var targetOffsetTop =
+        window.pageYOffset + document.querySelector(target).getBoundingClientRect().top - reductionHeight;
+      // console.log('target', targetOffsetTop)
+      scrollTo(targetOffsetTop, 500);
+
+      var anchor_tabs = document.querySelectorAll(".anchor_wrap > li");
+      anchor_tabs.forEach((anchor_tab) => {
+        anchor_tab.addEventListener("click", () => {
+          anchor_tabs.forEach((anchor_tab) => {
+            anchor_tab.classList.remove("on");
+          });
+          // 클릭된 요소에만 on 클래스 추가
+          anchor_tab.classList.add("on");
+        });
+      });
+    }
+
+    function postParam(e) {
+      var reductionHeight = 100;
+      var loc = new URL(window.location.href);
+      var index = loc.searchParams.get("postParam");
+      var target = document.getElementById(index);
+      var targetOffsetTop = target ? window.pageYOffset + target.getBoundingClientRect().top - reductionHeight : 0;
+      var bnf1 = "anchor01";
+      var bnf2 = "anchor02";
+      var bnf3 = "anchor03";
+
+      //앵커이동 트리거
+      if (index === tb2 || index === bnf1 || index === bnf2 || index === bnf3) {
+        setTimeout(function () {
+          document.getElementById("triggerTab02").click();
+        }, 300);
+      }
+      if (index === bnf1) {
+        setTimeout(function () {
+          document.getElementById("anchor01").click();
+        }, 400);
+      }
+      if (index === bnf2) {
+        setTimeout(function () {
+          document.getElementById("anchor02").click();
+        }, 400);
+      }
+      if (index === bnf3) {
+        setTimeout(function () {
+          document.getElementById("anchor03").click();
+        }, 400);
+      }
+
+      console.log("indexEl", targetOffsetTop);
+      scrollTo(targetOffsetTop, 500);
+    }
+
+    setTimeout(function () {
+      postParam();
+    }, 100);
+
+    function openMobileCnslPopup() {
+      const props = {
+        title: "전화상담신청", // 팝업 타이틀과 버튼명에 들어가는 텍스트
+        urcCnslRqstTmptId: "TG00000105",
+        // 사용하고자하는 템플릿 번호 (템플릿에 따라 사용자 입력 필드 노출 여부가 달라집니다. 사용자 입력 필드 노출을 하고 싶을 경우 BO 템플릿을 새로 만드시거나,
+        //기존 템플릿에 추가하셔야 합니다.)
+        appfLednDivsCd: "09", // 신청서인입구분코드 (01: 유플러스닷컴, 02: 프로모션, 03: 챗봇, 04: 자급제폰주문, 05: 불용폰, 06: 카카오비즈폼, 07: 라방, 08: 라이프케어,09: 유플닷컴이벤트)
+        eventTitle: "(다이렉트)신학기 맞이 키즈/청소년 기획전",
+      };
+      externalServices.dispatchMessageEvent("EventTelMobileCnslPopup", props);
+    }
+    //[템플릿 코드] STG TG00000105 / 운영 TG00000092
+
+    // 전역 스코프 (window)에 필요한 함수들을 바인딩합니다.
+    window.accordianClick = accordianClick;
+    window.tabsClick = tabsClick;
+    window.togglesClick = togglesClick;
+    window.scrollTo = scrollTo;
+    window.clickTargetHandler = clickTargetHandler;
+    window.postParam = postParam;
+    window.openMobileCnslPopup = openMobileCnslPopup;
+  })(window);
+</script>
+<!-- //MW -->
