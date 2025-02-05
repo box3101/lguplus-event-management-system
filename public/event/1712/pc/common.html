@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pc-1712</title>
+    <link rel="stylesheet" href="../pc.css" />
+  </head>
+  <body>
+    <div id="content"></div>
+
+    <script>
+      // URL 변경 방지
+      window.history.pushState = function () {
+        return;
+      };
+
+      // content 불러오기
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "/event/1712/pc/pc-content.html", true);
+      xhr.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+          document.getElementById("content").innerHTML = this.responseText;
+
+          // URL 변경 함수 무력화
+          window.postParam = function () {
+            return;
+          };
+
+          // 스크립트 재실행
+          var scripts = document.getElementById("content").getElementsByTagName("script");
+          Array.from(scripts).forEach((script) => {
+            var newScript = document.createElement("script");
+            Array.from(script.attributes).forEach((attr) => {
+              newScript.setAttribute(attr.name, attr.value);
+            });
+            newScript.appendChild(document.createTextNode(script.innerHTML));
+            script.parentNode.replaceChild(newScript, script);
+          });
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>

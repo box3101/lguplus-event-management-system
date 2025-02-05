@@ -29,6 +29,7 @@ const events = [
   "239",
   "1682",
   "1704",
+  "1712",
 ];
 
 events.forEach((eventId) => {
