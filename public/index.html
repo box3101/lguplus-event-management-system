@@ -252,10 +252,11 @@
           <td></td>
           <td>${popup.desc}</td>
           <td>
-            <a href="http://localhost:3002/${popup.path}/" target="_blank">PC</a>
-            <a href="http://localhost:3002/${popup.path}/m" target="_blank">Mobile</a>
+            <a href="http://localhost:${port}/${popup.path}/" target="_blank">PC</a>
+            <a href="http://localhost:${port}/${popup.path}/m" target="_blank">Mobile</a>
           </td>
         </tr>
+
       `
       );
 
@@ -270,8 +271,8 @@
           <td></td>
           <td>${device.desc}</td>
           <td>
-            <a href="http://localhost:3002/${device.path}/" target="_blank">PC</a>
-            <a href="http://localhost:3002/${device.path}/m" target="_blank">Mobile</a>
+            <a href="http://localhost:${port}/${device.path}/" target="_blank">PC</a>
+            <a href="http://localhost:${port}/${device.path}/m" target="_blank">Mobile</a>
           </td>
         </tr>
       `
