@@ -1,0 +1,719 @@
+<style type="text/css">
+  /* 배너 */
+  .event-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .event-banner {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 130px 0;
+    background: #e9f4ff url("https://sgate.ispark.kr/html/_skin/img/sub/evt-80/evt-80-banner01.png") no-repeat
+      center/cover;
+
+    @media (max-width: 768px) {
+      padding: 51px 0;
+      padding-bottom: 58px;
+      background: #ebf6ff;
+    }
+
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  .event-content {
+    flex: 1;
+    .mo-only.mt-4 {
+      @media (max-width: 768px) {
+        margin-top: 20px;
+        display: block;
+        img {
+          max-width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+      }
+      @media (max-width: 480px) {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .event-year {
+    color: #000;
+    font-family: Pretendard;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.56px;
+
+    @media (max-width: 768px) {
+      color: #000;
+      text-align: center;
+      font-family: Pretendard;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.48px;
+    }
+  }
+
+  .event-title {
+    color: #2e2f31;
+    font-family: Pretendard;
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -1.56px;
+
+    @media (max-width: 768px) {
+      margin-top: 10px;
+      color: #2e2f31;
+      text-align: center;
+      font-family: Pretendard;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 42px;
+      letter-spacing: -0.6px;
+    }
+  }
+
+  .event-period {
+    margin-top: 5px;
+    color: #000;
+    font-family: Pretendard;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26px;
+
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      color: #000;
+      text-align: center;
+      font-family: Pretendard;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+
+    span {
+      color: #ff4d00;
+      @media (max-width: 768px) {
+        color: #ff4d00;
+        font-family: Pretendard;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .com-button:hover {
+    background-color: #0069c7;
+  }
+
+  .event-image {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reward-image {
+    width: 608px;
+    height: auto;
+  }
+
+  /* 비용 지원 */
+  .cost-support-wrap {
+    padding: 100px 0;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      padding: 50px 0;
+    }
+
+    img {
+      margin-top: 44px;
+    }
+  }
+
+  /* 서비스 소개 */
+  .service-intro-wrap {
+    padding: 100px 0;
+    background: #141414;
+
+    @media (max-width: 768px) {
+      padding: 50px 0;
+    }
+
+    .inner {
+      text-align: center;
+
+      .com-button {
+        margin-top: 60px;
+
+        @media (max-width: 768px) {
+          margin-top: 40px;
+        }
+      }
+    }
+
+    img {
+      margin-top: 60px;
+      @media (max-width: 768px) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  /* 모집 안내 */
+  .recruitment-info {
+    padding: 100px 0;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      padding: 50px 0;
+    }
+
+    .inner {
+      max-width: 980px;
+    }
+
+    .info-content {
+      margin-top: 60px;
+
+      @media (max-width: 768px) {
+        margin-top: 40px;
+        text-align: left;
+      }
+
+      h3 {
+        color: #0af;
+        text-align: center;
+        font-family: Pretendard;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -0.6px;
+
+        @media (max-width: 768px) {
+          color: #0af;
+          font-family: Pretendard;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 30px; /* 136.364% */
+          letter-spacing: -0.44px;
+          text-align: left;
+        }
+      }
+
+      .info-table,
+      .application-process {
+        img {
+          margin-top: 30px;
+
+          @media (max-width: 768px) {
+            margin-top: 20px;
+          }
+        }
+      }
+      .info-table {
+        @media (max-width: 768px) {
+          margin-bottom: 40px;
+        }
+      }
+
+      .info-table img {
+        margin-top: 20px;
+      }
+
+      .info-content-wrap {
+        margin-top: 60px;
+        text-align: left;
+
+        > div {
+          margin-bottom: 24px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .logo-container {
+            @media (max-width: 768px) {
+              img {
+                width: 143px;
+              }
+            }
+          }
+
+          dl {
+            display: flex;
+            align-items: flex-start;
+
+            @media (max-width: 768px) {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+
+            dt {
+              min-width: 240px;
+              color: #0af;
+              text-align: center;
+              font-family: Pretendard;
+              font-size: 30px;
+              font-weight: 700;
+              line-height: 40px;
+              letter-spacing: -0.6px;
+
+              @media (max-width: 768px) {
+                min-width: 100%;
+                text-align: left;
+                color: #0af;
+                font-family: Pretendard;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 30px; /* 136.364% */
+                letter-spacing: -0.44px;
+              }
+            }
+
+            dd {
+              color: #2e2f31;
+              font-family: Pretendard;
+              font-size: 22px;
+              font-weight: 700;
+              line-height: 40px;
+              letter-spacing: -0.44px;
+              text-align: left;
+
+              @media (max-width: 768px) {
+                margin-top: 8px;
+                color: #2e2f31;
+                font-family: Pretendard;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 26px; /* 144.444% */
+                letter-spacing: -0.36px;
+              }
+
+              span {
+                font-weight: 500;
+
+                @media (max-width: 768px) {
+                  color: #2e2f31;
+                  font-family: Pretendard;
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 26px;
+                  letter-spacing: -0.36px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .custom.sub-cont-section.aligncenter.section-07.team-sgate-bottom-wrap {
+    padding-top: 80px !important;
+    @media (max-width: 768px) {
+      padding-top: 50px !important;
+    }
+    .custom-title {
+      margin-top: -10px;
+      color: #0af;
+      text-align: center;
+      font-family: Pretendard;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.8px;
+      @media (max-width: 768px) {
+        color: #0af;
+        text-align: center;
+        font-family: Pretendard;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.52px;
+      }
+      span {
+        color: #3c3c3c;
+        font-family: Pretendard;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.8px;
+        @media (max-width: 768px) {
+          color: #3c3c3c;
+          font-family: Pretendard;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: -0.52px;
+        }
+      }
+    }
+  }
+
+  /* 공통 */
+
+  .com-title {
+    color: #2e2f31;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: -0.8px;
+
+    @media (max-width: 768px) {
+      color: #2e2f31;
+      text-align: center;
+      font-family: Pretendard;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 34px; /* 130.769% */
+      letter-spacing: -0.52px;
+    }
+
+    span {
+      color: #0af;
+
+      @media (max-width: 768px) {
+        color: #0af;
+        font-family: Pretendard;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 34px;
+        letter-spacing: -0.52px;
+      }
+    }
+
+    &.type-2 {
+      color: #fff;
+
+      @media (max-width: 768px) {
+        color: #fff;
+        text-align: center;
+        font-family: Pretendard;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 34px; /* 130.769% */
+        letter-spacing: -0.52px;
+      }
+    }
+  }
+
+  .com-sub-title {
+    margin-top: 8px;
+    color: #fff;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+
+    @media (max-width: 768px) {
+      color: #fff;
+      text-align: center;
+      font-family: Pretendard;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px; /* 136.364% */
+      letter-spacing: -0.44px;
+    }
+  }
+
+  .pc-only {
+    display: inline-block;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .mo-only {
+    display: none;
+    @media (max-width: 768px) {
+      display: inline-block;
+    }
+  }
+
+  .com-button {
+    margin-top: 39px;
+    display: inline-block;
+    padding: 16px 60px;
+    border-radius: 10px;
+    background: #0af;
+    color: #fff;
+    text-align: center;
+    font-family: "Noto Sans CJK KR";
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      display: flex;
+      width: 100%;
+      max-width: 248px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      padding: 16px 30px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      text-align: center;
+      font-family: "Noto Sans CJK KR";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    &:hover {
+      background-color: #0085c7;
+    }
+  }
+</style>
+<!-- 배너 -->
+<section class="section">
+  <div class="event-container">
+    <div class="event-banner">
+      <div class="inner">
+        <div class="event-content">
+          <p class="event-year" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+            2025 중소기업 정부지원
+          </p>
+          <h1 class="event-title" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+            최대 8천만원 지원받고 <br class="mo-only" />
+            에스게이트를 경험하세요
+          </h1>
+          <p class="event-period" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+            신청 마감: 4월 18일까지 <br class="mo-only" />
+            <span>(*예산 소진 시 조기 마감)</span>
+          </p>
+          <div class="mo-only mt-4" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+            <img src="https://sgate.ispark.kr/html/_skin/img/sub/evt-80/evt-80-banner-mo.png" alt="" />
+          </div>
+          <a
+            href="https://sgate.ispark.kr/introduction"
+            target="_blank"
+            class="com-button"
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-once="true"
+            >무료 컨설팅 신청하기</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 배너 EEE-->
+
+<!-- 비용 지원 -->
+<section class="section">
+  <div class="cost-support-wrap inner">
+    <div class="sec1">
+      <h2 class="com-title" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+        지금 신청하면 <br class="mo-only" />
+        <span>80%</span> 비용 지원!
+      </h2>
+      <img
+        class="pc-only"
+        src="https://sgate.ispark.kr/html/_skin/img/sub/evt-80/evt-80-sec1.png"
+        alt=""
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-once="true"
+      />
+      <img
+        class="mo-only"
+        src="https://sgate.ispark.kr/html/_skin/img/sub/evt-80/evt-80-sec1-mo.png"
+        alt=""
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-once="true"
+      />
+    </div>
+  </div>
+</section>
+<!-- 비용 지원 EEE -->
+
+<!-- 서비스 소개 -->
+<section class="section">
+  <div class="service-intro-wrap">
+    <div class="sec2 inner">
+      <h2 class="com-title type-2" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+        조직성장플랫폼 <br class="mo-only" />
+        에스게이트 서비스 소개
+      </h2>
+      <h3 class="com-sub-title" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+        성과를 높이고 성장을 가속하는, <br class="mo-only" />
+        조직을 위한 올인원 솔루션!
+      </h3>
+      <img
+        class="pc-only"
+        src="https://sgate.ispark.kr/html/_skin/img/sub/evt-80/evt-80-service.png"
+        alt="에스게이트 서비스 소개"
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-once="true"
+      />
+      <img
+        class="mo-only"
+        src="https://sgate.ispark.kr/html/_skin/img/sub/evt-80/evt-80-service-mo.png"
+        alt="에스게이트 서비스 소개"
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-once="true"
+      />
+      <a
+        href="https://sgate.ispark.kr/service-introduction"
+        target="_blank"
+        class="com-button"
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-once="true"
+      >
+        서비스 자세히보기
+      </a>
+    </div>
+  </div>
+</section>
+<!-- 서비스 소개 EEE -->
+
+<!-- 모집 안내 -->
+<section class="section">
+  <div class="inner">
+    <div class="recruitment-info">
+      <h2 class="com-title" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+        2025년 중소기업 <br class="mo-only" />
+        클라우드 서비스 보급·확산 사업 <br />
+        수요기업 모집 안내
+      </h2>
+
+      <div class="info-content inner">
+        <h3 data-aos="fade-up" data-aos-duration="600" data-aos-once="true">지원 내용</h3>
+        <div class="info-table" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+          <img
+            class="pc-only"
+            src="https://sgate.ispark.kr/html/_skin/img/sub/evt-80/evt-80-support-info.png"
+            alt="지원 내용 표"
+          />
+          <img
+            class="mo-only"
+            src="https://sgate.ispark.kr/html/_skin/img/sub/evt-80/evt-80-support-info-mo.png"
+            alt="지원 내용 표"
+          />
+          <img
+            class="mo-only"
+            src="https://sgate.ispark.kr/html/_skin/img/sub/evt-80/evt-80-support-info-mo2.png"
+            alt="지원 내용 표"
+          />
+        </div>
+
+        <h3 data-aos="fade-up" data-aos-duration="600" data-aos-once="true">신청 절차</h3>
+        <div class="application-process" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+          <img
+            class="pc-only"
+            src="https://sgate.ispark.kr/html/_skin/img/sub/evt-80/evt-80-application-process.png"
+            alt="신청 절차 안내"
+          />
+          <img
+            class="mo-only"
+            src="https://sgate.ispark.kr/html/_skin/img/sub/evt-80/evt-80-application-process-mo.png"
+            alt="신청 절차 안내"
+          />
+        </div>
+        <div class="info-content-wrap">
+          <div class="qualification-info" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+            <dl>
+              <dt class="info-title">신청 자격</dt>
+              <dd class="info-desc">
+                중소기업기본법 제2조에 해당하는 기업<span
+                  >이면 <br class="mo-only" />
+                  누구나 신청 가능!</span
+                >
+              </dd>
+            </dl>
+          </div>
+
+          <div class="application-method" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+            <dl>
+              <dt class="info-title">신청 방법</dt>
+              <dd class="info-desc">
+                클라우드서비스 지원포털 홈페이지 접수 (공고 예정)<br />* 필수 제출서류 : 사업 신청 자료 및 이용계획서
+              </dd>
+            </dl>
+          </div>
+
+          <div class="organizers" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+            <dl>
+              <dt class="info-title">주최/주관</dt>
+              <dd class="logo-container">
+                <img
+                  src="https://sgate.ispark.kr/html/_skin/img/sub/evt-80/evt-80-organizers-logo.png"
+                  alt="주최/주관 기관 로고"
+                />
+                <img
+                  src="https://sgate.ispark.kr/html/_skin/img/sub/evt-80/evt-80-organizers-logo2.png"
+                  alt="주최/주관 기관 로고"
+                />
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 모집 안내 EEE -->
+
+<div
+  class="custom sub-cont-section aligncenter section-07 team-sgate-bottom-wrap custom ts-contents-list-wrap active"
+  style="border-top: 1px solid #efefef"
+  data-aos="fade-up"
+  data-aos-duration="600"
+  data-aos-once="true"
+>
+  <div class="inner" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0)">
+    <p>중소기업 클라우드 서비스 보급·확산 사업</p>
+
+    <h2 class="custom-title">Team Sgate<span>와 준비하세요</span></h2>
+    <div class="download-btn-wrap">
+      <div class="btn_wrap">
+        <a href="https://sgate.ispark.kr/html/files/2025_CloudService_Guide_for_SME_Customers.pdf" target="_new">
+          안내서 다운로드
+        </a>
+        <a class="btn_inquiry" href="/introduction">지금 바로 신청하기</a>
+      </div>
+    </div>
+  </div>
+</div>

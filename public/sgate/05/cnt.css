@@ -1,0 +1,15 @@
+/* Pretendard 폰트 CDN */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+.csreview-bg02 {
+  background: url("../../img/csreview-bg02.png") left top/auto no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+@media (max-width: 768px) {
+  .customer-review-wrap {
+    height: 480px;
+  }
+}
+
+/*# sourceMappingURL=cnt.css.map */

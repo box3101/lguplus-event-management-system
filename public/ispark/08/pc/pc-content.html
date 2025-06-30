@@ -1,0 +1,3778 @@
+<style>
+  @charset "UTF-8";
+  strong {
+    font-weight: 700 !important;
+  }
+
+  .mo-only {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .mo-only {
+      display: block;
+    }
+  }
+
+  .pc-only {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .pc-only {
+      display: block;
+    }
+  }
+
+  .section {
+    padding: 60px 0 !important;
+  }
+  @media (max-width: 768px) {
+    .section {
+      padding: 30px 0 !important;
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 15px;
+    }
+  }
+
+  .intro-section {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+  }
+  @media (max-width: 768px) {
+    .intro-section {
+      padding: 50px 0;
+    }
+  }
+
+  .intro-content {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    .intro-content {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+  }
+
+  .intro-title {
+    color: #009dff;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  @media (max-width: 768px) {
+    .intro-title {
+      font-size: 28px;
+      text-align: left;
+    }
+  }
+
+  .intro-divider {
+    width: 4px;
+    height: 76px;
+    background: #000000;
+    margin: 0 22px;
+  }
+  @media (max-width: 768px) {
+    .intro-divider {
+      width: 100%;
+      height: 2px;
+      margin: 15px 0;
+    }
+  }
+
+  .intro-subtitle {
+    color: #000;
+    font-family: Pretendard;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: left;
+    line-height: 1.2;
+  }
+  @media (max-width: 768px) {
+    .intro-subtitle {
+      font-size: 28px;
+    }
+  }
+
+  .intro-description {
+    color: #333;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34px;
+  }
+  @media (max-width: 768px) {
+    .intro-description {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+  }
+
+  .intro-cta {
+    margin-top: 40px;
+  }
+  @media (max-width: 768px) {
+    .intro-cta {
+      margin-top: 30px;
+    }
+  }
+
+  .problem-section {
+    background-color: #212529;
+    color: #ffffff;
+    position: relative;
+    padding: 80px 0;
+  }
+  @media (max-width: 768px) {
+    .problem-section {
+      padding: 60px 0;
+    }
+  }
+  .problem-section .section-title {
+    color: #ffffff;
+    margin-bottom: 60px;
+    word-break: keep-all;
+  }
+  @media (max-width: 768px) {
+    .problem-section .section-title {
+      margin-bottom: 40px;
+      font-size: 28px;
+    }
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  @media (max-width: 768px) {
+    .problem-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .problem-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .problem-item:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  }
+  @media (max-width: 768px) {
+    .problem-item {
+      padding: 25px 20px;
+    }
+  }
+
+  .problem-icon {
+    width: 108px;
+    height: 108px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .problem-icon img {
+    width: 108px;
+    height: 108px;
+    object-fit: contain;
+  }
+  @media (max-width: 768px) {
+    .problem-icon {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 15px;
+    }
+    .problem-icon img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  .problem-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 3px;
+      background-color: #ffffff;
+    }
+  }
+  @media (max-width: 768px) {
+    .problem-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .problem-desc {
+    margin-top: 28px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+  }
+  @media (max-width: 768px) {
+    .problem-desc {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+
+  .problem-conclusion {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    border-left: 4px solid #009dff;
+  }
+  @media (max-width: 768px) {
+    .problem-conclusion {
+      padding: 25px 20px;
+      text-align: left;
+    }
+  }
+  .problem-conclusion p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    .problem-conclusion p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  }
+  .problem-conclusion .highlight {
+    color: #009dff;
+    font-weight: 700;
+  }
+
+  .features-section {
+    background-color: #fafafa;
+    .section-title {
+      margin-bottom: 20px !important;
+    }
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  @media (max-width: 768px) {
+    .section-header {
+      margin-bottom: 40px;
+    }
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  @media (max-width: 992px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 24px;
+    }
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: #6c757d;
+  }
+  @media (max-width: 768px) {
+    .section-subtitle {
+      font-size: 15px;
+    }
+  }
+  .section-subtitle .highlight-check {
+    background: linear-gradient(120deg, rgba(0, 170, 255, 0.15) 0%, rgba(0, 170, 255, 0.1) 100%);
+    color: #00aaff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border-left: 3px solid #00aaff;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  .feature-constraints {
+    display: grid;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    .feature-constraints {
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .constraint-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  .constraint-item:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  @media (max-width: 768px) {
+    .constraint-item {
+      flex-direction: column;
+      gap: 15px;
+      padding: 25px 20px;
+    }
+  }
+
+  .constraint-number {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 250px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 768px) {
+    .constraint-number {
+      min-width: auto;
+      width: 100%;
+    }
+  }
+
+  .number {
+    width: 32px;
+    height: 32px;
+    background-color: #0da2ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .constraint-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0da2ff;
+  }
+  @media (max-width: 768px) {
+    .constraint-title {
+      font-size: 18px;
+    }
+  }
+
+  .constraint-desc {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #333333;
+    line-height: 1.4;
+    flex: 1;
+  }
+  @media (max-width: 768px) {
+    .constraint-desc {
+      font-size: 14px;
+    }
+  }
+
+  .core-features-section {
+    background-color: #f9fcff;
+  }
+
+  .feature-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 50px;
+  }
+  @media (max-width: 992px) {
+    .feature-tabs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 768px) {
+    .feature-tabs {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .feature-tab {
+    background: #ffffff;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .feature-tab:hover {
+    border-color: #3b75df;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    outline: 2px solid #125de6;
+    outline-offset: 2px;
+  }
+  .feature-tab.active {
+    background: #3b75df;
+    border-color: #3b75df;
+    color: #ffffff;
+    outline: 2px solid #125de6;
+    outline-offset: 2px;
+  }
+  @media (max-width: 768px) {
+    .feature-tab {
+      padding: 15px;
+      height: 75px;
+    }
+  }
+
+  .tab-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  @media (max-width: 768px) {
+    .tab-title {
+      font-size: 16px;
+    }
+  }
+
+  .tab-subtitle {
+    font-size: 0.875rem;
+    font-weight: 700;
+    opacity: 0.8;
+  }
+  @media (max-width: 768px) {
+    .tab-subtitle {
+      font-size: 12px;
+      display: none;
+    }
+  }
+
+  .feature-content {
+    position: relative;
+  }
+
+  .feature-detail {
+    margin-top: 50px;
+  }
+  @media (max-width: 768px) {
+    .feature-detail {
+      margin-top: 20px;
+    }
+  }
+  .feature-detail.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+  }
+
+  .feature-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+  }
+  @media (max-width: 992px) {
+    .feature-layout {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 40px 30px;
+    }
+  }
+  @media (max-width: 768px) {
+    .feature-layout {
+      padding: 30px 20px;
+      gap: 30px;
+    }
+  }
+
+  .feature-detail:nth-child(even) .feature-layout .feature-text {
+    order: 2;
+  }
+  .feature-detail:nth-child(even) .feature-layout .feature-image {
+    order: 1;
+  }
+
+  .feature-text .feature-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(18, 93, 230, 0.1), rgba(230, 246, 255, 0.05));
+    color: #125de6;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border: 1px solid rgba(18, 93, 230, 0.2);
+  }
+  .feature-text h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #212529;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+  }
+  @media (max-width: 768px) {
+    .feature-text h3 {
+      font-size: 24px;
+    }
+  }
+  .feature-text .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .feature-text .feature-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 5px;
+    color: #333;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
+  }
+  .feature-text .feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    color: #009dff;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  @media (max-width: 768px) {
+    .feature-text .feature-list li {
+      font-size: 15px;
+      padding-left: 20px;
+    }
+  }
+
+  .feature-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .feature-cta {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .results-section {
+    background: #ffffff;
+    .section-title {
+      margin-bottom: 20px !important;
+    }
+  }
+
+  .results-badge {
+    display: inline-block;
+    background-color: #009dff;
+    border-radius: 100px;
+    width: 250px;
+    height: 50px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  .results-badge span {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .results-badge:hover {
+    background-color: #0088e6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 157, 255, 0.3);
+  }
+  @media (max-width: 768px) {
+    .results-badge {
+      width: 200px;
+      height: 40px;
+    }
+    .results-badge span {
+      font-size: 18px;
+    }
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  @media (max-width: 992px) {
+    .results-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 768px) {
+    .results-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+
+  .result-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  @media (max-width: 768px) {
+    .result-item {
+      padding: 20px;
+    }
+  }
+  .result-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .result-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 15px;
+  }
+
+  .result-metric .metric-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #009dff;
+    margin-bottom: 5px;
+  }
+  @media (max-width: 768px) {
+    .result-metric .metric-value {
+      font-size: 24px;
+    }
+  }
+  .result-metric .metric-label {
+    display: block;
+    font-size: 0.875rem;
+    color: #6c757d;
+    font-weight: 500;
+  }
+
+  .case-study-section {
+    padding-top: 0px;
+    background: #fff;
+  }
+  .case-study-section .container {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 0px;
+    margin-top: 20px;
+  }
+
+  .testimonial-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.4;
+  }
+  @media (max-width: 768px) {
+    .testimonial-title {
+      font-size: 1.5rem;
+    }
+  }
+
+  .testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px 20px 0px 0px;
+    background: #f3fbff;
+  }
+  @media (max-width: 768px) {
+    .testimonial-content {
+      flex-direction: column;
+      gap: 30px;
+      padding: 30px 20px;
+      text-align: center;
+    }
+  }
+  .testimonial-content .flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  @media (max-width: 768px) {
+    .testimonial-content .flex {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .testimonial-avatar {
+    flex-shrink: 0;
+  }
+  .testimonial-avatar img {
+    width: 166px;
+    height: 166px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  @media (max-width: 768px) {
+    .testimonial-avatar img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .testimonial-quote {
+    flex: 1;
+    color: #333;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+    background: #fff;
+    box-shadow: 0px 4px 10px 4px rgba(221, 221, 221, 0.25);
+    padding: 16px 43px;
+  }
+  @media (max-width: 768px) {
+    .testimonial-quote {
+      font-size: 18px;
+      line-height: 28px;
+      padding: 16px 20px;
+    }
+  }
+  .testimonial-quote blockquote {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    font-style: italic;
+    position: relative;
+  }
+  @media (max-width: 768px) {
+    .testimonial-quote blockquote {
+      font-size: 1.125rem;
+    }
+  }
+
+  .case-details {
+    background: #ffffff;
+    padding: 60px 100px;
+  }
+  @media (max-width: 768px) {
+    .case-details {
+      padding: 30px 20px;
+    }
+  }
+
+  .case-intro {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #454545;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  .case-intro .highlight {
+    color: #125de6;
+    font-weight: 700;
+  }
+  @media (max-width: 768px) {
+    .case-intro {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .case-problems,
+  .case-solutions,
+  .case-results {
+    margin-top: 40px;
+  }
+  @media (max-width: 768px) {
+    .case-problems,
+    .case-solutions,
+    .case-results {
+      margin-top: 30px;
+    }
+  }
+
+  .case-section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 768px) {
+    .case-section-title {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .case-problem-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .case-problem-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #333333;
+  }
+  .case-problem-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: -7px;
+    color: #125de6;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  @media (max-width: 768px) {
+    .case-problem-list li {
+      font-size: 16px;
+      padding-left: 25px;
+      margin-bottom: 10px;
+    }
+    .case-problem-list li::before {
+      top: -5px;
+      font-size: 20px;
+    }
+  }
+
+  .case-problem-list2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    .case-problem-list2 {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px;
+    }
+  }
+  .case-problem-list2 li {
+    height: 160px;
+    border-radius: 8px;
+    border: 1px solid #32436c;
+  }
+  @media (max-width: 768px) {
+    .case-problem-list2 li {
+      height: 140px;
+    }
+  }
+  .case-problem-list2 li:nth-child(2) {
+    border: 1px solid #3f5896;
+  }
+  .case-problem-list2 li:nth-child(2) h4 {
+    background: #3f5896;
+  }
+  .case-problem-list2 li:nth-child(3) {
+    border: 1px solid #3e5fb4;
+  }
+  .case-problem-list2 li:nth-child(3) h4 {
+    background: #3e5fb4;
+  }
+  .case-problem-list2 li:nth-child(4) {
+    border: 1px solid #426bd5;
+  }
+  .case-problem-list2 li:nth-child(4) h4 {
+    background: #426bd5;
+  }
+  .case-problem-list2 li:nth-child(5) {
+    border: 1px solid #5a85d4;
+  }
+  .case-problem-list2 li:nth-child(5) h4 {
+    background: #5a85d4;
+  }
+  .case-problem-list2 h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px 8px 0px 0px;
+    background: #32436c;
+    height: 60px;
+    color: #fff;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  @media (max-width: 768px) {
+    .case-problem-list2 h4 {
+      height: 50px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  .case-problem-list2 p {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    line-height: 28px;
+  }
+  @media (max-width: 768px) {
+    .case-problem-list2 p {
+      height: 90px;
+      font-size: 18px;
+      line-height: 24px;
+      padding: 0 5px;
+    }
+  }
+
+  .solution-table {
+    display: grid;
+    gap: 1px;
+    background: #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #eee;
+  }
+
+  .solution-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    background: #ffffff;
+  }
+  @media (max-width: 768px) {
+    .solution-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .solution-label {
+    background: #f8f9fa;
+    padding: 20px;
+    font-weight: 600;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    .solution-label {
+      padding: 15px;
+      font-size: 14px;
+    }
+  }
+
+  .solution-content {
+    padding: 20px;
+    color: #333333;
+    line-height: 1.6;
+  }
+  @media (max-width: 768px) {
+    .solution-content {
+      padding: 15px;
+      font-size: 14px;
+    }
+  }
+
+  .global-cases-section {
+    padding: 80px 20px;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 50px;
+  }
+
+  /* Swiper Container */
+  .case-slider {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 0 50px 0;
+  }
+
+  .swiper {
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .case-card {
+    border-radius: 12px;
+    padding: 30px 25px;
+    border: 1px solid #e5e7eb;
+    height: 100%;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  @media (max-width: 768px) {
+    .case-card {
+      padding: 25px 20px;
+    }
+  }
+
+  .case-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .case-card--blue {
+    border-left: 4px solid #007bff;
+  }
+
+  .case-card--green {
+    border-left: 4px solid #28a745;
+  }
+
+  .case-card--orange {
+    border-left: 4px solid #fd7e14;
+  }
+
+  .case-card--purple {
+    border-left: 4px solid #6f42c1;
+  }
+
+  .case-card--red {
+    border-left: 4px solid #dc3545;
+  }
+
+  .case-category {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  @media (max-width: 768px) {
+    .case-category {
+      font-size: 14px;
+    }
+  }
+
+  .case-company {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  @media (max-width: 768px) {
+    .case-company {
+      font-size: 20px;
+    }
+  }
+
+  .case-content {
+    font-size: 1.1375rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+  @media (max-width: 768px) {
+    .case-content {
+      font-size: 15px;
+    }
+  }
+
+  .case-download {
+    display: none;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    align-self: flex-start;
+  }
+  @media (max-width: 768px) {
+    .case-download {
+      font-size: 14px;
+    }
+  }
+
+  .case-download:hover {
+    background: #0056b3;
+  }
+
+  /* Swiper Navigation 버튼 - 아이콘 직접 추가 */
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 50% !important;
+    width: 44px !important;
+    height: 44px !important;
+    margin-top: -22px !important;
+    color: #333 !important;
+    transition: all 0.3s ease !important;
+    z-index: 10 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+  }
+
+  /* 기본 아이콘 숨기고 직접 추가 */
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none !important;
+  }
+
+  /* 직접 화살표 추가 */
+  .swiper-button-next::before {
+    content: "›" !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+  }
+
+  .swiper-button-prev::before {
+    content: "‹" !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background: #fff !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  /* 모바일에서 숨김 */
+  @media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none !important;
+    }
+  }
+  /* 사례 다운로드 버튼 */
+  .text-center {
+    text-align: center;
+  }
+
+  .mt-40 {
+    margin-top: 40px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .btn--primary {
+    background: #007bff;
+    color: #fff;
+  }
+
+  .btn--primary:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+  }
+
+  /* 반응형 처리 */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 30px;
+    }
+    .case-card {
+      padding: 25px 20px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none !important;
+    }
+  }
+  @media (max-width: 480px) {
+    .global-cases-section {
+      padding: 60px 0;
+    }
+    .section-header {
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-size: 24px;
+    }
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 48px;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .btn--primary {
+    color: #125de6;
+    border: 2px solid #125de6;
+    background: #fff;
+  }
+  .btn--primary:hover {
+    background-color: #125de6;
+    color: #fff;
+  }
+  .btn--secondary {
+    background-color: #ffffff;
+    color: #43b7ff;
+    border: 2px solid #43b7ff;
+  }
+  .btn--secondary:hover {
+    background-color: #43b7ff;
+    color: #ffffff;
+  }
+  @media (max-width: 768px) {
+    .btn {
+      padding: 12px 24px;
+      font-size: 14px;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .mt-10 {
+    margin-top: 10px !important;
+  }
+
+  .mb-10 {
+    margin-bottom: 10px !important;
+  }
+
+  .mt-20 {
+    margin-top: 20px !important;
+  }
+
+  .mb-20 {
+    margin-bottom: 20px !important;
+  }
+
+  .mt-30 {
+    margin-top: 30px !important;
+  }
+
+  .mb-30 {
+    margin-bottom: 30px !important;
+  }
+
+  .mt-40 {
+    margin-top: 40px !important;
+  }
+
+  .mb-40 {
+    margin-bottom: 40px !important;
+  }
+
+  .mt-50 {
+    margin-top: 50px !important;
+  }
+
+  .mb-50 {
+    margin-bottom: 50px !important;
+  }
+
+  .mt-60 {
+    margin-top: 60px !important;
+  }
+
+  .mb-60 {
+    margin-bottom: 60px !important;
+  }
+
+  .mt-70 {
+    margin-top: 70px !important;
+  }
+
+  .mb-70 {
+    margin-bottom: 70px !important;
+  }
+
+  .mt-80 {
+    margin-top: 80px !important;
+  }
+
+  .mb-80 {
+    margin-bottom: 80px !important;
+  }
+
+  .mt-90 {
+    margin-top: 90px !important;
+  }
+
+  .mb-90 {
+    margin-bottom: 90px !important;
+  }
+
+  .mt-100 {
+    margin-top: 100px !important;
+  }
+
+  .mb-100 {
+    margin-bottom: 100px !important;
+  }
+
+  .mt-30 {
+    margin-top: 30px !important;
+  }
+
+  .mb-30 {
+    margin-bottom: 30px !important;
+  }
+
+  .mt-80 {
+    margin-top: 80px !important;
+  }
+
+  .mb-80 {
+    margin-bottom: 80px !important;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .color-primary {
+    color: #125de6;
+  }
+
+  .color-secondary {
+    color: #43b7ff;
+  }
+
+  .highlight {
+    padding: 5px 8px;
+    color: #009dff;
+    font-weight: 600;
+    background-color: #e6f6ff;
+  }
+
+  .bg-primary {
+    background-color: #125de6;
+  }
+
+  .bg-gray {
+    background-color: #f8f9fa;
+  }
+
+  .bg-white {
+    background-color: #ffffff;
+  }
+
+  .animate-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+  }
+
+  img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  img[loading="lazy"].loaded {
+    opacity: 1;
+  }
+
+  .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: 600;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  .notification.show {
+    transform: translateX(0);
+  }
+  .notification--success {
+    background-color: #28a745;
+  }
+  .notification--error {
+    background-color: #dc3545;
+  }
+
+  .field-error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    display: block;
+  }
+
+  input.error,
+  textarea.error {
+    border-color: #dc3545;
+  }
+
+  .loading {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (max-width: 768px) {
+    button,
+    .btn,
+    a[role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    .card:hover,
+    .btn:hover,
+    .problem-item:hover {
+      transform: none;
+    }
+    .case-slides {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  @media print {
+    .slider-nav,
+    .case-download,
+    .btn,
+    .notification {
+      display: none !important;
+    }
+    .case-slide {
+      break-inside: avoid;
+    }
+    * {
+      color: #000 !important;
+      background: #fff !important;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: #212529;
+      --text-color: #ffffff;
+      --border-color: #495057;
+    }
+  }
+  @supports (-webkit-appearance: none) {
+    .case-slides {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  @-moz-document url-prefix() {
+    .case-slides {
+      scrollbar-width: none;
+    }
+  }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .feature-tabs {
+      display: -ms-flexbox;
+      -ms-flex-wrap: wrap;
+    }
+  }
+  .problem-item,
+  .card,
+  .case-card,
+  .btn {
+    will-change: transform;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  .result-item {
+    position: relative;
+    overflow: hidden;
+  }
+  .result-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(18, 93, 230, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+  .result-item:hover::before {
+    left: 100%;
+  }
+
+  .btn {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #125de6, #43b7ff);
+    z-index: 1000;
+    transition: width 0.1s ease;
+  }
+
+  @media all and (display-mode: standalone) {
+    body {
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+  }
+  .section-title {
+    font-weight: 700 !important;
+  }
+
+  ::selection {
+    background: rgba(18, 93, 230, 0.2);
+    color: #333333;
+  }
+
+  ::-moz-selection {
+    background: rgba(18, 93, 230, 0.2);
+    color: #333333;
+  }
+
+  @media (max-width: 768px) {
+    .suitable-companies-section {
+      padding: 60px 0;
+    }
+  }
+  .suitable-companies-section .section-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 60px;
+    line-height: 1.4;
+  }
+  @media (max-width: 768px) {
+    .suitable-companies-section .section-title {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+  }
+  .suitable-companies-section .suitable-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    .suitable-companies-section .suitable-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding: 0 20px;
+    }
+  }
+  .suitable-companies-section .suitable-item {
+    background: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px 3px rgba(212, 212, 212, 0.5);
+    transition: all 0.3s ease;
+    height: 276px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .suitable-companies-section .suitable-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px 5px rgba(212, 212, 212, 0.3);
+  }
+  @media (max-width: 768px) {
+    .suitable-companies-section .suitable-item {
+      padding: 30px 20px;
+      height: auto;
+      min-height: 260px;
+    }
+  }
+  .suitable-companies-section .suitable-icon {
+    margin-bottom: 20px;
+  }
+  .suitable-companies-section .suitable-icon .icon-bg {
+    width: 114px;
+    height: 114px;
+    background: #ddeffa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    .suitable-companies-section .suitable-icon .icon-bg {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .suitable-companies-section .suitable-icon .suitable-svg {
+    width: 60px;
+    height: 60px;
+  }
+  @media (max-width: 768px) {
+    .suitable-companies-section .suitable-icon .suitable-svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .suitable-companies-section .suitable-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #454545;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    .suitable-companies-section .suitable-title {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+  }
+  .suitable-companies-section .suitable-desc {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    .suitable-companies-section .suitable-desc {
+      font-size: 14px;
+    }
+  }
+  .suitable-companies-section .suitable-cta {
+    text-align: center;
+    margin-top: 80px;
+  }
+  @media (max-width: 768px) {
+    .suitable-companies-section .suitable-cta {
+      margin-top: 60px;
+    }
+  }
+  .suitable-companies-section .suitable-cta .cta-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 30px;
+    line-height: 1.4;
+  }
+  @media (max-width: 768px) {
+    .suitable-companies-section .suitable-cta .cta-text {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+  }
+  .suitable-companies-section .suitable-cta .cta-text .highlight {
+    color: #09aaf7;
+    font-weight: 700;
+  }
+  .suitable-companies-section .btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  .suitable-companies-section .btn--primary {
+    background: linear-gradient(135deg, #09aaf7, #0785c7);
+    color: #ffffff;
+  }
+  .suitable-companies-section .btn--primary:hover {
+    background: linear-gradient(135deg, #0785c7, #065a89);
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px rgba(9, 170, 247, 0.3);
+  }
+  @media (max-width: 768px) {
+    .suitable-companies-section .btn {
+      padding: 14px 28px;
+      font-size: 15px;
+    }
+  }
+
+  [data-aos="fade-up"].aos-animate {
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+  }
+
+  .ispark-strengths-section {
+    background: linear-gradient(0deg, #d4d4d4 0%, #fff 91.35%);
+    padding: 100px 0;
+  }
+  @media (max-width: 992px) {
+    .ispark-strengths-section {
+      padding: 80px 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .ispark-strengths-section {
+      padding: 60px 0;
+    }
+  }
+  @media (max-width: 480px) {
+    .ispark-strengths-section {
+      padding: 50px 0;
+    }
+  }
+  .ispark-strengths-section .section-title {
+    text-align: center;
+    font-family: Pretendard, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #333333 !important;
+    margin-bottom: 60px;
+    line-height: 1.4;
+  }
+  @media (max-width: 992px) {
+    .ispark-strengths-section .section-title {
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+  }
+  @media (max-width: 768px) {
+    .ispark-strengths-section .section-title {
+      font-size: 24px;
+      margin-bottom: 40px;
+      padding: 0 20px;
+    }
+  }
+  @media (max-width: 480px) {
+    .ispark-strengths-section .section-title {
+      font-size: 20px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+  }
+  @media (max-width: 360px) {
+    .ispark-strengths-section .section-title {
+      font-size: 18px;
+      line-height: 1.3;
+    }
+  }
+  .ispark-strengths-section .strengths-list {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  @media (max-width: 768px) {
+    .ispark-strengths-section .strengths-list {
+      padding: 0 20px;
+      gap: 15px;
+    }
+  }
+  @media (max-width: 480px) {
+    .ispark-strengths-section .strengths-list {
+      padding: 0 15px;
+      gap: 12px;
+    }
+  }
+  .ispark-strengths-section .strength-item {
+    border-radius: 10px;
+    border: 1px solid #7e7e7e;
+    background: #fff !important;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px 0 72px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .ispark-strengths-section .strength-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: #5a5a5a;
+  }
+  @media (max-width: 992px) {
+    .ispark-strengths-section .strength-item {
+      height: 90px;
+      padding: 0 40px 0 60px;
+    }
+  }
+  @media (max-width: 768px) {
+    .ispark-strengths-section .strength-item {
+      height: auto;
+      min-height: 70px;
+      padding: 15px 20px 15px 50px;
+    }
+  }
+  @media (max-width: 480px) {
+    .ispark-strengths-section .strength-item {
+      padding: 12px 15px 12px 40px;
+      min-height: 60px;
+    }
+  }
+  @media (max-width: 360px) {
+    .ispark-strengths-section .strength-item {
+      padding: 10px 12px 10px 35px;
+      min-height: 55px;
+    }
+  }
+  .ispark-strengths-section .strength-bullet {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  @media (max-width: 768px) {
+    .ispark-strengths-section .strength-bullet {
+      left: 20px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  @media (max-width: 480px) {
+    .ispark-strengths-section .strength-bullet {
+      left: 15px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+  @media (max-width: 360px) {
+    .ispark-strengths-section .strength-bullet {
+      left: 12px;
+    }
+  }
+  .ispark-strengths-section .strength-bullet--orange {
+    background-color: #ff7825;
+  }
+  .ispark-strengths-section .strength-bullet--orange-title {
+    color: #ff7825 !important;
+  }
+  .ispark-strengths-section .strength-bullet--green {
+    background-color: #26c350;
+  }
+  .ispark-strengths-section .strength-bullet--green-title {
+    color: #26c350 !important;
+  }
+  .ispark-strengths-section .strength-bullet--cyan {
+    background-color: #00b6ca;
+  }
+  .ispark-strengths-section .strength-bullet--cyan-title {
+    color: #00b6ca !important;
+  }
+  .ispark-strengths-section .strength-bullet--purple {
+    background-color: #8a3bde;
+  }
+  .ispark-strengths-section .strength-bullet--purple-title {
+    color: #8a3bde !important;
+  }
+  .ispark-strengths-section .strength-bullet--pink {
+    background-color: #e5074d;
+  }
+  .ispark-strengths-section .strength-bullet--pink-title {
+    color: #e5074d !important;
+  }
+  .ispark-strengths-section .strength-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .ispark-strengths-section .strength-title {
+    font-family: Pretendard, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    line-height: 1.4;
+    margin: 0;
+  }
+  @media (max-width: 992px) {
+    .ispark-strengths-section .strength-title {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 768px) {
+    .ispark-strengths-section .strength-title {
+      font-size: 16px;
+      line-height: 1.3;
+    }
+  }
+  @media (max-width: 480px) {
+    .ispark-strengths-section .strength-title {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+  @media (max-width: 360px) {
+    .ispark-strengths-section .strength-title {
+      font-size: 13px;
+    }
+  }
+  .ispark-strengths-section .strengths-cta {
+    text-align: center;
+    margin-top: 60px;
+  }
+  @media (max-width: 992px) {
+    .ispark-strengths-section .strengths-cta {
+      margin-top: 50px;
+    }
+  }
+  @media (max-width: 768px) {
+    .ispark-strengths-section .strengths-cta {
+      margin-top: 40px;
+    }
+  }
+  @media (max-width: 480px) {
+    .ispark-strengths-section .strengths-cta {
+      margin-top: 30px;
+    }
+  }
+  .ispark-strengths-section .btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  .ispark-strengths-section .btn--primary {
+    background: linear-gradient(135deg, #09aaf7, #0785c7);
+    color: #ffffff;
+  }
+  .ispark-strengths-section .btn--primary:hover {
+    background: linear-gradient(135deg, #0785c7, #065a89);
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px rgba(9, 170, 247, 0.3);
+  }
+  @media (max-width: 992px) {
+    .ispark-strengths-section .btn {
+      padding: 15px 30px;
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 768px) {
+    .ispark-strengths-section .btn {
+      padding: 14px 28px;
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 480px) {
+    .ispark-strengths-section .btn {
+      padding: 12px 24px;
+      font-size: 13px;
+      min-width: 140px;
+    }
+  }
+  @media (max-width: 360px) {
+    .ispark-strengths-section .btn {
+      padding: 10px 20px;
+      font-size: 12px;
+      min-width: 120px;
+    }
+  }
+
+  [data-aos="fade-up"].aos-animate {
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+  }
+
+  .strength-item:focus-within {
+    outline: 2px solid #09aaf7;
+    outline-offset: 2px;
+  }
+
+  @media print {
+    .ispark-strengths-section {
+      background: white !important;
+    }
+    .ispark-strengths-section .strength-item {
+      border-color: #333 !important;
+      break-inside: avoid;
+    }
+    .ispark-strengths-section .strengths-cta {
+      display: none;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    .ispark-strengths-section .strength-item {
+      background: #2a2a2a;
+      border-color: #555;
+      color: #fff;
+    }
+    .ispark-strengths-section .strength-title {
+      color: #fff;
+    }
+    .ispark-strengths-section .section-title {
+      color: #fff;
+    }
+  }
+  .faq-section {
+    background: #f8f9fa;
+    padding: 100px 0;
+  }
+  @media (max-width: 992px) {
+    .faq-section {
+      padding: 80px 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .faq-section {
+      padding: 60px 0;
+    }
+  }
+  @media (max-width: 480px) {
+    .faq-section {
+      padding: 50px 0;
+    }
+  }
+  .faq-section .section-title {
+    text-align: center;
+    font-family: Pretendard, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 60px;
+    line-height: 1.4;
+  }
+  @media (max-width: 992px) {
+    .faq-section .section-title {
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+  }
+  @media (max-width: 768px) {
+    .faq-section .section-title {
+      font-size: 24px;
+      margin-bottom: 40px;
+      padding: 0 20px;
+    }
+  }
+  @media (max-width: 480px) {
+    .faq-section .section-title {
+      font-size: 20px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+  }
+  @media (max-width: 360px) {
+    .faq-section .section-title {
+      font-size: 18px;
+      line-height: 1.3;
+    }
+  }
+  .faq-section .faq-list {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (max-width: 768px) {
+    .faq-section .faq-list {
+      padding: 0 20px;
+      gap: 12px;
+    }
+  }
+  @media (max-width: 480px) {
+    .faq-section .faq-list {
+      padding: 0 15px;
+      gap: 10px;
+    }
+  }
+  .faq-section .faq-item {
+    background: #333333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .faq-section .faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  .faq-section .faq-item.active .faq-answer {
+    max-height: 300px;
+    opacity: 1;
+    padding-top: 20px;
+  }
+  .faq-section .faq-item.active .toggle-icon::before {
+    transform: rotate(180deg);
+  }
+  .faq-section .faq-item.active .toggle-icon::after {
+    opacity: 0;
+  }
+  .faq-section .faq-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 32px;
+  }
+  @media (max-width: 992px) {
+    .faq-section .faq-header {
+      gap: 30px;
+      padding: 28px;
+    }
+  }
+  @media (max-width: 768px) {
+    .faq-section .faq-header {
+      gap: 20px;
+      padding: 24px 20px;
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 480px) {
+    .faq-section .faq-header {
+      padding: 20px 16px;
+      gap: 10px;
+    }
+  }
+  @media (max-width: 360px) {
+    .faq-section .faq-header {
+      padding: 16px 12px;
+    }
+  }
+  .faq-section .faq-content {
+    flex: 1;
+    color: #ffffff;
+  }
+  .faq-section .faq-question {
+    font-family: Pretendard, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.417;
+    cursor: pointer;
+  }
+  @media (max-width: 992px) {
+    .faq-section .faq-question {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+  }
+  @media (max-width: 768px) {
+    .faq-section .faq-question {
+      font-size: 18px;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+  }
+  @media (max-width: 480px) {
+    .faq-section .faq-question {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 360px) {
+    .faq-section .faq-question {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+  .faq-section .faq-answer {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    padding-top: 0;
+  }
+  .faq-section .faq-answer p {
+    font-family: Pretendard, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+    color: #e1ff00;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 34px;
+    strong {
+      color: #f6ffb2;
+    }
+  }
+  .faq-section .faq-answer p:last-child {
+    margin-bottom: 0;
+  }
+  @media (max-width: 992px) {
+    .faq-section .faq-answer p {
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+  }
+  @media (max-width: 768px) {
+    .faq-section .faq-answer p {
+      font-size: 15px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+  }
+  @media (max-width: 480px) {
+    .faq-section .faq-answer p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 360px) {
+    .faq-section .faq-answer p {
+      font-size: 13px;
+      line-height: 1.4;
+    }
+  }
+  .faq-section .faq-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #6e6e6e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+  .faq-section .faq-toggle:hover {
+    background-color: #555555;
+    transform: scale(1.1);
+  }
+  .faq-section .faq-toggle:focus {
+    outline: 2px solid #09aaf7;
+    outline-offset: 2px;
+  }
+  @media (max-width: 768px) {
+    .faq-section .faq-toggle {
+      align-self: flex-start;
+      margin-top: 5px;
+    }
+  }
+  @media (max-width: 480px) {
+    .faq-section .faq-toggle {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  @media (max-width: 360px) {
+    .faq-section .faq-toggle {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .faq-section .toggle-icon {
+    position: relative;
+    width: 22px;
+    height: 4px;
+    display: block;
+  }
+  @media (max-width: 480px) {
+    .faq-section .toggle-icon {
+      width: 18px;
+      height: 3px;
+    }
+  }
+  @media (max-width: 360px) {
+    .faq-section .toggle-icon {
+      width: 16px;
+      height: 2px;
+    }
+  }
+  .faq-section .toggle-icon::before,
+  .faq-section .toggle-icon::after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+  }
+  .faq-section .toggle-icon::before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .faq-section .toggle-icon::after {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+  }
+  .faq-section .faq-cta {
+    text-align: center;
+    margin-top: 60px;
+  }
+  @media (max-width: 992px) {
+    .faq-section .faq-cta {
+      margin-top: 50px;
+    }
+  }
+  @media (max-width: 768px) {
+    .faq-section .faq-cta {
+      margin-top: 40px;
+    }
+  }
+  @media (max-width: 480px) {
+    .faq-section .faq-cta {
+      margin-top: 30px;
+    }
+  }
+  .faq-section .faq-cta .cta-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 30px;
+    line-height: 1.4;
+  }
+  @media (max-width: 992px) {
+    .faq-section .faq-cta .cta-text {
+      font-size: 22px;
+      margin-bottom: 28px;
+    }
+  }
+  @media (max-width: 768px) {
+    .faq-section .faq-cta .cta-text {
+      font-size: 18px;
+      margin-bottom: 25px;
+      padding: 0 20px;
+    }
+  }
+  @media (max-width: 480px) {
+    .faq-section .faq-cta .cta-text {
+      font-size: 16px;
+      margin-bottom: 20px;
+      padding: 0 15px;
+    }
+  }
+  @media (max-width: 360px) {
+    .faq-section .faq-cta .cta-text {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+  }
+  .faq-section .btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  .faq-section .btn--primary {
+    background: linear-gradient(135deg, #09aaf7, #0785c7);
+    color: #ffffff;
+  }
+  .faq-section .btn--primary:hover {
+    background: linear-gradient(135deg, #0785c7, #065a89);
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px rgba(9, 170, 247, 0.3);
+  }
+  @media (max-width: 992px) {
+    .faq-section .btn {
+      padding: 15px 30px;
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 768px) {
+    .faq-section .btn {
+      padding: 14px 28px;
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 480px) {
+    .faq-section .btn {
+      padding: 12px 24px;
+      font-size: 13px;
+      min-width: 140px;
+    }
+  }
+  @media (max-width: 360px) {
+    .faq-section .btn {
+      padding: 10px 20px;
+      font-size: 12px;
+      min-width: 120px;
+    }
+  }
+
+  [data-aos="fade-up"].aos-animate {
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 300px;
+    opacity: 1;
+    padding-top: 20px;
+  }
+  .faq-item.active .toggle-icon::after {
+    opacity: 0;
+  }
+
+  .faq-toggle:focus {
+    outline: 2px solid #09aaf7;
+    outline-offset: 2px;
+  }
+
+  @media print {
+    .faq-section .faq-item {
+      background: white !important;
+      border: 1px solid #333 !important;
+      color: #333 !important;
+      break-inside: avoid;
+    }
+    .faq-section .faq-question,
+    .faq-section .faq-answer p {
+      color: #333 !important;
+    }
+    .faq-section .faq-answer {
+      max-height: none !important;
+      opacity: 1 !important;
+      padding-top: 10px !important;
+    }
+    .faq-section .faq-toggle {
+      display: none;
+    }
+    .faq-section .faq-cta {
+      display: none;
+    }
+  }
+
+  /*# sourceMappingURL=cnt.css.map */
+</style>
+<!-- 인트로 섹션 -->
+<section class="section intro-section" data-aos="fade-up" data-aos-duration="800">
+  <div class="inner">
+    <div class="intro-content">
+      <h1 class="intro-title highlight">제약 조건까지 반영하는 정밀한 생산계획 솔루션</h1>
+      <div class="intro-divider"></div>
+      <p class="intro-subtitle">DELMIA Ortems<br />DELMIA APS</p>
+    </div>
+
+    <p class="intro-description">
+      DELMIA Ortems는 글로벌 제조 솔루션 기업 다쏘시스템이 제공하는<br /><br class="mo-only" />
+      고도화된 <strong>APS(Advanced Planning & Scheduling)</strong> 솔루션입니다.<br /><br class="mo-only" />
+      제약 기반 생산 스케쥴링(Finite Capacity Scheduling), 자재 수급 동기화, 계획 시뮬레이션 기능을 통합해<br
+        class="pc-only"
+      />
+      복잡한 제조 환경에서도 <strong>실행 가능한 생산계획을 수립</strong>할 수 있도록 지원합니다.
+    </p>
+
+    <div class="intro-cta">
+      <a href="https://ispark.kr/customer-center/customer-inquiry" target="_blank" class="btn btn--primary">문의하기</a>
+    </div>
+  </div>
+</section>
+
+<!-- 문제점 섹션 -->
+<section class="section problem-section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">
+      생산 계획이 <br class="mo-only" />
+      늘 현장 대응에 밀리나요?
+    </h2>
+
+    <div class="problem-grid">
+      <div class="problem-item" data-aos="fade-up">
+        <div class="problem-icon">
+          <img src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/problem-section-img01.png" alt="" />
+        </div>
+        <h3 class="problem-title">계획 무력화</h3>
+        <p class="problem-desc">수요 변동이나 긴급 주문으로 <br />하루 만에 계획표가 무력화됨</p>
+      </div>
+
+      <div class="problem-item" data-aos="fade-up">
+        <div class="problem-icon">
+          <img
+            src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/problem-section-img02.png"
+            alt="공급망 단절"
+          />
+        </div>
+        <h3 class="problem-title">공급망 단절</h3>
+        <p class="problem-desc">자재 납기 지연, 공급망 단절로 <br class="mo-only" />설비는 정지되고 생산은 지연됨</p>
+      </div>
+
+      <div class="problem-item" data-aos="fade-up">
+        <div class="problem-icon">
+          <img
+            src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/problem-section-img03.png"
+            alt="현장 대응"
+          />
+        </div>
+        <h3 class="problem-title">현장 대응</h3>
+        <p class="problem-desc">
+          ERP에 계획은 있지만, 현장은 <br class="mo-only" />
+          그때그때 대응으로 하루를 버팀
+        </p>
+      </div>
+
+      <div class="problem-item" data-aos="fade-up">
+        <div class="problem-icon">
+          <img
+            src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/problem-section-img04.png"
+            alt="인력 부족"
+          />
+        </div>
+        <h3 class="problem-title">인력 부족</h3>
+        <p class="problem-desc">
+          인력 부족과 교대조 공백으로 작업은 <br class="mo-only" />
+          늦어지고 수작업은 반복됨
+        </p>
+      </div>
+    </div>
+
+    <div class="problem-conclusion" data-aos="fade-up">
+      <p>
+        계획을 세워도 실행되지 않는다면, 이제는
+        <span class="color-secondary">&#39;제약 기반 생산계획(Finite Capacity Scheduling)&#39; 수립</span>이 필요한
+        때입니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 기능 체크리스트 섹션 -->
+<section class="section features-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">
+        실행 가능한 생산계획, <br class="mo-only" />
+        왜 Ortems APS일까요?
+      </h2>
+      <p class="section-subtitle">
+        <strong class="highlight-check">✅ 다양한 제조 제약 조건을 하나의 계획에 통합</strong>
+      </p>
+    </div>
+
+    <div class="feature-constraints">
+      <div class="constraint-item" data-aos="fade-up">
+        <div class="constraint-number">
+          <span class="number">1</span>
+          <h3 class="constraint-title">생산 전환·운영 제약</h3>
+        </div>
+        <p class="constraint-desc">
+          동기화 제약(Synchronization Constraints), Setup Time, CIP, Campaign 운영, <br />
+          대체 BOM/Recipes
+        </p>
+      </div>
+
+      <div class="constraint-item" data-aos="fade-up">
+        <div class="constraint-number">
+          <span class="number">2</span>
+          <h3 class="constraint-title">제품 믹스·신제품 대응</h3>
+        </div>
+        <p class="constraint-desc">다품종 소량생산 계획, 고복잡도 sku, 신제품 출시 등 제품 다변화 대응</p>
+      </div>
+
+      <div class="constraint-item" data-aos="fade-up">
+        <div class="constraint-number">
+          <span class="number">3</span>
+          <h3 class="constraint-title">자원·작업자 제약</h3>
+        </div>
+        <p class="constraint-desc">
+          작업자 인증/스킬 매칭<strong>(Certification & Skill Matrix)</strong>, 병렬 자원, 대체 설비 자동 반영
+        </p>
+      </div>
+
+      <div class="constraint-item" data-aos="fade-up">
+        <div class="constraint-number">
+          <span class="number">4</span>
+          <h3 class="constraint-title">품질 및 유효기간 관리</h3>
+        </div>
+        <p class="constraint-desc">Shelf Life, 품질 검사 일정, Quality Control 반영</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 핵심 기능 섹션 -->
+<section class="section core-features-section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">DELMIA Ortems 핵심 기능</h2>
+
+    <!-- 기능 탭 네비게이션 -->
+    <div class="feature-tabs" id="featureTabs" data-aos="fade-up">
+      <button class="feature-tab active" data-target="feature-1">
+        <span class="tab-title">생산 스케줄링</span>
+        <span class="tab-subtitle">(Production Scheduler)</span>
+      </button>
+      <button class="feature-tab" data-target="feature-2">
+        <span class="tab-title">자재 수급 동기화</span>
+        <span class="tab-subtitle">(Synchronized Requirements Planner)</span>
+      </button>
+      <button class="feature-tab" data-target="feature-3">
+        <span class="tab-title">ERP / MES 연동 구조 </span>
+        <span class="tab-subtitle">(ERP/MES Integration) </span>
+      </button>
+      <button class="feature-tab" data-target="feature-4">
+        <span class="tab-title">What-if 시뮬레이션 기능 </span>
+        <span class="tab-subtitle">(What-if Simulation) </span>
+      </button>
+      <button class="feature-tab" data-target="feature-5">
+        <span class="tab-title">제약기반 자원 관리 </span>
+        <span class="tab-subtitle">(Resource Constraints Handling) </span>
+      </button>
+      <button class="feature-tab" data-target="feature-6">
+        <span class="tab-title">우선순위 기반 자동 정렬 로직 </span>
+        <span class="tab-subtitle">(Priority-Based Scheduling) </span>
+      </button>
+    </div>
+
+    <!-- 기능 상세 내용 -->
+    <div class="feature-content" data-aos="fade-up">
+      <div class="feature-detail active" id="feature-1">
+        <div class="feature-layout">
+          <div class="feature-text">
+            <div class="feature-badge">Production Scheduler</div>
+            <h3>생산 스케줄링</h3>
+            <ul class="feature-list">
+              <li>제약 기반 최적화(Finite Capacity Scheduling) 기능 내장</li>
+              <li>
+                설비 제약, Setup Time, 우선순위 등 70개 이상 <br />
+                기준 기반 자동 스케줄 생성
+              </li>
+              <li>직관적인 Gantt Chart UI를 통한 작업 흐름 시각화</li>
+              <li>납기율, 가동률 중심의 What-if 시뮬레이션 제공</li>
+            </ul>
+          </div>
+          <div class="feature-image">
+            <img
+              src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/feature-production01.png"
+              alt="생산 스케줄링"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-detail" id="feature-2">
+        <div class="feature-layout">
+          <div class="feature-text">
+            <div class="feature-badge">Synchronized Requirements Planner</div>
+            <h3>자재 수급 동기화</h3>
+            <ul class="feature-list">
+              <li>다단계 BOM, 공정 리드타임 기반 소요 시점 역산</li>
+              <li>생산 일정과 자재 조달 일정 정밀 동기화</li>
+              <li>병목 자재 예측 및 공급 지연 시나리오 지원</li>
+            </ul>
+          </div>
+          <div class="feature-image">
+            <img
+              src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/feature-production02.JPG"
+              alt="자재 수급 동기화"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-detail" id="feature-3">
+        <div class="feature-layout">
+          <div class="feature-text">
+            <div class="feature-badge">ERP/MES Integration</div>
+            <h3>ERP / MES 연동 구조</h3>
+            <ul class="feature-list">
+              <li>ERP 기준계획(MPS) 기반 세부 실행계획 자동 생성</li>
+              <li>MES와 연계해 작업지시 발행, 실적 수신 자동화</li>
+            </ul>
+          </div>
+          <div class="feature-image">
+            <img
+              src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/feature-production03.png"
+              alt="ERP/MES 연동 구조"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-detail" id="feature-4">
+        <div class="feature-layout">
+          <div class="feature-text">
+            <div class="feature-badge">What-if Simulation</div>
+            <h3>What-if 시뮬레이션 기능</h3>
+            <ul class="feature-list">
+              <li>설비 고장, 긴급 주문, 작업자 교체 등 변수 적용</li>
+              <li>납기율, 리드타임, 재고 수준 등 KPI 기반 비교 분석</li>
+            </ul>
+          </div>
+          <div class="feature-image">
+            <img
+              src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/feature-production04.png"
+              alt="What-if 시뮬레이션 기능"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-detail" id="feature-5">
+        <div class="feature-layout">
+          <div class="feature-text">
+            <div class="feature-badge">Resource Constraints Handling</div>
+            <h3>제약기반 자원 관리</h3>
+            <ul class="feature-list">
+              <li>
+                작업자 스킬(Certification), 교대조(Shift Pattern), <br class="pc-only" />
+                병렬·대체 <br class="mo-only" />자원 제약 반영
+              </li>
+              <li>자원 가용성, 인력 배치, 동기화 제약 등 종합 반영</li>
+            </ul>
+          </div>
+          <div class="feature-image">
+            <img
+              src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/feature-production05.png"
+              alt="제약기반 자원 관리"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-detail" id="feature-6">
+        <div class="feature-layout">
+          <div class="feature-text">
+            <div class="feature-badge">Priority-Based Scheduling</div>
+            <h3>우선순위 기반 자동 정렬 로직</h3>
+            <ul class="feature-list">
+              <li>70개 이상 사전 정의된 우선순위 기준 자동 계획 병렬</li>
+              <li>
+                납기일, 비용, 셋업 최소화, VIP 고객 우선, 배치 생산<br class="pc-only" />
+                기준 등 설정 가능
+              </li>
+            </ul>
+          </div>
+          <div class="feature-image">
+            <img
+              src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/feature-production06.png"
+              alt="우선순위 기반 자동 정렬 로직"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-cta" data-aos="fade-up">
+      <a href="#download" class="btn btn--secondary">서비스 소개서</a>
+    </div>
+  </div>
+</section>
+
+<!-- 도입 효과 섹션 -->
+<section class="section results-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">실무자가 먼저 체감한 변화</h2>
+      <p class="section-subtitle">
+        <strong class="highlight-check">✅ Ortems APS, 도입 후 이렇게 달라졌습니다</strong>
+      </p>
+    </div>
+
+    <div class="results-badge" data-aos="fade-up">
+      <span>Ortems 도입 효과</span>
+    </div>
+
+    <div class="results-grid">
+      <div class="result-item" data-aos="fade-up">
+        <h3 class="result-title">반복 엑셀작업</h3>
+        <div class="result-metric">
+          <span class="metric-value">70% 감소</span>
+          <span class="metric-label">업무 효율성 개선</span>
+        </div>
+      </div>
+
+      <div class="result-item" data-aos="fade-up">
+        <h3 class="result-title">수주 대응력</h3>
+        <div class="result-metric">
+          <span class="metric-value">30% 향상</span>
+          <span class="metric-label">고객 만족도 증대</span>
+        </div>
+      </div>
+
+      <div class="result-item" data-aos="fade-up">
+        <h3 class="result-title">계획 수립 시간</h3>
+        <div class="result-metric">
+          <span class="metric-value">최대 70% 단축</span>
+          <span class="metric-label">업무 효율성</span>
+        </div>
+      </div>
+
+      <div class="result-item" data-aos="fade-up">
+        <h3 class="result-title">납기 신뢰도</h3>
+        <div class="result-metric">
+          <span class="metric-value">20~30% 향상</span>
+          <span class="metric-label">고객 만족도</span>
+        </div>
+      </div>
+
+      <div class="result-item" data-aos="fade-up">
+        <h3 class="result-title">설비 가동률</h3>
+        <div class="result-metric">
+          <span class="metric-value">15~25% 향상</span>
+          <span class="metric-label">생산성 증대</span>
+        </div>
+      </div>
+
+      <div class="result-item" data-aos="fade-up">
+        <h3 class="result-title">재고 비용</h3>
+        <div class="result-metric">
+          <span class="metric-value">10~20% 절감</span>
+          <span class="metric-label">비용 효율화</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 고객 사례 섹션 -->
+<section class="section case-study-section">
+  <div class="results-badge" data-aos="fade-up">
+    <span>APS 도입 사례 </span>
+  </div>
+  <div class="container">
+    <div class="testimonial" data-aos="fade-up">
+      <div class="testimonial-content">
+        <h2 class="testimonial-title">변동성 높은 생산환경, 자동차 전장 부품 기업이 선택한 해답</h2>
+        <div class="flex">
+          <div class="testimonial-avatar">
+            <img
+              src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/testimonial-content-img01.png"
+              alt="고객 사진"
+            />
+          </div>
+          <blockquote class="testimonial-quote">
+            "기존 Excel 기반에서는 설비와 작업자 제약을 동시에 반영한 계획이 불가능했지만,<br />
+            Ortems 도입 이후에는 계획 정확도가 비약적으로 향상됐습니다."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-details" data-aos="fade-up">
+      <p class="case-intro">
+        자동차 전장 부품을 다품종 소량 방식으로 생산하는 Y사는
+        <span class="highlight">제품 수 증가와 수시변경되는 고객 수요</span>로<br />
+        인해 수작업 기반 <span class="highlight">Excel 계획의 한계</span>를 절감하고 있었습니다.
+      </p>
+
+      <div class="case-problems">
+        <h3 class="case-section-title">[도입 전 어려움]</h3>
+        <ul class="case-problem-list">
+          <li>하루에만 수십 건의 생산변경 요청</li>
+          <li>수작업 BOM 전개로 인한 오류와 재작업</li>
+          <li>캠페인 운영 및 설비 제약 반영이 어려운 현실</li>
+        </ul>
+      </div>
+
+      <div class="case-solutions">
+        <h3 class="case-section-title">[APS 적용 항목 및 방식]</h3>
+        <div class="solution-table">
+          <div class="solution-row">
+            <div class="solution-label">변동성 대응</div>
+            <div class="solution-content">
+              고객 수요 변경에 따라 하루에도 수차례 계획 재생성 → APS로 자동 시뮬레이션
+            </div>
+          </div>
+          <div class="solution-row">
+            <div class="solution-label">셋업 최적화</div>
+            <div class="solution-content">품목 간 셋업타임 고려하여 캠페인 기반 일정 자동 생성</div>
+          </div>
+          <div class="solution-row">
+            <div class="solution-label">자원 제약 관리</div>
+            <div class="solution-content">병렬 설비 및 스킬 기준 작업자 자동 배치</div>
+          </div>
+          <div class="solution-row">
+            <div class="solution-label">신제품 대응력 강화</div>
+            <div class="solution-content">BOM/공정/레시피 자동 연동으로 신제품 출시 시 계획 오류 제거</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-results">
+        <h3 class="case-section-title">[도입 효과]</h3>
+        <ul class="case-problem-list2">
+          <li>
+            <h4>주간 계획 수립 시간</h4>
+            <p>약 90% 절감</p>
+          </li>
+          <li>
+            <h4>제품 납기 만족률</h4>
+            <p>약 17% 향상</p>
+          </li>
+          <li>
+            <h4>재고 회전율</h4>
+            <p>약 10% 개선</p>
+          </li>
+          <li>
+            <h4>BOM/라우팅 오류</h4>
+            <p>Zero 수준 도달</p>
+          </li>
+          <li>
+            <h4>작업자 과부하 일정</h4>
+            <p>사전 감지 및 <br />자동 조정</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 글로벌 사례 슬라이더 -->
+    <section class="section global-cases-section">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">글로벌 기업들이 선택한 DELMIA Ortems</h2>
+      </div>
+
+      <div class="case-slider" data-aos="fade-up">
+        <!-- Swiper -->
+        <div class="swiper caseSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="case-card case-card--blue">
+                <div class="case-category">프랑스 자동차 부품 제조사</div>
+                <h3 class="case-company">Novares</h3>
+                <p class="case-content">
+                  "자동화 납기와 생산 조건이 달라 계획 수립이 복잡했지만, Ortems가 수십 개 부품의 우선순위를 자동으로
+                  정렬해주니 납기 대응력이 크게 향상됐습니다."
+                </p>
+                <button class="case-download" data-case="novares">다운로드</button>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="case-card case-card--green">
+                <div class="case-category">복합소재 제조사</div>
+                <h3 class="case-company">MCPP</h3>
+                <p class="case-content">
+                  "공장 간 부하 조절이 힘겨웠으나 Ortems 덕분에 공급 현황과 수급상태를 실시간으로 비교하여, 설비
+                  가동률을 균형 있게 조정할 수 있게 됐습니다."
+                </p>
+                <button class="case-download" data-case="mcpp">다운로드</button>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="case-card case-card--orange">
+                <div class="case-category">고급 시계 제조사</div>
+                <h3 class="case-company">Ulysse Nardin</h3>
+                <p class="case-content">
+                  "정밀 조립공정에서 병목이 자주 발생했는데, Ortems 도입 후 공정 간 흐름이 매끄러지고 리드타임이
+                  짧아졌습니다."
+                </p>
+                <button class="case-download" data-case="ulysse">다운로드</button>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="case-card case-card--blue">
+                <div class="case-category">프랑스 자동차 부품 제조사</div>
+                <h3 class="case-company">Novares</h3>
+                <p class="case-content">
+                  "자동화 납기와 생산 조건이 달라 계획 수립이 복잡했지만, Ortems가 수십 개 부품의 우선순위를 자동으로
+                  정렬해주니 납기 대응력이 크게 향상됐습니다."
+                </p>
+                <button class="case-download" data-case="novares">다운로드</button>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="case-card case-card--green">
+                <div class="case-category">복합소재 제조사</div>
+                <h3 class="case-company">MCPP</h3>
+                <p class="case-content">
+                  "공장 간 부하 조절이 힘겨웠으나 Ortems 덕분에 공급 현황과 수급상태를 실시간으로 비교하여, 설비
+                  가동률을 균형 있게 조정할 수 있게 됐습니다."
+                </p>
+                <button class="case-download" data-case="mcpp">다운로드</button>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="case-card case-card--orange">
+                <div class="case-category">고급 시계 제조사</div>
+                <h3 class="case-company">Ulysse Nardin</h3>
+                <p class="case-content">
+                  "정밀 조립공정에서 병목이 자주 발생했는데, Ortems 도입 후 공정 간 흐름이 매끄러지고 리드타임이
+                  짧아졌습니다."
+                </p>
+                <button class="case-download" data-case="ulysse">다운로드</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- 사례집 다운로드 -->
+      <div class="text-center mt-40" data-aos="fade-up">
+        <button class="btn btn--primary" onclick="downloadAllCases()">사례집 다운로드</button>
+      </div>
+    </section>
+  </div>
+</section>
+
+<!-- 이런 기업에 적합합니다 -->
+<section class="section suitable-companies-section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">이런 기업에 적합합니다</h2>
+
+    <div class="suitable-grid">
+      <div class="suitable-item" data-aos="fade-up">
+        <div class="suitable-icon">
+          <div class="icon-bg">
+            <img src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/suitable-icon01.svg" alt="" />
+          </div>
+        </div>
+        <h3 class="suitable-title">
+          다품종 소량생산, <br />
+          변동 수요 많은 제조사
+        </h3>
+      </div>
+
+      <div class="suitable-item" data-aos="fade-up">
+        <div class="suitable-icon">
+          <div class="icon-bg">
+            <img src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/suitable-icon02.svg" alt="" />
+          </div>
+        </div>
+        <h3 class="suitable-title">MES는 있지만 계획은 여전히 수작업 중심인 기업</h3>
+      </div>
+
+      <div class="suitable-item" data-aos="fade-up">
+        <div class="suitable-icon">
+          <div class="icon-bg">
+            <img src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/suitable-icon03.svg" alt="" />
+          </div>
+        </div>
+        <h3 class="suitable-title">수주 기반 생산 체계를 운영하는 중견 제조사</h3>
+      </div>
+
+      <div class="suitable-item" data-aos="fade-up">
+        <div class="suitable-icon">
+          <div class="icon-bg">
+            <img src="https://sgate.ispark.kr/html/_skin/img/sub/delmia-ortems/suitable-icon04.svg" alt="" />
+          </div>
+        </div>
+        <h3 class="suitable-title">스마트공장 2~3단계 고도화 추진 중인 제조기업</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ISPark 강점 섹션 -->
+<section class="section ispark-strengths-section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">ISPark가 DELMIA Ortems 구축에 강한 이유</h2>
+
+    <div class="strengths-list">
+      <div class="strength-item" data-aos="fade-up">
+        <div class="strength-bullet strength-bullet--orange"></div>
+        <div class="strength-content">
+          <h3 class="strength-title strength-bullet--orange-title">
+            공정–자원–운영을 아우르는 엔지니어링 기반 전환 설계 역량
+          </h3>
+        </div>
+      </div>
+
+      <div class="strength-item" data-aos="fade-up">
+        <div class="strength-bullet strength-bullet--green"></div>
+        <div class="strength-content">
+          <h3 class="strength-title strength-bullet--green-title">
+            자동차·전자·반도체 등 복잡 제조 산업 특화 경험 다수
+          </h3>
+        </div>
+      </div>
+
+      <div class="strength-item" data-aos="fade-up">
+        <div class="strength-bullet strength-bullet--cyan"></div>
+        <div class="strength-content">
+          <h3 class="strength-title strength-bullet--cyan-title">
+            사전 진단 부터 PoC, 구축, 유지보수까지 이어지는 End-to-End 지원 체계
+          </h3>
+        </div>
+      </div>
+
+      <div class="strength-item" data-aos="fade-up">
+        <div class="strength-bullet strength-bullet--purple"></div>
+        <div class="strength-content">
+          <h3 class="strength-title strength-bullet--purple-title">
+            ERP–MES 연동까지 고려한 통합 운영 기반까지 구현 역량
+          </h3>
+        </div>
+      </div>
+
+      <div class="strength-item" data-aos="fade-up">
+        <div class="strength-bullet strength-bullet--pink"></div>
+        <div class="strength-content">
+          <h3 class="strength-title strength-bullet--pink-title">
+            Dassault Systèmes 공식 파트너로 글로벌 표준 기술과 독자 기술을 연계한 구축 가능
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ 섹션 -->
+<section class="section faq-section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">자주 묻는 질문 (FAQ) – DELMIA Ortems APS</h2>
+
+    <div class="faq-list">
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-header">
+          <div class="faq-content">
+            <h3 class="faq-question">Q1. ERP에도 생산계획 기능이 있는데, 굳이 APS가 필요한 이유는 무엇인가요?</h3>
+            <div class="faq-answer">
+              <p>
+                → ERP는 기준계획(MPS) 수준에서 자재 수요를 계산하는 <strong>정적 MRP 방식</strong>입니다. 자원 제약이나
+                작업 순서, 셋업 타임과 같은 <strong>현실적 제약 조건은 고려하지 않기 때문에</strong>, 실제 생산 현장에서
+                그대로 실행되기 어렵습니다.
+              </p>
+              <p>
+                반면 DELMIA Ortems APS는 <strong>Finite Capacity Scheduling(FCS)</strong> 기반으로
+                <strong>설비, 자재, 작업자, 동기화 제약 등</strong>을 반영한 <strong>실행 가능 계획</strong>을 자동
+                도출합니다.
+              </p>
+            </div>
+          </div>
+          <button class="faq-toggle" aria-expanded="true" aria-label="답변 토글">
+            <span class="toggle-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-header">
+          <div class="faq-content">
+            <h3 class="faq-question">Q2. MES가 없으면 Ortems APS를 쓸 수 없나요?</h3>
+            <div class="faq-answer">
+              <p>
+                → 아닙니다. Ortems는 ERP 기준계획만으로도 독립 운영이 가능하며, 실제로 MES가 없는 기업에서도 적용 사례가
+                다수 존재합니다.
+              </p>
+              <p>
+                단, MES와 연동하면 <strong>실적 기반 재계획, 작업지시 자동 발행, 현장 피드백 반영</strong>이 가능해져
+                운영 효율성이 크게 향상됩니다.
+              </p>
+            </div>
+          </div>
+          <button class="faq-toggle" aria-expanded="false" aria-label="답변 토글">
+            <span class="toggle-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-header">
+          <div class="faq-content">
+            <h3 class="faq-question">Q3. APS는 어떤 부서에 가장 효과가 있나요?</h3>
+            <div class="faq-answer">
+              <p>→ 생산기획, 자재관리, SCM, IT, 경영층 모두에 효과가 있습니다.</p>
+              <p>
+                · <strong>생산기획팀</strong>: 작업지시 수립 자동화, 긴급오더 대응력 향상<br />
+                · <strong>자재팀</strong>: 자재 소요 예측 정밀화, 병목 자재 사전 감지<br />
+                · <strong>SCM팀:</strong> 수요·공급 시나리오 기반의 what-if 분석<br />
+                · <strong>IT/스마트팩토리팀</strong>: ERP–MES 간 유연한 연동 구조 확보<br />
+                · <strong>경영층</strong>: KPI 기반 납기율 향상, 가동률 증대, ROI 도출 가능
+              </p>
+            </div>
+          </div>
+          <button class="faq-toggle" aria-expanded="false" aria-label="답변 토글">
+            <span class="toggle-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-header">
+          <div class="faq-content">
+            <h3 class="faq-question">Q4. 우리 공장은 다품종 소량생산인데, 효과가 있을까요?</h3>
+            <div class="faq-answer">
+              <p>
+                → Ortems는 특히 <strong>High Mix–Low Volume, ETO, 수요 변동성 큰 생산 환경</strong>에 최적화되어
+                있습니다.
+              </p>
+              <p>
+                고객사인 Novares(자동차 부품), MCPP(산업소재), Ulysse Nardin(시계 제조)도 SKU가 복잡하고 수요가 잦은
+                상황에서 큰 효과를 보았습니다.
+              </p>
+            </div>
+          </div>
+          <button class="faq-toggle" aria-expanded="false" aria-label="답변 토글">
+            <span class="toggle-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-header">
+          <div class="faq-content">
+            <h3 class="faq-question">Q5. 시스템 도입과 사용자 전환은 어렵지 않나요?</h3>
+            <div class="faq-answer">
+              <p>
+                → ISPark는 다쏘시스템의 공식 파트너로, 국내 제조기업을 위한
+                <strong>엔지니어링 기반 전환 설계</strong> 역량을 보유하고 있습니다.
+              </p>
+              <p>
+                업무 흐름 최적화, 연계 시나리오 제공을 통해 교육–정착까지 평균 <strong>2~3개월 내 전환</strong>이
+                가능하며, 기존 엑셀 사용자도 Gantt UI 기반으로 빠르게 적응할 수 있습니다.
+              </p>
+            </div>
+          </div>
+          <button class="faq-toggle" aria-expanded="false" aria-label="답변 토글">
+            <span class="toggle-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-header">
+          <div class="faq-content">
+            <h3 class="faq-question">Q6. APS는 우리 현장의 특이한 공정 흐름도 반영할 수 있나요?</h3>
+            <div class="faq-answer">
+              <p>
+                → Ortems는 70개 이상 기준 항목(Basic Criteria)과
+                <strong>VIC(Visual Interface Configurator)</strong> 기능으로, 고객사 공정에 맞춘 계획 로직을 구성할 수
+                있습니다.
+              </p>
+              <p>
+                병렬 설비, 셋업타임, 캠페인 생산, 작업자 인증, 대체 BOM 등
+                <strong>복합 제약 조건을 다층적으로 모델링</strong>할 수 있어, 업종 특화 대응이 가능합니다.
+              </p>
+            </div>
+          </div>
+          <button class="faq-toggle" aria-expanded="false" aria-label="답변 토글">
+            <span class="toggle-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-header">
+          <div class="faq-content">
+            <h3 class="faq-question">Q7. 투자 대비 효과는 어떻게 측정하나요?</h3>
+            <div class="faq-answer">
+              <p>
+                → Ortems는 납기율, 재고 수준, 설비 가동률 등 <strong>KPI 기반 시뮬레이션 도구</strong>를 제공하며, 도입
+                전 사전 진단을 통해 기대 효과를 정량적으로 예측할 수 있습니다.
+              </p>
+              <p>
+                실제 고객사에서도<br />
+                · 납기 신뢰도 20~30% 향상<br />
+                · 계획 수립 시간 최대 70% 단축<br />
+                · 설비 가동률 15~25% 향상 등의 수치를 보고하고 있습니다.
+              </p>
+            </div>
+          </div>
+          <button class="faq-toggle" aria-expanded="false" aria-label="답변 토글">
+            <span class="toggle-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 문의하기 섹션 -->
+<section class="section contact-section tac" data-aos="fade-up" data-aos-duration="800">
+  <div class="inner">
+    <div class="contact-container">
+      <h2 class="contact-title">
+        실행 가능한 생산계획, <br class="mo-only" />
+        지금 DELMIA Ortems로 경험해보세요!
+      </h2>
+      <p class="contact-description">
+        이즈파크는 다쏘시스템의 공식 파트너사로, <strong>DELMIA Ortems APS 솔루션</strong>을 단순히 제공하는 것을 넘어
+        <br />
+        수많은 프로젝트 경험을 바탕으로 <strong>고객의 생산 운영 과제를 깊이 이해</strong>하고, <br />
+        그에 맞는 <strong>현실적이고 실행 가능한 계획 수립 전략</strong>을 제안합니다. <br />
+        <br />
+        <strong>제조현장의 복잡성과 제약을 해결하는 APS 구축 전문 파트너, ISPark와 함께 해보세요.</strong>
+      </p>
+
+      <div class="consultants-grid">
+        <div class="consultant" data-aos="fade-up">
+          <img src="https://ispark.kr/html/_skin/img/sub/simulia/consultant1.png" alt="김준우 컨설턴트" />
+        </div>
+        <div class="consultant" data-aos="fade-up">
+          <img src="https://ispark.kr/html/_skin/img/sub/simulia/consultant2.png" alt="이민준 컨설턴트" />
+        </div>
+        <div class="consultant" data-aos="fade-up">
+          <img src="https://ispark.kr/html/_skin/img/sub/common/consultant-김강진.png" alt="조태준 컨설턴트" />
+        </div>
+        <div class="consultant" data-aos="fade-up">
+          <img src="https://ispark.kr/html/_skin/img/sub/common/consultant-김동진.png" alt="김영석 컨설턴트" />
+        </div>
+      </div>
+
+      <div class="contact-buttons" data-aos="fade-up">
+        <a href="https://ispark.kr/html/_skin/data/SIMULIA_Introduction.pdf" class="contact-btn" target="_blank"
+          >서비스 소개서</a
+        >
+        <a href="https://ispark.kr/customer-center/customer-inquiry" target="_blank" class="contact-btn">문의하기</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const featureTabs = document.getElementById("featureTabs");
+
+  if (featureTabs) {
+    featureTabs.addEventListener("click", function (e) {
+      // 이벤트 전파 중단
+      e.preventDefault();
+      e.stopPropagation();
+
+      const clickedTab = e.target.closest(".feature-tab");
+      if (!clickedTab) return;
+
+      // 모든 탭에서 active 클래스 제거
+      const allTabs = featureTabs.querySelectorAll(".feature-tab");
+      allTabs.forEach((tab) => tab.classList.remove("active"));
+
+      // 클릭된 탭에 active 클래스 추가
+      clickedTab.classList.add("active");
+
+      // data-target 속성에서 ID 가져오기
+      const targetId = clickedTab.getAttribute("data-target");
+
+      if (targetId) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          // 현재 스크롤 위치 저장
+          const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+          // 타겟 요소의 위치 계산 (sticky 헤더 고려)
+          const rect = targetElement.getBoundingClientRect();
+          const offsetTop = rect.top + currentScroll - 120; // 120px 오프셋 (sticky 탭 높이)
+
+          // 스크롤 이동
+          window.scrollTo({
+            top: Math.max(0, offsetTop), // 음수 방지
+            behavior: "smooth",
+          });
+        }
+      }
+    });
+  }
+</script>
+
+<script>
+  // Swiper 초기화
+  const swiper = new Swiper(".caseSwiper", {
+    // 기본 설정
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    centeredSlides: false,
+
+    // 자동 재생 (선택사항)
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+
+    // 반응형 breakpoints
+    breakpoints: {
+      // 768px 이상에서 2개씩 보이기
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // 1024px 이상에서 3개씩 보이기
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+
+    // 네비게이션
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    // 페이지네이션
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+
+    // 키보드 제어
+    keyboard: {
+      enabled: true,
+    },
+
+    // 마우스 휠로 슬라이드 (선택사항)
+    mousewheel: {
+      enabled: false,
+    },
+  });
+
+  // FAQ 아코디언 기능
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  // 첫 번째 FAQ는 기본으로 열려있도록 설정
+  if (faqItems.length > 0) {
+    faqItems[0].classList.add("active");
+    faqItems[0].querySelector(".faq-toggle").setAttribute("aria-expanded", "true");
+  }
+
+  faqItems.forEach((item) => {
+    const toggle = item.querySelector(".faq-toggle");
+    const question = item.querySelector(".faq-question");
+
+    // 토글 버튼과 질문 클릭 시 아코디언 동작
+    [toggle, question].forEach((element) => {
+      element.addEventListener("click", function () {
+        const isActive = item.classList.contains("active");
+
+        // 모든 FAQ 닫기
+        faqItems.forEach((otherItem) => {
+          otherItem.classList.remove("active");
+          otherItem.querySelector(".faq-toggle").setAttribute("aria-expanded", "false");
+        });
+
+        // 클릭된 FAQ만 토글
+        if (!isActive) {
+          item.classList.add("active");
+          toggle.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    // 키보드 접근성
+    toggle.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle.click();
+      }
+    });
+  });
+</script>
+
+<script>
+  const featureTabs = document.getElementById("featureTabs");
+
+  if (featureTabs) {
+    featureTabs.addEventListener("click", function (e) {
+      // 이벤트 전파 중단
+      e.preventDefault();
+      e.stopPropagation();
+
+      const clickedTab = e.target.closest(".feature-tab");
+      if (!clickedTab) return;
+
+      // 모든 탭에서 active 클래스 제거
+      const allTabs = featureTabs.querySelectorAll(".feature-tab");
+      allTabs.forEach((tab) => tab.classList.remove("active"));
+
+      // 클릭된 탭에 active 클래스 추가
+      clickedTab.classList.add("active");
+
+      // data-target 속성에서 ID 가져오기
+      const targetId = clickedTab.getAttribute("data-target");
+
+      if (targetId) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          // 현재 스크롤 위치 저장
+          const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+          // 타겟 요소의 위치 계산 (sticky 헤더 고려)
+          const rect = targetElement.getBoundingClientRect();
+          const offsetTop = rect.top + currentScroll - 120; // 120px 오프셋 (sticky 탭 높이)
+
+          // 스크롤 이동
+          window.scrollTo({
+            top: Math.max(0, offsetTop), // 음수 방지
+            behavior: "smooth",
+          });
+        }
+      }
+    });
+  }
+</script>
+
+<script>
+  // Swiper 초기화
+  const swiper = new Swiper(".caseSwiper", {
+    // 기본 설정
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    centeredSlides: false,
+
+    // 자동 재생 (선택사항)
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+
+    // 반응형 breakpoints
+    breakpoints: {
+      // 768px 이상에서 2개씩 보이기
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // 1024px 이상에서 3개씩 보이기
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+
+    // 네비게이션
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    // 페이지네이션
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+
+    // 키보드 제어
+    keyboard: {
+      enabled: true,
+    },
+
+    // 마우스 휠로 슬라이드 (선택사항)
+    mousewheel: {
+      enabled: false,
+    },
+  });
+
+  // 개별 사례 다운로드 기능
+  document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("case-download")) {
+      const caseType = e.target.getAttribute("data-case");
+      downloadCase(caseType);
+    }
+  });
+
+  function downloadCase(caseType) {
+    // 실제 구현에서는 서버에서 해당 사례 파일을 다운로드하는 로직
+    console.log(`${caseType} 사례를 다운로드합니다.`);
+    alert(`${caseType} 사례 다운로드가 시작됩니다.`);
+  }
+
+  function downloadAllCases() {
+    // 전체 사례집 다운로드 로직
+    console.log("전체 사례집을 다운로드합니다.");
+    alert("전체 사례집 다운로드가 시작됩니다.");
+  }
+
+  // FAQ 아코디언 기능
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  // 첫 번째 FAQ는 기본으로 열려있도록 설정
+  if (faqItems.length > 0) {
+    faqItems[0].classList.add("active");
+    faqItems[0].querySelector(".faq-toggle").setAttribute("aria-expanded", "true");
+  }
+
+  faqItems.forEach((item) => {
+    const toggle = item.querySelector(".faq-toggle");
+    const question = item.querySelector(".faq-question");
+
+    // 토글 버튼과 질문 클릭 시 아코디언 동작
+    [toggle, question].forEach((element) => {
+      element.addEventListener("click", function () {
+        const isActive = item.classList.contains("active");
+
+        // 모든 FAQ 닫기
+        faqItems.forEach((otherItem) => {
+          otherItem.classList.remove("active");
+          otherItem.querySelector(".faq-toggle").setAttribute("aria-expanded", "false");
+        });
+
+        // 클릭된 FAQ만 토글
+        if (!isActive) {
+          item.classList.add("active");
+          toggle.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    // 키보드 접근성
+    toggle.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle.click();
+      }
+    });
+  });
+</script>
+
+<script>
+  AOS.init({
+    once: true,
+    offset: 100,
+  });
+</script>

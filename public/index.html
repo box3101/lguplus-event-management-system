@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 링크</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      th,
+      td {
+        padding: 6px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f5f5f5;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background-color: #fafafa;
+      }
+
+      .event-id {
+        color: red;
+        font-weight: bold;
+      }
+
+      .c-blue {
+        color: blue;
+        font-weight: bold;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+        padding: 4px 8px;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+        margin-right: 8px;
+      }
+
+      a:hover {
+        background-color: #e0e0e0;
+      }
+
+      .section {
+        margin-bottom: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script>
+      const port = 3003;
+      const data = {
+        sgateEvents: [
+          {
+            id: "01",
+            title: "sgate 클라우드 서비스 바우처",
+            type: "",
+            contentCode: "01",
+          },
+          {
+            id: "02",
+            title: "sgate 고객 후기 이벤트 프로모션",
+            type: "",
+            contentCode: "02",
+          },
+          {
+            id: "03",
+            title: "리타게팅 랜딩페이지",
+            type: "",
+            contentCode: "03",
+          },
+          {
+            id: "04",
+            title: "오픈교육_집체_모집페이지",
+            type: "",
+            contentCode: "04",
+          },
+          {
+            id: "05",
+            title: "인터뷰사례페이지",
+            type: "",
+            contentCode: "05",
+          },
+          {
+            id: "06",
+            title: "고객사사례",
+            type: "",
+            contentCode: "06",
+          },
+          {
+            id: "07",
+            title: "정부지원사업-용인시",
+            type: "",
+            contentCode: "07",
+          },
+        ],
+        isparkEvents: [
+          {
+            id: "01",
+            title: "시뮬리아 소개 페이지",
+            type: "",
+            contentCode: "01",
+          },
+          {
+            id: "02",
+            title: "MODSIM",
+            type: "",
+            contentCode: "02",
+          },
+          {
+            id: "03",
+            title: "AI 솔루션",
+            type: "",
+            contentCode: "03",
+          },
+          {
+            id: "04",
+            title: "2025 스마트서비스 지원사업",
+            type: "",
+            contentCode: "04",
+          },
+          {
+            id: "05",
+            title: "3D 설계 소프트웨어 CATIA 특별 프로모션",
+            type: "",
+            contentCode: "05",
+          },
+          {
+            id: "06",
+            title: "카티아 웨비나 랜딩페이지",
+            type: "",
+            contentCode: "06",
+          },
+          {
+            id: "07",
+            title: "이즈파크 메인",
+            type: "",
+            contentCode: "07",
+          },
+          {
+            id: "08",
+            title: "제품(델미아) 상세페이지",
+            type: "",
+            contentCode: "08",
+          },
+        ],
+        templateGuide: [
+          {
+            id: "01",
+            title: "템플릿 가이드",
+            type: "",
+            contentCode: "01",
+          },
+        ],
+      };
+
+      // 테이블 생성 함수
+      function createTable(title, data, columns, renderRow) {
+        return `
+        <div class="section">
+          <h1>${title}</h1>
+          <table>
+            <colgroup>
+              <col style="width: 40%;">
+              <col style="width: 20%;">
+              <col style="width: 20%;">
+            </colgroup>
+            <thead>
+              <tr>
+                ${columns.map((col) => `<th>${col}</th>`).join("")}
+              </tr>
+            </thead>
+            <tbody>
+              ${data.map((item) => renderRow(item)).join("")}
+            </tbody>
+          </table>
+        </div>
+      `;
+      }
+
+      // Sgate 이벤트 테이블 렌더링
+      const sgateEventsTable = createTable(
+        "Sgate 이벤트 링크",
+        data.sgateEvents,
+        ["이벤트 ID (localhost)", "비고", "링크"],
+        (event) => `
+        <tr>
+          <td>
+            <span class="event-id">${event.id}</span>
+            ${event.contentCode ? `<span class="c-blue">(컨텐츠코드 ${event.contentCode})</span>` : ""}
+            - ${event.title}
+          </td>
+          <td>${event.type}</td>
+          <td>
+            <a href="http://localhost:${port}/sgate/${event.id}/" target="_blank">반응형</a>
+          </td>
+        </tr>
+      `
+      );
+
+      // Ispark 이벤트 테이블 렌더링
+      const isparkEventsTable = createTable(
+        "Ispark 이벤트 링크",
+        data.isparkEvents,
+        ["이벤트 ID (localhost)", "비고", "링크"],
+        (event) => `
+        <tr>
+          <td>
+            <span class="event-id">${event.id}</span>
+            ${event.contentCode ? `<span class="c-blue">(컨텐츠코드 ${event.contentCode})</span>` : ""}
+            - ${event.title}
+          </td>
+          <td>${event.type}</td>
+          <td>
+            <a href="http://localhost:${port}/ispark/${event.id}/" target="_blank">반응형</a>
+          </td>
+        </tr>
+      `
+      );
+
+      // 템플릿 가이드
+      const templateGuide = createTable(
+        "템플릿 가이드",
+        data.templateGuide,
+        ["이벤트 ID (localhost)", "비고", "링크"],
+        (event) => `
+        <tr>
+          <td>
+            <span class="event-id">${event.id}</span>
+            ${event.contentCode ? `<span class="c-blue">(컨텐츠코드 ${event.contentCode})</span>` : ""}
+            - ${event.title}
+          </td>
+          <td>${event.type}</td>
+          <td>
+       <a href="http://localhost:${port}/ispark/templates/content-template.html" target="_blank">템플릿</a>
+          </td>
+        </tr>
+      `
+      );
+
+      // 전체 렌더링
+      document.getElementById("app").innerHTML = sgateEventsTable + isparkEventsTable + templateGuide;
+    </script>
+  </body>
+</html>

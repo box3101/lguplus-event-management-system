@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2",
+    "node-sass": "^9.0.0",
+    "sass": "^1.69.5"
+  },
+  "scripts": {
+    "server": "nodemon server.js",
+    "browser-sync": "browser-sync start --proxy \"localhost:4000\" --files \"public/**/*.css, public/**/*.html, public/**/*.js\" --port 3003",
+    "scss": "sass --watch public:public",
+    "start": "concurrently \"npm run server\" \"npm run browser-sync\" \"npm run scss\""
+  }
+}

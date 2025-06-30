@@ -1,0 +1,303 @@
+/* Banner Section Styles */
+.section-01 {
+  .banner-section {
+    text-align: center;
+  }
+}
+
+.gradient-title {
+  max-width: 350px;
+  margin: 0 auto 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #009dff;
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    max-width: 280px;
+  }
+}
+
+.common-title {
+  color: #333;
+  font-family: Pretendard;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+.banner-description {
+  margin-top: 40px;
+  color: #333;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  strong {
+    color: #11a2fc;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
+/* section02 */
+.section-02 {
+  background: #f4faff;
+  text-align: center;
+}
+
+.video-thumbnail {
+  display: inline-block;
+  max-width: 650px;
+  margin: 0 auto;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+}
+
+.video-thumbnail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  border-radius: 32px;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 32px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* 오버레이와 이미지 위에 */
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.play-button:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-left: 20px solid #ff0000;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  margin-left: 4px; /* 중앙 정렬 보정 */
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: Pretendard;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px;
+
+  img {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 20px;
+    gap: 6px;
+    text-align: center;
+  }
+}
+
+.video-description p {
+  margin-top: 40px;
+  color: #333;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.action-button {
+  max-width: 450px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 40px auto 0;
+  border-radius: 4px;
+  background: #37b2ff;
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    height: 50px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
+
+.action-button:hover {
+  background: #2c99f5;
+}
+
+/* section03 */
+.section-03 {
+  background: #fff;
+  text-align: center;
+}
+
+.section-04 {
+  background: #f4faff;
+
+  .video-section {
+    p {
+      color: #333;
+      text-align: center;
+      font-family: Pretendard;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 34px;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .gradient-title {
+    max-width: 640px;
+    margin: 30px auto 20px;
+    background: #7be5d4;
+    color: #333;
+    font-family: Pretendard;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @media (max-width: 768px) {
+      max-width: 90%;
+      font-size: 22px;
+      margin: 20px auto 15px;
+    }
+  }
+
+  .resource-description {
+    margin-top: 20px;
+    color: #333;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 26px;
+      margin-top: 15px;
+    }
+  }
+
+  .download-button {
+    max-width: 440px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 0;
+    border-radius: 100px;
+    border: 2px solid #fff;
+    background: #e3e3e3;
+    color: #333;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34px;
+
+    @media (max-width: 768px) {
+      max-width: 280px;
+      height: 40px;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+}

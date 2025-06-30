@@ -1,0 +1,500 @@
+<style>
+  /* 기본 스타일 설정 */
+  @media (max-width: 412px) {
+    .fs_22 {
+      font-size: 16px !important;
+    }
+    .lh_1_8 {
+      line-height: 1.3 !important;
+    }
+    .ai_solution .ai_tech_category > li a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      word-break: keep-all;
+    }
+  }
+  .pc-only {
+    display: block;
+  }
+  .mo-only {
+    display: none;
+  }
+  @media (max-width: 992px) {
+    .pc-only {
+      display: none;
+    }
+    .mo-only {
+      display: block;
+    }
+  }
+  /* Banner Section Styles */
+  .section-01 {
+    .banner-section {
+      text-align: center;
+    }
+  }
+
+  .gradient-title {
+    max-width: 350px;
+    margin: 0 auto 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #009dff;
+    color: #fff;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+      max-width: 280px;
+    }
+  }
+
+  .common-title {
+    color: #333;
+    font-family: Pretendard;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  .banner-description {
+    margin-top: 40px;
+    color: #333;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34px;
+
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    strong {
+      color: #11a2fc;
+      font-family: Pretendard;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 34px;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+  /* section02 */
+  .section-02 {
+    background: #f4faff;
+    text-align: center;
+  }
+
+  .video-thumbnail {
+    display: inline-block;
+    max-width: 650px;
+    margin: 0 auto;
+    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+
+  .video-thumbnail::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    border-radius: 32px;
+  }
+
+  .video-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 32px;
+  }
+
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* 오버레이와 이미지 위에 */
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .play-button:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .play-icon {
+    width: 0;
+    height: 0;
+    border-left: 20px solid #ff0000;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    margin-left: 4px; /* 중앙 정렬 보정 */
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    color: #333;
+    font-family: Pretendard;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+
+    img {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 20px;
+      gap: 6px;
+      text-align: center;
+    }
+  }
+
+  .video-description p {
+    margin-top: 40px;
+    color: #333;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34px;
+
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  .action-button {
+    max-width: 450px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px auto 0;
+    border-radius: 4px;
+    background: #37b2ff;
+    color: #fff;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    @media (max-width: 768px) {
+      height: 50px;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+
+  .action-button:hover {
+    background: #2c99f5;
+  }
+
+  /* section03 */
+  .section-03 {
+    background: #fff;
+    text-align: center;
+  }
+
+  .section-04 {
+    background: #f4faff;
+
+    .video-section {
+      p {
+        color: #333;
+        text-align: center;
+        font-family: Pretendard;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 34px;
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+    }
+
+    .gradient-title {
+      max-width: 640px;
+      margin: 30px auto 20px;
+      background: #7be5d4;
+      color: #333;
+      font-family: Pretendard;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      @media (max-width: 768px) {
+        max-width: 90%;
+        font-size: 22px;
+        margin: 20px auto 15px;
+      }
+    }
+
+    .resource-description {
+      margin-top: 20px;
+      color: #333;
+      text-align: center;
+      font-family: Pretendard;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 34px;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 15px;
+      }
+    }
+
+    .download-button {
+      max-width: 440px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px auto 0;
+      border-radius: 100px;
+      border: 2px solid #fff;
+      background: #e3e3e3;
+      color: #333;
+      text-align: center;
+      font-family: Pretendard;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 34px;
+
+      @media (max-width: 768px) {
+        max-width: 280px;
+        height: 40px;
+        font-size: 18px;
+        margin-top: 20px;
+      }
+    }
+  }
+</style>
+
+<div class="sub-wrap-conts">
+  <div class="sub-cont-section section-01">
+    <div class="inner">
+      <div class="banner-section" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="gradient-title" data-aos="fade-up">설계를 더 똑똑하게 !</h2>
+        <h3 class="common-title" data-aos="fade-up">실무에 바로 쓰는 CATIA 꿀팁을 영상으로 확인하세요</h3>
+        <p class="banner-description" data-aos="fade-up">
+          CATIA를 도입했거나, 도입을 검토 중이신가요?<br />
+          복잡한 메뉴 설명은 줄이고, 실무에서 바로 써먹을 수 있는 핵심 팁만 골라 담았습니다.<br />
+          <br class="mo-only" />
+          누구나 쉽게 이해할 수 있는 설명과 <br class="mo-only" />
+          실제 사례 중심으로 진행된<br />
+          <strong><슬기로운 카티아 생활>웨비나</strong> , <br class="mo-only" />
+          지금 다시 확인해보세요!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="sub-cont-section section-02">
+    <div class="inner">
+      <div class="video-section" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="section-title" data-aos="fade-up">
+          <img src="https://ispark.kr/html/_skin/img/sub/webinar/icon-check.svg" alt="체크박스" class="icon-check" />
+          CATIA V5 Analysis 제대로 쓰는 법
+        </h2>
+
+        <div class="video-container" data-aos="fade-up">
+          <div class="video-wrapper">
+            <a
+              target="_blank"
+              class="video-thumbnail"
+              href="https://www.youtube.com/watch?v=6J5_0YGQjYs&list=PLwPC8BLZ62HV6qYv_TiEMl3F1qYiEdnSQ&index=1"
+            >
+              <img
+                src="https://ispark.kr/html/_skin/img/sub/webinar/video-thumbnail.jpg"
+                alt="CATIA V5 Analysis 영상 썸네일"
+              />
+              <div class="play-button">
+                <i class="play-icon"></i>
+              </div>
+            </a>
+          </div>
+
+          <div class="video-description">
+            <p data-aos="fade-up">
+              AI 도입구조해석 기능은 아직 낯설거나 <br class="mo-only" />
+              어렵게 느껴지셨나요?<br />
+              <br class="mo-only" />
+              CATIA 해석 기능을 마스터하고 싶거나 설계-해석 과정을 한 번에 끝내고 싶은 분이라면 꼭 시청하세요!<br />
+              <br class="mo-only" />
+              CATIA V5 Analysis를 활용해 설계 데이터 변환 없이,<br class="pc-only" />
+              해석 전달 과정 없이, 설계-해석-개선을 한 번에 끝내는 방법을 소개합니다.
+            </p>
+
+            <a
+              href="https://www.youtube.com/playlist?list=PLwPC8BLZ62HV6qYv_TiEMl3F1qYiEdnSQ&utm_source=catiaretargeting&utm_medium=isparkhomepage"
+              target="_blank"
+              class="action-button"
+            >
+              <span>모든 슬카생 웨비나 다시보러 가기</span>
+              <img
+                src="https://ispark.kr/html/_skin/img/sub/webinar/play-button-icon.svg"
+                alt="재생 버튼"
+                class="play-icon-image"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sub-cont-section section-03">
+    <div class="inner">
+      <div class="video-section" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="section-title" data-aos="fade-up">
+          <img
+            src="https://ispark.kr/html/_skin/img/sub/webinar/icon-check-blue.svg"
+            alt="체크박스"
+            class="icon-check"
+          />
+          CATIA MAGIC으로 <br class="mo-only" />
+          배우는 MBSE
+        </h2>
+
+        <div class="video-container" data-aos="fade-up">
+          <div class="video-wrapper">
+            <a
+              target="_blank"
+              class="video-thumbnail"
+              href="https://www.youtube.com/watch?v=D3ijvPpVdVI&list=PLwPC8BLZ62HV6qYv_TiEMl3F1qYiEdnSQ&index=2"
+            >
+              <img
+                src="https://ispark.kr/html/_skin/img/sub/webinar/video-thumbnail-02.jpg"
+                alt="CATIA V5 Analysis 영상 썸네일"
+              />
+              <div class="play-button">
+                <i class="play-icon"></i>
+              </div>
+            </a>
+          </div>
+
+          <div class="video-description">
+            <p data-aos="fade-up">
+              MBSE(모델 기반 시스템 엔지니어링), 아직 어렵게 느껴지시나요? <br />
+              <br class="mo-only" />
+              시스템 설계를 더 체계적이고 효율적으로 관리하고 싶거나<br />
+              복잡한 시스템 개발을 모델 기반으로 접근하고 싶은 분이라면 꼭 시청하세요! <br />
+              <br class="mo-only" />
+              이번 세션에서는 CATIA MAGIC을 활용해 복잡한 시스템을 쉽게 설계하고<br />
+              체계적으로 관리하는 방법을 실제 사례와 함께 소개합니다.
+            </p>
+
+            <a
+              href="https://www.youtube.com/playlist?list=PLwPC8BLZ62HV6qYv_TiEMl3F1qYiEdnSQ&utm_source=catiaretargeting&utm_medium=isparkhomepage"
+              target="_blank"
+              class="action-button"
+            >
+              <span>모든 슬카생 웨비나 다시보러 가기</span>
+              <img
+                src="https://ispark.kr/html/_skin/img/sub/webinar/play-button-icon.svg"
+                alt="재생 버튼"
+                class="play-icon-image"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sub-cont-section section-04">
+    <div class="inner">
+      <div class="video-section" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="section-title" data-aos="fade-up">
+          <img
+            src="https://ispark.kr/html/_skin/img/sub/webinar/icon-check-blue.svg"
+            alt="체크박스"
+            class="icon-check"
+          />
+          바로 적용 가능한 실무 자료
+        </h2>
+
+        <p data-aos="fade-up">
+          설계 납기, 반복 피드백, 이력 누락...<br />
+          실무에서 자주 발생하는 문제들, <br />
+          CATIA로 어떻게 해결할 수 있는지 더 깊이 알아보세요.
+        </p>
+
+        <div class="resource-download" data-aos="fade-up">
+          <h3 class="gradient-title">카티아 V5를 더 효율적으로 사용하는 10가지 방법</h3>
+          <div class="download-button" data-aos="fade-up">
+            <img src="https://ispark.kr/html/_skin/img/sub/webinar/icon-download.svg" alt="" />
+            지금 바로 받아보고, 적용해보세요.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  AOS.init({
+    once: true,
+    offset: 100,
+  });
+</script>

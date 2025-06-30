@@ -1,0 +1,1080 @@
+<style type="text/css">
+  /* Pretendard 폰트 CDN */
+  @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+  /* CSS Custom Properties */
+  :root {
+    /* Colors */
+    --primary-color: #ff895e;
+    --primary-hover: #e67348;
+    --primary-light: #ffccb7;
+    --bg-light: #fff9f6;
+    --text-dark: #111;
+    --text-medium: #3a3a3a;
+    --text-light: #444;
+    --text-gray: #666;
+    --text-darker: #151e23;
+    --border-light: rgba(0, 0, 0, 0.07);
+    --shadow-light: rgba(139, 139, 139, 0.25);
+    --shadow-table: rgba(153, 153, 153, 0.1);
+
+    /* Typography */
+    --font-family: "Pretendard", sans-serif;
+    --font-size-xs: 14px;
+    --font-size-sm: 16px;
+    --font-size-md: 18px;
+    --font-size-lg: 20px;
+    --font-size-xl: 22px;
+    --font-size-2xl: 26px;
+    --font-size-3xl: 30px;
+    --font-size-4xl: 40px;
+    --font-size-5xl: 56px;
+
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 20px;
+    --spacing-xl: 24px;
+    --spacing-2xl: 35px;
+    --spacing-3xl: 40px;
+    --spacing-4xl: 44px;
+    --spacing-5xl: 76px;
+    --spacing-6xl: 100px;
+
+    /* Border radius */
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-full: 200px;
+
+    /* Breakpoints (for reference in CSS) */
+    --mobile-max: 768px;
+    --tablet-min: 769px;
+  }
+
+  /* Common layout */
+  .section .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
+
+  /* Responsive display helpers */
+  .mo-only {
+    display: block;
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  /* Section 1 - Background */
+  .section-01 {
+    background: var(--bg-light);
+    position: relative;
+  }
+
+  .section-01::after {
+    content: "";
+    display: none; /* 모바일에서는 숨김 */
+  }
+
+  /* Master class header - Mobile First */
+  .master-class-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .master-title {
+    color: var(--text-dark);
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: var(--font-size-3xl);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .master-subtitle {
+    color: var(--text-light);
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .master-subtitle span {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+
+  .master-period {
+    display: inline-flex;
+    min-width: 280px;
+    height: 48px;
+    padding: 3px var(--spacing-sm);
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xs);
+    border-radius: var(--radius-full);
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+  }
+
+  .master-period span {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  /* Master class content - Mobile First */
+  .master-class-content {
+    max-width: 720px;
+    margin: 0 auto var(--spacing-2xl);
+    margin-bottom: 20px;
+    border-radius: var(--radius-xl);
+    background: #fff;
+    box-shadow: 2px 2px 7px 0px var(--shadow-light);
+    padding: 5px;
+  }
+
+  .master-class-content:last-child {
+    margin-bottom: 0;
+  }
+
+  .master-class-content .wrap {
+    padding: var(--spacing-xl) var(--spacing-md);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--primary-light);
+    background: #fff;
+  }
+
+  /* Content sections - Mobile First */
+  .question-section,
+  .solution-section,
+  .benefit-section {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .solution-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .question-section h3,
+  .solution-section h3,
+  .benefit-section h3 {
+    color: var(--text-medium);
+    font-family: var(--font-family);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    position: relative;
+  }
+
+  /* Decorative elements for headings - 모바일에서는 간소화 */
+  .question-section h3::after,
+  .solution-section h3::after,
+  .master-class-content:last-of-type .question-section h3::after {
+    display: none; /* 모바일에서는 데코레이션 숨김 */
+  }
+
+  /* Question list - Mobile First */
+  .question-list {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .question-list li {
+    margin-bottom: var(--spacing-xs);
+    position: relative;
+    padding-left: var(--spacing-2xl);
+    list-style-type: none;
+    color: var(--text-medium);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .question-list li::before {
+    content: "";
+    position: absolute;
+    left: var(--spacing-sm);
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--spacing-md);
+    height: var(--spacing-md);
+    background-image: url("https://sgate.ispark.kr/html/_skin/img/sub/masterClass/icon-check.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  /* Solution section - Mobile First */
+  .solution-section p {
+    color: var(--text-medium);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* Benefit section - Mobile First */
+  .benefit-item {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .benefit-item h4 {
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 7px;
+    padding-left: 10px;
+  }
+
+  .benefit-item p {
+    color: var(--text-gray);
+    font-size: var(--font-size-xs);
+    line-height: 1.5;
+  }
+
+  /* CTA Button - Mobile First */
+  .cta-button-wrapper {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+  }
+
+  .com-button {
+    display: inline-block;
+    border-radius: var(--radius-sm);
+    background: var(--primary-color);
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-xl);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+  }
+
+  .com-button:hover {
+    background-color: var(--primary-hover);
+  }
+
+  /* Section title - Mobile First */
+  .section-title {
+    color: var(--primary-color);
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.6px;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  /* Education table - Mobile First */
+  .education-table-wrap {
+    overflow: visible;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .education-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 5px 10px 20px 0px rgba(153, 153, 153, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* 테이블 헤더 */
+  .education-table thead tr {
+    background-color: #2f2f2f;
+    color: #fff;
+    text-align: center;
+    font-family: "Pretendard", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .education-table th {
+    padding: 12px 8px;
+    border: none;
+    font-weight: 500;
+  }
+
+  /* 테이블 바디 */
+  .education-table td {
+    padding: 15px 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    background: #fff;
+    vertical-align: middle;
+  }
+
+  /* 교육내용 컬럼 (왼쪽) */
+  .education-subject {
+    color: #151e23;
+    text-align: center;
+    font-family: "Pretendard", sans-serif;
+    font-size: var(--font-size-sm); /* 16px - 마스터클래스 답변 텍스트와 동일 */
+    font-weight: 600;
+    line-height: 1.4;
+    background: #f5f5f5 !important;
+    width: 25%;
+    min-width: 90px;
+  }
+
+  /* 주제와 시간을 함께 표시 */
+  .subject-with-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .subject-title {
+    font-size: var(--font-size-sm); /* 16px - 마스터클래스 답변 텍스트와 동일 */
+    font-weight: 600;
+    color: #151e23;
+    line-height: 1.2;
+  }
+
+  .subject-time {
+    font-size: 11px;
+    font-weight: 500;
+    color: #ff895e;
+    background: rgba(255, 137, 94, 0.1);
+    padding: 3px 6px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+
+  /* 인사평가 세부 구분 */
+  .evaluation-detail {
+    margin-top: 4px;
+  }
+
+  .evaluation-type {
+    font-size: 12px;
+    font-weight: 500;
+    color: #666;
+    background: #e9e9e9;
+    padding: 2px 6px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+
+  /* 내용 컬럼 (오른쪽) */
+  .education-content {
+    width: 75%;
+  }
+
+  .education-table ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .education-table li {
+    color: #151e23;
+    font-family: "Pretendard", sans-serif;
+    font-size: var(--font-size-sm); /* 16px - 마스터클래스 답변 텍스트와 동일 */
+    font-weight: 400;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 6px;
+  }
+
+  .education-table li:last-child {
+    margin-bottom: 0;
+  }
+
+  .education-table li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #ff895e;
+  }
+
+  /* Section 02 - 교육 구성 */
+  .section-02 .inner {
+    max-width: 950px;
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
+
+  /* Section 03 - 교육 개요 (박스 제거) */
+  .section-03 .inner {
+    max-width: 950px;
+    padding: var(--spacing-xl) var(--spacing-lg); /* PC에서 간격 줄임 */
+  }
+
+  .education-overview {
+    background: transparent; /* 박스 배경 제거 */
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .overview-content {
+    margin-top: var(--spacing-xl);
+  }
+
+  .overview-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .overview-list li {
+    display: flex;
+    margin-bottom: 0;
+    padding-bottom: var(--spacing-sm);
+    border-radius: var(--spacing-2xl);
+  }
+
+  .overview-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .overview-list strong {
+    display: flex;
+    width: 100px;
+    padding: 3px var(--spacing-sm);
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--spacing-2xl);
+    background: var(--primary-color);
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    letter-spacing: -0.54px;
+    margin-bottom: var(--spacing-xs);
+    align-self: flex-start;
+  }
+
+  .overview-list span {
+    flex: 1;
+    color: var(--text-medium);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-left: 15px;
+  }
+
+  /* Section 4 - Mobile First */
+  .section-04 {
+    padding: var(--spacing-3xl) 0;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--bg-light) 100%);
+  }
+
+  .section-04 .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+  }
+
+  .section-04 .cta-text {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: #333;
+  }
+
+  .section-04 .cta-text span {
+    color: var(--primary-color);
+  }
+
+  .section-04 .cta-contact {
+    font-size: var(--font-size-sm);
+    color: var(--text-gray);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .section-04 .com-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-sm);
+    width: 100%;
+    max-width: 280px;
+    box-sizing: border-box;
+  }
+
+  /* Desktop styles (769px and up) */
+  @media (min-width: 769px) {
+    /* Common layout */
+    .section .inner {
+      padding: var(--spacing-6xl) var(--spacing-lg);
+    }
+
+    /* Display helpers */
+    .mo-only {
+      display: none;
+    }
+
+    .pc-only {
+      display: block;
+    }
+
+    /* Section 1 background */
+    .section-01::after {
+      content: "";
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: 15%;
+      height: 1053px;
+      background-image: url("https://sgate.ispark.kr/html/_skin/img/sub/masterClass/bg-main.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    /* Master class header */
+    .master-class-header {
+      margin-bottom: var(--spacing-5xl);
+    }
+
+    .master-title {
+      font-size: var(--font-size-5xl);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .master-subtitle {
+      font-size: var(--font-size-4xl);
+      margin-bottom: var(--spacing-4xl);
+    }
+
+    .master-period {
+      width: 410px;
+      height: 56px;
+      padding: 4px var(--spacing-md);
+      font-size: var(--font-size-2xl);
+    }
+
+    .master-period span {
+      font-size: var(--font-size-2xl);
+    }
+
+    /* Master class content */
+    .master-class-content {
+      padding: var(--spacing-sm);
+      margin-bottom: 36px;
+    }
+
+    .master-class-content .wrap {
+      padding: var(--spacing-xl) 50px;
+      border-width: 4px;
+    }
+
+    /* Content sections */
+    .question-section,
+    .solution-section,
+    .benefit-section {
+      margin-bottom: 0;
+    }
+
+    .question-section h3,
+    .solution-section h3,
+    .benefit-section h3 {
+      font-size: var(--font-size-3xl);
+    }
+
+    /* Decorative elements for headings */
+    .question-section h3::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(7px);
+      bottom: 0;
+      width: 73px;
+      height: 60px;
+      background-image: url("https://sgate.ispark.kr/html/_skin/img/sub/masterClass/asset1.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+    }
+
+    .solution-section h3::after {
+      content: "";
+      position: absolute;
+      left: 55%;
+      transform: translateX(16px);
+      bottom: -13px;
+      width: 119px;
+      height: 66px;
+      background-image: url("https://sgate.ispark.kr/html/_skin/img/sub/masterClass/asset2.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+    }
+
+    .master-class-content:last-of-type .question-section h3::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(28px);
+      bottom: -16px;
+      width: 197px;
+      height: 80px;
+      background-image: url("https://sgate.ispark.kr/html/_skin/img/sub/masterClass/asset3.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+    }
+
+    /* Question list */
+    .question-list li {
+      font-size: var(--font-size-md);
+      padding-left: 50px;
+      margin-bottom: 4px;
+    }
+
+    .question-list li::before {
+      left: 25px;
+      top: 13px;
+    }
+
+    /* Solution section */
+    .solution-section p {
+      font-size: var(--font-size-md);
+    }
+
+    /* Benefit section */
+    .benefit-item {
+      margin-bottom: var(--spacing-md);
+    }
+
+    .benefit-item h4 {
+      font-size: var(--font-size-md);
+      margin-bottom: auto;
+    }
+
+    .benefit-item p {
+      font-size: var(--font-size-sm);
+    }
+
+    /* CTA Button */
+    .cta-button-wrapper {
+      margin-top: var(--spacing-3xl);
+    }
+
+    .com-button {
+      padding: var(--spacing-md) 32px;
+      font-size: var(--font-size-md);
+      border-radius: var(--radius-md);
+    }
+
+    /* Section title */
+    .section-title {
+      font-size: var(--font-size-3xl);
+      line-height: 40px;
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    /* 데스크톱 테이블 스타일 */
+    .education-table {
+      box-shadow: 15px 20px 34px 0px rgba(153, 153, 153, 0.1);
+      border-radius: 12px;
+    }
+
+    .education-table thead tr {
+      font-size: 18px;
+    }
+
+    .education-table th {
+      padding: 18px 20px;
+    }
+
+    .education-table td {
+      padding: 20px 25px;
+    }
+
+    .education-subject {
+      font-size: 16px;
+      width: 20%;
+      min-width: 120px;
+    }
+
+    .education-content {
+      width: 80%;
+    }
+
+    .subject-title {
+      font-size: 18px;
+    }
+
+    .subject-time {
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 12px;
+    }
+
+    .evaluation-type {
+      font-size: 14px;
+      padding: 3px 8px;
+      border-radius: 10px;
+    }
+
+    .education-table li {
+      font-size: 18px;
+      padding-left: 16px;
+      margin-bottom: 8px;
+    }
+
+    .education-table li::before {
+      top: 12px;
+      width: 6px;
+      height: 6px;
+    }
+
+    /* PC에서 섹션 간 간격 줄이기 */
+    .section-02 .inner {
+      padding-bottom: var(--spacing-3xl); /* 기존 100px에서 40px로 줄임 */
+    }
+
+    .section-03 .inner {
+      padding-top: var(--spacing-lg); /* 기존 100px에서 20px로 줄임 */
+      padding-bottom: var(--spacing-3xl); /* 기존 100px에서 40px로 줄임 */
+    }
+
+    /* Section 3 박스 제거 후 PC 스타일 조정 */
+    .education-overview {
+      padding: 0;
+      border-radius: 0;
+    }
+
+    .overview-content {
+      margin-top: var(--spacing-3xl);
+    }
+
+    .overview-list li {
+      flex-direction: row;
+      margin-bottom: var(--spacing-lg);
+      padding-bottom: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .overview-list strong {
+      flex: 0 0 120px;
+      width: 100px;
+      padding: 4px var(--spacing-md);
+      font-size: var(--font-size-md);
+      margin-right: var(--spacing-lg);
+      margin-bottom: 0;
+      align-self: center;
+    }
+
+    .overview-list span {
+      font-size: var(--font-size-lg);
+      line-height: 26px;
+      margin-left: 0;
+    }
+
+    /* Section 4 */
+    .section-04 {
+      padding: 120px 0;
+    }
+
+    .section-04 .cta-text {
+      font-size: 32px;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .section-04 .cta-contact {
+      font-size: var(--font-size-md);
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    .section-04 .com-button {
+      padding: var(--spacing-md) var(--spacing-3xl);
+      font-size: var(--font-size-md);
+      width: auto;
+      max-width: none;
+    }
+  }
+</style>
+</head>
+<body>
+<!-- 배너 -->
+<div class="event-container">
+<div class="section section-01">
+  <div class="inner">
+    <div class="master-class-container">
+      <div class="master-class-header" data-aos="fade-up">
+        <h2 class="master-title">Sgate Master Class</h2>
+        <p class="master-subtitle">
+          인사평가 완전 정복 <br class="mo-only" />
+          <span>Live Q&A</span>
+        </p>
+        <p class="master-period"><span>온라인 교육 신청</span> : ~7월 16일(수)</p>
+      </div>
+
+      <div class="master-class-content">
+        <div class="wrap">
+          <div class="question-section" data-aos="fade-up">
+            <h3>Sgate 사용하며 이런 고민, 있으셨나요?</h3>
+            <ul class="question-list">
+              <li>
+                기능이 많은데, <br class="mo-only" />
+                <strong>우리 조직에 필요한 것만 콕 집어서 쓰고 싶어요.</strong>
+              </li>
+              <li>보정 기능을<strong> 우리 회사 제도엔 어떻게 적용</strong> 해야 할지 모르겠어요.</li>
+              <li>이의 신청을 열긴 했는데, <strong>어느 시점에서 어떻게 관리하는 건지</strong> 감이 안 와요.</li>
+              <li>
+                지금 설정한 대로 하면, <strong> 구성원에겐 평가 결과가 어떻게 보이나요?</strong>
+                <strong> <br class="mo-only" />
+                  </strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="master-class-content">
+        <div class="wrap">
+          <div class="solution-section" data-aos="fade-up">
+            <h3>Sgate Master Class에서 함께 해결해보세요</h3>
+            <p>
+              <strong>평가설정 - 평가 - 결과 산출 - 조정평가 - 이의신청 까지</strong> <br class="mo-only" />
+              <br class="pc-only" />
+              전 과정에서 자주 발생하는 질문, 놓치기 쉬운 설정, <br />
+               오류 사례 등 <strong> Q&A 중심</strong>으로 해결해드립니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="master-class-content">
+        <div class="wrap">
+          <div class="question-section">
+            <h3 data-aos="fade-up">Master Class에서 얻을 수 있는 것</h3>
+
+            <div class="benefit-item" data-aos="fade-up">
+              <h4>
+                1. 평가 운영의 전체 흐름에 대한 명확한 이해 <br class="mo-only" />
+                
+              </h4>
+              <ul class="question-list">
+                <li>
+                  매년 반복되는 실수를 줄이고, <br class="mo-only" />
+                  업무의 기준을 세울 수 있습니다.
+                </li>
+              </ul>
+            </div>
+            <div class="benefit-item" data-aos="fade-up">
+              <h4>
+                2. 시스템 고급 기능에 대한 실전 적용법 <br class="mo-only" />
+                
+              </h4>
+              <ul class="question-list">
+                <li>
+                  평가자 편향 보정, 가중치 설정, 이의신청 처리 등 <br class="mo-only" />
+                  실제 적용 팁까지 안내합니다.
+                </li>
+              </ul>
+            </div>
+            <div class="benefit-item" data-aos="fade-up">
+              <h4>
+                3. HR 담당자들이 겪는 문제 해결 경험 공유 <br class="mo-only" />
+                
+              </h4>
+              <ul class="question-list">
+                <li>
+                  다른 고객사의 사례를 통해 우리 조직에 필요한 <br class="mo-only" />
+                  설정 포인트를 점검할 수 있습니다.
+                </li>
+              </ul>
+            </div>
+            <div class="benefit-item" data-aos="fade-up">
+              <h4>        
+              4. FAQ를 넘어서는 실무 중심 Q&A <br class="mo-only" />
+                
+              </h4>
+              <ul class="question-list">
+                <li>
+                 '현장감 있는 질문&#39;을 공유하고 <br class="mo-only" />
+                  바로 적용 가능한 인사이트를 제공합니다.          
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-02" id="education-section">
+  <div class="inner">
+    <div class="education-section" data-aos="fade-up">
+      <h2 class="section-title">교육 구성</h2>
+      <div class="education-table-wrap">
+        <table class="education-table">
+          <colgroup>
+            <col style="width: 25%" />
+            <col style="width: 75%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>교육내용</th>
+              <th>내용</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="education-subject">
+                <div class="subject-with-time">
+                  <div class="subject-title">평가 단계별 <br class="mo-only" />세부 기능</div>
+                  <div class="subject-time">45분</div>
+                </div>
+              </td>
+              <td class="education-content">
+                <ul>
+                  <li>평가 설정 : 평가 주기/대상/지표 구성 방식 등</li>
+                  <li>
+                    평가 진행 : 평가, 피드백, 마감, 진행현황 등 <br class="mo-only" />
+                  </li>
+                  <li>
+                    결과 산출 & 종합 : 평가점수 산출 방식, 코멘트 확인, 평가종합 처리 등 <br class="mo-only" />
+                  </li>
+                  <li>조정평가 & 이의신청 : 평가자 편향 보정, 평가 조정 방법, 이의신청 처리 절차 등</li>
+                  <li>
+                    결과 공개 : 대시보드, 구성원 피드백 제공 방식 및 시스템 활용 팁 등 <br class="mo-only" />
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="education-subject">
+                <div class="subject-with-time">
+                  <div class="subject-title">라이브 Q&A</div>
+                  <div class="subject-time">45분</div>
+                  <div class="evaluation-detail">
+                  </div>
+                </div>
+              </td>
+              <td class="education-content">
+                <ul>
+                  <li>사전 접수 질문 질의 응답</li>
+                  <li>실시간 질의 응답</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-03">
+  <div class="inner">
+    <div class="education-overview" data-aos="fade-up">
+      <h2 class="section-title">교육 개요</h2>
+      <div class="overview-content" data-aos="fade-up">
+        <ul class="overview-list">
+          <li>
+            <strong>일정</strong>
+            <span>2025년 7월 16일(수) <br class="mo-only" />
+              14:00 ~ 15:30</span>
+          </li>
+          <li>
+            <strong>참여 URL</strong>
+            <span>온라인 Zoom(참여신청자 대상 별도 전달 예정)</span>
+          </li>
+          <li>
+            <strong>참가비</strong>
+            <span>무료</span>
+          </li>
+          <li>
+            <strong>참여신청</strong>
+            <span>~ 7월 7일(월)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-04">
+  <div class="inner">
+    <p class="cta-text" data-aos="fade-up">지금 바로 <span>Live Q&A 신청</span>하고</p>
+    <p class="cta-text" data-aos="fade-up">궁금했던 모든 것 <span>미리</span> 남겨주세요!</p>
+    <p class="cta-contact" data-aos="fade-up">문의 : sgate@ispark.kr</p>
+    <a
+      href="https://sgate.ispark.kr/academy/master-class/6m-recruitment-form"
+      target="_blank"
+      class="com-button"
+      data-aos="fade-up"
+      >참여 신청 및 질문하기</a
+    >
+  </div>
+</div>
+</div>
+<!-- 배너 EEE-->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+document.head.insertAdjacentHTML(
+  "beforeend",
+  `
+<style>
+html {
+scroll-behavior: smooth;
+}
+</style>
+`
+);
+
+// URL 해시를 통한 커리큘럼 섹션 이동 처리
+function handleHashNavigation() {
+  const hash = window.location.hash;
+  if (hash === "#education-section" || hash === "#curriculum") {
+    const educationSection = document.getElementById("education-section");
+    if (educationSection) {
+      // 약간의 지연 후 스크롤 (페이지 로딩 완료 대기)
+      setTimeout(() => {
+        educationSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 100);
+    }
+  }
+}
+
+// 페이지 로드 시 해시 확인
+document.addEventListener("DOMContentLoaded", handleHashNavigation);
+
+// 해시 변경 시 처리 (뒤로가기/앞으로가기 대응)
+window.addEventListener("hashchange", handleHashNavigation);
+
+AOS.init({
+  once: true,
+  duration: 500,
+});
+</script>
