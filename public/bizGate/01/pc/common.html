@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KIAT 통합로그인</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;700&display=swap" />
+    <style>
+      /* Reset CSS */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        overflow: hidden;
+      }
+
+      /* Main Container */
+      .mainContainer {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+      }
+
+      /* Background Section - 전체 화면 배경 */
+      .backgroundSection {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .backgroundImage {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../img/bg01.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .backgroundOverlay1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #cffaff 0%, #060d16 100%);
+        opacity: 0.7;
+      }
+
+      .backgroundOverlay2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #cffaff 0%, #060d16 100%);
+        opacity: 0.5;
+      }
+
+      /* Login Section - 오른쪽에 위치 */
+      .loginSection {
+        position: relative;
+        z-index: 10; /* ✅ 배경보다 앞에 위치 */
+        margin-left: 50%;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 155px 240px;
+        gap: 48px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+      }
+
+      .loginContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        min-width: 327px;
+        gap: 24px;
+      }
+
+      /* Logo */
+      .logoContainer {
+        width: 327px;
+        height: 50px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzI3IiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMzI3IDUwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMzI3IiBoZWlnaHQ9IjUwIiBmaWxsPSIjQ0NDQ0NDIi8+Cjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlByZXRlbmRhcmQiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMzMzMzMzMiPktJQVQgTE9HTzwvdGV4dD4KPHN2Zz4=");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      /* Login Form */
+      .formContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 16px;
+      }
+
+      .formTitle {
+        font-family: "Pretendard", sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 1.5em;
+        color: #111111;
+        text-align: center;
+      }
+
+      .inputGroup {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+      }
+
+      .inputContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+      }
+
+      .textInput {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 2px;
+        padding: 16px;
+        background: #ffffff;
+        border: 1px solid #b1b8be;
+        border-radius: 8px;
+        transition: border-color 0.2s ease;
+      }
+
+      .textInput:focus-within {
+        border-color: #00377b;
+        outline: none;
+      }
+
+      .textInput input {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-family: "Pretendard", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5em;
+        color: #111111;
+      }
+
+      .textInput input::placeholder {
+        color: #999999;
+      }
+
+      /* Checkbox Section */
+      .checkboxContainer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .checkboxWrapper {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+      }
+
+      .customCheckbox {
+        width: 16px;
+        height: 16px;
+        border: 1px solid #58616a;
+        border-radius: 4px;
+        background: #ffffff;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .checkboxInput {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .checkboxInput:checked + .customCheckbox {
+        background: #00377b;
+        border-color: #00377b;
+      }
+
+      .checkboxInput:checked + .customCheckbox::after {
+        content: "✓";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+      }
+
+      .checkboxLabel {
+        font-family: "Pretendard", sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.4em;
+        color: #333333;
+        cursor: pointer;
+      }
+
+      /* Login Button */
+      .loginButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 2px;
+        padding: 16px;
+        background: #00377b;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .loginButton:hover {
+        background: #002d66;
+      }
+
+      .loginButton:active {
+        background: #001f4d;
+        transform: translateY(1px);
+      }
+
+      .loginButtonText {
+        font-family: "Pretendard", sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5em;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1200px) {
+        .loginSection {
+          padding: 100px 120px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .mainContainer {
+          flex-direction: column;
+        }
+
+        .loginSection {
+          margin-left: 0;
+          width: 100%;
+          height: 100vh;
+          padding: 40px 20px;
+          gap: 32px;
+        }
+
+        .backgroundSection {
+          opacity: 0.3;
+        }
+
+        .logoContainer {
+          width: 250px;
+          height: 38px;
+        }
+
+        .formTitle {
+          font-size: 24px;
+        }
+
+        .checkboxContainer {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .loginSection {
+          padding: 20px;
+          gap: 24px;
+        }
+
+        .logoContainer {
+          width: 200px;
+          height: 30px;
+        }
+
+        .formTitle {
+          font-size: 20px;
+        }
+
+        .textInput {
+          padding: 14px;
+        }
+
+        .loginButton {
+          padding: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <!-- Background Section - 전체 화면 배경 -->
+      <div class="backgroundSection">
+        <div class="backgroundImage"></div>
+      </div>
+
+      <!-- Login Section - 오른쪽에 위치 -->
+      <div class="loginSection">
+        <div class="loginContainer">
+          <!-- Logo -->
+          <div class="logoContainer">
+            <img src="../../img/logo_KIAT.png" alt="" />
+          </div>
+
+          <!-- Login Form -->
+          <div class="formContainer">
+            <h1 class="formTitle">통합로그인</h1>
+
+            <div class="inputGroup">
+              <div class="inputContainer">
+                <!-- Username Input -->
+                <div class="textInput">
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="아이디를 입력하세요"
+                    autocomplete="username"
+                  />
+                </div>
+
+                <!-- Password Input -->
+                <div class="textInput">
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="비밀번호를 입력하세요"
+                    autocomplete="current-password"
+                  />
+                </div>
+              </div>
+
+              <!-- Remember Me Checkbox -->
+              <div class="checkboxContainer">
+                <label class="checkboxWrapper">
+                  <input type="checkbox" id="rememberMe" name="rememberMe" class="checkboxInput" />
+                  <div class="customCheckbox"></div>
+                  <span class="checkboxLabel">아이디 저장</span>
+                </label>
+              </div>
+
+              <!-- Login Button -->
+              <button type="submit" class="loginButton">
+                <span class="loginButtonText">로그인</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

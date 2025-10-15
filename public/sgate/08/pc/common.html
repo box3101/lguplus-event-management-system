@@ -322,7 +322,7 @@
 
       // content 불러오기
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "/sgate/01/pc/pc-content.html", true);
+      xhr.open("GET", "/sgate/08/pc/pc-content.html", true);
       xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
           document.getElementById("content").innerHTML = this.responseText;

@@ -111,6 +111,12 @@
             type: "",
             contentCode: "07",
           },
+          {
+            id: "08",
+            title: "25년 4Q 인사평가 프로모션 페이지",
+            type: "",
+            contentCode: "08",
+          },
         ],
         isparkEvents: [
           {
@@ -160,6 +166,14 @@
             title: "제품(델미아) 상세페이지",
             type: "",
             contentCode: "08",
+          },
+        ],
+        bizGateEvents: [
+          {
+            id: "01",
+            title: "KIAT 로그인페이지",
+            type: "",
+            contentCode: "01",
           },
         ],
         templateGuide: [
@@ -236,6 +250,26 @@
       `
       );
 
+      // BizGate 이벤트 테이블 렌더링
+      const bizGateEventsTable = createTable(
+        "BizGate 이벤트 링크",
+        data.bizGateEvents,
+        ["이벤트 ID (localhost)", "비고", "링크"],
+        (event) => `
+        <tr>
+          <td>
+            <span class="event-id">${event.id}</span>
+            ${event.contentCode ? `<span class="c-blue">(컨텐츠코드 ${event.contentCode})</span>` : ""}
+            - ${event.title}
+          </td>
+          <td>${event.type}</td>
+          <td>
+            <a href="http://localhost:${port}/bizGate/${event.id}/" target="_blank">반응형</a>
+          </td>
+        </tr>
+      `
+      );
+
       // 템플릿 가이드
       const templateGuide = createTable(
         "템플릿 가이드",
@@ -257,7 +291,8 @@
       );
 
       // 전체 렌더링
-      document.getElementById("app").innerHTML = sgateEventsTable + isparkEventsTable + templateGuide;
+      document.getElementById("app").innerHTML =
+        sgateEventsTable + isparkEventsTable + bizGateEventsTable + templateGuide;
     </script>
   </body>
 </html>

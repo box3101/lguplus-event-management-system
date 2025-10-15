@@ -23,9 +23,9 @@ app.get("/", (req, res) => {
 });
 
 // 이벤트 페이지 라우팅
-const sgates = ["01", "02", "03", "04", "05", "06", "07"];
+const sgates = ["01", "02", "03", "04", "05", "06", "07", "08"];
 const isparks = ["01", "02", "03", "04", "05", "06", "07", "08"];
-
+const bizGates = ["01"];
 
 sgates.forEach((sgateId) => {
   // PC 버전
@@ -38,6 +38,13 @@ isparks.forEach((isparkId) => {
   // PC 버전
   app.get(`/ispark/${isparkId}/`, (req, res) => {
     res.sendFile(path.join(__dirname, "public", `ispark/${isparkId}/pc`, "common.html"));
+  });
+});
+
+bizGates.forEach((bizGateId) => {
+  // PC 버전
+  app.get(`/bizGate/${bizGateId}/`, (req, res) => {
+    res.sendFile(path.join(__dirname, "public", `bizGate/${bizGateId}/pc`, "common.html"));
   });
 });
 
